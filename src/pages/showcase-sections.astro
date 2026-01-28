@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const components = [
+  { name: 'hero-simple-left-aligned', path: 'components/sections/hero-simple-left-aligned.astro', status: 'error' },
+  { name: 'call-to-action-simple', path: 'components/sections/call-to-action-simple.astro', status: 'error' },
+  { name: 'features-three-column', path: 'components/sections/features-three-column.astro', status: 'error' },
+  { name: 'team-three-column-grid', path: 'components/sections/team-three-column-grid.astro', status: 'error' },
+  { name: 'testimonials-three-column-grid', path: 'components/sections/testimonials-three-column-grid.astro', status: 'error' }
+]
+---
+
+<Layout title="Section Components Showcase">
+  <div class="min-h-screen bg-mist-50 dark:bg-mist-950 py-12">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-mist-950 dark:text-white mb-8">Section Components Showcase</h1>
+      
+      <div class="space-y-16">
+        {components.map(comp => (
+          <div>
+            <h2 class="text-xl font-semibold text-mist-900 dark:text-white mb-4">{comp.name}</h2>
+            
+            <div class="rounded-lg border border-mist-200 bg-white p-8 dark:border-mist-800 dark:bg-mist-950">
+              {comp.status === 'error' && (
+                <div class="rounded-md bg-red-50 p-4 text-red-900 dark:bg-red-950/20 dark:text-red-400">
+                  <p class="font-semibold">Failed to render</p>
+                  <p class="text-sm">{comp.name} exists at {comp.path} but has import errors</p>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>

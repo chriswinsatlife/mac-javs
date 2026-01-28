@@ -9,6 +9,7 @@
     "astro": "bunx astro"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@popperjs/core": "^2.11.8",
     "astro": "^5.16.16",
     "tippy.js": "^6.3.7"

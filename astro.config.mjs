@@ -7,6 +7,23 @@ export default defineConfig({
       alias: {
         '@components': path.resolve(process.cwd(), './components')
       }
+    },
+    build: {
+      rollupOptions: {
+        external: ['react', '@headlessui/react', 'react-dom'],
+        output: {
+          manualChunks: undefined
+        }
+      },
+      commonjsOptions: {
+        transformMixedEsModules: true
+      }
+    },
+    server: {
+      fs: {
+        strict: false,
+        allow: ['.']
+      }
     }
   }
 });
