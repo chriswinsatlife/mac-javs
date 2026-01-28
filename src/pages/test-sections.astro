@@ -1,0 +1,19 @@
+---
+import TestLayout from '../layouts/TestLayout.astro'
+import Text from '@components/elements/text.astro'
+import Heading from '@components/elements/heading.astro'
+---
+
+<TestLayout title="Test Sections">
+	<section>
+		<h1>Section Components Test</h1>
+		
+		<div class="space-y-8">
+			<div class="border p-4">
+				<h2>Simple Test Section</h2>
+				<Heading>Test Heading</Heading>
+				<Text>Test text content</Text>
+			</div>
+		</div>
+	</section>
+</TestLayout>

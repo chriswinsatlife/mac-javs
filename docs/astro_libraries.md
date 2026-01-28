@@ -1,9 +1,7 @@
 https://daisyui.com/astro-component-library/?lang=en
-https://ui.full.dev/
-https://flowbite.com/docs/getting-started/introduction/
-https://stackblitz.com/edit/daisyui-astro?file=package.json
-https://daisyui.com/components/range/
 https://ui.shadcn.com/docs/installation/astro
 https://preline.co/
-https://webcoreui.dev/
 https://starwind.dev/
+https://webcoreui.dev/
+https://ui.full.dev/
+https://flowbite.com/docs/getting-started/introduction/

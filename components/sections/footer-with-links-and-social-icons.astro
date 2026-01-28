@@ -1,0 +1,19 @@
+---
+import { clsx } from 'clsx/lite'
+import Container from '../elements/container.astro'
+const { links, socialLinks, fineprint, className, ...props } = Astro.props
+---
+
+<footer class={clsx('pt-16', className)} { ...props }>
+  <div class="bg-mist-950/2.5 py-16 text-mist-950 dark:bg-white/5 dark:text-white">
+    <Container className="flex flex-col gap-10 text-center text-sm/7">
+      <div class="flex flex-col gap-6">
+        <nav>
+          <ul class="flex flex-wrap items-center justify-center gap-x-10 gap-y-2"><slot name="links">{links}</slot></ul>
+        </nav>
+        {socialLinks && <div class="flex items-center justify-center gap-10"><slot name="socialLinks">{socialLinks}</slot></div>}
+      </div>
+      <div class="text-mist-600 dark:text-mist-500">{fineprint}</div>
+    </Container>
+  </div>
+</footer>

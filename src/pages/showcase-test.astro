@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+
+import StarIcon from '../../components/icons/star-icon.astro'
+import Text from '../../components/elements/text.astro'
+
+---
+<Base title="Showcase - Testing Text">
+  <div class="p-8 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen dark:from-slate-900 dark:to-slate-800">
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+      Component Showcase
+    </h1>
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow">
+      <p class="text-slate-700 dark:text-slate-300 mb-4">
+        Testing Text component:
+      </p>
+      <Text>This is text from the Text component</Text>
+    </div>
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow mt-4">
+      <p class="text-slate-700 dark:text-slate-300 mb-4">
+        Testing Star icon:
+      </p>
+      <div class="flex items-center gap-2">
+        <StarIcon />
+        <span>Star Icon</span>
+      </div>
+    </div>
+  </div>
+</Base>

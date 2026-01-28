@@ -1,0 +1,116 @@
+---
+import Base from '../layouts/Base.astro';
+
+import StarIcon from '../../components/icons/star-icon.astro'
+import BellIcon from '../../components/icons/bell-icon.astro'
+import CheckmarkIcon from '../../components/icons/checkmark-icon.astro'
+import HeartIcon from '../../components/icons/heart-icon.astro'
+import HomeIcon from '../../components/icons/home-icon.astro'
+import GithubIcon from '../../components/icons/social/github-icon.astro'
+import InstagramIcon from '../../components/icons/social/instagram-icon.astro'
+import XIcon from '../../components/icons/social/x-icon.astro'
+import Text from '../../components/elements/text.astro'
+import Heading from '../../components/elements/heading.astro'
+import Subheading from '../../components/elements/subheading.astro'
+import Eyebrow from '../../components/elements/eyebrow.astro'
+import Container from '../../components/elements/container.astro'
+import Section from '../../components/elements/section.astro'
+
+const mainIcons = [
+  StarIcon,
+  BellIcon,
+  CheckmarkIcon,
+  HeartIcon,
+  HomeIcon,
+]
+
+const socialIcons = [
+  GithubIcon,
+  InstagramIcon,
+  XIcon,
+]
+---
+<Base title="Component Showcase">
+  <div class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen dark:from-slate-900 dark:to-slate-800">
+
+    <header class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
+      <Container>
+        <div class="py-8 text-center">
+          <Heading>Component Showcase</Heading>
+          <Text class="mt-4">Simple visual review - icons, elements, buttons</Text>
+        </div>
+      </Container>
+    </header>
+
+    <main class="mt-8">
+      <Section className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700">
+        <Container>
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+            5 Main Icons (Sample)
+          </h2>
+
+          <div class="grid grid-cols-5 gap-4">
+            {mainIcons.map((IconComponent) => (
+              <div class="flex flex-col items-center p-4 rounded-lg bg-slate-50 dark:bg-slate-700">
+                <div class="w-10 h-10 flex items-center justify-center text-slate-900 dark:text-white mb-2">
+                  <IconComponent />
+                </div>
+                <span class="text-xs text-slate-600 dark:text-slate-300">
+                  {IconComponent.name.replace('Icon', '')}
+                </span>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 mt-8">
+        <Container>
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+            3 Social Icons
+          </h2>
+
+          <div class="flex gap-6 justify-center">
+            {socialIcons.map((IconComponent) => (
+              <div class="flex flex-col items-center p-4 rounded-lg bg-slate-50 dark:bg-slate-700 min-w-[100px]">
+                <div class="w-10 h-10 flex items-center justify-center text-purple-700 dark:text-purple-300 mb-2">
+                  <IconComponent />
+                </div>
+                <span class="text-xs text-slate-600 dark:text-slate-300">
+                  {IconComponent.name.replace('Icon', '')}
+                </span>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 mt-8">
+        <Container>
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+            Typography
+          </h2>
+
+          <div class="space-y-4 p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+            <Eyebrow>Eyebrow Text</Eyebrow>
+            <Heading>Heading Component</Heading>
+            <Subheading>Subheading Component</Subheading>
+            <Text>Regular text component for body content.</Text>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="mt-8">
+        <Container>
+          <div class="text-center">
+            <Text class="text-slate-500 dark:text-slate-400">
+              Simplified showcase page - see docs/full-component-list.md for all 182 components
+            </Text>
+          </div>
+        </Container>
+      </Section>
+
+    </main>
+
+  </div>
+</Base>

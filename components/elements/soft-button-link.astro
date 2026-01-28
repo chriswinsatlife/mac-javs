@@ -1,0 +1,18 @@
+---
+const sizes = {
+  md: 'px-3 py-1',
+  lg: 'px-4 py-2',
+}
+
+const { size = 'md', href, className, ...props } = Astro.props
+---
+
+<a
+  href={href}
+  class:list={[
+    'inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-mist-950/10 text-sm/7 font-medium text-mist-950 hover:bg-mist-950/15 dark:bg-white/10 dark:text-white dark:hover:bg-white/20',
+    sizes[size],
+    className,
+  ]}
+  {...props}
+><slot /></a>

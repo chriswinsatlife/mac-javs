@@ -1,0 +1,25 @@
+---
+import { clsx } from 'clsx/lite'
+import ArrowNarrowRightIcon from '../icons/arrow-narrow-right-icon.astro'
+const { headline, subheadline, className, ...props } = Astro.props
+---
+
+<form class={clsx('flex max-w-sm flex-col gap-2', className)} { ...props }>
+  <p>{headline}</p>
+  <div class="flex flex-col gap-4 text-mist-700 dark:text-mist-400">{subheadline}</div>
+  <div class="flex items-center border-b border-mist-950/20 py-2 has-[input:focus]:border-mist-950 dark:border-white/20 dark:has-[input:focus]:border-white">
+    <input
+      type="email"
+      placeholder="Email"
+      aria-label="Email"
+      class="flex-1 text-mist-950 focus:outline-hidden dark:text-white"
+    />
+    <button
+      type="submit"
+      aria-label="Subscribe"
+      class="relative inline-flex size-7 items-center justify-center rounded-full after:absolute after:-inset-2 hover:bg-mist-950/10 dark:hover:bg-white/10 after:pointer-fine-hidden"
+    >
+      <ArrowNarrowRightIcon />
+    </button>
+  </div>
+</form>

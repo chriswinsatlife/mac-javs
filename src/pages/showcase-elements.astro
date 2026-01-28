@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+
+import Text from '../../components/elements/text.astro'
+import Heading from '../../components/elements/heading.astro'
+import Subheading from '../../components/elements/subheading.astro'
+import Eyebrow from '../../components/elements/eyebrow.astro'
+import Container from '../../components/elements/container.astro'
+import Section from '../../components/elements/section.astro'
+---
+
+<Base title="Showcase - Elements Only">
+  <div class="p-8 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen dark:from-slate-900 dark:to-slate-800">
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+      Component Showcase - Elements Only
+    </h1>
+    
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow mb-6">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+        Typography Elements
+      </h2>
+      <div class="space-y-4 p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+        <Eyebrow>Eyebrow Text</Eyebrow>
+        <Heading>Heading Component</Heading>
+        <Subheading>Subheading Component</Subheading>
+        <Text>Regular text component for body content.</Text>
+      </div>
+    </div>
+    
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow">
+      <p class="text-slate-700 dark:text-slate-300">
+        Elements only - loaded successfully!
+      </p>
+    </div>
+  </div>
+</Base>

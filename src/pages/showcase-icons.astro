@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+
+import StarIcon from '../../components/icons/star-icon.astro'
+import BellIcon from '../../components/icons/bell-icon.astro'
+import CheckmarkIcon from '../../components/icons/checkmark-icon.astro'
+import HeartIcon from '../../components/icons/heart-icon.astro'
+import HomeIcon from '../../components/icons/home-icon.astro'
+import GithubIcon from '../../components/icons/social/github-icon.astro'
+import InstagramIcon from '../../components/icons/social/instagram-icon.astro'
+import XIcon from '../../components/icons/social/x-icon.astro'
+
+const mainIcons = [
+  StarIcon,
+  BellIcon,
+  CheckmarkIcon,
+  HeartIcon,
+  HomeIcon,
+]
+
+const socialIcons = [
+  GithubIcon,
+  InstagramIcon,
+  XIcon,
+]
+---
+<Base title="Component Showcase">
+  <div class="p-8 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen dark:from-slate-900 dark:to-slate-800">
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+      Component Showcase
+    </h1>
+    
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow mb-6">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+        5 Main Icons
+      </h2>
+      <div class="grid grid-cols-5 gap-4">
+        {mainIcons.map((IconComponent) => (
+          <div class="flex flex-col items-center p-4 rounded-lg bg-slate-50 dark:bg-slate-700">
+            <div class="w-10 h-10 flex items-center justify-center text-slate-900 dark:text-white mb-2">
+              <IconComponent />
+            </div>
+            <span class="text-xs text-slate-600 dark:text-slate-300">
+              {IconComponent.name.replace('Icon', '')}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow mb-6">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+        3 Social Icons
+      </h2>
+      <div class="flex gap-6 justify-center">
+        {socialIcons.map((IconComponent) => (
+          <div class="flex flex-col items-center p-4 rounded-lg bg-slate-50 dark:bg-slate-700 min-w-[100px]">
+            <div class="w-10 h-10 flex items-center justify-center text-purple-700 dark:text-purple-300 mb-2">
+              <IconComponent />
+            </div>
+            <span class="text-xs text-slate-600 dark:text-slate-300">
+              {IconComponent.name.replace('Icon', '')}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow">
+      <p class="text-slate-700 dark:text-slate-300">
+        Icons only - loaded successfully!
+      </p>
+    </div>
+  </div>
+</Base>

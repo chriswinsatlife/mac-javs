@@ -1,0 +1,17 @@
+---
+const { className, ...props } = Astro.props;
+---
+
+    <svg
+      width="9"
+      height="13"
+      viewBox="0 0 9 13"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
+      role="image"
+      class:list={[className, 'inline-block']}
+      {...props}
+    >
+      <path stroke="currentColor" strokeLinecap="round" d="M.5 9.5v3M4.5 5v7.5M8.5.5v12" />
+    </svg>

@@ -1,0 +1,36 @@
+---
+import TestLayout from '../layouts/TestLayout.astro'
+import StarIcon from '@components/icons/star-icon.astro'
+import CheckmarkIcon from '@components/icons/checkmark-icon.astro'
+import ArrowNarrowRightIcon from '@components/icons/arrow-narrow-right-icon.astro'
+import ArrowNarrowLeftIcon from '@components/icons/arrow-narrow-left-icon.astro'
+import ArrowNarrowUpIcon from '@components/icons/arrow-narrow-up-icon.astro'
+---
+
+<TestLayout title="Test Icons">
+	<section>
+		<h1>Icon Components Test</h1>
+		<div class="flex gap-4 flex-wrap">
+			<div class="p-4 border">
+				<p>Star Icon</p>
+				<StarIcon className="w-8 h-8" />
+			</div>
+			<div class="p-4 border">
+				<p>Checkmark Icon</p>
+				<CheckmarkIcon className="w-8 h-8" />
+			</div>
+			<div class="p-4 border">
+				<p>Arrow Right Icon</p>
+				<ArrowNarrowRightIcon className="w-8 h-8" />
+			</div>
+			<div class="p-4 border">
+				<p>Arrow Left Icon</p>
+				<ArrowNarrowLeftIcon className="w-8 h-8" />
+			</div>
+			<div class="p-4 border">
+				<p>Arrow Up Icon</p>
+				<ArrowNarrowUpIcon className="w-8 h-8" />
+			</div>
+		</div>
+	</section>
+</TestLayout>

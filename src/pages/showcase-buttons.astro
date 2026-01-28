@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+
+import Button from '../../components/elements/button.astro'
+import ButtonLink from '../../components/elements/button-link.astro'
+---
+
+<Base title="Showcase - Buttons Only">
+  <div class="p-8 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen dark:from-slate-900 dark:to-slate-800">
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+      Component Showcase - Buttons Only
+    </h1>
+    
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+        Button Components
+      </h2>
+      <div class="flex flex-wrap gap-3 p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+        <Button>Default Button</Button>
+        <ButtonLink href="#">Button Link</ButtonLink>
+      </div>
+    </div>
+    
+    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow mt-6">
+      <p class="text-slate-700 dark:text-slate-300">
+        Buttons - loaded successfully!
+      </p>
+    </div>
+  </div>
+</Base>

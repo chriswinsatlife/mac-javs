@@ -1,0 +1,15 @@
+---
+import { clsx } from 'clsx/lite'
+import Section from '../elements/section.astro'
+
+const {
+  features,
+  ...props
+} = Astro.props
+---
+
+<Section {...props}>
+  <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <Fragment set:html={features} />
+  </div>
+</Section>

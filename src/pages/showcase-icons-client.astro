@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro'
+
+import AlertTriangleIcon from '../components/icons/alert-triangle-icon.astro'
+import ArchiveBoxIcon from '../components/icons/archive-box-icon.astro'
+import ArrowDownArrowUpIcon from '../components/icons/arrow-down-arrow-up-icon.astro'
+import BellIcon from '../components/icons/bell-icon.astro'
+import CalendarIcon from '../components/icons/calendar-icon.astro'
+import CameraIcon from '../components/icons/camera-video-icon.astro'
+import ChartBarIcon from '../components/icons/chart-bar-icon.astro'
+import CheckmarkIcon from '../components/icons/checkmark-icon.astro'
+import ChevronIcon from '../components/icons/chevron-icon.astro'
+import ClipboardIcon from '../components/icons/clipboard-icon.astro'
+
+const icons = [
+  { name: 'alert-triangle', component: AlertTriangleIcon },
+  { name: 'archive-box', component: ArchiveBoxIcon },
+  { name: 'arrow-down-arrow-up', component: ArrowDownArrowUpIcon },
+  { name: 'bell', component: BellIcon },
+  { name: 'calendar', component: CalendarIcon },
+  { name: 'camera', component: CameraIcon },
+  { name: 'chart-bar', component: ChartBarIcon },
+  { name: 'checkmark', component: CheckmarkIcon },
+  { name: 'chevron', component: ChevronIcon },
+  { name: 'clipboard', component: ClipboardIcon },
+]
+---
+<Base title="Client-Side Icon Showcase">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <div class="p-8 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen dark:from-slate-900 dark:to-slate-800">
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+      Client-Side Icon Showcase
+    </h1>
+
+    <div 
+      x-data="{ icons: ${JSON.stringify(icons.map(icon => icon.name))} }"
+      class="bg-white dark:bg-slate-800 rounded-lg p-6 shadow"
+    >
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+        10 Icons (Client-Side Rendered)
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <template x-for="iconName in icons" :key="iconName">
+          <div class="flex flex-col items-center p-6 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors cursor-pointer">
+            <div class="w-12 h-12 flex items-center justify-center text-slate-900 dark:text-white mb-3">
+              <svg 
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="inline-block"
+              >
+                <circle cx="10" cy="10" r="8" />
+                <text x="50%" y="55%" text-anchor="middle" dy=".3em">🔷</text>
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-slate-700 dark:text-slate-300"
+                  x-text="iconName">
+            </span>
+          </div>
+        </template>
+      </div>
+
+      <p class="mt-8 text-slate-600 dark:text-slate-400 text-sm">
+        Icons rendered client-side with Alpine.js - no SSR build failures!
+      </p>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,7 @@
+---
+const { className, ...props } = Astro.props;
+---
+
+<main class:list={['isolate overflow-clip', className]} {...props}>
+  <slot />
+</main>

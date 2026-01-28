@@ -2,7 +2,8 @@
 
 ## Reference
 
-`tailwind_templates/**`
+- `tailwind_templates/catalyst-ui-kit/typescript/**`
+- `tailwind_templates/oatmeal-mist-instrument/components/**`
 
 ## Summary
 

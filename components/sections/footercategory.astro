@@ -1,0 +1,11 @@
+---
+import { clsx } from 'clsx/lite'
+const { title, ...props } = Astro.props
+---
+
+<div { ...props }>
+  <h3>{title}</h3>
+  <ul role="list" class="mt-2 flex flex-col gap-2">
+    <slot />
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+---
+import Button from '@/components/elements/button.astro'
+
+const { 'aria-label': ariaLabel = 'Page navigation', className, ...props } = Astro.props
+---
+
+<nav aria-label={ariaLabel} {...props} class:list={[className, 'flex gap-x-2']}>
+  <slot />
+</nav>

@@ -1,0 +1,19 @@
+---
+import { clsx } from 'clsx/lite'
+import Section from '../elements/section.astro'
+
+const {
+  demo,
+  features,
+  ...props
+} = Astro.props
+---
+
+<Section {...props}>
+  <div class="flex flex-col gap-14">
+    {demo && <div class="flex flex-col gap-32"><Fragment set:html={demo} /></div>}
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <Fragment set:html={features} />
+    </div>
+  </div>
+</Section>

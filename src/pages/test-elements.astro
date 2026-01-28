@@ -1,0 +1,37 @@
+---
+import TestLayout from '../layouts/TestLayout.astro'
+import Button from '@components/elements/button.astro'
+import Heading from '@components/elements/heading.astro'
+import Text from '@components/elements/text.astro'
+---
+
+<TestLayout title="Test Elements">
+	<section>
+		<h1>Element Components Test</h1>
+		
+		<div class="space-y-8">
+			<div class="p-4 border">
+				<p>Heading Component</p>
+				<Heading>Test Heading</Heading>
+			</div>
+			
+			<div class="p-4 border">
+				<p>Text Component</p>
+				<Text>Test text content with default size</Text>
+			</div>
+			
+			<div class="p-4 border">
+				<p>Text Component (Large)</p>
+				<Text size="lg">Test text content with large size</Text>
+			</div>
+			
+			<div class="p-4 border">
+				<p>Button Components</p>
+				<div class="flex gap-2">
+					<Button size="md">Medium Button</Button>
+					<Button size="lg">Large Button</Button>
+				</div>
+			</div>
+		</div>
+	</section>
+</TestLayout>

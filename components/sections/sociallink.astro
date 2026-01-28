@@ -1,0 +1,14 @@
+---
+import { clsx } from 'clsx/lite'
+const { href, name, className, ...props } = Astro.props
+---
+
+<a
+  href={href}
+  target="_blank"
+  aria-label={name}
+  class={clsx('text-mist-950 *:size-6 dark:text-white', className)}
+  { ...props }
+>
+  <slot />
+</a>

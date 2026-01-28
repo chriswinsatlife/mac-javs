@@ -1,0 +1,26 @@
+---
+import { clsx } from 'clsx/lite'
+import Container from '../elements/container.astro'
+import Heading from '../elements/heading.astro'
+import Text from '../elements/text.astro'
+const { eyebrow, headline, subheadline, cta, photo, footer, className, ...props } = Astro.props
+---
+
+<section class={clsx('py-16', className)} { ...props }>
+  <Container className="flex flex-col gap-16">
+    <div class="flex flex-col gap-32">
+      <div class="flex flex-col items-center gap-6">
+        {eyebrow && <div class="flex flex-col items-center gap-6">{eyebrow}</div>}
+        <Heading className="max-w-5xl">{headline}</Heading>
+        <Text size="lg" className="flex max-w-3xl flex-col gap-4 text-center">
+          {subheadline}
+        </Text>
+        {cta}
+      </div>
+      <div class="overflow-hidden rounded-xl outline -outline-offset-1 outline-black/5 dark:outline-white/5">
+        {photo}
+      </div>
+    </div>
+    {footer}
+  </Container>
+</section>
