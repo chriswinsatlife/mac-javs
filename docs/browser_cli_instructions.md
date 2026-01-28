@@ -4,7 +4,7 @@ repo: vercel-labs/agent-browser
 
 # agent-browser
 
-Headless browser automation CLI for AI agents. Fast Rust CLI with Node.js fallback.
+Headless browser automation CLI for AI agents. Fast Rust CLI with Bun fallback.
 
 ## Quick Start
 
@@ -628,8 +628,8 @@ await browser.stopScreencast();
 agent-browser uses a client-daemon architecture:
 
 1. **Rust CLI** (fast native binary) - Parses commands, communicates with daemon
-2. **Node.js Daemon** - Manages Playwright browser instance
-3. **Fallback** - If native binary unavailable, uses Node.js directly
+2. **Bun Daemon** - Manages Playwright browser instance
+3. **Fallback** - If native binary unavailable, uses Bun directly
 
 The daemon starts automatically on first command and persists between commands for fast subsequent operations.
 
@@ -639,11 +639,11 @@ The daemon starts automatically on first command and persists between commands f
 
 | Platform    | Binary      | Fallback |
 | ----------- | ----------- | -------- |
-| macOS ARM64 | Native Rust | Node.js  |
-| macOS x64   | Native Rust | Node.js  |
-| Linux ARM64 | Native Rust | Node.js  |
-| Linux x64   | Native Rust | Node.js  |
-| Windows x64 | Native Rust | Node.js  |
+| macOS ARM64 | Native Rust | Bun      |
+| macOS x64   | Native Rust | Bun      |
+| Linux ARM64 | Native Rust | Bun      |
+| Linux x64   | Native Rust | Bun      |
+| Windows x64 | Native Rust | Bun      |
 
 ## Usage with AI Agents
 
@@ -662,7 +662,7 @@ The `--help` output is comprehensive and most agents can figure it out from ther
 Add the skill to your AI coding assistant for richer context:
 
 ```bash
-npx skills add vercel-labs/agent-browser
+bunx skills add vercel-labs/agent-browser
 ```
 
 This works with Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Goose, OpenCode, and Windsurf.

@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "bunx astro dev",
-    "build": "bunx astro build",
-    "preview": "bunx astro preview",
+    "dev": "bun scripts/sync_playbooks_to_site.mjs && bunx astro dev",
+    "build": "bun scripts/sync_playbooks_to_site.mjs && bunx astro build",
+    "preview": "bun scripts/sync_playbooks_to_site.mjs && bunx astro preview",
     "astro": "bunx astro"
   },
   "dependencies": {

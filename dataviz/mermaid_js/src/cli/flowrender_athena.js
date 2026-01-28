@@ -309,6 +309,8 @@ const PAGE_HTML = (fonts) => String.raw`<!doctype html>
 
       const svg = createSvgEl('svg');
       svg.setAttribute('id','chartSvg');
+      svg.setAttribute('width', String(width));
+      svg.setAttribute('height', String(height));
       svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
       svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
 

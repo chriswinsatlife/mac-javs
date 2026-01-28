@@ -71,7 +71,8 @@ const resolvedDownload = downloadSrc ?? src.replace(/\.svg$/i, '.png');
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 12px;
     background: #fff;
-    overflow: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     --diagram-font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
     --diagram-node-fill: #f6fbf7;
     --diagram-node-stroke: #05240C;
@@ -82,8 +83,9 @@ const resolvedDownload = downloadSrc ?? src.replace(/\.svg$/i, '.png');
   }
   .playbook-diagram__frame :global(svg){
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
+    max-width: none;
     font-family: var(--diagram-font-family);
   }
   .playbook-diagram__frame :global(.node-shape){

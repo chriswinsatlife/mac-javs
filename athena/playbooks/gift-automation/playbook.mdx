@@ -1,42 +1,61 @@
 ---
 title: Gift Automation
+layout: ../../layouts/Base.astro
 ---
 
 import Diagram from "@components/playbooks/Diagram.astro";
 import Icon from "@components/playbooks/Icon.astro";
 
-# Gift automation
+<div class="min-h-screen bg-base-200">
+  <main class="mx-auto max-w-3xl px-6 py-12">
+    <header class="mb-10">
+      <h1 class="font-display text-4xl tracking-tight text-base-content">Gift automation</h1>
+      <p class="mt-3 text-base leading-relaxed text-base-content/70">
+        Turn gifting into a system: capture context, apply constraints, execute reliably, and keep a light feedback loop.
+      </p>
+    </header>
 
-This playbook turns gifting into a system: capture context, pick from a small set of rules, execute reliably, and keep a light feedback loop.
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-base-content">What this covers</h2>
+      <ul class="mt-3 list-disc pl-6 text-base leading-relaxed text-base-content/80">
+        <li>Occasions and triggers</li>
+        <li>Constraints (budget, taste, shipping windows)</li>
+        <li>Execution workflow</li>
+      </ul>
+    </section>
 
-## What this covers
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-base-content">Workflow</h2>
+      <Diagram
+        src="/playbooks/gift-automation/assets/diagrams/workflow.svg"
+        alt="Gift automation workflow"
+        caption="From trigger to delivery confirmation, including an escalation path for ambiguity."
+      />
+    </section>
 
-- Occasions and triggers
-- Constraints (budget, taste, shipping windows)
-- Execution workflow
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-base-content">Core constraints</h2>
+      <ul class="mt-3 list-disc pl-6 text-base leading-relaxed text-base-content/80">
+        <li>Default budget bands are set per relationship tier.</li>
+        <li>No gifts that create recipient burden unless explicitly requested.</li>
+        <li>Escalate if the gift could be read as high-signal.</li>
+      </ul>
+    </section>
 
-## Workflow
+    <section class="rounded-2xl border border-base-300 bg-base-100 p-6">
+      <h2 class="text-xl font-semibold text-base-content">Quick toolkit</h2>
 
-<Diagram
-  src="/playbooks/gift-automation/assets/diagrams/workflow.svg"
-  alt="Gift automation workflow"
-  caption="From trigger to delivery confirmation, including an escalation path for ambiguity."
-/>
+      <div class="mt-4 grid gap-3">
+        <div class="flex items-start gap-3">
+          <span class="mt-0.5 text-base-content/70"><Icon name="calendar-days" title="Calendar" size={22} /></span>
+          <p class="text-base leading-relaxed text-base-content/80">Maintain a lightweight gifting calendar with lead times.</p>
+        </div>
 
-## Core constraints
-
-- Default budget bands are set per relationship tier.
-- No gifts that create recipient burden (set up, subscriptions, returns) unless explicitly requested.
-- Escalate if the gift could be read as high-signal (romance, religion, politics).
-
-## Quick toolkit
-
-<p style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-  <Icon name="calendar-days" title="Calendar" />
-  <span>Maintain a lightweight gifting calendar with lead times.</span>
-</p>
-
-<p style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-  <Icon name="gift" title="Gift" />
-  <span>Maintain a short list of recipient-safe defaults (by relationship tier).</span>
-</p>
+        <div class="flex items-start gap-3">
+          <span class="mt-0.5 text-base-content/70"><Icon name="gift" title="Gift" size={22} /></span>
+          <p class="text-base leading-relaxed text-base-content/80">Maintain a short list of recipient-safe defaults by relationship tier.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

@@ -1,11 +1,18 @@
 ## Files and Folders
 
-- This project uses Astro, DaisyUI, and Tailwind V4.
+- This project uses Astro, DaisyUI, Tailwind V4, Bun, D3/Dagre, Mermaid, MDX, and Vercel AI SDK v6.
+- Use the `grepapp` and `ref` CLI tools to get latest documentation.
+- Use the `exa` CLI tool to get latest code context (i.e. current implementations) or answers (simple reponses to questions).
 - `tailwind_templates/catalyst-ui-kit/` it the official Tailwind UI Kit and the preferred starting point for new styles, components, etc; it is a default theme intended to be duplicated from and then customized.
 - `tailwind_templates/oatmeal-mist-instrument/` is the official Tailwind theme with specific styles, page layouts, and so on that we can copy from.
+- The Oatmeal template is reasonably close to the Athena brand style, and can be used as a starting point for pages/styles/components, which can be adapted based on new design assets or the Athena style guide.
+- The Athena style guide is at: `athena/brand/athena_com_style_guide.md`.
+- The Athena brand voice guide is at: `athena/brand/athena_com_voice_and_copy.md`.
+- The Athena website is [https://athena.com](https://athena.com).
+- `athena/` contains information about the project's purpose; specifically the playbook generation.
 - `maggie_appleton_components/` is a collection of well-designed Astro components.
-- `athena/` contains information about the project's purpose; specifically the playbook generation
 - For testing, use `agent-browser`; see `docs/browser_cli_instructions.md`.
+- All plans, product requirement documents, and specifications go in `specs/`, in appropriate subdirectories based on the status of the item.
 - Verify all pages are error free yourself, without being asked by the user; keep checking the page with `agent-browser` and fixing issues until it is immaculate.
 - Do not use emojis in code, output, or documentation. Unicode symbols (✓, ✗, →, ⚠) are acceptable.
 - Refer to `docs/css_tricks_com_crafting_strong_dx_with_astro_components_and_typescript.md` for details on Astro and Typescript best practices.
@@ -13,3 +20,4 @@
 - Never use all caps for filenames or directory names or variables, unless strictly necessary (e.g. screaming snake case variable required in `.env` by a third-party library).
 - Original/older playbook format: `athena/coda_playbooks_doc/CqI5pastxC.txt`
 - Use `lower_snake_case` for every filename, directory name, etc.
+- Strongly prefer Bun and avoid Node to the maximum extent possible. Always check Bun.com documentation for ways to avoid using Node or implement a feature with the latest Bun APIs, primitives, and syntax. Refactor any discovered Node usage to Bun immediately if encountered. Only utilize Node if multiple non-Node implementations were tried relentlessly and could not be implemented to success.
