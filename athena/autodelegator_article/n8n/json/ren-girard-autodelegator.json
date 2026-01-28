@@ -1,0 +1,16 @@
+{
+  "Name": "René Girard Autodelegator",
+  "ID": "dQT4s8Wc6DqZ4oAc",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": true,
+  "Trigger Ct": 1,
+  "Last Updated": "12/14/2024 11:44:00",
+  "Created Datetime": "2/11/2024 3:17:00",
+  "Updated": "2024-12-14T16:44:01.652Z",
+  "Created": "2024-02-11T08:17:17.672Z",
+  "Nodes": "LangChain Code, Code, Webhook, OpenAI, Switch, Airtable, Set, Manual Trigger, HTTP Request, YouTube",
+  "Node Types": "@n8n/n8n-nodes-langchain.code, n8n-nodes-base.airtable, n8n-nodes-base.code, n8n-nodes-base.httpRequest, n8n-nodes-base.manualTrigger, n8n-nodes-base.openAi, n8n-nodes-base.set, n8n-nodes-base.switch, n8n-nodes-base.webhook, n8n-nodes-base.youTube",
+  "Node Names": "Build SHA1 Hash Authorization, Create delegation items from excerpt - Article, Create delegation items from excerpt - YT, Create delegation items from podcast excerpt, Create playbook from excerpt, Create playbook from excerpt - Article, Create playbook from podcast excerpt, Create Task via TickTick API V, Create Task via TickTick API V1, Create Task via TickTick API V2, Extract the parts where the person is talking about how to achieve the goal, Extract the parts where the person is talking about how to achieve the goal - Article, Extract the parts where the person is talking about how to achieve the goal - Podcast, Figure out where URL leads to, Generate Transcript via Deepgram, Get Correct mp3 URL, Get current unix epoch time, Get Goal of Podcast, Get Goal of YT Transcript, Get Video ID and Full YouTube URL from YouTube Share URLs, Get YouTube Video, Grab YT Transcript via LangChain, Merge All Text, [Old] Extract data in Browserless, Parse JSON & Clean Markdown, Podcast Index API Call, Send Output to Goal Autodelegator Airtable, Send Output to Goal Autodelegator Airtable1, Send Output to Goal Autodelegator Airtable2, Set API Keys, Spider - Crawl, Start flow, Switch, URL encode the title, Visit Page, What is the goal or outcome they are trying to achieve? - Article, When clicking ‘Test workflow’",
+  "Notes": ""
+}

@@ -1,0 +1,7 @@
+Name,Group Order,Data Points,Details
+All,0,"Name (First & Last),# Times Contacted,All Emails,Current Organization,Current Job Title,LinkedIn URL,Twitter URL,Crunchbase URL",
+Nice View,1,,
+Twitter Data,2,"Twitter Photo,Twitter Handle,Twitter Name,Twitter Bio,Twitter Location,Twitter Bio Link URL,Twitter Followers,Twitter Posts,Twitter Verified?,Twitter Listed,Twitter Account Creation Date",
+LinkedIn Data,3,"LI Founder?,LI Angel?,All LI Titles,All Companies Founded,All LI Schools",
+PeopleDataLabs Data,4,"Birth Date,PDL Location,PDL Interests,PDL Skills,PDL Schools",
+Crunchbase Data,5,"CB Investments,CB Investment Count",

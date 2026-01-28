@@ -11,3 +11,4 @@
 - Refer to `docs/css_tricks_com_crafting_strong_dx_with_astro_components_and_typescript.md` for details on Astro and Typescript best practices.
 - Refer to `.opencode/skill/daisyui/` for DaisyUI-specific best practices.
 - Never use all caps for filenames or directory names or variables, unless strictly necessary (e.g. screaming snake case variable required in `.env` by a third-party library).
+- Original/older playbook format: `athena/coda_playbooks_doc/CqI5pastxC.txt`

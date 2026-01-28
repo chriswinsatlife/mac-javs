@@ -1,0 +1,16 @@
+{
+  "Name": "Missive Comment Autodelegator",
+  "ID": "a4B0zlUBEJsLFRMA",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": true,
+  "Trigger Ct": 1,
+  "Last Updated": "2/28/2025 11:01:00",
+  "Created Datetime": "2/16/2024 3:49:00",
+  "Updated": "2025-03-01T04:01:32.405Z",
+  "Created": "2024-02-16T08:49:27.107Z",
+  "Nodes": "Webhook, TextManipulation, If, OpenAI, Airtable, Execute Workflow, Set, HTTP Request, Sticky Note",
+  "Node Types": "n8n-nodes-base.airtable, n8n-nodes-base.executeWorkflow, n8n-nodes-base.httpRequest, n8n-nodes-base.if, n8n-nodes-base.openAi, n8n-nodes-base.set, n8n-nodes-base.webhook, n8n-nodes-text-manipulation.textManipulation",
+  "Node Names": "Can Tavily Help with Research?, Catch Webhook from Missive Rule, Create Task via TickTick API V, Create Task via TickTick API V2, Create Title for Task, Edit Fields, If1, Load Profile, Missive - Get Message Details, Missive - Get Message Details1, Missive - Get Messages in Conversation, Remove HTML, Set query for Tavily API call, Tavily API call",
+  "Notes": ""
+}

@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+*.swp
+
+# Node
+node_modules/
+.npm-cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright
+playwright/.cache/
+
+# Generated assets (keep tracked by CI commits; comment out to ignore)
+# mermaid_js/generated/
+
+# Coverage/Temp
+coverage/
+.tmp/

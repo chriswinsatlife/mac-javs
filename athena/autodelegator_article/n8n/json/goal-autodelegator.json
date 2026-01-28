@@ -1,0 +1,16 @@
+{
+  "Name": "Goal Autodelegator",
+  "ID": "Z79mzV0Ev7b8tl8A",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": false,
+  "Trigger Ct": 1,
+  "Last Updated": "5/13/2024 10:47:00",
+  "Created Datetime": "2/9/2024 3:27:00",
+  "Updated": "2024-05-14T02:47:28.410Z",
+  "Created": "2024-02-09T08:27:56.295Z",
+  "Nodes": "Webhook, Split Out, Aggregate, OpenAI, Airtable, Execute Workflow, Set, Manual Trigger, HTTP Request",
+  "Node Types": "n8n-nodes-base.aggregate, n8n-nodes-base.airtable, n8n-nodes-base.executeWorkflow, n8n-nodes-base.httpRequest, n8n-nodes-base.manualTrigger, n8n-nodes-base.openAi, n8n-nodes-base.set, n8n-nodes-base.splitOut, n8n-nodes-base.webhook, n8n-nodes-browserless.Browserless",
+  "Node Names": "Aggregate, Aggregate1, Create Exa Query, Create playbook from article, Edit Fields, Exa Search, Exclude previously-found URLs, Execute Workflow, Generate delegation ideas from article, Get Body, Get Title, Look up previously-found URLs, Pick best Exa search result, Set variables, Split Out, Tavily search, Webhook, When clicking \"Test workflow\"",
+  "Notes": ""
+}

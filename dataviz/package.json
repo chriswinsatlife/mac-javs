@@ -1,0 +1,50 @@
+{
+  "name": "elicit-automation",
+  "version": "1.0.0",
+  "description": "Automate Elicit.org login, search, and file export using OpenAI Computer Use",
+  "type": "module",
+  "main": "elicit_automation.js",
+  "scripts": {
+    "start": "node elicit_automation.js",
+    "install-playwright": "npx playwright install chromium",
+    "flowrender": "node mermaid_js/src/cli/flowrender.js",
+    "flowrender:all": "node mermaid_js/src/cli/render_all.js --inDir mermaid_js --outDir mermaid_js/generated",
+    "render:any": "node mermaid_js/src/cli/render_all_any.js --inDir mermaid_js --outDir mermaid_js/generated"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.0",
+    "@ai-sdk/google": "^2.0.0",
+    "@ai-sdk/openai": "^2.0.0",
+    "@excalidraw/excalidraw": "^0.18.0",
+    "@excalidraw/mermaid-to-excalidraw": "^1.1.2",
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "@openrouter/ai-sdk-provider": "^0.7.3",
+    "ai": "^5.0.0",
+    "commander": "^14.0.0",
+    "dotenv": "^17.2.1",
+    "js-yaml": "^4.1.0",
+    "mailparser": "^3.7.4",
+    "openai": "^4.73.0",
+    "playwright": "^1.48.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rough-viz": "^2.0.5",
+    "scrapybara": "^2.5.2",
+    "turndown": "^7.2.0",
+    "zod": "^4.0.14"
+  },
+  "keywords": [
+    "automation",
+    "elicit",
+    "openai",
+    "computer-use",
+    "playwright"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.9.1",
+    "@vitest/ui": "^3.2.4",
+    "vitest": "^3.2.4"
+  }
+}

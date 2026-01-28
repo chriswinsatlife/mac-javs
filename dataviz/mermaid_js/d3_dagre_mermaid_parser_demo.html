@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D3 + Dagre + Rough, driven by Mermaid parser (no regex)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="d3_chart_styles.css" />
+  <style>
+    body { background: #fff; }
+    .chart-container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <h1>D3.js Flowchart (Latest, Mermaid AST, no regex)</h1>
+    <div id="chart"></div>
+    <pre id="src" style="display:none;">
+      flowchart LR
+      A(["Start"])
+      A --> B{"Need Auth?"}
+      B -->|Yes| C["Login"]
+      B -->|No| D["Guest Mode"]
+      C --> E{"Valid?"}
+      E -->|Yes| F["Dashboard"]
+      E -->|No| C
+      D --> G["Limited Access"]
+      F --> H["Full Features"]
+      G --> I["Upgrade Prompt"]
+      H --> J(["End"])
+      I --> C
+      F --> K["Settings"]
+      K --> F
+    </pre>
+  </div>
+
+  <!-- libs -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@dagrejs/dagre@1.1.5/dist/dagre.min.js"></script>
+  <!-- Use Mermaid UMD so we can access mermaid.mermaidAPI -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.0.0/dist/mermaid.min.js"></script>
+  <script type="module">
+  import { parse as parseMermaidAst } from 'https://cdn.jsdelivr.net/npm/@mermaid-js/parser@0.6.2/+esm';
+
+     // Plan: Prefer Mermaid AST via @mermaid-js/parser and fall back to diagram.db
+
+    function detectDir(code) {
+      const m = code.match(/\bflowchart\s+(TB|BT|LR|RL|TD)\b/i);
+      return m ? m[1].toUpperCase() : 'LR';
+    }
+
+    // Map Mermaid flowchart node types to our three shapes
+    function mapShape(t) {
+      const type = (t || '').toLowerCase();
+      if (type === 'diamond' || type === 'rhombus') return 'diamond';
+      if (type === 'circle' || type === 'ellipse' || type === 'round' || type === 'stadium') return 'ellipse';
+      return 'rect';
+    }
+
+    // Strip simple HTML that mermaid might keep in labels
+    function stripHtml(s) {
+      return String(s == null ? '' : s).replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]*>/g, '').trim();
+    }
+
+    (async function main() {
+      const mermaidCode = document.getElementById('src').textContent.trim();
+
+      // Initialize Mermaid but don't autostart rendering
+      if (window.mermaid && window.mermaid.mermaidAPI) {
+        window.mermaid.mermaidAPI.initialize({ startOnLoad: false });
+      }
+
+      // Build graph data; try AST first
+      let nodes = [];
+      let links = [];
+      let rankdir = detectDir(mermaidCode);
+
+      function extractFromAst(ast) {
+        const res = { nodes: [], links: [] };
+        const nodeMap = new Map();
+        function addNode(id, label, type) {
+          if (!id) return;
+          if (!nodeMap.has(id)) nodeMap.set(id, { id, label: stripHtml(label || id), type: mapShape(type) });
+        }
+        function addEdge(a, b, label) {
+          if (!a || !b) return;
+          res.links.push({ source: a, target: b, label: stripHtml(label) || undefined });
+          addNode(a); addNode(b);
+        }
+        function walk(o) {
+          if (!o || typeof o !== 'object') return;
+          // Common shapes in ASTs
+          if (o.type === 'node' && (o.id || o.identifier)) {
+            addNode(o.id || o.identifier, o.text || o.label || o.value, o.shape || o.nodeType || o.typeName);
+          }
+          if (o.type === 'edge' || (o.start && o.end) || (o.from && o.to)) {
+            addEdge(o.start || o.from, o.end || o.to, o.text || o.label);
+          }
+          // Some ASTs encode statements containing arrays of nodes/edges
+          for (const k of Object.keys(o)) {
+            const v = o[k];
+            if (Array.isArray(v)) v.forEach(walk);
+            else if (v && typeof v === 'object') walk(v);
+          }
+        }
+        walk(ast);
+        res.nodes = Array.from(nodeMap.values());
+        return res;
+      }
+
+      let usedAst = false;
+      try {
+        const ast = parseMermaidAst('flowchart', mermaidCode);
+        const { nodes: n2, links: l2 } = extractFromAst(ast);
+        if (n2.length && l2.length) {
+          nodes = n2; links = l2; usedAst = true;
+        }
+      } catch (e) {
+        // AST parse not available or unexpected shape; will fall back below
+      }
+
+      if (!usedAst) {
+        // Fallback to Mermaid diagram DB
+        try {
+          const diagram = await window.mermaid.mermaidAPI.getDiagramFromText(mermaidCode);
+          const db = diagram.db; // FlowDB for flowchart diagrams
+
+          if (typeof db.getDirection === 'function') {
+            const d = db.getDirection();
+            if (d) rankdir = d.toUpperCase();
+          }
+
+          let verts = typeof db.getVertices === 'function' ? db.getVertices() : null;
+          if (verts) {
+            const iter = verts instanceof Map ? verts.entries() : Object.entries(verts);
+            for (const [id, v] of iter) {
+              nodes.push({ id, label: stripHtml(v.text || id), type: mapShape(v.type) });
+            }
+          }
+
+          let edges = typeof db.getEdges === 'function' ? db.getEdges() : [];
+          for (const e of edges) {
+            links.push({ source: e.start, target: e.end, label: stripHtml(e.text) || undefined });
+          }
+        } catch (err) {
+          console.error('Mermaid DB parsing failed:', err);
+          const pre = document.createElement('pre');
+          pre.textContent = 'Mermaid parse error: ' + err?.message;
+          document.getElementById('chart').appendChild(pre);
+          return;
+        }
+      }
+
+      // Use dagre for layout
+      const g = new dagre.graphlib.Graph();
+      g.setGraph({
+        rankdir: rankdir,
+        nodesep: 120,
+        ranksep: 120,
+        marginx: 50,
+        marginy: 50,
+        ranker: 'network-simplex'
+      });
+      g.setDefaultEdgeLabel(() => ({}));
+
+      // Measure text to size nodes before layout
+      const measureSvg = d3.select('body')
+        .append('svg')
+        .attr('visibility', 'hidden')
+        .attr('width', 0)
+        .attr('height', 0);
+      const measurer = measureSvg.append('text')
+        .attr('font-family', 'Architects Daughter, cursive')
+        .attr('font-size', '12px')
+        .attr('font-weight', 'bold');
+
+      function textSize(text, fontPx = 12) {
+        measurer.attr('font-size', fontPx + 'px').text(text);
+        const box = measurer.node().getBBox();
+        return { w: Math.ceil(box.width), h: Math.ceil(box.height) };
+      }
+
+      function pickFontSize(label, type) {
+        const maxWidth = type === 'diamond' ? 260 : 220;
+        let size = 18; // start big
+        for (; size >= 10; size--) {
+          const t = textSize(label, size);
+          if (t.w <= maxWidth - 32) return { size, t, maxWidth };
+        }
+        const t = textSize(label, 10);
+        return { size: 10, t, maxWidth };
+      }
+
+      // Add nodes to dagre with dynamic sizes; shrink text to fit a target width
+      nodes.forEach(node => {
+        const padX = 32, padY = 22; // more padding so labels never kiss borders
+        const { size: fontSize, t, maxWidth } = pickFontSize(node.label || node.id, node.type);
+        node.fontSize = fontSize;
+        let baseMinW = node.type === 'diamond' ? 150 : 120;
+        let baseMinH = node.type === 'diamond' ? 90 : 56;
+        let width = Math.max(t.w + padX, baseMinW);
+        width = Math.min(width, maxWidth);
+        let height = Math.max(t.h + padY, baseMinH);
+        if (node.type === 'diamond') {
+          width = Math.max(width, Math.ceil(t.w * 1.6) + padX);
+          if (width < height + 50) width = height + 50; // avoid skinny diamonds
+          width = Math.min(width, maxWidth);
+        }
+        node.width = width;
+        node.height = height;
+        g.setNode(node.id, { label: node.label, width, height, type: node.type });
+      });
+      measureSvg.remove();
+
+      // Add edges
+      links.forEach(link => {
+        g.setEdge(link.source, link.target, { label: link.label, weight: link.label ? 5 : 1, minlen: 1 });
+      });
+
+      // Layout
+      dagre.layout(g);
+
+      // Dimensions
+      const graphInfo = g.graph();
+      const width = graphInfo.width + 100;
+      const height = graphInfo.height + 100;
+
+      // Update node positions from dagre
+      nodes.forEach(node => {
+        const n = g.node(node.id);
+        node.x = n.x; node.y = n.y; node.width = n.width; node.height = n.height;
+      });
+
+      const svg = d3.select('#chart')
+        .append('svg')
+        .attr('viewBox', `0 0 ${width} ${height}`)
+        .attr('preserveAspectRatio', 'xMidYMid meet');
+
+      const edgesG = svg.append('g').attr('class', 'edges');
+      const nodesG = svg.append('g').attr('class', 'nodes');
+
+      // Arrowhead
+      svg.append('defs')
+        .append('marker')
+        .attr('id', 'arrowhead')
+        .attr('markerWidth', 10)
+        .attr('markerHeight', 10)
+        .attr('refX', 10)
+        .attr('refY', 5)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M 0 0 L 10 5 L 0 10 Z')
+        .attr('class', 'arrow');
+
+      function getNodeEdgeIntersection(node, fromX, fromY) {
+        const dx = fromX - node.x;
+        const dy = fromY - node.y;
+        const absDx = Math.abs(dx);
+        const absDy = Math.abs(dy);
+        const w = (node.width || (node.type === 'rect' ? 100 : 80)) / 2;
+        const h = (node.height || (node.type === 'diamond' ? 60 : 40)) / 2;
+
+        if (node.type === 'ellipse') {
+          const a = w, b = h;
+          const angle = Math.atan2(dy, dx);
+          const cos = Math.cos(angle);
+          const sin = Math.sin(angle);
+          const t = Math.sqrt(a * a * sin * sin + b * b * cos * cos);
+          return { x: node.x + (a * b * cos) / t, y: node.y + (a * b * sin) / t };
+        } else if (node.type === 'diamond') {
+          const t = 1 / (absDx / w + absDy / h);
+          return { x: node.x + dx * t, y: node.y + dy * t };
+        } else {
+          if (absDx === 0 && absDy === 0) return { x: node.x, y: node.y };
+          const tx = absDx > 0 ? w / absDx : Infinity;
+          const ty = absDy > 0 ? h / absDy : Infinity;
+          const t = Math.min(tx, ty);
+          return { x: node.x + dx * t, y: node.y + dy * t };
+        }
+      }
+
+      const rc = rough.svg(svg.node());
+
+      // Helper: position at fraction t along a polyline and perpendicular normal
+      function positionAlongPolyline(points, t) {
+        const total = points.reduce((acc, p, i) => {
+          if (i === 0) return 0;
+          const dx = p.x - points[i - 1].x;
+          const dy = p.y - points[i - 1].y;
+          return acc + Math.hypot(dx, dy);
+        }, 0);
+        const target = total * t;
+        let run = 0;
+        for (let i = 1; i < points.length; i++) {
+          const a = points[i - 1];
+          const b = points[i];
+          const dx = b.x - a.x, dy = b.y - a.y;
+          const seg = Math.hypot(dx, dy);
+          if (run + seg >= target) {
+            const tt = (target - run) / (seg || 1);
+            const x = a.x + tt * dx;
+            const y = a.y + tt * dy;
+            const len = seg || 1;
+            return { x, y, nx: -dy / len, ny: dx / len, tx: dx / len, ty: dy / len };
+          }
+          run += seg;
+        }
+        const last = points[points.length - 1];
+        const prev = points[points.length - 2] || last;
+        const dx = last.x - prev.x, dy = last.y - prev.y;
+        const len = Math.hypot(dx, dy) || 1;
+        return { x: last.x, y: last.y, nx: -dy / len, ny: dx / len, tx: dx / len, ty: dy / len };
+      }
+
+      links.forEach(link => {
+        const e = g.edge(link.source, link.target);
+        let pts = (e && e.points) ? e.points.map(p => ({ ...p })) : [];
+        if (pts.length < 2) return;
+
+        const src = g.node(link.source);
+        const tgt = g.node(link.target);
+        if (src && pts[1]) {
+          const interS = getNodeEdgeIntersection({ x: src.x, y: src.y, width: src.width, height: src.height, type: src.type }, pts[1].x, pts[1].y);
+          pts[0] = interS;
+        }
+        if (tgt && pts[pts.length - 2]) {
+          const interT = getNodeEdgeIntersection({ x: tgt.x, y: tgt.y, width: tgt.width, height: tgt.height, type: tgt.type }, pts[pts.length - 2].x, pts[pts.length - 2].y);
+          pts[pts.length - 1] = interT;
+        }
+
+        // Add extra gap between lines and boxes
+        const startGap = 14; // px
+        const endGap = 20;   // px, includes arrowhead room
+        if (pts[1]) {
+          const vx0 = pts[1].x - pts[0].x;
+          const vy0 = pts[1].y - pts[0].y;
+          const len0 = Math.hypot(vx0, vy0) || 1;
+          pts[0] = { x: pts[0].x + (vx0 / len0) * startGap, y: pts[0].y + (vy0 / len0) * startGap };
+        }
+        if (pts.length >= 2) {
+          const n = pts.length;
+          const vx1 = pts[n - 2].x - pts[n - 1].x;
+          const vy1 = pts[n - 2].y - pts[n - 1].y;
+          const len1 = Math.hypot(vx1, vy1) || 1;
+          pts[n - 1] = { x: pts[n - 1].x + (vx1 / len1) * endGap, y: pts[n - 1].y + (vy1 / len1) * endGap };
+        }
+
+        // Pull control points slightly away from node borders to avoid curve bulging into shapes
+        const padOut = 12;
+        if (pts.length >= 3) {
+          const p0 = pts[0], p1 = pts[1];
+          let vx = p1.x - p0.x, vy = p1.y - p0.y;
+          let d1 = Math.hypot(vx, vy) || 1;
+          const scale1 = Math.min(padOut, d1 * 0.45) / d1;
+          pts[1] = { x: p0.x + vx * scale1 + vx * 0.2, y: p0.y + vy * scale1 + vy * 0.2 };
+
+          const pn = pts[pts.length - 1], pn1 = pts[pts.length - 2];
+          vx = pn1.x - pn.x; vy = pn1.y - pn.y;
+          let d2 = Math.hypot(vx, vy) || 1;
+          const scale2 = Math.min(padOut, d2 * 0.45) / d2;
+          pts[pts.length - 2] = { x: pn.x + vx * scale2 + vx * 0.2, y: pn.y + vy * scale2 + vy * 0.2 };
+        }
+
+        // Rough.js Bezier-like curve through Dagre points
+        const roughCurve = rc.curve(pts.map(p => [p.x, p.y]), {
+          stroke: '#666',
+          strokeWidth: 1.2,
+          roughness: 1.6,
+          bowing: 0,
+          curveTightness: 0.25
+        });
+        edgesG.node().appendChild(roughCurve);
+
+        // Invisible path for precise arrowhead alignment; simple polyline is fine
+        const d = pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
+        edgesG.append('path')
+          .attr('d', d)
+          .attr('fill', 'none')
+          .attr('stroke', 'rgba(0,0,0,0)')
+          .attr('marker-end', 'url(#arrowhead)');
+
+        if (link.label && pts.length >= 2) {
+          // Center label along the whole polyline, offset perpendicular
+          const mid = positionAlongPolyline(pts, 0.5);
+          const offset = 16;
+          edgesG.append('text')
+            .attr('x', mid.x + mid.nx * offset)
+            .attr('y', mid.y + mid.ny * offset)
+            .attr('text-anchor', 'middle')
+            .attr('font-family', 'Architects Daughter, cursive')
+            .attr('font-size', '12px')
+            .attr('fill', '#333')
+            .text(link.label);
+        }
+      });
+
+      const nodeGroups = nodesG.selectAll('.node')
+        .data(nodes)
+        .enter()
+        .append('g')
+        .attr('class', 'node')
+        .attr('transform', d => `translate(${d.x}, ${d.y})`);
+
+      nodeGroups.each(function(d) {
+        const gsel = d3.select(this);
+        const w = d.width / 2;
+        const h = d.height / 2;
+        let shape;
+        if (d.type === 'ellipse') {
+          shape = rc.ellipse(0, 0, w * 2, h * 2, { stroke: '#9370db', strokeWidth: 2, fill: '#e8e8ff', fillStyle: 'hachure', roughness: 1.5, fillWeight: 2, hachureAngle: 45 });
+        } else if (d.type === 'diamond') {
+          shape = rc.polygon([[0, -h], [w, 0], [0, h], [-w, 0]], { stroke: '#9370db', strokeWidth: 2, fill: '#e8e8ff', fillStyle: 'hachure', roughness: 1.5, fillWeight: 1.5 });
+        } else {
+          shape = rc.rectangle(-w, -h, w * 2, h * 2, { stroke: '#9370db', strokeWidth: 2, fill: '#e8e8ff', fillStyle: 'hachure', roughness: 2.5, fillWeight: 1.5, hachureAngle: 60 });
+        }
+        this.appendChild(shape);
+      });
+
+      nodeGroups.append('text')
+        .text(d => d.label)
+        .attr('x', 0)
+        .attr('y', 0)
+        .attr('text-anchor', 'middle')
+        .attr('dominant-baseline', 'middle')
+        .attr('font-family', 'Architects Daughter, cursive')
+        .attr('font-size', d => (d.fontSize || 12) + 'px')
+        .attr('font-weight', 'bold')
+        .attr('fill', '#333')
+        .attr('pointer-events', 'none');
+    })();
+  </script>
+</body>
+</html>

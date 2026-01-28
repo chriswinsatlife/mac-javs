@@ -1,0 +1,16 @@
+{
+  "Name": "Delete Autodelegator Screenshots",
+  "ID": "OvdS0qu1MbzaP4v0",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": true,
+  "Trigger Ct": 1,
+  "Last Updated": "5/17/2024 10:36:00",
+  "Created Datetime": "5/17/2024 10:26:00",
+  "Updated": "2024-05-17T14:36:37.419Z",
+  "Created": "2024-05-17T14:26:36.562Z",
+  "Nodes": "Google Drive, Schedule Trigger, HTTP Request, Sticky Note",
+  "Node Types": "n8n-nodes-base.googleDrive, n8n-nodes-base.httpRequest, n8n-nodes-base.scheduleTrigger",
+  "Node Names": "Google Drive, Google Drive - Delete Files, Make Google Drive File Private, Schedule Trigger",
+  "Notes": ""
+}

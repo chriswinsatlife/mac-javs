@@ -1,0 +1,16 @@
+{
+  "Name": "Anytime Mailbox Autodelegator",
+  "ID": "rXFrObKkDnVLev5D",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": true,
+  "Trigger Ct": 1,
+  "Last Updated": "6/10/2025 12:47:00",
+  "Created Datetime": "4/29/2024 6:10:00",
+  "Updated": "2025-06-10T04:47:13.269Z",
+  "Created": "2024-04-29T10:10:54.806Z",
+  "Nodes": "Code, AWS Textract, Split Out, OpenAI, Google Drive, Merge, Filter, Limit, Schedule Trigger, Set, HTTP Request, AWS Rekognition, Sticky Note, Edit Image",
+  "Node Types": "@n8n/n8n-nodes-langchain.openAi, n8n-nodes-base.awsRekognition, n8n-nodes-base.awsTextract, n8n-nodes-base.code, n8n-nodes-base.editImage, n8n-nodes-base.filter, n8n-nodes-base.googleDrive, n8n-nodes-base.httpRequest, n8n-nodes-base.limit, n8n-nodes-base.merge, n8n-nodes-base.scheduleTrigger, n8n-nodes-base.set, n8n-nodes-base.splitOut",
+  "Node Names": "ATMB - Login, ATMB - Redirect, AWS Rekognition, AWS Textract, Cookie, Create Task via TickTick API V, Edit Image, Envelope, Extract Image URL Strings1, Filter, Fireworks - Vision via URL1, Get ATMB - Completed1, Get ATMB Inbox1, Get ATMB Inbox3, Get ATMB Item as PDF, Get ATMB Item as PDF2, Get ATMB Item Details1, Get ATMB PDF, Get ATMB PDF2, Get Envelope Front, Get First Image, Get First Page, Get Image, Google Drive, Google Drive2, Google Drive - Update File, Limit, Merge, Merge1, OCR Text, OpenAI, Schedule Trigger, Split Out1, Split Out3",
+  "Notes": ""
+}

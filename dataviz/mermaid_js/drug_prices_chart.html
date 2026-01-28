@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchy Charts from Markdown</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="chart_styles.css">
+    
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    
+    <!-- External libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
+    <script src="https://unpkg.com/svg2roughjs/dist/svg2roughjs.umd.min.js"></script>
+</head>
+<body>
+    <div class="chart-section">
+        <h1>✏️ Your Sketchy Chart</h1>
+        <div id="rough-container">
+            <p style="color: #666;">Loading chart...</p>
+        </div>
+    </div>
+    
+    <div class="edit-section">
+        <h4>Select Markdown File:</h4>
+        <select id="fileSelector" onchange="loadSelectedFile()">
+            <option value="">Choose a file...</option>
+            <option value="drug_prices.md">Drug Prices Chart</option>
+            <option value="example_pie_chart.md">Example Pie Chart</option>
+        </select>
+        <button onclick="loadCustomFile()">📁 Load Custom File</button>
+    </div>
+    
+    <button onclick="generateChart()">🎨 Generate Sketchy Chart</button>
+    
+    <details>
+        <summary>📝 Edit Chart Settings</summary>
+        <div class="edit-section">
+            <h4>Mermaid Chart Code:</h4>
+            <textarea id="chartEditor">Select a file above or paste your Mermaid code here...</textarea>
+        </div>
+        
+        <div class="edit-section">
+            <h4>Sketchy Style:</h4>
+                    <textarea id="stylingEditor">{
+        "roughConfig": {
+            "roughness": 4,
+            "bowing": 1,
+            "fillStyle": "hachure",
+            "fillWeight": 1,
+            "hachureAngle": 45,
+            "hachureGap": 3,
+            "strokeWidth": 1,
+            "fillOpacity": 0.0,
+            "strokeOpacity": 0.1,
+            "preserveVertices": true
+        },
+        "fontFamily": "Architects Daughter",
+        "backgroundColor": "transparent",
+        "randomize": false,
+        "seed": 42,
+        "pencilFilter": false
+        }</textarea>
+        </div>
+    </details>
+
+    <!-- Hidden container for Mermaid rendering -->
+    <div id="chart-container" style="display: none;"></div>
+
+    <script>
+        async function loadSelectedFile() {
+            const selector = document.getElementById('fileSelector');
+            const filename = selector.value;
+            
+            if (!filename) return;
+            
+            try {
+                // Add cache busting to force fresh content
+                const response = await fetch(filename + '?t=' + Date.now());
+                if (response.ok) {
+                    const content = await response.text();
+                    document.getElementById('chartEditor').value = content;
+                    console.log('Loaded content:', content);
+                    generateChart();
+                } else {
+                    console.error('Failed to load file:', filename);
+                }
+            } catch (error) {
+                console.error('Error loading file:', error);
+            }
+        }
+        
+        function loadCustomFile() {
+            const filename = prompt('Enter filename (e.g., my_chart.md):');
+            if (filename) {
+                loadFile(filename);
+            }
+        }
+        
+        async function loadFile(filename) {
+            try {
+                const response = await fetch(filename);
+                if (response.ok) {
+                    const content = await response.text();
+                    document.getElementById('chartEditor').value = content;
+                    generateChart();
+                } else {
+                    alert('File not found: ' + filename);
+                }
+            } catch (error) {
+                console.error('Error loading file:', error);
+                alert('Error loading file: ' + filename);
+            }
+        }
+
+        function generateChart() {
+            try {
+                // Get the raw Mermaid code and styling
+                const mermaidCode = document.getElementById('chartEditor').value.trim();
+                const styling = JSON.parse(document.getElementById('stylingEditor').value);
+                
+                console.log('Generating chart with Mermaid code:', mermaidCode);
+                
+                // Clear containers
+                document.getElementById('chart-container').innerHTML = `<div class="mermaid">${mermaidCode}</div>`;
+                document.getElementById('rough-container').innerHTML = '<p>Generating...</p>';
+                
+                // Initialize Mermaid with xychart support  
+                mermaid.initialize({ 
+                    startOnLoad: false,
+                    theme: 'base',
+                    securityLevel: 'loose',
+                    experimental: {
+                        xyChart: true
+                    },
+                    xyChart: { 
+                        useMaxWidth: true
+                    }
+                });
+                mermaid.run().then(() => {
+                    console.log('Mermaid rendered');
+                    
+                    // Convert to sketchy after short delay
+                    setTimeout(() => {
+                        const svgElement = document.querySelector('#chart-container svg');
+                        if (svgElement) {
+                            // Fix the SVG dimensions to include all content
+                            svgElement.style.width = '100%';
+                            svgElement.style.height = 'auto';
+                            svgElement.removeAttribute('width');
+                            svgElement.removeAttribute('height');
+                            
+                            // Set a proper viewBox to show all content
+                            const bbox = svgElement.getBBox();
+                            const padding = 30;
+                            svgElement.setAttribute('viewBox', 
+                                `${bbox.x - padding} ${bbox.y - padding} ${bbox.width + padding * 2} ${bbox.height + padding * 2}`);
+                            
+                            const roughConverter = new svg2roughjs.Svg2Roughjs('#rough-container');
+                            roughConverter.svg = svgElement;
+                            
+                            // Apply styling
+                            roughConverter.roughConfig = styling.roughConfig;
+                            roughConverter.fontFamily = styling.fontFamily;
+                            roughConverter.backgroundColor = styling.backgroundColor;
+                            roughConverter.randomize = styling.randomize;
+                            roughConverter.seed = styling.seed;
+                            roughConverter.pencilFilter = styling.pencilFilter;
+                            
+                            roughConverter.sketch().then(() => {
+                                console.log('Sketchy chart complete!');
+                                // Clear the "Generating..." text after chart is ready
+                                const generatingText = document.querySelector('#rough-container p');
+                                if (generatingText && generatingText.textContent.includes('Generating')) {
+                                    generatingText.style.display = 'none';
+                                }
+                                
+                                // Make sure the final output shows full content
+                                const finalSvg = document.querySelector('#rough-container svg');
+                                if (finalSvg) {
+                                    finalSvg.style.width = '100%';
+                                    finalSvg.style.height = 'auto';
+                                    finalSvg.style.maxWidth = '800px';
+                                }
+                            });
+                        }
+                    }, 500);
+                }).catch(err => {
+                    console.error('Mermaid failed:', err);
+                    document.getElementById('rough-container').innerHTML = '<p style="color: red;">Chart generation failed</p>';
+                });
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('rough-container').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+        
+        // Auto-load on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Auto-select and load the drug prices chart
+            const selector = document.getElementById('fileSelector');
+            selector.value = 'drug_prices.md';
+            loadSelectedFile();
+        });
+    </script>
+</body>
+</html>

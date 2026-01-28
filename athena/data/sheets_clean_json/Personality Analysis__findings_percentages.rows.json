@@ -1,0 +1,158 @@
+[
+  {
+    "__EMPTY_1": "Findings",
+    "__EMPTY_2": "Matrix-old",
+    "__EMPTY_3": "Matrix2-old",
+    "__EMPTY_4": "Matrix-new",
+    "__EMPTY_5": "Matrix2-new",
+    "__EMPTY_6": "Matrix-all",
+    "__EMPTY_7": "Matrix2-all"
+  },
+  {
+    "__EMPTY": "a)",
+    "__EMPTY_1": "Client Openness positively correlates to success.",
+    "__EMPTY_2": "79% (avg is 79%)",
+    "__EMPTY_3": "86% (avg is 81%)",
+    "__EMPTY_4": "78% (avg is 75%)",
+    "__EMPTY_5": "78% (avg is 75%)",
+    "__EMPTY_6": "82% (avg is 81%)",
+    "__EMPTY_7": "82% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "and performs well with:"
+  },
+  {
+    "__EMPTY_1": "High Dominance",
+    "__EMPTY_2": "81% (avg is 79%)",
+    "__EMPTY_3": "89% (avg is 81%)",
+    "__EMPTY_4": "85% (avg is 75%)",
+    "__EMPTY_5": "84% (avg is 75%)",
+    "__EMPTY_6": "85% (avg is 81%)",
+    "__EMPTY_7": "85% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "High Neuroticism",
+    "__EMPTY_2": "78% (avg is 79%)",
+    "__EMPTY_3": "87% (avg is 81%)",
+    "__EMPTY_4": "81% (avg is 75%)",
+    "__EMPTY_5": "82% (avg is 75%)",
+    "__EMPTY_6": "86% (avg is 81%)",
+    "__EMPTY_7": "86% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "Low Calculativeness",
+    "__EMPTY_2": "82% (avg is 79%, high is 76%)",
+    "__EMPTY_3": "84% (avg is 81%, high is 88%)",
+    "__EMPTY_4": "73% (avg is 75%, high is 82%)",
+    "__EMPTY_5": "73% (avg is 75%, high is 82%)",
+    "__EMPTY_6": "79% (avg is 81%, high is 85%)",
+    "__EMPTY_7": "79% (avg is 81%, high is 85%)"
+  },
+  {
+    "__EMPTY": "b)",
+    "__EMPTY_1": "Client Conscientiousness positively correlates to success.",
+    "__EMPTY_2": "80% (avg is 79%)",
+    "__EMPTY_3": "86% (avg is 81%)",
+    "__EMPTY_4": "76% (avg 75%)",
+    "__EMPTY_5": "76% (avg 75%)",
+    "__EMPTY_6": "83% (avg is 81%)",
+    "__EMPTY_7": "83% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "and performs well with:"
+  },
+  {
+    "__EMPTY_1": "High conscientiousness",
+    "__EMPTY_2": "84% (avg is 79%)",
+    "__EMPTY_3": "87% (avg is 81%)",
+    "__EMPTY_4": "81% (avg is 75%)",
+    "__EMPTY_5": "80% (avg is 75%)",
+    "__EMPTY_6": "84% (avg is 81%)",
+    "__EMPTY_7": "85% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "High dominance",
+    "__EMPTY_2": "84% (avg is 79%)",
+    "__EMPTY_3": "90% (avg is 81%)",
+    "__EMPTY_4": "79% (avg is 75%)",
+    "__EMPTY_5": "80% (avg is 75%)",
+    "__EMPTY_6": "87% (avg is 81%)",
+    "__EMPTY_7": "86% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "Low calculativeness",
+    "__EMPTY_2": "83% (avg is 79%, high is 75%)",
+    "__EMPTY_3": "85% (avg is 81%, high is 88%)",
+    "__EMPTY_4": "72% (avg is 75%, high is 79%)",
+    "__EMPTY_5": "72% (avg is 75%, high is 78%)",
+    "__EMPTY_6": "82% (avg is 81%, high is 84%)",
+    "__EMPTY_7": "82% (avg is 81%, high is 84%)"
+  },
+  {
+    "__EMPTY_1": "Low extraversion",
+    "__EMPTY_2": "83% (avg is 79%)",
+    "__EMPTY_3": "86% (avg is 81%)",
+    "__EMPTY_4": "80% (avg is 75%)",
+    "__EMPTY_5": "76% (avg is 75%)",
+    "__EMPTY_6": "82% (avg is 81%)",
+    "__EMPTY_7": "82% (avg is 81%)"
+  },
+  {
+    "__EMPTY": "c)",
+    "__EMPTY_1": "Client Neuroticism negatively correlates to success.",
+    "__EMPTY_2": "79% (avg is 79%)",
+    "__EMPTY_3": "86% (avg is 81%)",
+    "__EMPTY_4": "78% (avg is 75%)",
+    "__EMPTY_5": "78% (avg is 75%)",
+    "__EMPTY_6": "83% (avg is 81%)",
+    "__EMPTY_7": "83% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "and performs well with:"
+  },
+  {
+    "__EMPTY_1": "High Neuroticism",
+    "__EMPTY_2": "82% (avg is 79%)",
+    "__EMPTY_3": "83% (avg is 81%)",
+    "__EMPTY_4": "68% (avg is 75%, low is 79%)",
+    "__EMPTY_5": "70% (avg is 75%, low is 80%)",
+    "__EMPTY_6": "83% (avg is 81%)",
+    "__EMPTY_7": "83% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "High Dominance",
+    "__EMPTY_2": "80% (avg is 79%)",
+    "__EMPTY_3": "83% (avg is 81%)",
+    "__EMPTY_4": "75% (avg is 75%)",
+    "__EMPTY_5": "77% (avg is 75%)",
+    "__EMPTY_6": "85% (avg is 81%)",
+    "__EMPTY_7": "84% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "Low Calculativeness",
+    "__EMPTY_2": "76% (avg is 79%)",
+    "__EMPTY_3": "85% (avg is 81%)",
+    "__EMPTY_4": "65% (avg is 75%)",
+    "__EMPTY_5": "66% (avg is 75%)",
+    "__EMPTY_6": "80% (avg is 81%)",
+    "__EMPTY_7": "80% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "Low Extraversion",
+    "__EMPTY_2": "84% (avg is 79%)",
+    "__EMPTY_3": "84% (avg is 81%)",
+    "__EMPTY_4": "68% (avg is 75%)",
+    "__EMPTY_5": "72% (avg is 75%)",
+    "__EMPTY_6": "79% (avg is 81%)",
+    "__EMPTY_7": "80% (avg is 81%)"
+  },
+  {
+    "__EMPTY_1": "High Conscientousness",
+    "__EMPTY_2": "83% (avg is 79%)",
+    "__EMPTY_3": "81% (avg is 81%)",
+    "__EMPTY_4": "76% (avg is 75%)",
+    "__EMPTY_5": "75% (avg is 75%)",
+    "__EMPTY_6": "81% (avg is 81%)",
+    "__EMPTY_7": "81% (avg is 81%)"
+  }
+]

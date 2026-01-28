@@ -1,0 +1,30 @@
+# D3 JS Links
+
+- [d3 Flowchart Repo](https://codesandbox.io/p/sandbox/d3-flow-chart-testing-16su9?file=%2Findex.html)
+  - Sandbox/repo of nice D3 JS Flowcharts from JSON data, although not with rough styling
+- [D3 Org Chart](https://github.com/bumbeishvili/org-chart#readme)
+  - Highly customizable org chart library made for D3 JS V7 with integrations available for Angular, React, Vue; `npm i d3-org-chart`
+- [D3 + Rough SVG](https://observablehq.com/@lifewinning/d3-rough-svg)
+  - Good example of rough map drawn with D3 JS
+- [Handy](https://github.com/gicentre/handy)
+  - Older repo used by RoughViz JS with good hand-drawn styling
+- [RoughViz JS](https://github.com/jwilber/roughViz)
+  - Older repo with great styling and robust API for hand-drawn D3 JS charts, but stuck with legacy code and only supports D3 JS v5 vs current v7.9.0
+- [Rough JS](https://roughjs.com/)
+  - Older repo used as the base and primitives for RoughViz JS
+- [SVG to Rough JS](https://www.jsdelivr.com/package/npm/svg2roughjs)
+  - Library used by Mermaid in their application for rough drawn rendering
+- [D3 Flextree](https://github.com/klortho/d3-flextree)
+  - This plugin provides a more general version of the D3 tree layout module. It has not been updated in several years and the sole developer died in 2024.
+- [D3 JS Tree](https://d3js.org/d3-hierarchy/tree)
+  - D3 data visualization most used for flowcharts (tree and flextree), official documentation
+- [The D3.js  Graph Gallery](https://d3-graph-gallery.com/)
+  - Collection of D3 JS graphs
+- [Swoopy Arrows](https://github.com/bizweekgraphics/swoopyarrows)
+  - A family of three path generators for making curved arrows for annotations. 
+- [Swoopy Drag](https://github.com/1wheel/swoopy-drag)
+  - Artisanal label placement for d3 graphics
+  - [More details](https://1wheel.github.io/swoopy-drag/)
+- [Ring Note](https://github.com/armollica/d3-ring-note)
+  - D3 plugin for creating and positioning circle and text annotation. Useful for commenting on an area of a graphic or map.
+- 

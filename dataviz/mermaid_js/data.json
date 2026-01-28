@@ -1,0 +1,13 @@
+{
+  "title": "NETFLIX",
+  "values": [
+    {
+      "label": "Time spent looking for movie",
+      "value": 90
+    },
+    {
+      "label": "Time spent watching it", 
+      "value": 10
+    }
+  ]
+}

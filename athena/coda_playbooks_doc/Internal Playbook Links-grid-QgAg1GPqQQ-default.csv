@@ -1,0 +1,20 @@
+Name,URL,Setup,Notes
+Zapier zap with OpenAI that drafts an email,https://zapier.com/app/editor/153408257/nodes/153409803,"* Emails with a certain star or label get modified with Zapier steps for text edits and javascript, and then sent to OpenAI with the prompt “reply to this email”
+  * The first text action finds the horizontal line indicating that below that are previous emails in the thread, and only gets the text up to that line (to limit how much data is sent to OpenAI)
+  * The first javascript action gets the person’s first name (Gmail only provides full name) and converts the email body to JSON (the format required for APIs
+  * The second javascript step creates the body of the API call for OpenAI, which includes the fields to modify for getting ‘safer’ responses (e.g. temperature), and other options, and formats it as a JSON string
+  * The ‘custom request’ step is the API call; it does a simple POST request to OpenAI
+  * The text step after the API call removes extra spaces
+* The Gmail step creates a draft based on the OpenAI response
+  * Limitations: Zapier doesn’t allow you to add the draft to the same thread as a reply; it gets put in the drafts folder unattached to any email",* This is a great template for doing API calls in Zapier in general
+Airtable base with OpenAI scripting app (Meeting Bios),https://airtable.com/appyIF2hJ412mnBFk/tbl6h8tStP0eS6LW7/viweberkvlASKMAga?blocks=bipbWAyk9hS1v7tLz,"* The scripting app in Dashboard 1 of this zap does an API call to OpenAI and generates a sentence about each person (row) with the same prompt
+* In the future, we want to modify the prompt based on spreadsheet columns. 
+  * For example, if the most recent fundraising round was <60 days, use a prompt based on that; e.g. ”Congratulate {FirstName} on {Company}’s recent fundraise”.
+* The options to modify the API calls are in the line with “let PROMPT =”
+  * Currently line 47
+* The output is added to a column called OpenAI2 (there was an OpenAI column used with another Airtable app, which is no longer used)","* This is a great template for doing API calls in Airtable in general for the whole base; for one-per-row, the top half of the code is useful as a starting point. "
+Clay base with OpenAI API calls,https://app.clay.run/workspaces/2318/tables/t_8gz0uLx3g7YW/views/gv_2PepLNTKDM6s,"* The prompt column creates a prompt for OpenAI based on the person’s email and name.
+* The data column prepares the API call and  sets the options for OpenAI and converts it to JSON
+* The API call columns both call the OpenAI API with content from the other columns, and the “negative” one simply tells the API to provide a negative response (e.g. declining a meeting)","* This base has a manually-entered email, though obviously it could receive emails from a webhook in the future.
+* We can customize what the prompt is based on other spreadsheet data, to make the responses more different and personalized. 
+* This is a good template for API calls in Clay."

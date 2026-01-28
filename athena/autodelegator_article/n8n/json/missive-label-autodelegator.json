@@ -1,0 +1,16 @@
+{
+  "Name": "Missive Label Autodelegator",
+  "ID": "IjMGZBXBugOA2Bb0",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": true,
+  "Trigger Ct": 1,
+  "Last Updated": "6/10/2025 11:59:00",
+  "Created Datetime": "3/20/2025 5:20:00",
+  "Updated": "2025-06-11T03:59:05.202Z",
+  "Created": "2025-03-20T09:20:11.769Z",
+  "Nodes": "No Operation, do nothing, Webhook, Execution Data, TextManipulation, OpenAI, Markdown, Switch, Set, Manual Trigger, HTTP Request, Sticky Note",
+  "Node Types": "n8n-nodes-base.executionData, n8n-nodes-base.httpRequest, n8n-nodes-base.manualTrigger, n8n-nodes-base.markdown, n8n-nodes-base.noOp, n8n-nodes-base.openAi, n8n-nodes-base.set, n8n-nodes-base.switch, n8n-nodes-base.webhook, n8n-nodes-text-manipulation.textManipulation",
+  "Node Names": "Create Task Title, Create Task via TickTick API, Create Task via TickTick API - AJ, Create Task via TickTick API - CL, Create Task via TickTick API - CY, Execution Data, HTML to Markdown, Missive - Get Message Details, No Operation, do nothing, Prepare Content, Remove HTML, Switch, Webhook, When clicking ‘Execute workflow’",
+  "Notes": ""
+}

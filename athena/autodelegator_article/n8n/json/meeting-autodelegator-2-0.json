@@ -1,0 +1,16 @@
+{
+  "Name": "Meeting Autodelegator 2.0",
+  "ID": "Ymz8ObEPcfzxrqV4",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": false,
+  "Trigger Ct": 1,
+  "Last Updated": "9/1/2024 4:26:00",
+  "Created Datetime": "8/9/2024 3:52:00",
+  "Updated": "2024-09-01T20:26:22.970Z",
+  "Created": "2024-08-09T07:52:17.531Z",
+  "Nodes": "GraphQL, Webhook, Split Out, Aggregate, OpenAI, Merge, Filter, Limit, Schedule Trigger, Set, HTTP Request, Sticky Note, Sort",
+  "Node Types": "@n8n/n8n-nodes-langchain.openAi, n8n-nodes-base.aggregate, n8n-nodes-base.filter, n8n-nodes-base.graphql, n8n-nodes-base.httpRequest, n8n-nodes-base.limit, n8n-nodes-base.merge, n8n-nodes-base.scheduleTrigger, n8n-nodes-base.set, n8n-nodes-base.sort, n8n-nodes-base.splitOut, n8n-nodes-base.webhook",
+  "Node Names": "Aggregate, Clean OpenAI Output, Create TT Task - Process Meeting with All Action Items, Create TT Tasks for Each Action Item, Create TT Tasks for Each Action Item1, Create TT Tasks for Each Action Item2, Filter, Filter for Meeting Ended in Last 5 Minutes, Get Active Tasks, Get Completed Tasks, Get Details for Meeting with Transcript1, Get Details for Meeting w/o Transcript1, Get Recent Fireflies Meetings, Get Recent Fireflies Meetings2, Get TickTick Tasks, Get Transcript, Limit, Merge, Merge1, Merge2, Merge3, OpenAI - Assign to AI & Make JSON, OpenAI - Check Task, OpenAI - Find Related Transcript Portions, OpenAI - Make JSON of Separate Tasks, Organize Meeting Data1, Schedule Trigger1, Sort, Sort by Recency, Split Out1, Split Out Action Items, Tasks, Tasks from Transcript, Tasks from Transcript1, Webhook - Meeting Transcription Completed",
+  "Notes": ""
+}

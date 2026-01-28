@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js Flowchart with Sketchy Style and Dagre Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="d3_chart_styles.css">
+</head>
+<body>
+    <div class="chart-container">
+        <h1>D3.js Flowchart</h1>
+        <div id="chart"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/roughjs@4.5.2/bundled/rough.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@dagrejs/dagre@1.1.5/dist/dagre.min.js"></script>
+    <script>
+        // Parse Mermaid-like syntax
+        function parseMermaidSyntax(mermaidCode) {
+            const lines = mermaidCode.trim().split('\n');
+            const nodes = [];
+            const links = [];
+            const nodeMap = {};
+            
+            lines.forEach(line => {
+                line = line.trim();
+                if (!line || line.startsWith('flowchart')) return;
+                
+                // Parse node definitions and links
+                const linkPattern = new RegExp('(\\w+)\\s*-->\\s*(\\w+)');
+                
+                // Simpler, more reliable regex patterns
+                const rectPattern = new RegExp('(\\w+)\\[["\']?([^"\'\\]]+)["\']?\\]');
+                const diamondPattern = new RegExp('(\\w+)\\{["\']?([^"\'\\}]+)["\']?\\}');
+                const ellipsePattern = new RegExp('(\\w+)\\(\\[["\']?([^"\'\\]]+)["\']?\\]\\)');
+                
+                const linkMatch = line.match(linkPattern);
+                const rectMatch = line.match(rectPattern);
+                const diamondMatch = line.match(diamondPattern);
+                const ellipseMatch = line.match(ellipsePattern);
+                
+                // Debug: log what we're trying to parse
+                console.log('Parsing line:', line);
+                console.log('Link match:', linkMatch);
+                console.log('Rect match:', rectMatch);
+                console.log('Diamond match:', diamondMatch);
+                console.log('Ellipse match:', ellipseMatch);
+                
+                if (linkMatch) {
+                    // It's a link
+                    const [, source, target] = linkMatch;
+                    links.push({ source, target });
+                    
+                    // Create nodes if they don't exist
+                    if (!nodeMap[source]) {
+                        nodeMap[source] = { id: source, label: source };
+                        nodes.push(nodeMap[source]);
+                    }
+                    if (!nodeMap[target]) {
+                        nodeMap[target] = { id: target, label: target };
+                        nodes.push(nodeMap[target]);
+                    }
+                } else if (rectMatch) {
+                    // It's a rectangle node
+                    const [, id, label] = rectMatch;
+                    if (!nodeMap[id]) {
+                        nodeMap[id] = { id, label, type: 'rect' };
+                        nodes.push(nodeMap[id]);
+                    } else {
+                        nodeMap[id].label = label;
+                        nodeMap[id].type = 'rect';
+                    }
+                } else if (diamondMatch) {
+                    // It's a diamond node
+                    const [, id, label] = diamondMatch;
+                    if (!nodeMap[id]) {
+                        nodeMap[id] = { id, label, type: 'diamond' };
+                        nodes.push(nodeMap[id]);
+                    } else {
+                        nodeMap[id].label = label;
+                        nodeMap[id].type = 'diamond';
+                    }
+                } else if (ellipseMatch) {
+                    // It's an ellipse node
+                    const [, id, label] = ellipseMatch;
+                    if (!nodeMap[id]) {
+                        nodeMap[id] = { id, label, type: 'ellipse' };
+                        nodes.push(nodeMap[id]);
+                    } else {
+                        nodeMap[id].label = label;
+                        nodeMap[id].type = 'ellipse';
+                    }
+                }
+            });
+            
+            // Debug: log what was parsed
+            console.log('Parsed nodes:', nodes);
+            console.log('Parsed links:', links);
+            
+            return { nodes, links };
+        }
+        
+        // Example Mermaid syntax - try a complex one!
+        const mermaidCode = `
+            flowchart LR
+            A(["Start"])
+            A --> B{"Need Auth?"}
+            B -->|Yes| C["Login"]
+            B -->|No| D["Guest Mode"]
+            C --> E{"Valid?"}
+            E -->|Yes| F["Dashboard"]
+            E -->|No| C
+            D --> G["Limited Access"]
+            F --> H["Full Features"]
+            G --> I["Upgrade Prompt"]
+            H --> J(["End"])
+            I --> C
+            F --> K["Settings"]
+            K --> F
+        `;
+        
+        // Parse it
+        const { nodes, links } = parseMermaidSyntax(mermaidCode);
+        
+        // Use dagre for intelligent layout
+        const g = new dagre.graphlib.Graph();
+        g.setGraph({
+            rankdir: 'LR',  // Left to right
+            nodesep: 100,   // Horizontal spacing
+            ranksep: 100,   // Vertical spacing
+            marginx: 50,
+            marginy: 50
+        });
+        g.setDefaultEdgeLabel(() => ({}));
+        
+        // Add nodes to dagre
+        nodes.forEach(node => {
+            g.setNode(node.id, { 
+                label: node.label,
+                width: node.type === 'rect' ? 100 : 80,
+                height: node.type === 'diamond' ? 60 : 40,
+                type: node.type
+            });
+        });
+        
+        // Add edges to dagre
+        links.forEach(link => {
+            g.setEdge(link.source, link.target);
+        });
+        
+        // Calculate the layout
+        dagre.layout(g);
+        
+        // Get the graph dimensions
+        const graphInfo = g.graph();
+        const width = graphInfo.width + 100;
+        const height = graphInfo.height + 100;
+        
+        // Update node positions from dagre layout
+        nodes.forEach(node => {
+            const n = g.node(node.id);
+            node.x = n.x;
+            node.y = n.y;
+            node.width = n.width;
+            node.height = n.height;
+        });
+        
+        const svg = d3.select('#chart')
+            .append('svg')
+            .attr('viewBox', `0 0 ${width} ${height}`)
+            .attr('preserveAspectRatio', 'xMidYMid meet');
+        
+        // Create arrowhead marker
+        svg.append('defs')
+            .append('marker')
+            .attr('id', 'arrowhead')
+            .attr('markerWidth', 10)
+            .attr('markerHeight', 10)
+            .attr('refX', 10)
+            .attr('refY', 5)
+            .attr('orient', 'auto')
+            .append('path')
+            .attr('d', 'M 0 0 L 10 5 L 0 10 Z')
+            .attr('class', 'arrow');
+        
+        // Helper function to calculate edge intersection
+        function getNodeEdgeIntersection(node, fromX, fromY) {
+            const dx = fromX - node.x;
+            const dy = fromY - node.y;
+            const angle = Math.atan2(dy, dx);
+            
+            if (node.type === 'ellipse') {
+                // Ellipse intersection
+                const a = 40; // half width
+                const b = 20; // half height
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                const t = Math.sqrt((a * a * sin * sin) + (b * b * cos * cos));
+                return {
+                    x: node.x + (a * b * cos) / t,
+                    y: node.y + (a * b * sin) / t
+                };
+            } else if (node.type === 'diamond') {
+                // Diamond intersection
+                const size = 40;
+                const scale = size / Math.max(Math.abs(dx), Math.abs(dy));
+                return {
+                    x: node.x + dx * scale * 0.7,
+                    y: node.y + dy * scale * 0.7
+                };
+            } else {
+                // Rectangle intersection
+                const w = 50; // half width
+                const h = 20; // half height
+                const absX = Math.abs(dx);
+                const absY = Math.abs(dy);
+                
+                if (absX / w > absY / h) {
+                    // Intersect with left/right edge
+                    return {
+                        x: node.x + (dx > 0 ? w : -w),
+                        y: node.y + (dy * w) / absX
+                    };
+                } else {
+                    // Intersect with top/bottom edge
+                    return {
+                        x: node.x + (dx * h) / absY,
+                        y: node.y + (dy > 0 ? h : -h)
+                    };
+                }
+            }
+        }
+
+        // Draw links with rough.js
+        const rc = rough.svg(svg.node());
+        
+        links.forEach(link => {
+            const sourceNode = nodes.find(n => n.id === link.source);
+            const targetNode = nodes.find(n => n.id === link.target);
+            const edge = g.edge(link.source, link.target);
+            
+            // Calculate proper start and end points at node edges
+            const sourceEdge = getNodeEdgeIntersection(sourceNode, targetNode.x, targetNode.y);
+            const targetEdge = getNodeEdgeIntersection(targetNode, sourceNode.x, sourceNode.y);
+            
+            // Draw single rough line from source edge to target edge
+            const line = rc.line(
+                sourceEdge.x, sourceEdge.y,
+                targetEdge.x, targetEdge.y,
+                {
+                    stroke: '#666',
+                    strokeWidth: 1,
+                    roughness: 1.5,
+                    bowing: 0
+                }
+            );
+            svg.node().appendChild(line);
+            
+            // Add clean arrowhead
+            svg.append('line')
+                .attr('x1', sourceEdge.x)
+                .attr('y1', sourceEdge.y)
+                .attr('x2', targetEdge.x)
+                .attr('y2', targetEdge.y)
+                .attr('stroke', 'none')
+                .attr('marker-end', 'url(#arrowhead)');
+        });
+        
+        // Draw nodes
+        const nodeGroups = svg.selectAll('.node')
+            .data(nodes)
+            .enter()
+            .append('g')
+            .attr('class', 'node')
+            .attr('transform', d => `translate(${d.x}, ${d.y})`);
+        
+        // Add shapes with rough.js
+        nodeGroups.each(function(d) {
+            const g = d3.select(this);
+            let shape;
+            
+            if (d.type === 'ellipse') {
+                shape = rc.ellipse(0, 0, 80, 40, {
+                    stroke: '#9370db',
+                    strokeWidth: 2,
+                    fill: '#e8e8ff',
+                    fillStyle: 'hachure',
+                    roughness: 1.5,
+                    fillWeight: 2,
+                    hachureAngle: 45
+                });
+            } else if (d.type === 'diamond') {
+                shape = rc.polygon([
+                    [0, -30], [40, 0], [0, 30], [-40, 0]
+                ], {
+                    stroke: '#9370db',
+                    strokeWidth: 2,
+                    fill: '#e8e8ff',
+                    fillStyle: 'hachure',
+                    roughness: 1.5,
+                    fillWeight: 1.5
+                });
+            } else {
+                shape = rc.rectangle(-50, -20, 100, 40, {
+                    stroke: '#9370db',
+                    strokeWidth: 2,
+                    fill: '#e8e8ff',
+                    fillStyle: 'hachure',
+                    roughness: 2.5,
+                    fillWeight: 1.5,
+                    hachureAngle: 60
+                });
+            }
+            
+            this.appendChild(shape);
+        });
+        
+        // Add text labels (can't make these rough)
+        nodeGroups.append('text')
+            .text(d => d.label)
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('text-anchor', 'middle')
+            .attr('dominant-baseline', 'middle')
+            .attr('font-family', 'Architects Daughter, cursive')
+            .attr('font-size', '12px')
+            .attr('font-weight', 'bold')
+            .attr('fill', '#333')
+            .attr('pointer-events', 'none');
+    </script>
+</body>
+</html>

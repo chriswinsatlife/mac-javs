@@ -1,0 +1,7572 @@
+[
+  {
+    "__EMPTY": "Cleaned Type",
+    "Period": 45108,
+    "__EMPTY_2": 45139,
+    "__EMPTY_3": 45170,
+    "__EMPTY_4": 45200,
+    "__EMPTY_5": 45231,
+    "__EMPTY_6": 45261,
+    "__EMPTY_7": 45292,
+    "__EMPTY_8": 45323,
+    "__EMPTY_9": 45352,
+    "__EMPTY_10": 45383,
+    "__EMPTY_11": 45413,
+    "__EMPTY_12": 45444,
+    "__EMPTY_13": "Total"
+  },
+  {
+    "__EMPTY": "Average Annual Ticket Size - 100-1k",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 77,
+    "__EMPTY_5": 81,
+    "__EMPTY_6": 83,
+    "__EMPTY_7": 91,
+    "__EMPTY_8": 100,
+    "__EMPTY_9": 107,
+    "__EMPTY_10": 106,
+    "__EMPTY_11": 115,
+    "__EMPTY_12": 120,
+    "__EMPTY_13": 120
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 21,
+    "__EMPTY_5": 21,
+    "__EMPTY_6": 13,
+    "__EMPTY_7": 13,
+    "__EMPTY_8": 16,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_4": 13,
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 39,
+    "__EMPTY_7": 9,
+    "__EMPTY_9": 79,
+    "__EMPTY_10": 7.5,
+    "__EMPTY_12": 38,
+    "__EMPTY_13": 28.89
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_4": 13,
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 39,
+    "__EMPTY_7": 9,
+    "__EMPTY_9": 79,
+    "__EMPTY_10": 7.5,
+    "__EMPTY_12": 38,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 6,
+    "__EMPTY_5": 5,
+    "__EMPTY_6": 10,
+    "__EMPTY_7": 9,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 20,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 93
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 0.857,
+    "__EMPTY_5": 0.833,
+    "__EMPTY_6": 0.833,
+    "__EMPTY_7": 0.9,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.952,
+    "__EMPTY_10": 0.818,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.833,
+    "__EMPTY_13": 0.912
+  },
+  {
+    "__EMPTY": "Average Annual Ticket Size - 1k-5k",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 64,
+    "__EMPTY_12": 64,
+    "__EMPTY_13": 64
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 2
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_11": 7,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_11": 7,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 1
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 38
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 0.833,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.974
+  },
+  {
+    "__EMPTY": "Average Annual Ticket Size - 50k+",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 62,
+    "__EMPTY_5": 71,
+    "__EMPTY_6": 77,
+    "__EMPTY_7": 82,
+    "__EMPTY_8": 92,
+    "__EMPTY_9": 100,
+    "__EMPTY_10": 106,
+    "__EMPTY_11": 120,
+    "__EMPTY_12": 135,
+    "__EMPTY_13": 135
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 7,
+    "__EMPTY_5": 13,
+    "__EMPTY_6": 16,
+    "__EMPTY_7": 11,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 25,
+    "__EMPTY_13": 25
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 60.67,
+    "__EMPTY_9": 23,
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 29.75
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 72,
+    "__EMPTY_9": 27,
+    "__EMPTY_12": 19.5,
+    "__EMPTY_13": 23.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 3,
+    "__EMPTY_7": 11,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 12,
+    "__EMPTY_11": 11,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 77
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.846,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.643,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.667,
+    "__EMPTY_13": 0.885
+  },
+  {
+    "__EMPTY": "B2B - Function - Analytics",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 71,
+    "__EMPTY_5": 78,
+    "__EMPTY_6": 89,
+    "__EMPTY_7": 92,
+    "__EMPTY_8": 101,
+    "__EMPTY_9": 115,
+    "__EMPTY_10": 138,
+    "__EMPTY_11": 161,
+    "__EMPTY_12": 175,
+    "__EMPTY_13": 175
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 14,
+    "__EMPTY_5": 14,
+    "__EMPTY_6": 18,
+    "__EMPTY_7": 15,
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 12,
+    "__EMPTY_10": 15,
+    "__EMPTY_11": 25,
+    "__EMPTY_12": 33,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_4": 38.5,
+    "__EMPTY_7": 14,
+    "__EMPTY_9": 25.67,
+    "__EMPTY_10": 34.75,
+    "__EMPTY_11": 33.33,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 27.31
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_4": 38.5,
+    "__EMPTY_7": 14,
+    "__EMPTY_9": 27,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 3,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 6,
+    "__EMPTY_6": 7,
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 14,
+    "__EMPTY_10": 22,
+    "__EMPTY_11": 18,
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 116
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 0.6,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.875,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.824,
+    "__EMPTY_10": 0.88,
+    "__EMPTY_11": 0.857,
+    "__EMPTY_12": 0.882,
+    "__EMPTY_13": 0.892
+  },
+  {
+    "__EMPTY": "B2B - Function - Engineering",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 63,
+    "__EMPTY_2": 67,
+    "__EMPTY_3": 76,
+    "__EMPTY_4": 86,
+    "__EMPTY_5": 102,
+    "__EMPTY_6": 110,
+    "__EMPTY_7": 119,
+    "__EMPTY_8": 125,
+    "__EMPTY_9": 136,
+    "__EMPTY_10": 159,
+    "__EMPTY_11": 180,
+    "__EMPTY_12": 187,
+    "__EMPTY_13": 187
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 4,
+    "__EMPTY_2": 4,
+    "__EMPTY_3": 7,
+    "__EMPTY_4": 14,
+    "__EMPTY_5": 27,
+    "__EMPTY_6": 25,
+    "__EMPTY_7": 22,
+    "__EMPTY_8": 17,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 18,
+    "__EMPTY_11": 22,
+    "__EMPTY_12": 27,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 55,
+    "__EMPTY_6": 45,
+    "__EMPTY_7": 52,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 48,
+    "__EMPTY_10": 29,
+    "__EMPTY_11": 34.67,
+    "__EMPTY_12": 18.75,
+    "__EMPTY_13": 35.71
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 55,
+    "__EMPTY_6": 45,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 48,
+    "__EMPTY_10": 29,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 3,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 15
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 5,
+    "__EMPTY_2": 6,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 4,
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 11,
+    "__EMPTY_7": 12,
+    "__EMPTY_8": 16,
+    "__EMPTY_9": 20,
+    "__EMPTY_10": 21,
+    "__EMPTY_11": 24,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 139
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.857,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.8,
+    "__EMPTY_5": 0.75,
+    "__EMPTY_6": 0.917,
+    "__EMPTY_7": 0.857,
+    "__EMPTY_8": 0.941,
+    "__EMPTY_9": 0.952,
+    "__EMPTY_10": 0.955,
+    "__EMPTY_11": 0.889,
+    "__EMPTY_12": 0.786,
+    "__EMPTY_13": 0.903
+  },
+  {
+    "__EMPTY": "B2B - Function - Finance",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 62,
+    "__EMPTY_5": 68,
+    "__EMPTY_6": 68,
+    "__EMPTY_7": 78,
+    "__EMPTY_8": 82,
+    "__EMPTY_9": 91,
+    "__EMPTY_10": 107,
+    "__EMPTY_11": 124,
+    "__EMPTY_12": 146,
+    "__EMPTY_13": 146
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 9,
+    "__EMPTY_5": 12,
+    "__EMPTY_6": 13,
+    "__EMPTY_7": 14,
+    "__EMPTY_8": 9,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 11,
+    "__EMPTY_11": 19,
+    "__EMPTY_12": 33,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_5": 21,
+    "__EMPTY_8": 6,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 21,
+    "__EMPTY_13": 26.5
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_5": 21,
+    "__EMPTY_8": 6,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 21,
+    "__EMPTY_13": 24
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 5
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 9,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 12,
+    "__EMPTY_10": 13,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 89
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0.75,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.917,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.933,
+    "__EMPTY_12": 0.923,
+    "__EMPTY_13": 0.947
+  },
+  {
+    "__EMPTY": "B2B - Function - Human Resources",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 66,
+    "__EMPTY_12": 69,
+    "__EMPTY_13": 69
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_11": 35,
+    "__EMPTY_12": 26,
+    "__EMPTY_13": 23.27
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_11": 35,
+    "__EMPTY_12": 26,
+    "__EMPTY_13": 15
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 44
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 0.857,
+    "__EMPTY_12": 0.846,
+    "__EMPTY_13": 0.815
+  },
+  {
+    "__EMPTY": "B2B - Function - Information Technology",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_7": 62,
+    "__EMPTY_8": 75,
+    "__EMPTY_9": 83,
+    "__EMPTY_10": 96,
+    "__EMPTY_11": 128,
+    "__EMPTY_12": 154,
+    "__EMPTY_13": 154
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_7": 15,
+    "__EMPTY_8": 18,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 11,
+    "__EMPTY_11": 33,
+    "__EMPTY_12": 45,
+    "__EMPTY_13": 45
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_9": 48,
+    "__EMPTY_10": 43.5,
+    "__EMPTY_11": 29,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 25.93
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_9": 48,
+    "__EMPTY_10": 43.5,
+    "__EMPTY_11": 21.5,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 21.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_7": 10,
+    "__EMPTY_8": 10,
+    "__EMPTY_9": 18,
+    "__EMPTY_10": 15,
+    "__EMPTY_11": 13,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 96
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.947,
+    "__EMPTY_10": 0.882,
+    "__EMPTY_11": 0.765,
+    "__EMPTY_12": 0.85,
+    "__EMPTY_13": 0.881
+  },
+  {
+    "__EMPTY": "B2B - Function - Marketing",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_2": 66,
+    "__EMPTY_3": 72,
+    "__EMPTY_4": 81,
+    "__EMPTY_5": 91,
+    "__EMPTY_6": 100,
+    "__EMPTY_7": 110,
+    "__EMPTY_8": 121,
+    "__EMPTY_9": 141,
+    "__EMPTY_10": 162,
+    "__EMPTY_11": 184,
+    "__EMPTY_12": 196,
+    "__EMPTY_13": 196
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_2": 5,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 9,
+    "__EMPTY_5": 16,
+    "__EMPTY_6": 18,
+    "__EMPTY_7": 22,
+    "__EMPTY_8": 21,
+    "__EMPTY_9": 18,
+    "__EMPTY_10": 13,
+    "__EMPTY_11": 19,
+    "__EMPTY_12": 31,
+    "__EMPTY_13": 31
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 3,
+    "__EMPTY_8": 93,
+    "__EMPTY_9": 2.67,
+    "__EMPTY_10": 46.33,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 26.87
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 3,
+    "__EMPTY_8": 93,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 27,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_2": 4,
+    "__EMPTY_3": 5,
+    "__EMPTY_4": 7,
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 8,
+    "__EMPTY_8": 14,
+    "__EMPTY_9": 26,
+    "__EMPTY_10": 28,
+    "__EMPTY_11": 20,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 132
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_2": 0.8,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.875,
+    "__EMPTY_5": 0.75,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.875,
+    "__EMPTY_9": 0.897,
+    "__EMPTY_10": 0.933,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.75,
+    "__EMPTY_13": 0.91
+  },
+  {
+    "__EMPTY": "B2B - Function - Operations",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 139,
+    "__EMPTY_2": 153,
+    "__EMPTY_3": 167,
+    "__EMPTY_4": 196,
+    "__EMPTY_5": 230,
+    "__EMPTY_6": 244,
+    "__EMPTY_7": 260,
+    "__EMPTY_8": 274,
+    "__EMPTY_9": 298,
+    "__EMPTY_10": 329,
+    "__EMPTY_11": 363,
+    "__EMPTY_12": 398,
+    "__EMPTY_13": 398
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 8,
+    "__EMPTY_2": 9,
+    "__EMPTY_3": 10,
+    "__EMPTY_4": 30,
+    "__EMPTY_5": 53,
+    "__EMPTY_6": 55,
+    "__EMPTY_7": 44,
+    "__EMPTY_8": 29,
+    "__EMPTY_9": 22,
+    "__EMPTY_10": 28,
+    "__EMPTY_11": 45,
+    "__EMPTY_12": 70,
+    "__EMPTY_13": 70
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 26.75,
+    "__EMPTY_6": 32,
+    "__EMPTY_7": 54,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 15,
+    "__EMPTY_10": 34.63,
+    "__EMPTY_11": 25.2,
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 31.41
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 24.5,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 65.5,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 15,
+    "__EMPTY_10": 28,
+    "__EMPTY_11": 29,
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 4,
+    "__EMPTY_7": 5,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 5,
+    "__EMPTY_2": 13,
+    "__EMPTY_3": 15,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 8,
+    "__EMPTY_6": 15,
+    "__EMPTY_7": 28,
+    "__EMPTY_8": 33,
+    "__EMPTY_9": 31,
+    "__EMPTY_10": 33,
+    "__EMPTY_11": 30,
+    "__EMPTY_12": 25,
+    "__EMPTY_13": 247
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.917,
+    "__EMPTY_5": 0.667,
+    "__EMPTY_6": 0.789,
+    "__EMPTY_7": 0.848,
+    "__EMPTY_8": 0.971,
+    "__EMPTY_9": 0.939,
+    "__EMPTY_10": 0.825,
+    "__EMPTY_11": 0.857,
+    "__EMPTY_12": 0.862,
+    "__EMPTY_13": 0.882
+  },
+  {
+    "__EMPTY": "B2B - Function - Procurement",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 61,
+    "__EMPTY_13": 61
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 5
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 31
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 0.833,
+    "__EMPTY_13": 0.861
+  },
+  {
+    "__EMPTY": "B2B - Function - Research & Development",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_10": 71,
+    "__EMPTY_11": 75,
+    "__EMPTY_12": 81,
+    "__EMPTY_13": 81
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 3,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_13": 55
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_13": 55
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 1
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 36
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.973
+  },
+  {
+    "__EMPTY": "B2B - Function - Sales",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_5": 60,
+    "__EMPTY_6": 62,
+    "__EMPTY_7": 69,
+    "__EMPTY_8": 78,
+    "__EMPTY_9": 92,
+    "__EMPTY_10": 102,
+    "__EMPTY_11": 121,
+    "__EMPTY_12": 131,
+    "__EMPTY_13": 131
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_5": 16,
+    "__EMPTY_6": 13,
+    "__EMPTY_7": 12,
+    "__EMPTY_8": 16,
+    "__EMPTY_9": 12,
+    "__EMPTY_10": 10,
+    "__EMPTY_11": 19,
+    "__EMPTY_12": 25,
+    "__EMPTY_13": 25
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_6": 47,
+    "__EMPTY_8": 103,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 39.67,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 33.55
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_6": 47,
+    "__EMPTY_8": 103,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 17,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 17
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 9,
+    "__EMPTY_9": 19,
+    "__EMPTY_10": 16,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 90
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0.714,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.9,
+    "__EMPTY_9": 0.905,
+    "__EMPTY_10": 0.889,
+    "__EMPTY_11": 0.933,
+    "__EMPTY_12": 0.923,
+    "__EMPTY_13": 0.909
+  },
+  {
+    "__EMPTY": "B2B - Function - Strategy and Business Development",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_6": 65,
+    "__EMPTY_7": 68,
+    "__EMPTY_8": 75,
+    "__EMPTY_9": 82,
+    "__EMPTY_10": 104,
+    "__EMPTY_11": 124,
+    "__EMPTY_12": 126,
+    "__EMPTY_13": 126
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_6": 19,
+    "__EMPTY_7": 15,
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 12,
+    "__EMPTY_11": 20,
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 65,
+    "__EMPTY_9": 337.5,
+    "__EMPTY_10": 19.5,
+    "__EMPTY_11": 38.5,
+    "__EMPTY_12": 19.67,
+    "__EMPTY_13": 76
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 72,
+    "__EMPTY_9": 337.5,
+    "__EMPTY_10": 19.5,
+    "__EMPTY_11": 38.5,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 12
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 14,
+    "__EMPTY_10": 19,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 98
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.778,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.875,
+    "__EMPTY_10": 0.905,
+    "__EMPTY_11": 0.875,
+    "__EMPTY_12": 0.857,
+    "__EMPTY_13": 0.891
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - B2B Good & Services - Consulting & Advisory",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_5": 60,
+    "__EMPTY_6": 66,
+    "__EMPTY_7": 71,
+    "__EMPTY_8": 81,
+    "__EMPTY_9": 85,
+    "__EMPTY_10": 89,
+    "__EMPTY_11": 96,
+    "__EMPTY_12": 96,
+    "__EMPTY_13": 96
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_5": 17,
+    "__EMPTY_6": 17,
+    "__EMPTY_7": 13,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 11,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 51,
+    "__EMPTY_9": 648,
+    "__EMPTY_12": 22,
+    "__EMPTY_13": 128.5
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 51,
+    "__EMPTY_9": 648,
+    "__EMPTY_12": 22,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 5
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 6,
+    "__EMPTY_7": 9,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 13,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 62
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.9,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.929,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.714,
+    "__EMPTY_13": 0.925
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - B2B Good & Services - Marketing & Advertising",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_10": 68,
+    "__EMPTY_11": 75,
+    "__EMPTY_12": 79,
+    "__EMPTY_13": 79
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_10": 27,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 13.5
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_10": 27,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 4
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_10": 15,
+    "__EMPTY_11": 8,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 61
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_10": 0.938,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.8,
+    "__EMPTY_13": 0.938
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Consumer Good & Services - Food & Beverage",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 66,
+    "__EMPTY_13": 66
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 15
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 26.75
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 21.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 4
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 42
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 0.909,
+    "__EMPTY_13": 0.913
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Consumer Good & Services - Retail",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 74,
+    "__EMPTY_12": 84,
+    "__EMPTY_13": 84
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 19,
+    "__EMPTY_12": 22,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_11": 30.5,
+    "__EMPTY_12": 10.8,
+    "__EMPTY_13": 23.71
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_11": 30.5,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 48
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 0.75,
+    "__EMPTY_12": 0.714,
+    "__EMPTY_13": 0.787
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Finance",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 62,
+    "__EMPTY_13": 62
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 31.5
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 32.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 4
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 37
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 0.889,
+    "__EMPTY_13": 0.902
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Finance - Banking",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 64,
+    "__EMPTY_13": 64
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 20
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 28.57
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 0.8,
+    "__EMPTY_13": 0.825
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Finance - Fintech",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 68,
+    "__EMPTY_12": 83,
+    "__EMPTY_13": 83
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 16,
+    "__EMPTY_12": 23,
+    "__EMPTY_13": 23
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_11": 69,
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 38.44
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_11": 69,
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 29
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 45
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 0.857,
+    "__EMPTY_12": 0.818,
+    "__EMPTY_13": 0.833
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Health - Healthcare",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_7": 60,
+    "__EMPTY_8": 65,
+    "__EMPTY_9": 67,
+    "__EMPTY_10": 73,
+    "__EMPTY_11": 87,
+    "__EMPTY_12": 93,
+    "__EMPTY_13": 93
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 7,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 4,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 16
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_8": 68,
+    "__EMPTY_10": 57.5,
+    "__EMPTY_13": 38.43
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_8": 68,
+    "__EMPTY_10": 57.5,
+    "__EMPTY_13": 30
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_7": 6,
+    "__EMPTY_8": 5,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 60
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.833,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.8,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.896
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Mining & Forestry",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 70,
+    "__EMPTY_13": 70
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 15
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_13": 33.25
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 4
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 31
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.886
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Other - Construction",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 69,
+    "__EMPTY_13": 69
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 18,
+    "__EMPTY_13": 18
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_13": 44.4
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_13": 57
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 5
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 41
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.891
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Other - Education",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_7": 60,
+    "__EMPTY_8": 66,
+    "__EMPTY_9": 72,
+    "__EMPTY_10": 78,
+    "__EMPTY_11": 91,
+    "__EMPTY_12": 93,
+    "__EMPTY_13": 93
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_7": 8,
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 13,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 12
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 95,
+    "__EMPTY_8": 49,
+    "__EMPTY_10": 57.5,
+    "__EMPTY_11": 37,
+    "__EMPTY_12": 18.33,
+    "__EMPTY_13": 39.31
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 95,
+    "__EMPTY_8": 49,
+    "__EMPTY_10": 57.5,
+    "__EMPTY_11": 35,
+    "__EMPTY_12": 25,
+    "__EMPTY_13": 35
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 3,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_7": 3,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 11,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 11,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 65
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_7": 0.75,
+    "__EMPTY_8": 0.6,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.75,
+    "__EMPTY_11": 0.786,
+    "__EMPTY_12": 0.667,
+    "__EMPTY_13": 0.833
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Other - Energy",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 69,
+    "__EMPTY_13": 69
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 15
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_13": 33.25
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 4
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 30
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.882
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Other - Manufacturing",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_8": 60,
+    "__EMPTY_9": 69,
+    "__EMPTY_10": 79,
+    "__EMPTY_11": 96,
+    "__EMPTY_12": 120,
+    "__EMPTY_13": 120
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 16,
+    "__EMPTY_12": 33,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_10": 31.33,
+    "__EMPTY_11": 27.5,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 26.5
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 27.5,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 24
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 8
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 12,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 53
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.8,
+    "__EMPTY_11": 0.818,
+    "__EMPTY_12": 0.8,
+    "__EMPTY_13": 0.869
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Other - Real Estate",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 71,
+    "__EMPTY_12": 77,
+    "__EMPTY_13": 77
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 21.5,
+    "__EMPTY_13": 33.6
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 21.5,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 5
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 7,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 47
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.75,
+    "__EMPTY_13": 0.904
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Technology - Ai & Machine Learning",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_9": 62,
+    "__EMPTY_10": 76,
+    "__EMPTY_11": 93,
+    "__EMPTY_12": 107,
+    "__EMPTY_13": 107
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 10,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 22,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_9": 17.25,
+    "__EMPTY_10": 42.5,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 27,
+    "__EMPTY_13": 20.45
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 42.5,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 27,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_9": 4,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 18,
+    "__EMPTY_11": 13,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 71
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_9": 0.692,
+    "__EMPTY_10": 0.9,
+    "__EMPTY_11": 0.867,
+    "__EMPTY_12": 0.909,
+    "__EMPTY_13": 0.866
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Technology - Crypto & Blockchain",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 61,
+    "__EMPTY_12": 61,
+    "__EMPTY_13": 61
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 3,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 3
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_13": 17
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 2
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 50
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.962
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Technology - Platform",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 63,
+    "__EMPTY_13": 63
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 16
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 14.25,
+    "__EMPTY_13": 24.5
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 21
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 8
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 45
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 0.625,
+    "__EMPTY_13": 0.849
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Technology - Software/Saas",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_3": 62,
+    "__EMPTY_4": 78,
+    "__EMPTY_5": 89,
+    "__EMPTY_6": 99,
+    "__EMPTY_7": 107,
+    "__EMPTY_8": 131,
+    "__EMPTY_9": 157,
+    "__EMPTY_10": 192,
+    "__EMPTY_11": 234,
+    "__EMPTY_12": 260,
+    "__EMPTY_13": 260
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_3": 4,
+    "__EMPTY_4": 15,
+    "__EMPTY_5": 24,
+    "__EMPTY_6": 23,
+    "__EMPTY_7": 22,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 23,
+    "__EMPTY_10": 25,
+    "__EMPTY_11": 39,
+    "__EMPTY_12": 53,
+    "__EMPTY_13": 53
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_3": 36,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 45,
+    "__EMPTY_7": 52,
+    "__EMPTY_8": 67,
+    "__EMPTY_9": 14.2,
+    "__EMPTY_10": 37.5,
+    "__EMPTY_11": 29,
+    "__EMPTY_12": 15.29,
+    "__EMPTY_13": 33.47
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_3": 36,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 45,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 83,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 28,
+    "__EMPTY_11": 21.5,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_3": 5,
+    "__EMPTY_4": 6,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 9,
+    "__EMPTY_7": 11,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 39,
+    "__EMPTY_10": 38,
+    "__EMPTY_11": 34,
+    "__EMPTY_12": 21,
+    "__EMPTY_13": 185
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_3": 0.833,
+    "__EMPTY_4": 0.857,
+    "__EMPTY_5": 0.5,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.846,
+    "__EMPTY_8": 0.813,
+    "__EMPTY_9": 0.886,
+    "__EMPTY_10": 0.884,
+    "__EMPTY_11": 0.895,
+    "__EMPTY_12": 0.808,
+    "__EMPTY_13": 0.869
+  },
+  {
+    "__EMPTY": "B2B - Industry Of Buyers - Technology - Startup",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_8": 68,
+    "__EMPTY_9": 81,
+    "__EMPTY_10": 94,
+    "__EMPTY_11": 105,
+    "__EMPTY_12": 102,
+    "__EMPTY_13": 102
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 10,
+    "__EMPTY_11": 12,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 9,
+    "__EMPTY_11": 66,
+    "__EMPTY_12": 18.75,
+    "__EMPTY_13": 40.43
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 9,
+    "__EMPTY_11": 66,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 23.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 12
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_8": 7,
+    "__EMPTY_9": 19,
+    "__EMPTY_10": 14,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 72
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_8": 0.778,
+    "__EMPTY_9": 0.905,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.875,
+    "__EMPTY_12": 0.625,
+    "__EMPTY_13": 0.857
+  },
+  {
+    "__EMPTY": "B2B - Size - Enterprise",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 139,
+    "__EMPTY_2": 146,
+    "__EMPTY_3": 153,
+    "__EMPTY_4": 168,
+    "__EMPTY_5": 181,
+    "__EMPTY_6": 192,
+    "__EMPTY_7": 217,
+    "__EMPTY_8": 251,
+    "__EMPTY_9": 281,
+    "__EMPTY_10": 331,
+    "__EMPTY_11": 398,
+    "__EMPTY_12": 452,
+    "__EMPTY_13": 452
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 5,
+    "__EMPTY_2": 5,
+    "__EMPTY_3": 8,
+    "__EMPTY_4": 18,
+    "__EMPTY_5": 25,
+    "__EMPTY_6": 25,
+    "__EMPTY_7": 39,
+    "__EMPTY_8": 53,
+    "__EMPTY_9": 31,
+    "__EMPTY_10": 39,
+    "__EMPTY_11": 65,
+    "__EMPTY_12": 97,
+    "__EMPTY_13": 97
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 10.67,
+    "__EMPTY_3": 21.33,
+    "__EMPTY_5": 12,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 41.33,
+    "__EMPTY_9": 19.43,
+    "__EMPTY_10": 30.75,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 25.11
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 14,
+    "__EMPTY_5": 12,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 19.5,
+    "__EMPTY_13": 20
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 38
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 6,
+    "__EMPTY_2": 9,
+    "__EMPTY_3": 5,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 5,
+    "__EMPTY_6": 10,
+    "__EMPTY_7": 12,
+    "__EMPTY_8": 22,
+    "__EMPTY_9": 57,
+    "__EMPTY_10": 50,
+    "__EMPTY_11": 51,
+    "__EMPTY_12": 37,
+    "__EMPTY_13": 272
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.818,
+    "__EMPTY_3": 0.714,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0.714,
+    "__EMPTY_6": 0.909,
+    "__EMPTY_7": 0.923,
+    "__EMPTY_8": 0.88,
+    "__EMPTY_9": 0.891,
+    "__EMPTY_10": 0.877,
+    "__EMPTY_11": 0.911,
+    "__EMPTY_12": 0.822,
+    "__EMPTY_13": 0.877
+  },
+  {
+    "__EMPTY": "B2B - Size - Large",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 134,
+    "__EMPTY_2": 141,
+    "__EMPTY_3": 149,
+    "__EMPTY_4": 172,
+    "__EMPTY_5": 194,
+    "__EMPTY_6": 210,
+    "__EMPTY_7": 227,
+    "__EMPTY_8": 267,
+    "__EMPTY_9": 310,
+    "__EMPTY_10": 380,
+    "__EMPTY_11": 476,
+    "__EMPTY_12": 542,
+    "__EMPTY_13": 542
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 4,
+    "__EMPTY_2": 7,
+    "__EMPTY_3": 8,
+    "__EMPTY_4": 21,
+    "__EMPTY_5": 41,
+    "__EMPTY_6": 42,
+    "__EMPTY_7": 38,
+    "__EMPTY_8": 61,
+    "__EMPTY_9": 39,
+    "__EMPTY_10": 48,
+    "__EMPTY_11": 88,
+    "__EMPTY_12": 122,
+    "__EMPTY_13": 122
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 10.67,
+    "__EMPTY_3": 21.33,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 55,
+    "__EMPTY_6": 35.2,
+    "__EMPTY_7": 59.17,
+    "__EMPTY_8": 43,
+    "__EMPTY_9": 19.43,
+    "__EMPTY_10": 29.78,
+    "__EMPTY_11": 28.4,
+    "__EMPTY_12": 18.4,
+    "__EMPTY_13": 29.96
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 14,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 55,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 61.5,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 23.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 46
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 4,
+    "__EMPTY_2": 7,
+    "__EMPTY_3": 8,
+    "__EMPTY_4": 12,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 13,
+    "__EMPTY_7": 23,
+    "__EMPTY_8": 21,
+    "__EMPTY_9": 70,
+    "__EMPTY_10": 67,
+    "__EMPTY_11": 64,
+    "__EMPTY_12": 50,
+    "__EMPTY_13": 341
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.778,
+    "__EMPTY_3": 0.8,
+    "__EMPTY_4": 0.857,
+    "__EMPTY_5": 0.667,
+    "__EMPTY_6": 0.722,
+    "__EMPTY_7": 0.852,
+    "__EMPTY_8": 0.875,
+    "__EMPTY_9": 0.909,
+    "__EMPTY_10": 0.905,
+    "__EMPTY_11": 0.928,
+    "__EMPTY_12": 0.862,
+    "__EMPTY_13": 0.881
+  },
+  {
+    "__EMPTY": "B2B - Size - Medium",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 146,
+    "__EMPTY_2": 164,
+    "__EMPTY_3": 175,
+    "__EMPTY_4": 211,
+    "__EMPTY_5": 240,
+    "__EMPTY_6": 258,
+    "__EMPTY_7": 279,
+    "__EMPTY_8": 325,
+    "__EMPTY_9": 381,
+    "__EMPTY_10": 447,
+    "__EMPTY_11": 549,
+    "__EMPTY_12": 624,
+    "__EMPTY_13": 624
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 4,
+    "__EMPTY_2": 12,
+    "__EMPTY_3": 13,
+    "__EMPTY_4": 32,
+    "__EMPTY_5": 52,
+    "__EMPTY_6": 61,
+    "__EMPTY_7": 50,
+    "__EMPTY_8": 69,
+    "__EMPTY_9": 47,
+    "__EMPTY_10": 47,
+    "__EMPTY_11": 100,
+    "__EMPTY_12": 143,
+    "__EMPTY_13": 143
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 73,
+    "__EMPTY_2": 10.67,
+    "__EMPTY_3": 26.5,
+    "__EMPTY_4": 26.33,
+    "__EMPTY_5": 45,
+    "__EMPTY_6": 32.75,
+    "__EMPTY_7": 60.8,
+    "__EMPTY_8": 43,
+    "__EMPTY_9": 123.67,
+    "__EMPTY_10": 35.3,
+    "__EMPTY_11": 31.88,
+    "__EMPTY_12": 15.53,
+    "__EMPTY_13": 39.09
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 73,
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 25,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 45,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 20.5,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 31.5,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 23.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 4,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 4,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 8,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 57
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 9,
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 13,
+    "__EMPTY_4": 17,
+    "__EMPTY_5": 8,
+    "__EMPTY_6": 12,
+    "__EMPTY_7": 34,
+    "__EMPTY_8": 33,
+    "__EMPTY_9": 82,
+    "__EMPTY_10": 76,
+    "__EMPTY_11": 64,
+    "__EMPTY_12": 54,
+    "__EMPTY_13": 413
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.9,
+    "__EMPTY_2": 0.846,
+    "__EMPTY_3": 0.765,
+    "__EMPTY_4": 0.85,
+    "__EMPTY_5": 0.8,
+    "__EMPTY_6": 0.75,
+    "__EMPTY_7": 0.895,
+    "__EMPTY_8": 0.917,
+    "__EMPTY_9": 0.932,
+    "__EMPTY_10": 0.905,
+    "__EMPTY_11": 0.889,
+    "__EMPTY_12": 0.818,
+    "__EMPTY_13": 0.879
+  },
+  {
+    "__EMPTY": "B2B - Size - Small",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 210,
+    "__EMPTY_2": 235,
+    "__EMPTY_3": 255,
+    "__EMPTY_4": 311,
+    "__EMPTY_5": 352,
+    "__EMPTY_6": 380,
+    "__EMPTY_7": 406,
+    "__EMPTY_8": 452,
+    "__EMPTY_9": 504,
+    "__EMPTY_10": 565,
+    "__EMPTY_11": 652,
+    "__EMPTY_12": 717,
+    "__EMPTY_13": 717
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 8,
+    "__EMPTY_2": 17,
+    "__EMPTY_3": 18,
+    "__EMPTY_4": 50,
+    "__EMPTY_5": 79,
+    "__EMPTY_6": 90,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 70,
+    "__EMPTY_9": 47,
+    "__EMPTY_10": 46,
+    "__EMPTY_11": 91,
+    "__EMPTY_12": 133,
+    "__EMPTY_13": 133
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 10.67,
+    "__EMPTY_3": 28,
+    "__EMPTY_4": 26.33,
+    "__EMPTY_5": 36.8,
+    "__EMPTY_6": 33.67,
+    "__EMPTY_7": 52.67,
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 18.8,
+    "__EMPTY_10": 35.27,
+    "__EMPTY_11": 31.88,
+    "__EMPTY_12": 15.53,
+    "__EMPTY_13": 29.42
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 28,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 28,
+    "__EMPTY_7": 61.5,
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 31.5,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 25
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 3,
+    "__EMPTY_7": 5,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 8,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 55
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 15,
+    "__EMPTY_2": 17,
+    "__EMPTY_3": 22,
+    "__EMPTY_4": 24,
+    "__EMPTY_5": 11,
+    "__EMPTY_6": 21,
+    "__EMPTY_7": 48,
+    "__EMPTY_8": 55,
+    "__EMPTY_9": 81,
+    "__EMPTY_10": 76,
+    "__EMPTY_11": 64,
+    "__EMPTY_12": 49,
+    "__EMPTY_13": 483
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.895,
+    "__EMPTY_3": 0.917,
+    "__EMPTY_4": 0.889,
+    "__EMPTY_5": 0.733,
+    "__EMPTY_6": 0.875,
+    "__EMPTY_7": 0.906,
+    "__EMPTY_8": 0.965,
+    "__EMPTY_9": 0.942,
+    "__EMPTY_10": 0.894,
+    "__EMPTY_11": 0.889,
+    "__EMPTY_12": 0.803,
+    "__EMPTY_13": 0.898
+  },
+  {
+    "__EMPTY": "B2C - Customer Age - 10-20",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_7": 61,
+    "__EMPTY_8": 65,
+    "__EMPTY_9": 68,
+    "__EMPTY_10": 70,
+    "__EMPTY_11": 75,
+    "__EMPTY_12": 90,
+    "__EMPTY_13": 90
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_7": 9,
+    "__EMPTY_8": 7,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 20
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 95,
+    "__EMPTY_8": 35,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 29.63
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 95,
+    "__EMPTY_8": 35,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 21
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_7": 6,
+    "__EMPTY_8": 7,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 56
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_7": 0.857,
+    "__EMPTY_8": 0.778,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.75,
+    "__EMPTY_11": 0.857,
+    "__EMPTY_12": 0.75,
+    "__EMPTY_13": 0.889
+  },
+  {
+    "__EMPTY": "B2C - Customer Age - 20-35",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 194,
+    "__EMPTY_2": 205,
+    "__EMPTY_3": 224,
+    "__EMPTY_4": 280,
+    "__EMPTY_5": 311,
+    "__EMPTY_6": 319,
+    "__EMPTY_7": 341,
+    "__EMPTY_8": 358,
+    "__EMPTY_9": 375,
+    "__EMPTY_10": 390,
+    "__EMPTY_11": 426,
+    "__EMPTY_12": 468,
+    "__EMPTY_13": 468
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 8,
+    "__EMPTY_2": 7,
+    "__EMPTY_3": 16,
+    "__EMPTY_4": 52,
+    "__EMPTY_5": 72,
+    "__EMPTY_6": 48,
+    "__EMPTY_7": 37,
+    "__EMPTY_8": 37,
+    "__EMPTY_9": 21,
+    "__EMPTY_10": 25,
+    "__EMPTY_11": 42,
+    "__EMPTY_12": 70,
+    "__EMPTY_13": 70
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 149.67,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 11.67,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 35.8,
+    "__EMPTY_7": 43,
+    "__EMPTY_8": 31.57,
+    "__EMPTY_9": 69,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 23.17,
+    "__EMPTY_13": 38.93
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 192,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 33,
+    "__EMPTY_7": 51,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 67.5,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 31,
+    "__EMPTY_12": 29,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 3,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 3,
+    "__EMPTY_8": 7,
+    "__EMPTY_9": 4,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 40
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 12,
+    "__EMPTY_2": 14,
+    "__EMPTY_3": 13,
+    "__EMPTY_4": 23,
+    "__EMPTY_5": 13,
+    "__EMPTY_6": 32,
+    "__EMPTY_7": 36,
+    "__EMPTY_8": 29,
+    "__EMPTY_9": 42,
+    "__EMPTY_10": 33,
+    "__EMPTY_11": 36,
+    "__EMPTY_12": 25,
+    "__EMPTY_13": 308
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.8,
+    "__EMPTY_2": 0.933,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.92,
+    "__EMPTY_5": 0.929,
+    "__EMPTY_6": 0.865,
+    "__EMPTY_7": 0.923,
+    "__EMPTY_8": 0.806,
+    "__EMPTY_9": 0.913,
+    "__EMPTY_10": 0.917,
+    "__EMPTY_11": 0.857,
+    "__EMPTY_12": 0.833,
+    "__EMPTY_13": 0.885
+  },
+  {
+    "__EMPTY": "B2C - Customer Age - 35-50",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 187,
+    "__EMPTY_2": 195,
+    "__EMPTY_3": 212,
+    "__EMPTY_4": 271,
+    "__EMPTY_5": 308,
+    "__EMPTY_6": 320,
+    "__EMPTY_7": 336,
+    "__EMPTY_8": 356,
+    "__EMPTY_9": 370,
+    "__EMPTY_10": 390,
+    "__EMPTY_11": 429,
+    "__EMPTY_12": 470,
+    "__EMPTY_13": 470
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 8,
+    "__EMPTY_2": 6,
+    "__EMPTY_3": 14,
+    "__EMPTY_4": 54,
+    "__EMPTY_5": 80,
+    "__EMPTY_6": 58,
+    "__EMPTY_7": 35,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 20,
+    "__EMPTY_10": 25,
+    "__EMPTY_11": 44,
+    "__EMPTY_12": 69,
+    "__EMPTY_13": 69
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 149.67,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 11.67,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 35.8,
+    "__EMPTY_7": 41.75,
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 69,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 22.4,
+    "__EMPTY_13": 41.08
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 192,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 33,
+    "__EMPTY_7": 44.5,
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 67.5,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 31,
+    "__EMPTY_12": 31,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 3,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 4,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 34
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 11,
+    "__EMPTY_2": 12,
+    "__EMPTY_3": 12,
+    "__EMPTY_4": 21,
+    "__EMPTY_5": 13,
+    "__EMPTY_6": 34,
+    "__EMPTY_7": 41,
+    "__EMPTY_8": 33,
+    "__EMPTY_9": 40,
+    "__EMPTY_10": 33,
+    "__EMPTY_11": 38,
+    "__EMPTY_12": 27,
+    "__EMPTY_13": 315
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.786,
+    "__EMPTY_2": 0.923,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.913,
+    "__EMPTY_5": 0.929,
+    "__EMPTY_6": 0.872,
+    "__EMPTY_7": 0.911,
+    "__EMPTY_8": 0.971,
+    "__EMPTY_9": 0.909,
+    "__EMPTY_10": 0.917,
+    "__EMPTY_11": 0.864,
+    "__EMPTY_12": 0.871,
+    "__EMPTY_13": 0.903
+  },
+  {
+    "__EMPTY": "B2C - Customer Age - 50+",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 91,
+    "__EMPTY_2": 92,
+    "__EMPTY_3": 99,
+    "__EMPTY_4": 129,
+    "__EMPTY_5": 146,
+    "__EMPTY_6": 154,
+    "__EMPTY_7": 161,
+    "__EMPTY_8": 175,
+    "__EMPTY_9": 178,
+    "__EMPTY_10": 183,
+    "__EMPTY_11": 204,
+    "__EMPTY_12": 231,
+    "__EMPTY_13": 231
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 2,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 28,
+    "__EMPTY_5": 42,
+    "__EMPTY_6": 31,
+    "__EMPTY_7": 19,
+    "__EMPTY_8": 17,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 22,
+    "__EMPTY_12": 38,
+    "__EMPTY_13": 38
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 216,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 28.67,
+    "__EMPTY_7": 38,
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 30,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 34,
+    "__EMPTY_12": 13.33,
+    "__EMPTY_13": 36.65
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 216,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 28,
+    "__EMPTY_7": 38,
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 34,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 3,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 15
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 7,
+    "__EMPTY_2": 3,
+    "__EMPTY_3": 3,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 6,
+    "__EMPTY_6": 19,
+    "__EMPTY_7": 20,
+    "__EMPTY_8": 18,
+    "__EMPTY_9": 15,
+    "__EMPTY_10": 15,
+    "__EMPTY_11": 17,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 148
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.875,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.889,
+    "__EMPTY_5": 0.857,
+    "__EMPTY_6": 0.864,
+    "__EMPTY_7": 0.952,
+    "__EMPTY_8": 0.947,
+    "__EMPTY_9": 0.833,
+    "__EMPTY_10": 0.938,
+    "__EMPTY_11": 0.944,
+    "__EMPTY_12": 0.895,
+    "__EMPTY_13": 0.908
+  },
+  {
+    "__EMPTY": "B2C - Customer Lifestyle - Family and Relationship-Centered",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 62,
+    "__EMPTY_13": 62
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 1.67,
+    "__EMPTY_13": 19.73
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 42
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 0.333,
+    "__EMPTY_13": 0.824
+  },
+  {
+    "__EMPTY": "B2C - Customer Lifestyle - Health and Wellness Enthusiasts",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_9": 64,
+    "__EMPTY_10": 63,
+    "__EMPTY_11": 64,
+    "__EMPTY_12": 68,
+    "__EMPTY_13": 68
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_9": 4,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 6
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter"
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter"
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 0
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 3,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 42
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 1
+  },
+  {
+    "__EMPTY": "B2C - Customer Lifestyle - Professional and Career-Focused",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 62,
+    "__EMPTY_12": 73,
+    "__EMPTY_13": 73
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_11": 32,
+    "__EMPTY_13": 36.29
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_11": 32,
+    "__EMPTY_13": 41
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 48
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 0.667,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.873
+  },
+  {
+    "__EMPTY": "B2C - Customer Occupation - Business and Entrepreneurship",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_10": 62,
+    "__EMPTY_11": 75,
+    "__EMPTY_12": 92,
+    "__EMPTY_13": 92
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 13,
+    "__EMPTY_12": 22,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_11": 63,
+    "__EMPTY_13": 51.79
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_11": 63,
+    "__EMPTY_13": 43
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 12,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 63
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.923,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.9
+  },
+  {
+    "__EMPTY": "B2C - Customer Occupation - Education Sector",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_11": 67,
+    "__EMPTY_12": 70,
+    "__EMPTY_13": 70
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_11": 11,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 30.55
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 34
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 55
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.875,
+    "__EMPTY_13": 0.833
+  },
+  {
+    "__EMPTY": "Business Cost Type - Capital-Intensive",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 71,
+    "__EMPTY_2": 74,
+    "__EMPTY_3": 77,
+    "__EMPTY_4": 88,
+    "__EMPTY_5": 99,
+    "__EMPTY_6": 105,
+    "__EMPTY_7": 113,
+    "__EMPTY_8": 122,
+    "__EMPTY_9": 126,
+    "__EMPTY_10": 140,
+    "__EMPTY_11": 158,
+    "__EMPTY_12": 176,
+    "__EMPTY_13": 176
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 3,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 17,
+    "__EMPTY_6": 21,
+    "__EMPTY_7": 17,
+    "__EMPTY_8": 20,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 10,
+    "__EMPTY_11": 22,
+    "__EMPTY_12": 32,
+    "__EMPTY_13": 32
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_6": 45,
+    "__EMPTY_7": 85,
+    "__EMPTY_9": 47.83,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 12.33,
+    "__EMPTY_13": 39.58
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_6": 45,
+    "__EMPTY_7": 85,
+    "__EMPTY_9": 35,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 1,
+    "__EMPTY_2": 4,
+    "__EMPTY_3": 4,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 4,
+    "__EMPTY_7": 13,
+    "__EMPTY_8": 9,
+    "__EMPTY_9": 18,
+    "__EMPTY_10": 18,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 102
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0.8,
+    "__EMPTY_7": 0.929,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.783,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.933,
+    "__EMPTY_12": 0.813,
+    "__EMPTY_13": 0.903
+  },
+  {
+    "__EMPTY": "Business Cost Type - Labor-Intensive",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 163,
+    "__EMPTY_2": 181,
+    "__EMPTY_3": 200,
+    "__EMPTY_4": 265,
+    "__EMPTY_5": 305,
+    "__EMPTY_6": 329,
+    "__EMPTY_7": 353,
+    "__EMPTY_8": 378,
+    "__EMPTY_9": 407,
+    "__EMPTY_10": 449,
+    "__EMPTY_11": 511,
+    "__EMPTY_12": 556,
+    "__EMPTY_13": 556
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 7,
+    "__EMPTY_2": 7,
+    "__EMPTY_3": 19,
+    "__EMPTY_4": 61,
+    "__EMPTY_5": 88,
+    "__EMPTY_6": 84,
+    "__EMPTY_7": 61,
+    "__EMPTY_8": 49,
+    "__EMPTY_9": 24,
+    "__EMPTY_10": 32,
+    "__EMPTY_11": 64,
+    "__EMPTY_12": 91,
+    "__EMPTY_13": 91
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 14,
+    "__EMPTY_5": 46.5,
+    "__EMPTY_6": 35.33,
+    "__EMPTY_7": 58.25,
+    "__EMPTY_8": 49,
+    "__EMPTY_9": 115.38,
+    "__EMPTY_10": 27.5,
+    "__EMPTY_11": 35,
+    "__EMPTY_12": 15.83,
+    "__EMPTY_13": 46.32
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 14,
+    "__EMPTY_5": 46.5,
+    "__EMPTY_6": 33,
+    "__EMPTY_7": 61.5,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 18.5,
+    "__EMPTY_10": 23.5,
+    "__EMPTY_11": 31.5,
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 3,
+    "__EMPTY_7": 3,
+    "__EMPTY_8": 7,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 4,
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 43
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 8,
+    "__EMPTY_2": 17,
+    "__EMPTY_3": 10,
+    "__EMPTY_4": 25,
+    "__EMPTY_5": 13,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 49,
+    "__EMPTY_8": 44,
+    "__EMPTY_9": 61,
+    "__EMPTY_10": 51,
+    "__EMPTY_11": 47,
+    "__EMPTY_12": 35,
+    "__EMPTY_13": 389
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.944,
+    "__EMPTY_3": 0.909,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0.867,
+    "__EMPTY_6": 0.906,
+    "__EMPTY_7": 0.942,
+    "__EMPTY_8": 0.863,
+    "__EMPTY_9": 0.884,
+    "__EMPTY_10": 0.927,
+    "__EMPTY_11": 0.922,
+    "__EMPTY_12": 0.778,
+    "__EMPTY_13": 0.9
+  },
+  {
+    "__EMPTY": "Business Cost Type - Material-Intensive",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 68,
+    "__EMPTY_5": 79,
+    "__EMPTY_6": 77,
+    "__EMPTY_7": 83,
+    "__EMPTY_8": 95,
+    "__EMPTY_9": 99,
+    "__EMPTY_10": 106,
+    "__EMPTY_11": 125,
+    "__EMPTY_12": 142,
+    "__EMPTY_13": 142
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 16,
+    "__EMPTY_5": 18,
+    "__EMPTY_6": 9,
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 14,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 16,
+    "__EMPTY_12": 28,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_4": 9.25,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 33,
+    "__EMPTY_10": 9,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 33,
+    "__EMPTY_10": 9,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 8
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 7,
+    "__EMPTY_5": 8,
+    "__EMPTY_6": 10,
+    "__EMPTY_7": 8,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 13,
+    "__EMPTY_10": 11,
+    "__EMPTY_11": 13,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 100
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 0.7,
+    "__EMPTY_5": 0.889,
+    "__EMPTY_6": 0.909,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.846,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.909,
+    "__EMPTY_13": 0.926
+  },
+  {
+    "__EMPTY": "Business Cost Type - Technology-Intensive",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 294,
+    "__EMPTY_2": 318,
+    "__EMPTY_3": 335,
+    "__EMPTY_4": 373,
+    "__EMPTY_5": 405,
+    "__EMPTY_6": 429,
+    "__EMPTY_7": 462,
+    "__EMPTY_8": 503,
+    "__EMPTY_9": 543,
+    "__EMPTY_10": 601,
+    "__EMPTY_11": 681,
+    "__EMPTY_12": 752,
+    "__EMPTY_13": 752
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 10,
+    "__EMPTY_2": 21,
+    "__EMPTY_3": 16,
+    "__EMPTY_4": 37,
+    "__EMPTY_5": 60,
+    "__EMPTY_6": 65,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 69,
+    "__EMPTY_9": 44,
+    "__EMPTY_10": 48,
+    "__EMPTY_11": 88,
+    "__EMPTY_12": 135,
+    "__EMPTY_13": 135
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 10.67,
+    "__EMPTY_3": 32.75,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 21.75,
+    "__EMPTY_6": 37,
+    "__EMPTY_7": 47.57,
+    "__EMPTY_8": 29.8,
+    "__EMPTY_9": 32.71,
+    "__EMPTY_10": 32.56,
+    "__EMPTY_11": 24.1,
+    "__EMPTY_12": 18,
+    "__EMPTY_13": 29.07
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 39,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 24.5,
+    "__EMPTY_6": 37.5,
+    "__EMPTY_7": 59,
+    "__EMPTY_8": 14,
+    "__EMPTY_9": 38,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 24,
+    "__EMPTY_12": 15.5,
+    "__EMPTY_13": 24.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 3,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 4,
+    "__EMPTY_7": 6,
+    "__EMPTY_8": 5,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 60
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 12,
+    "__EMPTY_2": 16,
+    "__EMPTY_3": 27,
+    "__EMPTY_4": 20,
+    "__EMPTY_5": 10,
+    "__EMPTY_6": 20,
+    "__EMPTY_7": 30,
+    "__EMPTY_8": 54,
+    "__EMPTY_9": 74,
+    "__EMPTY_10": 73,
+    "__EMPTY_11": 63,
+    "__EMPTY_12": 48,
+    "__EMPTY_13": 447
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.923,
+    "__EMPTY_2": 0.889,
+    "__EMPTY_3": 0.9,
+    "__EMPTY_4": 0.909,
+    "__EMPTY_5": 0.714,
+    "__EMPTY_6": 0.833,
+    "__EMPTY_7": 0.833,
+    "__EMPTY_8": 0.915,
+    "__EMPTY_9": 0.914,
+    "__EMPTY_10": 0.913,
+    "__EMPTY_11": 0.863,
+    "__EMPTY_12": 0.842,
+    "__EMPTY_13": 0.882
+  },
+  {
+    "__EMPTY": "Business Type - B2B",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 332,
+    "__EMPTY_2": 361,
+    "__EMPTY_3": 388,
+    "__EMPTY_4": 460,
+    "__EMPTY_5": 522,
+    "__EMPTY_6": 558,
+    "__EMPTY_7": 601,
+    "__EMPTY_8": 650,
+    "__EMPTY_9": 718,
+    "__EMPTY_10": 799,
+    "__EMPTY_11": 901,
+    "__EMPTY_12": 978,
+    "__EMPTY_13": 978
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 15,
+    "__EMPTY_2": 22,
+    "__EMPTY_3": 24,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 111,
+    "__EMPTY_6": 119,
+    "__EMPTY_7": 103,
+    "__EMPTY_8": 84,
+    "__EMPTY_9": 59,
+    "__EMPTY_10": 61,
+    "__EMPTY_11": 114,
+    "__EMPTY_12": 163,
+    "__EMPTY_13": 163
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 10.67,
+    "__EMPTY_3": 26.5,
+    "__EMPTY_4": 26.33,
+    "__EMPTY_5": 32.33,
+    "__EMPTY_6": 37.5,
+    "__EMPTY_7": 53.57,
+    "__EMPTY_8": 43.6,
+    "__EMPTY_9": 87.44,
+    "__EMPTY_10": 35.27,
+    "__EMPTY_11": 30.3,
+    "__EMPTY_12": 15.06,
+    "__EMPTY_13": 36.6
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 25,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 37.5,
+    "__EMPTY_7": 59,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 13.5,
+    "__EMPTY_13": 25
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 4,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 6,
+    "__EMPTY_6": 6,
+    "__EMPTY_7": 6,
+    "__EMPTY_8": 5,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 73
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 17,
+    "__EMPTY_2": 24,
+    "__EMPTY_3": 28,
+    "__EMPTY_4": 29,
+    "__EMPTY_5": 18,
+    "__EMPTY_6": 33,
+    "__EMPTY_7": 63,
+    "__EMPTY_8": 78,
+    "__EMPTY_9": 99,
+    "__EMPTY_10": 98,
+    "__EMPTY_11": 81,
+    "__EMPTY_12": 65,
+    "__EMPTY_13": 633
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.923,
+    "__EMPTY_3": 0.875,
+    "__EMPTY_4": 0.906,
+    "__EMPTY_5": 0.75,
+    "__EMPTY_6": 0.846,
+    "__EMPTY_7": 0.913,
+    "__EMPTY_8": 0.94,
+    "__EMPTY_9": 0.917,
+    "__EMPTY_10": 0.916,
+    "__EMPTY_11": 0.89,
+    "__EMPTY_12": 0.833,
+    "__EMPTY_13": 0.897
+  },
+  {
+    "__EMPTY": "Business Type - B2C",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 235,
+    "__EMPTY_2": 251,
+    "__EMPTY_3": 277,
+    "__EMPTY_4": 346,
+    "__EMPTY_5": 392,
+    "__EMPTY_6": 405,
+    "__EMPTY_7": 434,
+    "__EMPTY_8": 458,
+    "__EMPTY_9": 480,
+    "__EMPTY_10": 501,
+    "__EMPTY_11": 551,
+    "__EMPTY_12": 601,
+    "__EMPTY_13": 601
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 9,
+    "__EMPTY_2": 12,
+    "__EMPTY_3": 22,
+    "__EMPTY_4": 64,
+    "__EMPTY_5": 94,
+    "__EMPTY_6": 71,
+    "__EMPTY_7": 57,
+    "__EMPTY_8": 46,
+    "__EMPTY_9": 26,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 56,
+    "__EMPTY_12": 88,
+    "__EMPTY_13": 88
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 149.67,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 9.25,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 35.8,
+    "__EMPTY_7": 57.67,
+    "__EMPTY_8": 36.13,
+    "__EMPTY_9": 48.17,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 20.5,
+    "__EMPTY_13": 37.22
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 192,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 33,
+    "__EMPTY_7": 69,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 33,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 31,
+    "__EMPTY_12": 24.5,
+    "__EMPTY_13": 29.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 3,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 3,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 47
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 16,
+    "__EMPTY_2": 15,
+    "__EMPTY_3": 19,
+    "__EMPTY_4": 30,
+    "__EMPTY_5": 19,
+    "__EMPTY_6": 38,
+    "__EMPTY_7": 47,
+    "__EMPTY_8": 49,
+    "__EMPTY_9": 56,
+    "__EMPTY_10": 44,
+    "__EMPTY_11": 44,
+    "__EMPTY_12": 34,
+    "__EMPTY_13": 411
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.842,
+    "__EMPTY_2": 0.938,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.909,
+    "__EMPTY_5": 0.905,
+    "__EMPTY_6": 0.884,
+    "__EMPTY_7": 0.94,
+    "__EMPTY_8": 0.86,
+    "__EMPTY_9": 0.903,
+    "__EMPTY_10": 0.936,
+    "__EMPTY_11": 0.88,
+    "__EMPTY_12": 0.829,
+    "__EMPTY_13": 0.897
+  },
+  {
+    "__EMPTY": "Business Type - Investments",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 67,
+    "__EMPTY_2": 75,
+    "__EMPTY_3": 80,
+    "__EMPTY_4": 91,
+    "__EMPTY_5": 102,
+    "__EMPTY_6": 113,
+    "__EMPTY_7": 122,
+    "__EMPTY_8": 134,
+    "__EMPTY_9": 133,
+    "__EMPTY_10": 149,
+    "__EMPTY_11": 163,
+    "__EMPTY_12": 174,
+    "__EMPTY_13": 174
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 1,
+    "__EMPTY_2": 5,
+    "__EMPTY_3": 4,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 21,
+    "__EMPTY_6": 26,
+    "__EMPTY_7": 20,
+    "__EMPTY_8": 17,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 10,
+    "__EMPTY_11": 20,
+    "__EMPTY_12": 23,
+    "__EMPTY_13": 23
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 73,
+    "__EMPTY_5": 21,
+    "__EMPTY_7": 61.5,
+    "__EMPTY_9": 46,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 12.33,
+    "__EMPTY_13": 39.2
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 73,
+    "__EMPTY_5": 21,
+    "__EMPTY_7": 61.5,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 35
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 5,
+    "__EMPTY_2": 3,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 4,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 6,
+    "__EMPTY_7": 16,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 14,
+    "__EMPTY_10": 16,
+    "__EMPTY_11": 12,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 107
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.833,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.889,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.737,
+    "__EMPTY_10": 0.941,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.769,
+    "__EMPTY_13": 0.892
+  },
+  {
+    "__EMPTY": "Buyer Geography - Global",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 234,
+    "__EMPTY_2": 247,
+    "__EMPTY_3": 259,
+    "__EMPTY_4": 302,
+    "__EMPTY_5": 334,
+    "__EMPTY_6": 363,
+    "__EMPTY_7": 400,
+    "__EMPTY_8": 447,
+    "__EMPTY_9": 486,
+    "__EMPTY_10": 545,
+    "__EMPTY_11": 619,
+    "__EMPTY_12": 675,
+    "__EMPTY_13": 675
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 9,
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 10,
+    "__EMPTY_4": 42,
+    "__EMPTY_5": 65,
+    "__EMPTY_6": 68,
+    "__EMPTY_7": 75,
+    "__EMPTY_8": 75,
+    "__EMPTY_9": 37,
+    "__EMPTY_10": 46,
+    "__EMPTY_11": 72,
+    "__EMPTY_12": 105,
+    "__EMPTY_13": 105
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 36,
+    "__EMPTY_4": 8,
+    "__EMPTY_6": 45,
+    "__EMPTY_7": 61.25,
+    "__EMPTY_8": 43.88,
+    "__EMPTY_9": 32.3,
+    "__EMPTY_10": 25.89,
+    "__EMPTY_11": 30.25,
+    "__EMPTY_12": 15.63,
+    "__EMPTY_13": 31.44
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 36,
+    "__EMPTY_4": 8,
+    "__EMPTY_6": 45,
+    "__EMPTY_7": 68,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 21,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 24,
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 44
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 11,
+    "__EMPTY_2": 13,
+    "__EMPTY_3": 16,
+    "__EMPTY_4": 13,
+    "__EMPTY_5": 11,
+    "__EMPTY_6": 24,
+    "__EMPTY_7": 37,
+    "__EMPTY_8": 50,
+    "__EMPTY_9": 85,
+    "__EMPTY_10": 69,
+    "__EMPTY_11": 67,
+    "__EMPTY_12": 41,
+    "__EMPTY_13": 437
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.929,
+    "__EMPTY_3": 0.941,
+    "__EMPTY_4": 0.929,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0.96,
+    "__EMPTY_7": 0.902,
+    "__EMPTY_8": 0.862,
+    "__EMPTY_9": 0.904,
+    "__EMPTY_10": 0.896,
+    "__EMPTY_11": 0.944,
+    "__EMPTY_12": 0.854,
+    "__EMPTY_13": 0.909
+  },
+  {
+    "__EMPTY": "Buyer Geography - National",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 188,
+    "__EMPTY_2": 201,
+    "__EMPTY_3": 221,
+    "__EMPTY_4": 267,
+    "__EMPTY_5": 306,
+    "__EMPTY_6": 312,
+    "__EMPTY_7": 326,
+    "__EMPTY_8": 338,
+    "__EMPTY_9": 358,
+    "__EMPTY_10": 380,
+    "__EMPTY_11": 418,
+    "__EMPTY_12": 447,
+    "__EMPTY_13": 447
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 11,
+    "__EMPTY_2": 6,
+    "__EMPTY_3": 18,
+    "__EMPTY_4": 41,
+    "__EMPTY_5": 69,
+    "__EMPTY_6": 57,
+    "__EMPTY_7": 39,
+    "__EMPTY_8": 27,
+    "__EMPTY_9": 22,
+    "__EMPTY_10": 23,
+    "__EMPTY_11": 45,
+    "__EMPTY_12": 66,
+    "__EMPTY_13": 66
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 149.67,
+    "__EMPTY_2": 10,
+    "__EMPTY_4": 9.25,
+    "__EMPTY_5": 32.67,
+    "__EMPTY_6": 32.2,
+    "__EMPTY_7": 53.17,
+    "__EMPTY_8": 28.33,
+    "__EMPTY_9": 28.17,
+    "__EMPTY_10": 24.25,
+    "__EMPTY_11": 19.6,
+    "__EMPTY_12": 23.57,
+    "__EMPTY_13": 35.91
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 192,
+    "__EMPTY_2": 10,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 64,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 31,
+    "__EMPTY_10": 17,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 21,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 3,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 5,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 43
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 13,
+    "__EMPTY_2": 17,
+    "__EMPTY_3": 11,
+    "__EMPTY_4": 24,
+    "__EMPTY_5": 9,
+    "__EMPTY_6": 23,
+    "__EMPTY_7": 34,
+    "__EMPTY_8": 36,
+    "__EMPTY_9": 29,
+    "__EMPTY_10": 33,
+    "__EMPTY_11": 33,
+    "__EMPTY_12": 24,
+    "__EMPTY_13": 286
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.813,
+    "__EMPTY_2": 0.944,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.889,
+    "__EMPTY_5": 0.75,
+    "__EMPTY_6": 0.821,
+    "__EMPTY_7": 0.872,
+    "__EMPTY_8": 0.923,
+    "__EMPTY_9": 0.829,
+    "__EMPTY_10": 0.917,
+    "__EMPTY_11": 0.868,
+    "__EMPTY_12": 0.8,
+    "__EMPTY_13": 0.869
+  },
+  {
+    "__EMPTY": "Buyer Geography - National - United States",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 232,
+    "__EMPTY_2": 244,
+    "__EMPTY_3": 268,
+    "__EMPTY_4": 325,
+    "__EMPTY_5": 365,
+    "__EMPTY_6": 377,
+    "__EMPTY_7": 393,
+    "__EMPTY_8": 413,
+    "__EMPTY_9": 433,
+    "__EMPTY_10": 457,
+    "__EMPTY_11": 502,
+    "__EMPTY_12": 547,
+    "__EMPTY_13": 547
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 13,
+    "__EMPTY_2": 7,
+    "__EMPTY_3": 20,
+    "__EMPTY_4": 51,
+    "__EMPTY_5": 75,
+    "__EMPTY_6": 68,
+    "__EMPTY_7": 47,
+    "__EMPTY_8": 36,
+    "__EMPTY_9": 25,
+    "__EMPTY_10": 21,
+    "__EMPTY_11": 54,
+    "__EMPTY_12": 86,
+    "__EMPTY_13": 86
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 149.67,
+    "__EMPTY_2": 10,
+    "__EMPTY_4": 9.25,
+    "__EMPTY_5": 25.25,
+    "__EMPTY_6": 32.2,
+    "__EMPTY_7": 53.17,
+    "__EMPTY_8": 37,
+    "__EMPTY_9": 29.56,
+    "__EMPTY_10": 31.5,
+    "__EMPTY_11": 17.5,
+    "__EMPTY_12": 24.5,
+    "__EMPTY_13": 36.38
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 192,
+    "__EMPTY_2": 10,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 31.5,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 64,
+    "__EMPTY_8": 37,
+    "__EMPTY_9": 27,
+    "__EMPTY_10": 31.5,
+    "__EMPTY_11": 17,
+    "__EMPTY_12": 21.5,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 3,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 5,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 45
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 13,
+    "__EMPTY_2": 18,
+    "__EMPTY_3": 14,
+    "__EMPTY_4": 27,
+    "__EMPTY_5": 15,
+    "__EMPTY_6": 24,
+    "__EMPTY_7": 40,
+    "__EMPTY_8": 44,
+    "__EMPTY_9": 37,
+    "__EMPTY_10": 39,
+    "__EMPTY_11": 34,
+    "__EMPTY_12": 30,
+    "__EMPTY_13": 335
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.813,
+    "__EMPTY_2": 0.947,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.9,
+    "__EMPTY_5": 0.789,
+    "__EMPTY_6": 0.828,
+    "__EMPTY_7": 0.889,
+    "__EMPTY_8": 0.957,
+    "__EMPTY_9": 0.804,
+    "__EMPTY_10": 0.951,
+    "__EMPTY_11": 0.895,
+    "__EMPTY_12": 0.811,
+    "__EMPTY_13": 0.882
+  },
+  {
+    "__EMPTY": "Buyer Geography - Regional",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 65,
+    "__EMPTY_5": 75,
+    "__EMPTY_6": 84,
+    "__EMPTY_7": 88,
+    "__EMPTY_8": 99,
+    "__EMPTY_9": 102,
+    "__EMPTY_10": 110,
+    "__EMPTY_11": 128,
+    "__EMPTY_12": 153,
+    "__EMPTY_13": 153
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 14,
+    "__EMPTY_5": 21,
+    "__EMPTY_6": 26,
+    "__EMPTY_7": 14,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 19,
+    "__EMPTY_12": 36,
+    "__EMPTY_13": 36
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 40,
+    "__EMPTY_10": 6,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 40,
+    "__EMPTY_10": 6,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 6
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 6
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 6,
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 16,
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 11,
+    "__EMPTY_10": 15,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 93
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.923,
+    "__EMPTY_9": 0.846,
+    "__EMPTY_10": 0.938,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.857,
+    "__EMPTY_13": 0.939
+  },
+  {
+    "__EMPTY": "Company Industry -",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_6": 64,
+    "__EMPTY_7": 67,
+    "__EMPTY_8": 78,
+    "__EMPTY_9": 89,
+    "__EMPTY_10": 95,
+    "__EMPTY_11": 113,
+    "__EMPTY_12": 131,
+    "__EMPTY_13": 131
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_6": 14,
+    "__EMPTY_7": 10,
+    "__EMPTY_8": 16,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 18,
+    "__EMPTY_12": 31,
+    "__EMPTY_13": 31
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_8": 35,
+    "__EMPTY_9": 61.67,
+    "__EMPTY_10": 85,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 25.5,
+    "__EMPTY_13": 41.5
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 79,
+    "__EMPTY_10": 85,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 25.5,
+    "__EMPTY_13": 34
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 8
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 6,
+    "__EMPTY_9": 17,
+    "__EMPTY_10": 11,
+    "__EMPTY_11": 11,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 79
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.75,
+    "__EMPTY_9": 0.895,
+    "__EMPTY_10": 0.917,
+    "__EMPTY_11": 0.917,
+    "__EMPTY_12": 0.846,
+    "__EMPTY_13": 0.908
+  },
+  {
+    "__EMPTY": "Company Industry - Ai & Machine Learning",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_5": 65,
+    "__EMPTY_6": 70,
+    "__EMPTY_7": 75,
+    "__EMPTY_8": 82,
+    "__EMPTY_9": 88,
+    "__EMPTY_10": 108,
+    "__EMPTY_11": 125,
+    "__EMPTY_12": 139,
+    "__EMPTY_13": 139
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_5": 11,
+    "__EMPTY_6": 12,
+    "__EMPTY_7": 10,
+    "__EMPTY_8": 9,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 15,
+    "__EMPTY_11": 17,
+    "__EMPTY_12": 25,
+    "__EMPTY_13": 25
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_9": 29.67,
+    "__EMPTY_10": 42.5,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 23.44
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_9": 38,
+    "__EMPTY_10": 42.5,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 9
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_5": 5,
+    "__EMPTY_6": 4,
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 18,
+    "__EMPTY_11": 18,
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 98
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.727,
+    "__EMPTY_10": 0.9,
+    "__EMPTY_11": 0.9,
+    "__EMPTY_12": 0.933,
+    "__EMPTY_13": 0.916
+  },
+  {
+    "__EMPTY": "Company Industry - Consulting & Advisory",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_8": 63,
+    "__EMPTY_9": 67,
+    "__EMPTY_10": 78,
+    "__EMPTY_11": 89,
+    "__EMPTY_12": 87,
+    "__EMPTY_13": 87
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 11,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_9": 648,
+    "__EMPTY_12": 22,
+    "__EMPTY_13": 129.17
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_9": 648,
+    "__EMPTY_12": 22,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 5
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 13,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 7,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 57
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.929,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.714,
+    "__EMPTY_13": 0.919
+  },
+  {
+    "__EMPTY": "Company Industry - Health Tech",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 61,
+    "__EMPTY_5": 68,
+    "__EMPTY_6": 70,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 73,
+    "__EMPTY_9": 77,
+    "__EMPTY_10": 79,
+    "__EMPTY_11": 81,
+    "__EMPTY_12": 85,
+    "__EMPTY_13": 85
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 4,
+    "__EMPTY_5": 10,
+    "__EMPTY_6": 7,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 3,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_6": 29,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 38,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_6": 29,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 38,
+    "__EMPTY_13": 29
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 4
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 4,
+    "__EMPTY_7": 5,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 36
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 1,
+    "__EMPTY_6": 0.667,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.857,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.5,
+    "__EMPTY_13": 0.9
+  },
+  {
+    "__EMPTY": "Company Industry - Marketing & Advertising",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_10": 63,
+    "__EMPTY_11": 69,
+    "__EMPTY_12": 71,
+    "__EMPTY_13": 71
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 2
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 56
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.667,
+    "__EMPTY_13": 0.966
+  },
+  {
+    "__EMPTY": "Company Industry - Platform",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_12": 66,
+    "__EMPTY_13": 66
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_12": 21,
+    "__EMPTY_13": 21
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_12": 15.8,
+    "__EMPTY_13": 19.46
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 17
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 44
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_12": 0.6,
+    "__EMPTY_13": 0.815
+  },
+  {
+    "__EMPTY": "Company Industry - Software/Saas",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 122,
+    "__EMPTY_2": 131,
+    "__EMPTY_3": 137,
+    "__EMPTY_4": 162,
+    "__EMPTY_5": 181,
+    "__EMPTY_6": 197,
+    "__EMPTY_7": 218,
+    "__EMPTY_8": 247,
+    "__EMPTY_9": 267,
+    "__EMPTY_10": 298,
+    "__EMPTY_11": 342,
+    "__EMPTY_12": 382,
+    "__EMPTY_13": 382
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 6,
+    "__EMPTY_2": 10,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 25,
+    "__EMPTY_5": 37,
+    "__EMPTY_6": 43,
+    "__EMPTY_7": 43,
+    "__EMPTY_8": 43,
+    "__EMPTY_9": 28,
+    "__EMPTY_10": 26,
+    "__EMPTY_11": 52,
+    "__EMPTY_12": 77,
+    "__EMPTY_13": 77
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 10,
+    "__EMPTY_3": 40,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 15.5,
+    "__EMPTY_7": 45.2,
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 25,
+    "__EMPTY_10": 42.17,
+    "__EMPTY_11": 21.57,
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 30.27
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 10,
+    "__EMPTY_3": 42,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 15.5,
+    "__EMPTY_7": 59,
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 20.5,
+    "__EMPTY_10": 28,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 7,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 36
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 10,
+    "__EMPTY_2": 7,
+    "__EMPTY_3": 11,
+    "__EMPTY_4": 7,
+    "__EMPTY_5": 7,
+    "__EMPTY_6": 10,
+    "__EMPTY_7": 23,
+    "__EMPTY_8": 29,
+    "__EMPTY_9": 40,
+    "__EMPTY_10": 42,
+    "__EMPTY_11": 34,
+    "__EMPTY_12": 30,
+    "__EMPTY_13": 250
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.875,
+    "__EMPTY_3": 0.846,
+    "__EMPTY_4": 0.778,
+    "__EMPTY_5": 0.778,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.852,
+    "__EMPTY_8": 0.935,
+    "__EMPTY_9": 0.87,
+    "__EMPTY_10": 0.894,
+    "__EMPTY_11": 0.829,
+    "__EMPTY_12": 0.857,
+    "__EMPTY_13": 0.874
+  },
+  {
+    "__EMPTY": "Company Industry - Venture Capital",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 62,
+    "__EMPTY_2": 70,
+    "__EMPTY_3": 74,
+    "__EMPTY_4": 84,
+    "__EMPTY_5": 96,
+    "__EMPTY_6": 104,
+    "__EMPTY_7": 112,
+    "__EMPTY_8": 122,
+    "__EMPTY_9": 122,
+    "__EMPTY_10": 137,
+    "__EMPTY_11": 149,
+    "__EMPTY_12": 156,
+    "__EMPTY_13": 156
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 1,
+    "__EMPTY_2": 5,
+    "__EMPTY_3": 4,
+    "__EMPTY_4": 9,
+    "__EMPTY_5": 19,
+    "__EMPTY_6": 22,
+    "__EMPTY_7": 16,
+    "__EMPTY_8": 16,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 16,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 16
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 132.5,
+    "__EMPTY_5": 21,
+    "__EMPTY_7": 77,
+    "__EMPTY_9": 47.83,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 12.33,
+    "__EMPTY_13": 51.73
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 132.5,
+    "__EMPTY_5": 21,
+    "__EMPTY_7": 77,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 35
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 2,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 4,
+    "__EMPTY_2": 3,
+    "__EMPTY_3": 5,
+    "__EMPTY_4": 4,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 6,
+    "__EMPTY_7": 15,
+    "__EMPTY_8": 10,
+    "__EMPTY_9": 13,
+    "__EMPTY_10": 13,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 93
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.667,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0.5,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.882,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.722,
+    "__EMPTY_10": 0.929,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.75,
+    "__EMPTY_13": 0.869
+  },
+  {
+    "__EMPTY": "Employee Count - 0-10",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 65,
+    "__EMPTY_5": 81,
+    "__EMPTY_6": 90,
+    "__EMPTY_7": 101,
+    "__EMPTY_8": 112,
+    "__EMPTY_9": 117,
+    "__EMPTY_10": 126,
+    "__EMPTY_11": 130,
+    "__EMPTY_12": 134,
+    "__EMPTY_13": 134
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 14,
+    "__EMPTY_5": 29,
+    "__EMPTY_6": 31,
+    "__EMPTY_7": 24,
+    "__EMPTY_8": 14,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 4,
+    "__EMPTY_11": 8,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 7
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_6": 48,
+    "__EMPTY_7": 12,
+    "__EMPTY_9": 140,
+    "__EMPTY_13": 66.67
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_6": 48,
+    "__EMPTY_7": 12,
+    "__EMPTY_9": 140,
+    "__EMPTY_13": 48
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 3
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 8,
+    "__EMPTY_7": 19,
+    "__EMPTY_8": 22,
+    "__EMPTY_9": 16,
+    "__EMPTY_10": 14,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 106
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 1,
+    "__EMPTY_6": 0.889,
+    "__EMPTY_7": 0.95,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.941,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.972
+  },
+  {
+    "__EMPTY": "Employee Count - 10-50",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_5": 64,
+    "__EMPTY_6": 70,
+    "__EMPTY_7": 77,
+    "__EMPTY_8": 92,
+    "__EMPTY_9": 95,
+    "__EMPTY_10": 103,
+    "__EMPTY_11": 120,
+    "__EMPTY_12": 125,
+    "__EMPTY_13": 125
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_5": 20,
+    "__EMPTY_6": 19,
+    "__EMPTY_7": 15,
+    "__EMPTY_8": 19,
+    "__EMPTY_9": 11,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 16,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 17
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 28,
+    "__EMPTY_8": 103,
+    "__EMPTY_9": 31,
+    "__EMPTY_11": 48,
+    "__EMPTY_12": 38,
+    "__EMPTY_13": 41.7
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 28,
+    "__EMPTY_8": 103,
+    "__EMPTY_9": 36.5,
+    "__EMPTY_11": 48,
+    "__EMPTY_12": 38,
+    "__EMPTY_13": 36.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 4,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 7,
+    "__EMPTY_7": 11,
+    "__EMPTY_8": 11,
+    "__EMPTY_9": 13,
+    "__EMPTY_10": 14,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 93
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_5": 0.5,
+    "__EMPTY_6": 0.875,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.917,
+    "__EMPTY_9": 0.765,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.875,
+    "__EMPTY_12": 0.875,
+    "__EMPTY_13": 0.903
+  },
+  {
+    "__EMPTY": "Employee Count - 50-200",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_6": 67,
+    "__EMPTY_7": 67,
+    "__EMPTY_8": 72,
+    "__EMPTY_9": 79,
+    "__EMPTY_10": 81,
+    "__EMPTY_11": 88,
+    "__EMPTY_12": 96,
+    "__EMPTY_13": 96
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_6": 18,
+    "__EMPTY_7": 10,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 4,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 65.6,
+    "__EMPTY_9": 222,
+    "__EMPTY_10": 12,
+    "__EMPTY_11": 7,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 78
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 72,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 12,
+    "__EMPTY_11": 7,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 36
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 9,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 7,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 57
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.692,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.75,
+    "__EMPTY_10": 0.857,
+    "__EMPTY_11": 0.875,
+    "__EMPTY_12": 0.75,
+    "__EMPTY_13": 0.814
+  },
+  {
+    "__EMPTY": "Employee Geography - Global",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_7": 61,
+    "__EMPTY_8": 69,
+    "__EMPTY_9": 77,
+    "__EMPTY_10": 81,
+    "__EMPTY_11": 90,
+    "__EMPTY_12": 100,
+    "__EMPTY_13": 100
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_7": 10,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 16
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 54.5,
+    "__EMPTY_8": 15,
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 34
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 54.5,
+    "__EMPTY_8": 15,
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 21
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 6
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 5,
+    "__EMPTY_9": 17,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 59
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_7": 0.778,
+    "__EMPTY_8": 0.833,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.75,
+    "__EMPTY_13": 0.908
+  },
+  {
+    "__EMPTY": "Employee Geography - National",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 240,
+    "__EMPTY_2": 259,
+    "__EMPTY_3": 282,
+    "__EMPTY_4": 341,
+    "__EMPTY_5": 382,
+    "__EMPTY_6": 403,
+    "__EMPTY_7": 433,
+    "__EMPTY_8": 463,
+    "__EMPTY_9": 493,
+    "__EMPTY_10": 542,
+    "__EMPTY_11": 608,
+    "__EMPTY_12": 665,
+    "__EMPTY_13": 665
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 10,
+    "__EMPTY_2": 13,
+    "__EMPTY_3": 23,
+    "__EMPTY_4": 55,
+    "__EMPTY_5": 81,
+    "__EMPTY_6": 78,
+    "__EMPTY_7": 61,
+    "__EMPTY_8": 62,
+    "__EMPTY_9": 37,
+    "__EMPTY_10": 40,
+    "__EMPTY_11": 78,
+    "__EMPTY_12": 118,
+    "__EMPTY_13": 118
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 116.5,
+    "__EMPTY_3": 40,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 26,
+    "__EMPTY_6": 32.2,
+    "__EMPTY_7": 52.86,
+    "__EMPTY_8": 33.5,
+    "__EMPTY_9": 37.27,
+    "__EMPTY_10": 19.25,
+    "__EMPTY_11": 27.83,
+    "__EMPTY_12": 20.4,
+    "__EMPTY_13": 33.75
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 116.5,
+    "__EMPTY_3": 42,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 31.5,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 59,
+    "__EMPTY_8": 12.5,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 14.5,
+    "__EMPTY_11": 27.5,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 2,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 6,
+    "__EMPTY_8": 4,
+    "__EMPTY_9": 11,
+    "__EMPTY_10": 7,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 56
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 12,
+    "__EMPTY_2": 17,
+    "__EMPTY_3": 18,
+    "__EMPTY_4": 28,
+    "__EMPTY_5": 14,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 49,
+    "__EMPTY_8": 42,
+    "__EMPTY_9": 61,
+    "__EMPTY_10": 62,
+    "__EMPTY_11": 60,
+    "__EMPTY_12": 40,
+    "__EMPTY_13": 432
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.857,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0.9,
+    "__EMPTY_4": 0.966,
+    "__EMPTY_5": 0.778,
+    "__EMPTY_6": 0.853,
+    "__EMPTY_7": 0.891,
+    "__EMPTY_8": 0.913,
+    "__EMPTY_9": 0.847,
+    "__EMPTY_10": 0.899,
+    "__EMPTY_11": 0.909,
+    "__EMPTY_12": 0.833,
+    "__EMPTY_13": 0.885
+  },
+  {
+    "__EMPTY": "Employee Geography - National - United States",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 247,
+    "__EMPTY_2": 268,
+    "__EMPTY_3": 292,
+    "__EMPTY_4": 354,
+    "__EMPTY_5": 387,
+    "__EMPTY_6": 409,
+    "__EMPTY_7": 441,
+    "__EMPTY_8": 475,
+    "__EMPTY_9": 499,
+    "__EMPTY_10": 549,
+    "__EMPTY_11": 615,
+    "__EMPTY_12": 674,
+    "__EMPTY_13": 674
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 11,
+    "__EMPTY_2": 16,
+    "__EMPTY_3": 23,
+    "__EMPTY_4": 56,
+    "__EMPTY_5": 72,
+    "__EMPTY_6": 74,
+    "__EMPTY_7": 62,
+    "__EMPTY_8": 62,
+    "__EMPTY_9": 32,
+    "__EMPTY_10": 39,
+    "__EMPTY_11": 75,
+    "__EMPTY_12": 112,
+    "__EMPTY_13": 112
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 116.5,
+    "__EMPTY_3": 32.75,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 25,
+    "__EMPTY_6": 32.2,
+    "__EMPTY_7": 52.86,
+    "__EMPTY_8": 54.5,
+    "__EMPTY_9": 37.27,
+    "__EMPTY_10": 22.2,
+    "__EMPTY_11": 27.8,
+    "__EMPTY_12": 20.4,
+    "__EMPTY_13": 35
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 116.5,
+    "__EMPTY_3": 39,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 59,
+    "__EMPTY_8": 54.5,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 12,
+    "__EMPTY_11": 27,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 2,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 3,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 5,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 6,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 11,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 53
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 12,
+    "__EMPTY_2": 18,
+    "__EMPTY_3": 22,
+    "__EMPTY_4": 30,
+    "__EMPTY_5": 17,
+    "__EMPTY_6": 25,
+    "__EMPTY_7": 45,
+    "__EMPTY_8": 44,
+    "__EMPTY_9": 60,
+    "__EMPTY_10": 58,
+    "__EMPTY_11": 58,
+    "__EMPTY_12": 42,
+    "__EMPTY_13": 431
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.857,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0.88,
+    "__EMPTY_4": 0.968,
+    "__EMPTY_5": 0.773,
+    "__EMPTY_6": 0.833,
+    "__EMPTY_7": 0.882,
+    "__EMPTY_8": 0.957,
+    "__EMPTY_9": 0.845,
+    "__EMPTY_10": 0.921,
+    "__EMPTY_11": 0.921,
+    "__EMPTY_12": 0.84,
+    "__EMPTY_13": 0.89
+  },
+  {
+    "__EMPTY": "Employee Geography - Regional",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 71,
+    "__EMPTY_5": 79,
+    "__EMPTY_6": 89,
+    "__EMPTY_7": 94,
+    "__EMPTY_8": 101,
+    "__EMPTY_9": 107,
+    "__EMPTY_10": 117,
+    "__EMPTY_11": 135,
+    "__EMPTY_12": 156,
+    "__EMPTY_13": 156
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 15,
+    "__EMPTY_5": 21,
+    "__EMPTY_6": 27,
+    "__EMPTY_7": 16,
+    "__EMPTY_8": 10,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 18,
+    "__EMPTY_12": 32,
+    "__EMPTY_13": 32
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 38.33,
+    "__EMPTY_10": 6,
+    "__EMPTY_12": 3.25,
+    "__EMPTY_13": 21.11
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_8": 56,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 6,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 6
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 8
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 7,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 16,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 18,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 96
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.929,
+    "__EMPTY_9": 0.769,
+    "__EMPTY_10": 0.947,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.786,
+    "__EMPTY_13": 0.923
+  },
+  {
+    "__EMPTY": "Funding Sources - Venture Capital",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 257,
+    "__EMPTY_2": 277,
+    "__EMPTY_3": 290,
+    "__EMPTY_4": 318,
+    "__EMPTY_5": 338,
+    "__EMPTY_6": 357,
+    "__EMPTY_7": 384,
+    "__EMPTY_8": 403,
+    "__EMPTY_9": 423,
+    "__EMPTY_10": 445,
+    "__EMPTY_11": 498,
+    "__EMPTY_12": 536,
+    "__EMPTY_13": 536
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 9,
+    "__EMPTY_2": 15,
+    "__EMPTY_3": 15,
+    "__EMPTY_4": 30,
+    "__EMPTY_5": 43,
+    "__EMPTY_6": 49,
+    "__EMPTY_7": 49,
+    "__EMPTY_8": 46,
+    "__EMPTY_9": 26,
+    "__EMPTY_10": 29,
+    "__EMPTY_11": 59,
+    "__EMPTY_12": 81,
+    "__EMPTY_13": 81
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 10.5,
+    "__EMPTY_3": 40,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 20.67,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 44.25,
+    "__EMPTY_8": 29.8,
+    "__EMPTY_9": 43.2,
+    "__EMPTY_10": 26,
+    "__EMPTY_11": 26.67,
+    "__EMPTY_12": 21.25,
+    "__EMPTY_13": 32.55
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 10.5,
+    "__EMPTY_3": 42,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 21,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 36.5,
+    "__EMPTY_8": 14,
+    "__EMPTY_9": 36.5,
+    "__EMPTY_10": 22,
+    "__EMPTY_11": 24,
+    "__EMPTY_12": 23,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 5,
+    "__EMPTY_9": 9,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 44
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 10,
+    "__EMPTY_2": 16,
+    "__EMPTY_3": 17,
+    "__EMPTY_4": 15,
+    "__EMPTY_5": 8,
+    "__EMPTY_6": 12,
+    "__EMPTY_7": 29,
+    "__EMPTY_8": 32,
+    "__EMPTY_9": 46,
+    "__EMPTY_10": 36,
+    "__EMPTY_11": 43,
+    "__EMPTY_12": 33,
+    "__EMPTY_13": 297
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.909,
+    "__EMPTY_2": 0.889,
+    "__EMPTY_3": 0.895,
+    "__EMPTY_4": 0.938,
+    "__EMPTY_5": 0.727,
+    "__EMPTY_6": 0.857,
+    "__EMPTY_7": 0.879,
+    "__EMPTY_8": 0.865,
+    "__EMPTY_9": 0.836,
+    "__EMPTY_10": 0.878,
+    "__EMPTY_11": 0.878,
+    "__EMPTY_12": 0.892,
+    "__EMPTY_13": 0.871
+  },
+  {
+    "__EMPTY": "Monetization - Investments",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 76,
+    "__EMPTY_2": 83,
+    "__EMPTY_3": 89,
+    "__EMPTY_4": 101,
+    "__EMPTY_5": 111,
+    "__EMPTY_6": 124,
+    "__EMPTY_7": 136,
+    "__EMPTY_8": 147,
+    "__EMPTY_9": 148,
+    "__EMPTY_10": 167,
+    "__EMPTY_11": 182,
+    "__EMPTY_12": 196,
+    "__EMPTY_13": 196
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 1,
+    "__EMPTY_2": 3,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 12,
+    "__EMPTY_5": 19,
+    "__EMPTY_6": 27,
+    "__EMPTY_7": 25,
+    "__EMPTY_8": 20,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 11,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 25,
+    "__EMPTY_13": 25
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 73,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 21,
+    "__EMPTY_7": 58,
+    "__EMPTY_8": 6,
+    "__EMPTY_9": 47.83,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 12.33,
+    "__EMPTY_13": 36.89
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 73,
+    "__EMPTY_2": 11,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 21,
+    "__EMPTY_7": 51,
+    "__EMPTY_8": 6,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 12,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 21
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 3,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 17
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 4,
+    "__EMPTY_2": 4,
+    "__EMPTY_3": 3,
+    "__EMPTY_4": 5,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 6,
+    "__EMPTY_7": 15,
+    "__EMPTY_8": 18,
+    "__EMPTY_9": 18,
+    "__EMPTY_10": 19,
+    "__EMPTY_11": 15,
+    "__EMPTY_12": 12,
+    "__EMPTY_13": 121
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.8,
+    "__EMPTY_2": 0.8,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.833,
+    "__EMPTY_5": 0.667,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.833,
+    "__EMPTY_8": 0.947,
+    "__EMPTY_9": 0.783,
+    "__EMPTY_10": 0.95,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.8,
+    "__EMPTY_13": 0.877
+  },
+  {
+    "__EMPTY": "Monetization - Products Sold",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 97,
+    "__EMPTY_2": 101,
+    "__EMPTY_3": 116,
+    "__EMPTY_4": 152,
+    "__EMPTY_5": 184,
+    "__EMPTY_6": 186,
+    "__EMPTY_7": 196,
+    "__EMPTY_8": 210,
+    "__EMPTY_9": 220,
+    "__EMPTY_10": 235,
+    "__EMPTY_11": 258,
+    "__EMPTY_12": 277,
+    "__EMPTY_13": 277
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 7,
+    "__EMPTY_2": 3,
+    "__EMPTY_3": 10,
+    "__EMPTY_4": 34,
+    "__EMPTY_5": 54,
+    "__EMPTY_6": 38,
+    "__EMPTY_7": 20,
+    "__EMPTY_8": 20,
+    "__EMPTY_9": 12,
+    "__EMPTY_10": 13,
+    "__EMPTY_11": 22,
+    "__EMPTY_12": 39,
+    "__EMPTY_13": 39
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 204,
+    "__EMPTY_4": 9.25,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 42.33,
+    "__EMPTY_7": 82,
+    "__EMPTY_8": 12.5,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 24.5,
+    "__EMPTY_12": 24,
+    "__EMPTY_13": 44.52
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 204,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 45,
+    "__EMPTY_7": 82,
+    "__EMPTY_8": 12.5,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 24.5,
+    "__EMPTY_12": 31,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 2,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 3,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 20
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 5,
+    "__EMPTY_2": 8,
+    "__EMPTY_3": 8,
+    "__EMPTY_4": 13,
+    "__EMPTY_5": 11,
+    "__EMPTY_6": 22,
+    "__EMPTY_7": 29,
+    "__EMPTY_8": 19,
+    "__EMPTY_9": 24,
+    "__EMPTY_10": 19,
+    "__EMPTY_11": 22,
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 194
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.714,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.813,
+    "__EMPTY_5": 0.917,
+    "__EMPTY_6": 0.88,
+    "__EMPTY_7": 0.935,
+    "__EMPTY_8": 0.905,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.905,
+    "__EMPTY_11": 0.917,
+    "__EMPTY_12": 0.824,
+    "__EMPTY_13": 0.907
+  },
+  {
+    "__EMPTY": "Monetization - Service Fees",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 263,
+    "__EMPTY_2": 290,
+    "__EMPTY_3": 320,
+    "__EMPTY_4": 396,
+    "__EMPTY_5": 455,
+    "__EMPTY_6": 484,
+    "__EMPTY_7": 516,
+    "__EMPTY_8": 547,
+    "__EMPTY_9": 596,
+    "__EMPTY_10": 655,
+    "__EMPTY_11": 731,
+    "__EMPTY_12": 787,
+    "__EMPTY_13": 787
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 10,
+    "__EMPTY_2": 18,
+    "__EMPTY_3": 25,
+    "__EMPTY_4": 75,
+    "__EMPTY_5": 120,
+    "__EMPTY_6": 109,
+    "__EMPTY_7": 84,
+    "__EMPTY_8": 62,
+    "__EMPTY_9": 39,
+    "__EMPTY_10": 43,
+    "__EMPTY_11": 81,
+    "__EMPTY_12": 124,
+    "__EMPTY_13": 124
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 10.5,
+    "__EMPTY_3": 13,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 30.4,
+    "__EMPTY_6": 35.2,
+    "__EMPTY_7": 51.75,
+    "__EMPTY_8": 37.5,
+    "__EMPTY_9": 120,
+    "__EMPTY_10": 23.86,
+    "__EMPTY_11": 33.4,
+    "__EMPTY_12": 16.19,
+    "__EMPTY_13": 38.39
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 10.5,
+    "__EMPTY_3": 14,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 30,
+    "__EMPTY_7": 61.5,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 32.5,
+    "__EMPTY_10": 17,
+    "__EMPTY_11": 34,
+    "__EMPTY_12": 17.5,
+    "__EMPTY_13": 22
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 5,
+    "__EMPTY_6": 5,
+    "__EMPTY_7": 3,
+    "__EMPTY_8": 10,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 61
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 13,
+    "__EMPTY_2": 19,
+    "__EMPTY_3": 26,
+    "__EMPTY_4": 30,
+    "__EMPTY_5": 15,
+    "__EMPTY_6": 40,
+    "__EMPTY_7": 63,
+    "__EMPTY_8": 65,
+    "__EMPTY_9": 77,
+    "__EMPTY_10": 76,
+    "__EMPTY_11": 60,
+    "__EMPTY_12": 47,
+    "__EMPTY_13": 531
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.929,
+    "__EMPTY_2": 0.905,
+    "__EMPTY_3": 0.929,
+    "__EMPTY_4": 0.968,
+    "__EMPTY_5": 0.75,
+    "__EMPTY_6": 0.889,
+    "__EMPTY_7": 0.955,
+    "__EMPTY_8": 0.867,
+    "__EMPTY_9": 0.906,
+    "__EMPTY_10": 0.927,
+    "__EMPTY_11": 0.923,
+    "__EMPTY_12": 0.783,
+    "__EMPTY_13": 0.897
+  },
+  {
+    "__EMPTY": "Monetization - Subscriptions",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 220,
+    "__EMPTY_2": 234,
+    "__EMPTY_3": 244,
+    "__EMPTY_4": 290,
+    "__EMPTY_5": 315,
+    "__EMPTY_6": 330,
+    "__EMPTY_7": 352,
+    "__EMPTY_8": 374,
+    "__EMPTY_9": 403,
+    "__EMPTY_10": 433,
+    "__EMPTY_11": 483,
+    "__EMPTY_12": 525,
+    "__EMPTY_13": 525
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 8,
+    "__EMPTY_2": 12,
+    "__EMPTY_3": 9,
+    "__EMPTY_4": 38,
+    "__EMPTY_5": 55,
+    "__EMPTY_6": 49,
+    "__EMPTY_7": 45,
+    "__EMPTY_8": 37,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 35,
+    "__EMPTY_11": 64,
+    "__EMPTY_12": 85,
+    "__EMPTY_13": 85
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 10,
+    "__EMPTY_3": 40,
+    "__EMPTY_5": 24.4,
+    "__EMPTY_6": 37.5,
+    "__EMPTY_7": 23.5,
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 22.4,
+    "__EMPTY_10": 37,
+    "__EMPTY_11": 29.38,
+    "__EMPTY_12": 22.5,
+    "__EMPTY_13": 30.12
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 10,
+    "__EMPTY_3": 42,
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 37.5,
+    "__EMPTY_7": 13,
+    "__EMPTY_8": 59,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 19,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 5,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 8,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 38
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 12,
+    "__EMPTY_2": 13,
+    "__EMPTY_3": 18,
+    "__EMPTY_4": 18,
+    "__EMPTY_5": 7,
+    "__EMPTY_6": 23,
+    "__EMPTY_7": 29,
+    "__EMPTY_8": 36,
+    "__EMPTY_9": 40,
+    "__EMPTY_10": 49,
+    "__EMPTY_11": 39,
+    "__EMPTY_12": 34,
+    "__EMPTY_13": 318
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.929,
+    "__EMPTY_3": 0.9,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0.583,
+    "__EMPTY_6": 0.92,
+    "__EMPTY_7": 0.879,
+    "__EMPTY_8": 0.947,
+    "__EMPTY_9": 0.889,
+    "__EMPTY_10": 0.891,
+    "__EMPTY_11": 0.83,
+    "__EMPTY_12": 0.919,
+    "__EMPTY_13": 0.893
+  },
+  {
+    "__EMPTY": "Office Model - Hybrid",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_6": 62,
+    "__EMPTY_7": 63,
+    "__EMPTY_8": 70,
+    "__EMPTY_9": 74,
+    "__EMPTY_10": 76,
+    "__EMPTY_11": 86,
+    "__EMPTY_12": 93,
+    "__EMPTY_13": 93
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_6": 14,
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 10,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 10
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 60.67,
+    "__EMPTY_8": 59,
+    "__EMPTY_11": 17,
+    "__EMPTY_12": 22.33,
+    "__EMPTY_13": 40.23
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 59,
+    "__EMPTY_11": 17,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_6": 3,
+    "__EMPTY_7": 8,
+    "__EMPTY_8": 4,
+    "__EMPTY_9": 12,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 7,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 48
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.8,
+    "__EMPTY_8": 0.667,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.778,
+    "__EMPTY_12": 0.75,
+    "__EMPTY_13": 0.814
+  },
+  {
+    "__EMPTY": "Office Model - In-Office",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 91,
+    "__EMPTY_2": 95,
+    "__EMPTY_3": 103,
+    "__EMPTY_4": 130,
+    "__EMPTY_5": 147,
+    "__EMPTY_6": 158,
+    "__EMPTY_7": 170,
+    "__EMPTY_8": 181,
+    "__EMPTY_9": 192,
+    "__EMPTY_10": 206,
+    "__EMPTY_11": 232,
+    "__EMPTY_12": 266,
+    "__EMPTY_13": 266
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 6,
+    "__EMPTY_2": 3,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 24,
+    "__EMPTY_5": 36,
+    "__EMPTY_6": 38,
+    "__EMPTY_7": 25,
+    "__EMPTY_8": 21,
+    "__EMPTY_9": 14,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 25,
+    "__EMPTY_12": 44,
+    "__EMPTY_13": 44
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_6": 39,
+    "__EMPTY_8": 27,
+    "__EMPTY_9": 105.38,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 61.82
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_6": 39,
+    "__EMPTY_8": 14,
+    "__EMPTY_9": 31,
+    "__EMPTY_11": 28,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 0,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 3,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 2,
+    "__EMPTY_13": 16
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 6,
+    "__EMPTY_2": 8,
+    "__EMPTY_3": 5,
+    "__EMPTY_4": 9,
+    "__EMPTY_5": 5,
+    "__EMPTY_6": 11,
+    "__EMPTY_7": 25,
+    "__EMPTY_8": 17,
+    "__EMPTY_9": 20,
+    "__EMPTY_10": 24,
+    "__EMPTY_11": 15,
+    "__EMPTY_12": 17,
+    "__EMPTY_13": 162
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0.846,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.85,
+    "__EMPTY_9": 0.714,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.938,
+    "__EMPTY_12": 0.895,
+    "__EMPTY_13": 0.91
+  },
+  {
+    "__EMPTY": "Sales Model - AE - Long Cycle",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 132,
+    "__EMPTY_2": 140,
+    "__EMPTY_3": 148,
+    "__EMPTY_4": 169,
+    "__EMPTY_5": 190,
+    "__EMPTY_6": 210,
+    "__EMPTY_7": 230,
+    "__EMPTY_8": 259,
+    "__EMPTY_9": 284,
+    "__EMPTY_10": 328,
+    "__EMPTY_11": 390,
+    "__EMPTY_12": 433,
+    "__EMPTY_13": 433
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 6,
+    "__EMPTY_2": 6,
+    "__EMPTY_3": 8,
+    "__EMPTY_4": 22,
+    "__EMPTY_5": 40,
+    "__EMPTY_6": 50,
+    "__EMPTY_7": 42,
+    "__EMPTY_8": 45,
+    "__EMPTY_9": 24,
+    "__EMPTY_10": 33,
+    "__EMPTY_11": 62,
+    "__EMPTY_12": 86,
+    "__EMPTY_13": 86
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 21.33,
+    "__EMPTY_5": 55,
+    "__EMPTY_7": 52.67,
+    "__EMPTY_8": 103,
+    "__EMPTY_9": 148.2,
+    "__EMPTY_10": 39.67,
+    "__EMPTY_11": 32.75,
+    "__EMPTY_12": 15.1,
+    "__EMPTY_13": 49.45
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 14,
+    "__EMPTY_5": 55,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 103,
+    "__EMPTY_9": 27,
+    "__EMPTY_10": 35,
+    "__EMPTY_11": 24,
+    "__EMPTY_12": 14.5,
+    "__EMPTY_13": 21
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 0,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 4,
+    "__EMPTY_12": 8,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 5,
+    "__EMPTY_2": 8,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 9,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 10,
+    "__EMPTY_7": 27,
+    "__EMPTY_8": 30,
+    "__EMPTY_9": 49,
+    "__EMPTY_10": 40,
+    "__EMPTY_11": 40,
+    "__EMPTY_12": 36,
+    "__EMPTY_13": 264
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.889,
+    "__EMPTY_3": 0.75,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0.8,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 0.931,
+    "__EMPTY_8": 0.968,
+    "__EMPTY_9": 0.907,
+    "__EMPTY_10": 0.93,
+    "__EMPTY_11": 0.909,
+    "__EMPTY_12": 0.818,
+    "__EMPTY_13": 0.907
+  },
+  {
+    "__EMPTY": "Sales Model - AE - Short Cycle",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 62,
+    "__EMPTY_5": 69,
+    "__EMPTY_6": 68,
+    "__EMPTY_7": 70,
+    "__EMPTY_8": 74,
+    "__EMPTY_9": 88,
+    "__EMPTY_10": 100,
+    "__EMPTY_11": 126,
+    "__EMPTY_12": 147,
+    "__EMPTY_13": 147
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 12,
+    "__EMPTY_5": 15,
+    "__EMPTY_6": 14,
+    "__EMPTY_7": 8,
+    "__EMPTY_8": 7,
+    "__EMPTY_9": 11,
+    "__EMPTY_10": 4,
+    "__EMPTY_11": 20,
+    "__EMPTY_12": 35,
+    "__EMPTY_13": 35
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 19,
+    "__EMPTY_6": 38,
+    "__EMPTY_7": 95,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 3,
+    "__EMPTY_12": 15.33,
+    "__EMPTY_13": 22.15
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 19,
+    "__EMPTY_6": 38,
+    "__EMPTY_7": 95,
+    "__EMPTY_8": 15,
+    "__EMPTY_9": 3,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 15
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 2,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 6,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 10,
+    "__EMPTY_8": 6,
+    "__EMPTY_9": 12,
+    "__EMPTY_10": 21,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 11,
+    "__EMPTY_13": 94
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 0.857,
+    "__EMPTY_5": 0.667,
+    "__EMPTY_6": 0.333,
+    "__EMPTY_7": 0.909,
+    "__EMPTY_8": 0.857,
+    "__EMPTY_9": 0.857,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.786,
+    "__EMPTY_13": 0.879
+  },
+  {
+    "__EMPTY": "Sales Model - Self-Serve",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 219,
+    "__EMPTY_2": 234,
+    "__EMPTY_3": 259,
+    "__EMPTY_4": 325,
+    "__EMPTY_5": 366,
+    "__EMPTY_6": 374,
+    "__EMPTY_7": 401,
+    "__EMPTY_8": 431,
+    "__EMPTY_9": 463,
+    "__EMPTY_10": 488,
+    "__EMPTY_11": 550,
+    "__EMPTY_12": 598,
+    "__EMPTY_13": 598
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 9,
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 17,
+    "__EMPTY_4": 61,
+    "__EMPTY_5": 88,
+    "__EMPTY_6": 62,
+    "__EMPTY_7": 49,
+    "__EMPTY_8": 52,
+    "__EMPTY_9": 32,
+    "__EMPTY_10": 29,
+    "__EMPTY_11": 65,
+    "__EMPTY_12": 95,
+    "__EMPTY_13": 95
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 116.5,
+    "__EMPTY_4": 9.25,
+    "__EMPTY_5": 25.25,
+    "__EMPTY_6": 39,
+    "__EMPTY_7": 57.67,
+    "__EMPTY_8": 27.5,
+    "__EMPTY_9": 56,
+    "__EMPTY_10": 24.25,
+    "__EMPTY_11": 25.13,
+    "__EMPTY_12": 23,
+    "__EMPTY_13": 32.92
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 116.5,
+    "__EMPTY_4": 11,
+    "__EMPTY_5": 31.5,
+    "__EMPTY_6": 39,
+    "__EMPTY_7": 69,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 56,
+    "__EMPTY_10": 17,
+    "__EMPTY_11": 28.5,
+    "__EMPTY_12": 24.5,
+    "__EMPTY_13": 27.5
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 2,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 3,
+    "__EMPTY_8": 6,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 8,
+    "__EMPTY_12": 7,
+    "__EMPTY_13": 46
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 11,
+    "__EMPTY_2": 15,
+    "__EMPTY_3": 23,
+    "__EMPTY_4": 25,
+    "__EMPTY_5": 15,
+    "__EMPTY_6": 38,
+    "__EMPTY_7": 45,
+    "__EMPTY_8": 39,
+    "__EMPTY_9": 62,
+    "__EMPTY_10": 50,
+    "__EMPTY_11": 45,
+    "__EMPTY_12": 37,
+    "__EMPTY_13": 405
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.846,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.893,
+    "__EMPTY_5": 0.789,
+    "__EMPTY_6": 0.95,
+    "__EMPTY_7": 0.938,
+    "__EMPTY_8": 0.867,
+    "__EMPTY_9": 0.925,
+    "__EMPTY_10": 0.893,
+    "__EMPTY_11": 0.849,
+    "__EMPTY_12": 0.841,
+    "__EMPTY_13": 0.898
+  },
+  {
+    "__EMPTY": "Top Resource Allocation - Customer Service & Support",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_4": 61,
+    "__EMPTY_5": 68,
+    "__EMPTY_6": 72,
+    "__EMPTY_7": 81,
+    "__EMPTY_8": 81,
+    "__EMPTY_9": 86,
+    "__EMPTY_10": 85,
+    "__EMPTY_11": 94,
+    "__EMPTY_12": 108,
+    "__EMPTY_13": 108
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_4": 21,
+    "__EMPTY_5": 25,
+    "__EMPTY_6": 20,
+    "__EMPTY_7": 19,
+    "__EMPTY_8": 9,
+    "__EMPTY_9": 7,
+    "__EMPTY_10": 5,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 19,
+    "__EMPTY_13": 19
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_5": 38,
+    "__EMPTY_6": 29,
+    "__EMPTY_8": 43.8,
+    "__EMPTY_9": 140,
+    "__EMPTY_10": 20.5,
+    "__EMPTY_11": 45.5,
+    "__EMPTY_13": 45.15
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_5": 38,
+    "__EMPTY_6": 29,
+    "__EMPTY_8": 34,
+    "__EMPTY_9": 140,
+    "__EMPTY_10": 20.5,
+    "__EMPTY_11": 45.5,
+    "__EMPTY_13": 34
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_4": 0,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 5,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 2,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 0,
+    "__EMPTY_13": 13
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_4": 3,
+    "__EMPTY_5": 3,
+    "__EMPTY_6": 9,
+    "__EMPTY_7": 13,
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 8,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 84
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 0.75,
+    "__EMPTY_6": 0.818,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0.706,
+    "__EMPTY_9": 0.889,
+    "__EMPTY_10": 0.8,
+    "__EMPTY_11": 0.818,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 0.866
+  },
+  {
+    "__EMPTY": "Top Resource Allocation - Employee Training & Development",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_7": 64,
+    "__EMPTY_8": 75,
+    "__EMPTY_9": 88,
+    "__EMPTY_10": 110,
+    "__EMPTY_11": 135,
+    "__EMPTY_12": 148,
+    "__EMPTY_13": 148
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_7": 9,
+    "__EMPTY_8": 17,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 13,
+    "__EMPTY_11": 25,
+    "__EMPTY_12": 33,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_9": 22.5,
+    "__EMPTY_12": 15,
+    "__EMPTY_13": 20.85
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_9": 9.5,
+    "__EMPTY_12": 13.5,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_7": 0,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 6,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 12
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_7": 6,
+    "__EMPTY_8": 4,
+    "__EMPTY_9": 20,
+    "__EMPTY_10": 18,
+    "__EMPTY_11": 18,
+    "__EMPTY_12": 10,
+    "__EMPTY_13": 100
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0.769,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.714,
+    "__EMPTY_13": 0.893
+  },
+  {
+    "__EMPTY": "Top Resource Allocation - Marketing & Advertising",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_2": 62,
+    "__EMPTY_3": 73,
+    "__EMPTY_4": 95,
+    "__EMPTY_5": 108,
+    "__EMPTY_6": 112,
+    "__EMPTY_7": 124,
+    "__EMPTY_8": 127,
+    "__EMPTY_9": 142,
+    "__EMPTY_10": 151,
+    "__EMPTY_11": 165,
+    "__EMPTY_12": 180,
+    "__EMPTY_13": 180
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_2": 6,
+    "__EMPTY_3": 11,
+    "__EMPTY_4": 20,
+    "__EMPTY_5": 26,
+    "__EMPTY_6": 21,
+    "__EMPTY_7": 21,
+    "__EMPTY_8": 10,
+    "__EMPTY_9": 8,
+    "__EMPTY_10": 10,
+    "__EMPTY_11": 14,
+    "__EMPTY_12": 28,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 48,
+    "__EMPTY_7": 69,
+    "__EMPTY_8": 59,
+    "__EMPTY_11": 49,
+    "__EMPTY_12": 14,
+    "__EMPTY_13": 45.64
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 48,
+    "__EMPTY_7": 69,
+    "__EMPTY_8": 59,
+    "__EMPTY_11": 49,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 31
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 2,
+    "__EMPTY_6": 1,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 14
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_2": 3,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 13,
+    "__EMPTY_5": 7,
+    "__EMPTY_6": 10,
+    "__EMPTY_7": 13,
+    "__EMPTY_8": 18,
+    "__EMPTY_9": 19,
+    "__EMPTY_10": 14,
+    "__EMPTY_11": 16,
+    "__EMPTY_12": 5,
+    "__EMPTY_13": 127
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.929,
+    "__EMPTY_5": 0.778,
+    "__EMPTY_6": 0.909,
+    "__EMPTY_7": 0.929,
+    "__EMPTY_8": 0.9,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 0.889,
+    "__EMPTY_12": 0.556,
+    "__EMPTY_13": 0.901
+  },
+  {
+    "__EMPTY": "Top Resource Allocation - Production & Manufacturing",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 72,
+    "__EMPTY_2": 73,
+    "__EMPTY_3": 83,
+    "__EMPTY_4": 100,
+    "__EMPTY_5": 118,
+    "__EMPTY_6": 117,
+    "__EMPTY_7": 121,
+    "__EMPTY_8": 127,
+    "__EMPTY_9": 135,
+    "__EMPTY_10": 149,
+    "__EMPTY_11": 168,
+    "__EMPTY_12": 190,
+    "__EMPTY_13": 190
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 6,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 5,
+    "__EMPTY_4": 17,
+    "__EMPTY_5": 28,
+    "__EMPTY_6": 18,
+    "__EMPTY_7": 9,
+    "__EMPTY_8": 12,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 17,
+    "__EMPTY_12": 33,
+    "__EMPTY_13": 33
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 39,
+    "__EMPTY_7": 95,
+    "__EMPTY_10": 25,
+    "__EMPTY_11": 24.5,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 30.64
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 35,
+    "__EMPTY_6": 39,
+    "__EMPTY_7": 95,
+    "__EMPTY_10": 9,
+    "__EMPTY_11": 24.5,
+    "__EMPTY_12": 3,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 0,
+    "__EMPTY_3": 0,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 0,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 3,
+    "__EMPTY_11": 2,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 11
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 3,
+    "__EMPTY_2": 7,
+    "__EMPTY_3": 6,
+    "__EMPTY_4": 5,
+    "__EMPTY_5": 7,
+    "__EMPTY_6": 12,
+    "__EMPTY_7": 13,
+    "__EMPTY_8": 9,
+    "__EMPTY_9": 14,
+    "__EMPTY_10": 15,
+    "__EMPTY_11": 15,
+    "__EMPTY_12": 13,
+    "__EMPTY_13": 119
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 0.833,
+    "__EMPTY_5": 0.875,
+    "__EMPTY_6": 0.857,
+    "__EMPTY_7": 0.929,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 0.833,
+    "__EMPTY_11": 0.882,
+    "__EMPTY_12": 0.929,
+    "__EMPTY_13": 0.915
+  },
+  {
+    "__EMPTY": "Top Resource Allocation - Research & Development",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 150,
+    "__EMPTY_2": 158,
+    "__EMPTY_3": 169,
+    "__EMPTY_4": 191,
+    "__EMPTY_5": 208,
+    "__EMPTY_6": 225,
+    "__EMPTY_7": 250,
+    "__EMPTY_8": 279,
+    "__EMPTY_9": 299,
+    "__EMPTY_10": 344,
+    "__EMPTY_11": 391,
+    "__EMPTY_12": 431,
+    "__EMPTY_13": 431
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 5,
+    "__EMPTY_2": 8,
+    "__EMPTY_3": 7,
+    "__EMPTY_4": 22,
+    "__EMPTY_5": 34,
+    "__EMPTY_6": 43,
+    "__EMPTY_7": 47,
+    "__EMPTY_8": 43,
+    "__EMPTY_9": 28,
+    "__EMPTY_10": 34,
+    "__EMPTY_11": 54,
+    "__EMPTY_12": 79,
+    "__EMPTY_13": 79
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 36,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 55,
+    "__EMPTY_6": 37.5,
+    "__EMPTY_7": 79.67,
+    "__EMPTY_8": 35.75,
+    "__EMPTY_9": 29.67,
+    "__EMPTY_10": 30.75,
+    "__EMPTY_11": 27.6,
+    "__EMPTY_12": 24.8,
+    "__EMPTY_13": 35.9
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 36,
+    "__EMPTY_4": 69,
+    "__EMPTY_5": 55,
+    "__EMPTY_6": 37.5,
+    "__EMPTY_7": 72,
+    "__EMPTY_8": 14.5,
+    "__EMPTY_9": 38,
+    "__EMPTY_10": 28,
+    "__EMPTY_11": 21,
+    "__EMPTY_12": 20,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 0,
+    "__EMPTY_2": 1,
+    "__EMPTY_3": 1,
+    "__EMPTY_4": 1,
+    "__EMPTY_5": 1,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 2,
+    "__EMPTY_8": 4,
+    "__EMPTY_9": 3,
+    "__EMPTY_10": 4,
+    "__EMPTY_11": 5,
+    "__EMPTY_12": 4,
+    "__EMPTY_13": 28
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 4,
+    "__EMPTY_2": 8,
+    "__EMPTY_3": 13,
+    "__EMPTY_4": 8,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 11,
+    "__EMPTY_7": 21,
+    "__EMPTY_8": 36,
+    "__EMPTY_9": 44,
+    "__EMPTY_10": 49,
+    "__EMPTY_11": 39,
+    "__EMPTY_12": 27,
+    "__EMPTY_13": 264
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 1,
+    "__EMPTY_2": 0.889,
+    "__EMPTY_3": 0.929,
+    "__EMPTY_4": 0.889,
+    "__EMPTY_5": 0.8,
+    "__EMPTY_6": 0.846,
+    "__EMPTY_7": 0.913,
+    "__EMPTY_8": 0.9,
+    "__EMPTY_9": 0.936,
+    "__EMPTY_10": 0.925,
+    "__EMPTY_11": 0.886,
+    "__EMPTY_12": 0.871,
+    "__EMPTY_13": 0.904
+  },
+  {
+    "__EMPTY": "Top Resource Allocation - Sales & Customer Acquisition",
+    "__EMPTY_1": "Total Active Plans",
+    "__EMPTY_7": 61,
+    "__EMPTY_8": 66,
+    "__EMPTY_9": 70,
+    "__EMPTY_10": 68,
+    "__EMPTY_11": 80,
+    "__EMPTY_12": 84,
+    "__EMPTY_13": 84
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "__EMPTY_7": 10,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 5,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 9,
+    "__EMPTY_12": 16,
+    "__EMPTY_13": 16
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "__EMPTY_7": 69,
+    "__EMPTY_8": 83,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 86.25
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "__EMPTY_7": 69,
+    "__EMPTY_8": 83,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 76
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "__EMPTY_7": 1,
+    "__EMPTY_8": 1,
+    "__EMPTY_9": 0,
+    "__EMPTY_10": 0,
+    "__EMPTY_11": 0,
+    "__EMPTY_12": 1,
+    "__EMPTY_13": 4
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "__EMPTY_7": 7,
+    "__EMPTY_8": 8,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 4,
+    "__EMPTY_11": 6,
+    "__EMPTY_12": 6,
+    "__EMPTY_13": 57
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "__EMPTY_7": 0.875,
+    "__EMPTY_8": 0.889,
+    "__EMPTY_9": 1,
+    "__EMPTY_10": 1,
+    "__EMPTY_11": 1,
+    "__EMPTY_12": 0.857,
+    "__EMPTY_13": 0.934
+  },
+  {
+    "__EMPTY": "Top Resource Allocation - Technology & Infrastructure",
+    "__EMPTY_1": "Total Active Plans",
+    "Period": 243,
+    "__EMPTY_2": 267,
+    "__EMPTY_3": 281,
+    "__EMPTY_4": 321,
+    "__EMPTY_5": 349,
+    "__EMPTY_6": 371,
+    "__EMPTY_7": 398,
+    "__EMPTY_8": 443,
+    "__EMPTY_9": 483,
+    "__EMPTY_10": 540,
+    "__EMPTY_11": 616,
+    "__EMPTY_12": 692,
+    "__EMPTY_13": 692
+  },
+  {
+    "__EMPTY_1": "Onboarding Plans",
+    "Period": 9,
+    "__EMPTY_2": 18,
+    "__EMPTY_3": 14,
+    "__EMPTY_4": 39,
+    "__EMPTY_5": 57,
+    "__EMPTY_6": 58,
+    "__EMPTY_7": 60,
+    "__EMPTY_8": 72,
+    "__EMPTY_9": 42,
+    "__EMPTY_10": 47,
+    "__EMPTY_11": 88,
+    "__EMPTY_12": 139,
+    "__EMPTY_13": 139
+  },
+  {
+    "__EMPTY_1": "--"
+  },
+  {
+    "__EMPTY_1": "Avg Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 10.67,
+    "__EMPTY_3": 40,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 21.75,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 45.2,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 31.45,
+    "__EMPTY_10": 35.88,
+    "__EMPTY_11": 24.1,
+    "__EMPTY_12": 18,
+    "__EMPTY_13": 27.89
+  },
+  {
+    "__EMPTY_1": "Median Days to Falter",
+    "Period": 41,
+    "__EMPTY_2": 11,
+    "__EMPTY_3": 42,
+    "__EMPTY_4": 38.5,
+    "__EMPTY_5": 24.5,
+    "__EMPTY_6": 29,
+    "__EMPTY_7": 59,
+    "__EMPTY_8": 13,
+    "__EMPTY_9": 35,
+    "__EMPTY_10": 27,
+    "__EMPTY_11": 24,
+    "__EMPTY_12": 15.5,
+    "__EMPTY_13": 27
+  },
+  {
+    "__EMPTY_1": "---"
+  },
+  {
+    "__EMPTY_1": "Faltered Plans",
+    "Period": 1,
+    "__EMPTY_2": 2,
+    "__EMPTY_3": 2,
+    "__EMPTY_4": 2,
+    "__EMPTY_5": 4,
+    "__EMPTY_6": 2,
+    "__EMPTY_7": 4,
+    "__EMPTY_8": 2,
+    "__EMPTY_9": 10,
+    "__EMPTY_10": 6,
+    "__EMPTY_11": 10,
+    "__EMPTY_12": 9,
+    "__EMPTY_13": 54
+  },
+  {
+    "__EMPTY_1": "Onboarded Plans",
+    "Period": 9,
+    "__EMPTY_2": 17,
+    "__EMPTY_3": 23,
+    "__EMPTY_4": 17,
+    "__EMPTY_5": 11,
+    "__EMPTY_6": 21,
+    "__EMPTY_7": 30,
+    "__EMPTY_8": 40,
+    "__EMPTY_9": 76,
+    "__EMPTY_10": 69,
+    "__EMPTY_11": 60,
+    "__EMPTY_12": 47,
+    "__EMPTY_13": 420
+  },
+  {
+    "__EMPTY_1": "Onboarding Success Rate",
+    "Period": 0.9,
+    "__EMPTY_2": 0.895,
+    "__EMPTY_3": 0.92,
+    "__EMPTY_4": 0.895,
+    "__EMPTY_5": 0.733,
+    "__EMPTY_6": 0.913,
+    "__EMPTY_7": 0.882,
+    "__EMPTY_8": 0.952,
+    "__EMPTY_9": 0.884,
+    "__EMPTY_10": 0.92,
+    "__EMPTY_11": 0.857,
+    "__EMPTY_12": 0.839,
+    "__EMPTY_13": 0.886
+  }
+]

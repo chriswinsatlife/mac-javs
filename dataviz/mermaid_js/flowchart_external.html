@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Externalized Mermaid Flowchart (D3 + Dagre + Rough)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/flowchart.css" />
+</head>
+<body>
+  <div class="chart-container">
+    <h1>Externalized Mermaid Flowchart</h1>
+    <p>Note: You have to "Choose file" before you can hit "Render".</p>
+    <div class="controls">
+      <label>Source (.md/.mmd):</label>
+      <input id="srcPath" type="text" placeholder="examples/sample_flow.md" />
+      <button id="renderBtn">Render</button>
+      <span>or</span>
+      <input id="fileInput" type="file" accept=".md,.mmd,.txt" />
+      <button id="exportSvgBtn">Export SVG</button>
+      <button id="exportPngBtn">Export PNG</button>
+      <button id="exportPdfBtn">Export PDF (print)</button>
+    </div>
+    <div id="chart"></div>
+  </div>
+
+  <!-- libs -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@dagrejs/dagre@1.1.5/dist/dagre.min.js"></script>
+  <!-- Optional fallback: Mermaid UMD for DB access if AST unavailable -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.0.0/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <script type="module">
+    import { parse as parseMermaidAst } from 'https://cdn.jsdelivr.net/npm/@mermaid-js/parser@0.6.2/+esm';
+    import { load as yamlLoad } from 'https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/+esm';
+
+    // Utilities
+    const $ = (sel) => document.querySelector(sel);
+    const cssvar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+    function getQueryParam(name, def) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name) || def;
+    }
+
+    async function fetchText(path) {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+      return await res.text();
+    }
+
+    async function renderFromContent(text, virtualPath = '') {
+      const chart = $('#chart'); chart.innerHTML='';
+      // Defaults from CSS variables
+      const css = {
+        nodeStroke: cssvar('--node-stroke') || '#9370db',
+        nodeFill: cssvar('--node-fill') || '#e8e8ff',
+        nodeStrokeWidth: +cssvar('--node-stroke-width') || 2,
+        edgeStroke: cssvar('--edge-stroke') || '#666',
+        edgeStrokeWidth: +cssvar('--edge-stroke-width') || 1.2,
+        fontFamily: cssvar('--font-family') || 'Architects Daughter, cursive',
+        fontWeight: cssvar('--font-weight') || '700',
+        labelOffset: +cssvar('--label-offset') || 16,
+        roughness: +cssvar('--roughness') || 1.6,
+        curveTightness: +cssvar('--curve-tightness') || 0.25,
+        nodePadX: +cssvar('--node-pad-x') || 32,
+        nodePadY: +cssvar('--node-pad-y') || 22,
+        nodesep: +cssvar('--nodesep') || 120,
+        ranksep: +cssvar('--ranksep') || 120,
+        startGap: +cssvar('--start-gap') || 14,
+        endGap: +cssvar('--end-gap') || 20,
+        diamondMinW: +cssvar('--diamond-extra-min-w') || 150,
+        diamondMinH: +cssvar('--diamond-extra-min-h') || 90,
+        fontMinPx: +cssvar('--font-min-px') || 10,
+        fontMaxPx: +cssvar('--font-max-px') || 18,
+      };
+
+      const { frontmatter, mermaidCode } = parseFrontmatterAndBody(text);
+
+      const settings = { ...css };
+      const map = {
+        rankdir: 'rankdir', nodesep:'nodesep', ranksep:'ranksep', startGap:'startGap', endGap:'endGap',
+        labelOffset:'labelOffset', roughness:'roughness', curveTightness:'curveTightness',
+        nodePaddingX:'nodePadX', nodePaddingY:'nodePadY', fontFamily:'fontFamily',
+        fontMaxPx:'fontMaxPx', fontMinPx:'fontMinPx', stroke:'nodeStroke', fill:'nodeFill'
+      };
+      for (const [k,v] of Object.entries(frontmatter||{})){
+        const key = map[k]||k;
+        if (key in settings) settings[key] = v;
+      }
+
+      let nodes = [], links = [];
+      let rankdir = frontmatter?.rankdir || detectDir(mermaidCode);
+
+      let usedAst = false;
+      try {
+        const ast = parseMermaidAst('flowchart', mermaidCode);
+        const g = extractFromAst(ast);
+        if (g.nodes.length) { nodes = g.nodes; links = g.links; usedAst = true; }
+      } catch {}
+
+      if (!usedAst && window.mermaid?.mermaidAPI){
+        try {
+          window.mermaid.mermaidAPI.initialize({ startOnLoad:false });
+          const diagram = await window.mermaid.mermaidAPI.getDiagramFromText(mermaidCode);
+          const db = diagram.db;
+          if (typeof db.getDirection==='function'){ const d=db.getDirection(); if (d) rankdir=d.toUpperCase(); }
+          const verts = typeof db.getVertices==='function'? db.getVertices() : null;
+          if (verts){
+            const iter = verts instanceof Map ? verts.entries() : Object.entries(verts);
+            for (const [id,v] of iter){ nodes.push({ id, label: stripHtml(v.text||id), type: mapShape(v.type) }); }
+          }
+          const edges = typeof db.getEdges==='function'? db.getEdges() : [];
+          for (const e of edges){ links.push({ source:e.start, target:e.end, label: stripHtml(e.text)||undefined }); }
+        } catch(err){
+          const pre = document.createElement('pre'); pre.textContent = 'Parse error: '+err?.message; chart.appendChild(pre); return;
+        }
+      }
+
+      // Layout with Dagre and render (reusing the existing block below)
+      return { nodes, links, settings, rankdir };
+    }
+
+    function parseFrontmatterAndBody(text) {
+      let fm = {}; let body = text;
+      if (text.startsWith('---')) {
+        const idx = text.indexOf('\n---', 3);
+        if (idx !== -1) {
+          const yaml = text.slice(3, idx).replace(/^\n/, '');
+          fm = yaml ? yamlLoad(yaml) || {} : {};
+          body = text.slice(idx + 4);
+        }
+      }
+      // Extract first ```mermaid code block
+      const mermaidBlockRE = /```\s*mermaid\s*\n([\s\S]*?)\n```/i;
+      const m = body.match(mermaidBlockRE);
+      const mermaidCode = m ? m[1].trim() : body.trim();
+      return { frontmatter: fm || {}, mermaidCode };
+    }
+
+    function mapShape(t) {
+      const type = (t || '').toLowerCase();
+      if (type === 'diamond' || type === 'rhombus') return 'diamond';
+      if (type === 'circle' || type === 'ellipse' || type === 'round' || type === 'stadium') return 'ellipse';
+      return 'rect';
+    }
+    function stripHtml(s) {
+      return String(s == null ? '' : s).replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]*>/g, '').trim();
+    }
+
+    function detectDir(code) {
+      const m = code.match(/\bflowchart\s+(TB|BT|LR|RL|TD)\b/i);
+      return m ? m[1].toUpperCase() : 'LR';
+    }
+
+    function extractFromAst(ast) {
+      const res = { nodes: [], links: [] };
+      const nodeMap = new Map();
+      const addNode = (id, label, type) => {
+        if (!id) return;
+        if (!nodeMap.has(id)) nodeMap.set(id, { id, label: stripHtml(label || id), type: mapShape(type) });
+      };
+      const addEdge = (a, b, label) => {
+        if (!a || !b) return;
+        res.links.push({ source: a, target: b, label: stripHtml(label) || undefined });
+        addNode(a); addNode(b);
+      };
+      const walk = (o) => {
+        if (!o || typeof o !== 'object') return;
+        if (o.type === 'node' && (o.id || o.identifier)) {
+          addNode(o.id || o.identifier, o.text || o.label || o.value, o.shape || o.nodeType || o.typeName);
+        }
+        if (o.type === 'edge' || (o.start && o.end) || (o.from && o.to)) {
+          addEdge(o.start || o.from, o.end || o.to, o.text || o.label);
+        }
+        for (const k of Object.keys(o)) {
+          const v = o[k];
+          if (Array.isArray(v)) v.forEach(walk);
+          else if (v && typeof v === 'object') walk(v);
+        }
+      };
+      walk(ast);
+      res.nodes = Array.from(nodeMap.values());
+      return res;
+    }
+
+    function getNodeEdgeIntersection(node, fromX, fromY) {
+      const dx = fromX - node.x;
+      const dy = fromY - node.y;
+      const absDx = Math.abs(dx);
+      const absDy = Math.abs(dy);
+      const w = (node.width) / 2;
+      const h = (node.height) / 2;
+      if (node.type === 'ellipse') {
+        const a = w, b = h; const angle = Math.atan2(dy, dx);
+        const cos = Math.cos(angle), sin = Math.sin(angle);
+        const t = Math.sqrt(a*a*sin*sin + b*b*cos*cos);
+        return { x: node.x + (a*b*cos)/t, y: node.y + (a*b*sin)/t };
+      } else if (node.type === 'diamond') {
+        const t = 1 / (absDx / w + absDy / h);
+        return { x: node.x + dx * t, y: node.y + dy * t };
+      } else {
+        if (absDx === 0 && absDy === 0) return { x: node.x, y: node.y };
+        const tx = absDx > 0 ? w / absDx : Infinity;
+        const ty = absDy > 0 ? h / absDy : Infinity;
+        const t = Math.min(tx, ty);
+        return { x: node.x + dx * t, y: node.y + dy * t };
+      }
+    }
+
+    function positionAlongPolyline(points, t) {
+      const total = points.reduce((acc, p, i) => i===0?0:acc + Math.hypot(p.x - points[i-1].x, p.y - points[i-1].y), 0);
+      const target = total * t; let run = 0;
+      for (let i=1;i<points.length;i++){
+        const a = points[i-1], b = points[i];
+        const dx = b.x-a.x, dy = b.y-a.y; const seg = Math.hypot(dx,dy);
+        if (run + seg >= target){
+          const tt = (target - run) / (seg||1);
+          const x = a.x + tt*dx, y = a.y + tt*dy; const len = seg||1;
+          return { x, y, nx: -dy/len, ny: dx/len };
+        }
+        run += seg;
+      }
+      const last = points[points.length-1]; const prev = points[points.length-2]||last;
+      const dx = last.x - prev.x, dy = last.y - prev.y; const len = Math.hypot(dx,dy)||1;
+      return { x:last.x, y:last.y, nx:-dy/len, ny:dx/len };
+    }
+
+    async function renderFromFile(path) {
+      const chart = $('#chart'); chart.innerHTML='';
+      // Defaults from CSS variables
+      const css = {
+        nodeStroke: cssvar('--node-stroke') || '#9370db',
+        nodeFill: cssvar('--node-fill') || '#e8e8ff',
+        nodeStrokeWidth: +cssvar('--node-stroke-width') || 2,
+        edgeStroke: cssvar('--edge-stroke') || '#666',
+        edgeStrokeWidth: +cssvar('--edge-stroke-width') || 1.2,
+        fontFamily: cssvar('--font-family') || 'Architects Daughter, cursive',
+        fontWeight: cssvar('--font-weight') || '700',
+        labelOffset: +cssvar('--label-offset') || 16,
+        roughness: +cssvar('--roughness') || 1.6,
+        curveTightness: +cssvar('--curve-tightness') || 0.25,
+        nodePadX: +cssvar('--node-pad-x') || 32,
+        nodePadY: +cssvar('--node-pad-y') || 22,
+        nodesep: +cssvar('--nodesep') || 120,
+        ranksep: +cssvar('--ranksep') || 120,
+        startGap: +cssvar('--start-gap') || 14,
+        endGap: +cssvar('--end-gap') || 20,
+        diamondMinW: +cssvar('--diamond-extra-min-w') || 150,
+        diamondMinH: +cssvar('--diamond-extra-min-h') || 90,
+        fontMinPx: +cssvar('--font-min-px') || 10,
+        fontMaxPx: +cssvar('--font-max-px') || 18,
+      };
+
+      // Load file and extract Mermaid
+      const text = await fetchText(path);
+      const { frontmatter, mermaidCode } = parseFrontmatterAndBody(text);
+
+      // Apply frontmatter overrides to css/settings
+      const settings = { ...css };
+      const map = {
+        rankdir: 'rankdir', nodesep:'nodesep', ranksep:'ranksep', startGap:'startGap', endGap:'endGap',
+        labelOffset:'labelOffset', roughness:'roughness', curveTightness:'curveTightness',
+        nodePaddingX:'nodePadX', nodePaddingY:'nodePadY', fontFamily:'fontFamily',
+        fontMaxPx:'fontMaxPx', fontMinPx:'fontMinPx', stroke:'nodeStroke', fill:'nodeFill'
+      };
+      for (const [k,v] of Object.entries(frontmatter||{})){
+        const key = map[k]||k;
+        if (key in settings) settings[key] = v;
+      }
+
+      let nodes = [], links = [];
+      let rankdir = frontmatter?.rankdir || detectDir(mermaidCode);
+
+      // AST-first
+      let usedAst = false;
+      try {
+        const ast = parseMermaidAst('flowchart', mermaidCode);
+        const g = extractFromAst(ast);
+        if (g.nodes.length) { nodes = g.nodes; links = g.links; usedAst = true; }
+      } catch {}
+
+      if (!usedAst && window.mermaid?.mermaidAPI){
+        try {
+          window.mermaid.mermaidAPI.initialize({ startOnLoad:false });
+          const diagram = await window.mermaid.mermaidAPI.getDiagramFromText(mermaidCode);
+          const db = diagram.db;
+          if (typeof db.getDirection==='function'){ const d=db.getDirection(); if (d) rankdir=d.toUpperCase(); }
+          const verts = typeof db.getVertices==='function'? db.getVertices() : null;
+          if (verts){
+            const iter = verts instanceof Map ? verts.entries() : Object.entries(verts);
+            for (const [id,v] of iter){ nodes.push({ id, label: stripHtml(v.text||id), type: mapShape(v.type) }); }
+          }
+          const edges = typeof db.getEdges==='function'? db.getEdges() : [];
+          for (const e of edges){ links.push({ source:e.start, target:e.end, label: stripHtml(e.text)||undefined }); }
+        } catch(err){
+          const pre = document.createElement('pre'); pre.textContent = 'Parse error: '+err?.message; chart.appendChild(pre); return;
+        }
+      }
+
+      // Layout with Dagre
+      const g = new dagre.graphlib.Graph();
+      g.setGraph({ rankdir, nodesep: settings.nodesep, ranksep: settings.ranksep, marginx:50, marginy:50, ranker:'network-simplex' });
+      g.setDefaultEdgeLabel(() => ({}));
+
+      // Hidden measurement SVG
+      const measureSvg = d3.select('body').append('svg').attr('visibility','hidden').attr('width',0).attr('height',0);
+      const measurer = measureSvg.append('text').attr('font-family', settings.fontFamily).attr('font-weight', settings.fontWeight);
+      function textSize(text, px){ measurer.attr('font-size', px+'px').text(text); const box = measurer.node().getBBox(); return { w: Math.ceil(box.width), h: Math.ceil(box.height) }; }
+      function pickFontSize(label, type){ const maxW = type==='diamond'? 260:220; let size = settings.fontMaxPx; for (; size>=settings.fontMinPx; size--){ const t=textSize(label,size); if (t.w <= maxW-32) return { size, t, maxW }; } const t=textSize(label, settings.fontMinPx); return { size: settings.fontMinPx, t, maxW }; }
+
+      nodes.forEach(node => {
+        const { size: fontSize, t } = pickFontSize(node.label||node.id, node.type);
+        node.fontSize = fontSize;
+        const padX = settings.nodePadX, padY = settings.nodePadY;
+        let baseMinW = node.type==='diamond'? settings.diamondMinW : 120;
+        let baseMinH = node.type==='diamond'? settings.diamondMinH : 56;
+        let width = Math.max(t.w + padX, baseMinW);
+        let height = Math.max(t.h + padY, baseMinH);
+        if (node.type==='diamond'){
+          width = Math.max(width, Math.ceil(t.w*1.6) + padX);
+          if (width < height + 50) width = height + 50;
+        }
+        node.width = width; node.height = height;
+        g.setNode(node.id, { label: node.label, width, height, type: node.type });
+      });
+      measureSvg.remove();
+
+      links.forEach(link => { g.setEdge(link.source, link.target, { label: link.label, weight: link.label?5:1, minlen:1 }); });
+      dagre.layout(g);
+
+      nodes.forEach(n => { const gn=g.node(n.id); n.x=gn.x; n.y=gn.y; n.width=gn.width; n.height=gn.height; });
+
+      const graphInfo = g.graph();
+      const width = graphInfo.width + 100; const height = graphInfo.height + 100;
+      const svg = d3.select('#chart').append('svg').attr('viewBox', `0 0 ${width} ${height}`).attr('preserveAspectRatio','xMidYMid meet');
+      const edgesG = svg.append('g').attr('class','edges');
+      const nodesG = svg.append('g').attr('class','nodes');
+
+      svg.append('defs').append('marker').attr('id','arrowhead').attr('markerWidth',10).attr('markerHeight',10).attr('refX',10).attr('refY',5).attr('orient','auto')
+        .append('path').attr('d','M 0 0 L 10 5 L 0 10 Z').attr('fill', settings.edgeStroke);
+
+      const rc = rough.svg(svg.node());
+
+      links.forEach(link => {
+        const e = g.edge(link.source, link.target);
+        let pts = (e && e.points) ? e.points.map(p => ({...p})) : [];
+        if (pts.length < 2) return;
+
+        const src = g.node(link.source), tgt = g.node(link.target);
+        if (src && pts[1]) { pts[0] = getNodeEdgeIntersection({ x:src.x,y:src.y,width:src.width,height:src.height,type:src.type }, pts[1].x, pts[1].y); }
+        if (tgt && pts[pts.length-2]) { pts[pts.length-1] = getNodeEdgeIntersection({ x:tgt.x,y:tgt.y,width:tgt.width,height:tgt.height,type:tgt.type }, pts[pts.length-2].x, pts[pts.length-2].y); }
+
+        // Add gap from node borders
+        if (pts[1]){
+          const vx0 = pts[1].x - pts[0].x, vy0 = pts[1].y - pts[0].y; const len0 = Math.hypot(vx0,vy0)||1;
+          pts[0] = { x: pts[0].x + (vx0/len0)*settings.startGap, y: pts[0].y + (vy0/len0)*settings.startGap };
+        }
+        if (pts.length>=2){ const n=pts.length; const vx1 = pts[n-2].x - pts[n-1].x, vy1 = pts[n-2].y - pts[n-1].y; const len1 = Math.hypot(vx1,vy1)||1; pts[n-1] = { x: pts[n-1].x + (vx1/len1)*settings.endGap, y: pts[n-1].y + (vy1/len1)*settings.endGap }; }
+
+        // Rough Bezier-like
+        const roughCurve = rc.curve(pts.map(p => [p.x,p.y]), { stroke: settings.edgeStroke, strokeWidth: settings.edgeStrokeWidth, roughness: settings.roughness, bowing: 0, curveTightness: settings.curveTightness });
+        edgesG.node().appendChild(roughCurve);
+
+        const d = pts.map((p,i)=>`${i===0?'M':'L'} ${p.x} ${p.y}`).join(' ');
+        edgesG.append('path').attr('d', d).attr('fill','none').attr('stroke','rgba(0,0,0,0)').attr('marker-end','url(#arrowhead)');
+
+        if (link.label && pts.length>=2){
+          const mid = positionAlongPolyline(pts, 0.5);
+          edgesG.append('text').attr('class','edge-label')
+            .attr('x', mid.x + mid.nx * settings.labelOffset)
+            .attr('y', mid.y + mid.ny * settings.labelOffset)
+            .attr('text-anchor','middle')
+            .attr('font-family', settings.fontFamily)
+            .attr('font-size','12px')
+            .text(link.label);
+        }
+      });
+
+      const nodeGroups = nodesG.selectAll('.node').data(nodes).enter().append('g').attr('class','node').attr('transform', d=>`translate(${d.x}, ${d.y})`);
+      nodeGroups.each(function(d){
+        const w=d.width/2, h=d.height/2; let shape;
+        if (d.type==='ellipse') shape = rc.ellipse(0,0,w*2,h*2,{ stroke: settings.nodeStroke, strokeWidth: settings.nodeStrokeWidth, fill: settings.nodeFill, fillStyle: 'hachure', roughness: settings.roughness, fillWeight: 1.8, hachureAngle: 45 });
+        else if (d.type==='diamond') shape = rc.polygon([[0,-h],[w,0],[0,h],[-w,0]],{ stroke: settings.nodeStroke, strokeWidth: settings.nodeStrokeWidth, fill: settings.nodeFill, fillStyle: 'hachure', roughness: settings.roughness, fillWeight: 1.5 });
+        else shape = rc.rectangle(-w,-h,w*2,h*2,{ stroke: settings.nodeStroke, strokeWidth: settings.nodeStrokeWidth, fill: settings.nodeFill, fillStyle: 'hachure', roughness: settings.roughness, fillWeight: 1.5, hachureAngle: 60 });
+        this.appendChild(shape);
+      });
+      nodeGroups.append('text').text(d=>d.label).attr('x',0).attr('y',0).attr('text-anchor','middle').attr('dominant-baseline','middle').attr('font-family', settings.fontFamily).attr('font-size', d=> (d.fontSize||12)+'px').attr('font-weight', '700').attr('fill', '#333').attr('pointer-events','none');
+    }
+
+    // Export helpers
+    function svgToString(svgEl){ const serializer = new XMLSerializer(); return serializer.serializeToString(svgEl); }
+    function download(filename, dataUrl){ const a=document.createElement('a'); a.href=dataUrl; a.download=filename; document.body.appendChild(a); a.click(); a.remove(); }
+
+    async function exportSvg(){ const svg = document.querySelector('#chart svg'); if (!svg) return; const str = svgToString(svg); const url = 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(str); download('flowchart.svg', url); }
+    async function exportPng(){ const svg = document.querySelector('#chart svg'); if (!svg) return; const str = svgToString(svg); const img = new Image(); const blob = new Blob([str], {type:'image/svg+xml'}); const url = URL.createObjectURL(blob); await new Promise(res=>{ img.onload=res; img.src = url; }); const box = svg.viewBox.baseVal; const canvas = document.createElement('canvas'); canvas.width = Math.ceil(box.width); canvas.height = Math.ceil(box.height); const ctx = canvas.getContext('2d'); ctx.fillStyle='#fff'; ctx.fillRect(0,0,canvas.width, canvas.height); ctx.drawImage(img, 0,0); URL.revokeObjectURL(url); download('flowchart.png', canvas.toDataURL('image/png')); }
+    async function exportPdf(){ const svg = document.querySelector('#chart svg'); if (!svg) return; const str = svgToString(svg); const img = new Image(); const blob = new Blob([str], {type:'image/svg+xml'}); const url = URL.createObjectURL(blob); await new Promise(res=>{ img.onload=res; img.src = url; }); const box = svg.viewBox.baseVal; const canvas = document.createElement('canvas'); canvas.width = Math.ceil(box.width); canvas.height = Math.ceil(box.height); const ctx = canvas.getContext('2d'); ctx.fillStyle='#fff'; ctx.fillRect(0,0,canvas.width, canvas.height); ctx.drawImage(img, 0,0); URL.revokeObjectURL(url); const { jsPDF } = window.jspdf; const pdf = new jsPDF({ orientation: box.width >= box.height ? 'l' : 'p', unit: 'pt', format: [box.width, box.height] }); pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, box.width, box.height); pdf.save('flowchart.pdf'); }
+
+    // Wire UI
+    const defaultSrc = getQueryParam('src', 'examples/sample_flow.md');
+    $('#srcPath').value = defaultSrc;
+    $('#renderBtn').addEventListener('click', ()=> renderFromFile($('#srcPath').value));
+    $('#exportSvgBtn').addEventListener('click', exportSvg);
+    $('#exportPngBtn').addEventListener('click', exportPng);
+    $('#exportPdfBtn').addEventListener('click', exportPdf);
+    $('#fileInput').addEventListener('change', async (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      $('#srcPath').value = url;
+      try { await renderFromFile(url); } finally { URL.revokeObjectURL(url); }
+    });
+
+    // Initial render (show helpful message if using file://)
+    renderFromFile(defaultSrc).catch(err => {
+      if (window.location.protocol === 'file:') {
+        const chart = document.querySelector('#chart');
+        const msg = document.createElement('div');
+        msg.innerHTML = `Unable to fetch external files via file:// due to browser security. Either:<br>1) Start a local server in mermaid_js (e.g., <code>python3 -m http.server 8000</code>) and open <code>http://localhost:8000/flowchart_external.html?src=examples/sample_flow.md</code><br>2) Use the file chooser to load a local .md/.mmd file.`;
+        chart.appendChild(msg);
+      } else {
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

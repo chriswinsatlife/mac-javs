@@ -1,0 +1,18 @@
+Areas,Type,#
+Physical Health,Personal,1
+Mental Health,Personal,2
+Relationships,Personal,3
+Personal Finance,Personal,4
+Learning / PKM,Personal,5
+Passion Projects,Personal,6
+Experiences / Travel,Personal,7
+Bucket List,Personal,8
+Admin,Work,9
+Finance,Work,10
+People,Work,11
+Marketing,Work,12
+Sales,Work,13
+Product,Work,14
+Engineering,Work,15
+Operations,Work,16
+Meta,Meta,17

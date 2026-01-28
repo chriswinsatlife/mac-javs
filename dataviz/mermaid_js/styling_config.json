@@ -1,0 +1,25 @@
+{
+  "roughConfig": {
+    "roughness": 3,
+    "bowing": 2,
+    "fillStyle": "hachure",
+    "fillWeight": 2,
+    "hachureAngle": 45,
+    "hachureGap": 4,
+    "stroke": "#333",
+    "strokeWidth": 2
+  },
+  "fontFamily": "Architects Daughter",
+  "backgroundColor": "#fafafa",
+  "randomize": true,
+  "seed": 12345,
+  "pencilFilter": true,
+  "mermaidTheme": "neutral",
+  "mermaidColors": {
+    "pie1": "#ff6b6b",
+    "pie2": "#4ecdc4", 
+    "pie3": "#45b7d1",
+    "pie4": "#f9ca24",
+    "pieTitleTextColor": "#2c3e50"
+  }
+}

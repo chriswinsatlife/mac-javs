@@ -1,0 +1,64 @@
+# n8n — workflows mermaid
+---
+
+```mermaid
+graph LR
+  Gmail_Trigger --> Get_Client_&_EA_Context
+  Gmail_Trigger --> Merge
+  Get_Company_Name_from_Email --> Is_this_actually_important?
+  Is_this_actually_important? --> Filter_to_Emails_Deemed_Important_by_LLM
+  Summarize_Email --> What_Action_or_Content_is_Required_via_the_Email_Reply?
+  What_Action_or_Content_is_Required_via_the_Email_Reply? --> Create_Task_Title
+  How_Might_We_Go_Above_and_Beyond? --> Any_Research_Items_the_LLM_can_help_with?
+  Any_Research_Items_the_LLM_can_help_with? --> Construct_Query
+  Construct_Query --> Route_Based_On_Research_Agent_Opportunity
+  Missive_-_Get_Message_IDs --> Missive_-_Get_Message_URLs
+  Missive_-_Get_Message_URLs --> Get_Tasks_in_CYCL_List_via_TickTick_V2_API1
+  Get_Client_&_EA_Context --> Merge
+  Create_Task_via_TickTick_API_V2 --> Upsert_Record_in_Autodelegator_Base
+  Who_Should_Respond? --> Get_Availability
+  Get_Availability --> Filter_Events
+  Filter_Events --> Aggregate
+  Aggregate --> Generate_Unavailability_String
+  Generate_Unavailability_String --> Client/EA_Router
+  Update_Tasks_via_TickTick_V2_API1 --> Upsert_Record_in_Autodelegator_Base
+  Get_Tasks_in_CYCL_List_via_TickTick_V2_API1 --> Filter_to_Matching_Task
+  Limit --> If_Tavily_Research_Exists1
+  Filter_to_Emails_Deemed_Important_by_LLM --> Tavily_API_Request
+  Tavily_API_Request --> Summarize_Email
+  Tavily_API_Request_2 --> Missive_-_Last_X_Conversations
+  Route_Based_On_Whether_Task_Exists_for_Conversation --> If_Tavily_Research_Exists
+  Upsert_Record_in_Autodelegator_Base --> Who_Should_Respond?
+  Route_Based_On_Research_Agent_Opportunity --> Missive_-_Last_X_Conversations
+  If_Tavily_Research_Exists --> Update_Tasks_via_TickTick_V2_API1
+  Update_Tasks_via_TickTick_V2_API --> Upsert_Record_in_Autodelegator_Base
+  If_Tavily_Research_Exists1 --> Create_Task_via_TickTick_API_V
+  Create_Task_via_TickTick_API_V --> Upsert_Record_in_Autodelegator_Base
+  Missive_-_Last_X_Conversations --> Split_Out_Emails
+  Missive_-_Last_X_Conversations1 --> Get_Missive_Conversation_ID_from_Multiple_API_Calls
+  Gmail_Trigger2 --> Missive_-_Last_X_Conversations1
+  Gmail_Trigger2 --> Missive_-_Last_50_Conversations
+  Missive_-_Last_50_Conversations --> Get_Missive_Conversation_ID_from_1_API_Call
+  Conversation_Data --> Missive_-_Get_Message_IDs
+  Split_Out_Emails --> Filter_to_Matching_Subject
+  Filter_to_Matching_Subject --> Conversation_Data
+  Trim_Email_Thread --> Get_Company_Name_from_Email
+  Merge --> Trim_Email_Thread
+  Filter_to_Matching_Task --> Route_Based_On_Whether_Task_Exists_for_Conversation
+  Generate_Email_Search_String --> EA_Email_Fields
+  Client_Email_Fields --> Find_Client_Emails
+  EA_Email_Fields --> Find_EA_Emails
+  Find_Client_Emails --> Limit2
+  Find_EA_Emails --> Limit1
+  Client/EA_Router --> Generate_Email_Search_String
+  Limit2 --> Generate_Client_Email
+  Limit1 --> Generate_EA_Email
+  Missive_-_Create_Draft_from_EA --> Create_Task_via_TickTick_API_V1
+  Missive_-_Create_Draft_from_Client --> Create_Task_via_TickTick_API_V3
+  Generate_EA_Email --> Missive_-_Create_Draft_from_EA
+  Generate_Client_Email --> Missive_-_Create_Draft_from_Client
+  Create_Task_Title --> How_Might_We_Go_Above_and_Beyond?
+```
+---
+Tips:
+- Use --json for raw payload

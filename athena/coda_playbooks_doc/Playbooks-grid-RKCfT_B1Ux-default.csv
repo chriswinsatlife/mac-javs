@@ -1,0 +1,71 @@
+Status,Name,Content,Ext URL,Priority,Audience,Request Source,Area,Credit-Person,Credit-Org,Reference URL,Tools,Release Date,Review Date,Who Benefits,Notes
+1 In Progress: Feedback,Improving your writing,model,https://www.notion.so/athenaplaybooks/Improving-Your-Writing-2709fd7ae7224066a8db27d6699b6778,4,EAs,Client Survey,Learning / PKM,,,,,,,,Ongoing practices to check and improve writing as an EA when responding immediately isn't required
+1 In Progress: Feedback,OpenAI GPT Fine-Tuning via Google Sheets,model,,,Clients,Client Survey,Meta,,,,"OpenAI,Google Sheets",,,,
+2 In Progress: Draft,Weekly Client-EA Productivity,model,,5,"Clients,EAs",,,,,,"Airtable,OpenAI,Gmail",,,,
+2 In Progress: Draft,Gift Automation,model,,4,Clients,,,,,,Airtable,,,,
+2 In Progress: Draft,Pre-Meeting Bio Automation,model,,4,"Clients,EAs",,,,,,"Airtable,Zapier,Superhuman,Gmail,Google Calendar,Clay",,,,
+2 In Progress: Draft,Personal Network CRM Management,model,,4,Clients,,,,,,"Airtable,Zapier,Superhuman,Gmail,Google Calendar,Clay",,,,
+2 In Progress: Draft,Personal Network CRM Setup,model,,4,Clients,,,,,,"Airtable,Zapier,Gmail,Google Calendar,Clay,DataMiner,CloudHQ",,,,
+2 In Progress: Draft,Travel Database,model,,4,Clients,,,,,,Airtable,,,,
+2 In Progress: Draft,Call Action Items,model,,4,Clients,,,,,,"Fireflies,Zapier,Notion,Coda,Zoom",,,,
+2 In Progress: Draft,2FA Verification via Google Voice,model,,4,EAs,,,,,,Google Voice,,,,
+2 In Progress: Draft,Nutrition Optimization,model,,2,Clients,,,,,,,,,,
+2 In Progress: Draft,Recruiting & JD Creation,model,,,Clients,Client Survey,,,,,,,,,
+2 In Progress: Draft,Inbox Management,model,,,,Client Survey,,,,,,,,,
+2 In Progress: Draft,VC Fundraising,model,,,,Client Survey,,,,,,,,,
+2 In Progress: Draft,Timeblocking 2.0,model,,,,Client Survey,,,,,,,,,
+3 Planned,Finance Tracking,model,,4,Clients,Client Survey,Personal Finance,,,https://www.kubera.com/blog/personal-capital-vs-mint-vs-kubera,Kubera,,,,
+4 Requested,How to Identify Areas to Delegate,model,,5,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Do Espionage on 10x Delegators,model,,5,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Book an Airbnb,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Learn Things,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Give Consistently Great Feedback to your Team,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Automate Epic Pre-Meeting Bios,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Put Travel on Autopilot,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Tap your Network for Great People Recs,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Tap your Network to Distribute your MVP,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Run an EA Weekly Meeting,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Systematize And Scale Sales,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Organize your File System,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Give Critical Feedback to your EA,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Have your EA Set Up & Manage a Dealflow CRM,model,,3,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,Showing Interest in your Client,model,,1,EAs,Client Survey,,,,,,,,,How to appear enthusiastic and knowledgable about the things your client cares about so that the client feels more confident in delegating tasks related to professional and personal goals
+4 Requested,Communicating Availability,model,,1,EAs,Client Survey,,,,,,,,,Ensuring EAs let clients know when they sign off or when to expect their return so the client has confidence and predictability for responses and when action will be taken
+4 Requested,Communicating What You're Working On,model,,1,EAs,Client Survey,,,,,,,,,Practices for sending client's daily updates on what's being prioritized or done along with any blockers so they feel confident on what's happening
+4 Requested,Improving Responsiveness,model,,1,EAs,Client Survey,,,,,,,,,"How to properly acknowledge tasks and get any missing information early so your client feels strongly that the task will be handled quickly and successfully. Also setting expectations for how the EA confirms. e.g. ""Noted"" is fine and not too short/abrupt so long as you set expectations."
+4 Requested,Documenting Processes,model,,1,EAs,Client Survey,,,,,,,,,How to document or create quick SOPs that leave the client confident that the EA is completing tasks in a reliable way
+4 Requested,Encouraging your Client to Delegate,model,,1,EAs,Client Survey,,,,,,,,,Perhaps just a checklist that puts more pressure on EAs to ask their client to delegate more. We can provide prompts or templates for this by approaching it categorically
+4 Requested,Travel Documents,model,,1,EAs,Playbook Team,,,,,,,,,Putting together a document for your client when they travel.
+4 Requested,Airtable Contact Management,model,,1,EAs,Playbook Team,,,,,,,,,
+4 Requested,How to Write a Playbook,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Approach Email Personalization via Voice Notes,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Do Research for Every City your Client is Traveling to,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Level Up Voice Delegation by Using Voicy on Telegram,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Organize In-Person Events,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Tap your Network,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Maintain Client’s Reading List,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Research,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Source Talents for Specialized Tasks,model,,1,Clients,Coaching Interviews,,,,,,,,,
+4 Requested,How to Research for your Client’s Children,model,,1,Clients,Coaching Interviews,,,,,,,,,
+,Athena Version of: Inside the Mind of a Productivity Master: Tiago Forte reveals his contrarian takes on everything from how he takes notes to what he does when he falls off his system,model,,,Clients,,,,,https://every.to/superorganizers/inside-the-mind-of-a-productivity-186899,,,,,Tiago Forte reveals his contrarian takes on everything from how he takes notes to what he does when he falls off his system
+,Athena Version of: Action Item: How to create a network from scratch: Ali Hamed of CoVenture shares his tools for getting to the people who can make a difference,model,,,Clients,,,,,https://every.to/superorganizers/action-item-how-to-create-a-network-21330785,,,,,Ali Hamed of CoVenture shares his tools for getting to the people who can make a difference
+,"Athena Version of: One VC Wrote An OS for Her Life: Maria Salamanca shares how she uses Airtable, Notion, and Bear to create a complete system to run her life",model,,,Clients,,,,,https://every.to/superorganizers/one-vc-wrote-an-os-for-her-life-179709,,,,,"Maria Salamanca shares how she uses Airtable, Notion, and Bear to create a complete system to run her life"
+,Athena Version of: Productivity for Parents: Square’s Restaurant Product Lead on integrating career and family,model,,,Clients,,,,,https://every.to/superorganizers/productivity-for-parents-378698,,,,,Square’s Restaurant Product Lead on integrating career and family
+,Athena Version of: Action Item: How to stop worrying and love Twitter: Visakan Veerasamy on building an audience by making internet friends,model,,,Clients,,,,,https://every.to/superorganizers/action-item-how-to-stop-worrying-25992272,,,,,Visakan Veerasamy on building an audience by making internet friends
+,Athena Version of: Dan Shipper: The Sultan of Superorganizers: We turn the tables to reveal the systems and processes he uses to run his life,model,,,Clients,,,,,https://every.to/superorganizers/dan-shipper-the-sultan-of-superorganizers-4345,,,,,We turn the tables to reveal the systems and processes he uses to run his life
+,"Athena Version of: Organize Your Week with the Weekly Priority Sheet: ",model,,,Clients,,,,,https://every.to/superorganizers/organize-your-week-with-the-weekly-521593,,,,,
+,"Athena Version of: Airtable - superorganizers.xyz: ",model,,,Clients,,,,,https://airtable.com/shrCoXeYMogBLnoIp/tblPJVnEX4nmTyLzM/viwRleceKsxiSQQKL?blocks=bip4PmL2uSq5GImu7,,,,,
+,"Athena Version of: Organizing Superorganizers: ",model,,,Clients,,,,,https://every.to/superorganizers/organizing-superorganizers-879829,,,,,
+,"Athena Version of: Kevin Yien's Calendar Design Template: ",model,,,Clients,,,,,https://every.to/superorganizers/kevin-yiens-calendar-design-template-379230,,,,,
+,Athena Version of: How To Run Your Life Inside of Notion: Marie Poulin gives a tour through the most impressive Notion setup I've ever seen,model,,,Clients,,,,,https://every.to/superorganizers/how-to-run-your-life-inside-of-notion-241825,,,,,Marie Poulin gives a tour through the most impressive Notion setup I've ever seen
+,"Athena Version of: Marie Poulin's Life Planning Notion Template: ",model,,,Clients,,,,,https://every.to/superorganizers/marie-poulins-life-planning-notion-295422,,,,,
+,"Athena Version of: The Notion Template Behind One of Our Most Popular Posts: ",model,,,Clients,,,,,https://every.to/superorganizers/the-notion-template-behind-one-of-262979,,,,,
+,"Athena Version of: Recruiting: ",model,,,Clients,,,,,https://www.dover.com/tools/great-recruiting-emails,,,,,
+,"Athena Version of: Live doc meetings: ",model,,,Clients,,,,,https://about.gitlab.com/company/culture/all-remote/live-doc-meetings/,,,,,
+,"Athena Version of: CEO manual: ",model,,,Clients,,,,,https://about.gitlab.com/handbook/ceo/,,,,,
+,"Athena Version of: Sales and partnership playbooks: ",model,,,Clients,,,,,https://inaccord.com/playbook-gallery-1,,,,,
+,"Athena Version of: Mailman HQ inbox tips: ",model,,,Clients,,,,,https://blog.mailmanhq.com/,,,,,
+,"Athena Version of: All the hacks playbooks: ",model,,,Clients,,,,,https://www.allthehacks.com/,,,,,
+,"Athena Version of: How Levels Does Meetings: ",model,,,Clients,,,,,https://www.notion.so/levelshealth/How-Levels-Does-Meetings-7494df9281bf4bb8ac16b97a291e4cb6,,,,,
+,"Athena Version of: How to Hire Your First Designer: ",model,,,Clients,,,,,https://www.notion.so/Hiring-your-1st-Product-Designer-d7c0c474ea9e47c994abcaae9ed7720c,,,,,
+,🟢 Playbook Template,model,,,,Client Survey,,,,,,,,,

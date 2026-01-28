@@ -1,0 +1,60 @@
+# n8n — workflows mermaid
+---
+
+```mermaid
+graph LR
+  Missive_-_Get_Message_IDs --> Missive_-_Get_Message_URLs
+  Missive_-_Get_Message_URLs --> Get_Tasks_in_CYCL_List_via_TickTick_V2_API1
+  Get_Client_&_EA_Context --> Merge
+  Get_Availability --> Filter_Events
+  Filter_Events --> Aggregate
+  Aggregate --> Generate_Unavailability_String
+  Generate_Unavailability_String --> Check_if_meeting_already_scheduled
+  Update_Tasks_via_TickTick_V2_API1 --> Upsert_Record_in_Autodelegator_Base
+  Get_Tasks_in_CYCL_List_via_TickTick_V2_API1 --> Filter_to_Matching_Task
+  Route_Based_On_Whether_Task_Exists_for_Conversation --> Update_Tasks_via_TickTick_V2_API1
+  Upsert_Record_in_Autodelegator_Base --> Execution_Data
+  Route_Based_On_Research_Agent_Opportunity --> Missive_-_Last_X_Conversations
+  Create_Task_via_TickTick_API_V --> Upsert_Record_in_Autodelegator_Base
+  Missive_-_Last_X_Conversations --> Split_Out_Emails
+  Missive_-_Last_X_Conversations1 --> Get_Missive_Conversation_ID_from_Multiple_API_Calls
+  Gmail_Trigger2 --> Missive_-_Last_X_Conversations1
+  Gmail_Trigger2 --> Missive_-_Last_50_Conversations
+  Missive_-_Last_50_Conversations --> Get_Missive_Conversation_ID_from_1_API_Call
+  Conversation_Data --> Limit
+  Split_Out_Emails --> Filter_by_Subject_&_Recency
+  Filter_to_Matching_Task --> Route_Based_On_Whether_Task_Exists_for_Conversation
+  Merge --> Step_1
+  Generate_Email_Search_String --> EA_Email_Fields
+  Client_Email_Fields --> Find_Client_Emails
+  EA_Email_Fields --> Find_EA_Emails
+  Find_Client_Emails --> Limit2
+  Find_EA_Emails --> Limit1
+  Limit2 --> Generate_Client_Email
+  Limit1 --> Generate_EA_Email
+  Missive_-_Create_Draft_from_EA --> Create_Task_via_TickTick_API_V1
+  Missive_-_Create_Draft_from_Client --> Create_Task_via_TickTick_API_V3
+  Generate_Client_Email --> Missive_-_Create_Draft_from_Client
+  Generate_EA_Email --> Missive_-_Create_Draft_from_EA
+  Client/EA_Router --> Generate_Email_Search_String
+  If --> Client/EA_Router
+  Check_if_meeting_already_scheduled --> If
+  Filter_Out_CY/CL_Emails --> Get_Availability
+  Filters --> Email
+  Gmail_Trigger --> Wait
+  Email --> Filter_Out_Automated_Emails
+  Filter_Out_Automated_Emails --> Get_Client_&_EA_Context
+  Filter_Out_Automated_Emails --> Merge
+  Missive_Webhook_-_"Delegated"_Label_Added --> Respond_to_Webhook
+  Step_1 --> Filter_to_Emails_Deemed_Important_by_LLM
+  Step_2 --> Route_Based_On_Research_Agent_Opportunity
+  Filter_to_Emails_Deemed_Important_by_LLM --> Tavily_API_-_Research_Company
+  Tavily_API_-_Research_Company --> Step_2
+  Tavily_API_-_Research_Tasks --> Missive_-_Last_X_Conversations
+  Filter_by_Subject_&_Recency --> Conversation_Data
+  Limit --> Missive_-_Get_Message_IDs
+  Wait --> Filters
+```
+---
+Tips:
+- Use --json for raw payload

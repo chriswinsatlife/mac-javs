@@ -1,0 +1,42 @@
+# n8n — workflows mermaid
+---
+
+```mermaid
+graph LR
+  Figure_out_where_URL_leads_to --> Switch
+  Get_Video_ID_and_Full_YouTube_URL_from_YouTube_Share_URLs --> Grab_YT_Transcript_via_LangChain
+  Get_Goal_of_YT_Transcript --> Extract_the_parts_where_the_person_is_talking_about_how_to_achieve_the_goal
+  Extract_the_parts_where_the_person_is_talking_about_how_to_achieve_the_goal --> Create_playbook_from_excerpt
+  Create_playbook_from_excerpt --> Create_delegation_items_from_excerpt_-_YT
+  Create_delegation_items_from_excerpt_-_YT --> Send_Output_to_Goal_Autodelegator_Airtable2
+  What_is_the_goal_or_outcome_they_are_trying_to_achieve?_-_Article --> Extract_the_parts_where_the_person_is_talking_about_how_to_achieve_the_goal_-_Article
+  Extract_the_parts_where_the_person_is_talking_about_how_to_achieve_the_goal_-_Article --> Create_playbook_from_excerpt_-_Article
+  Create_playbook_from_excerpt_-_Article --> Create_delegation_items_from_excerpt_-_Article
+  Create_delegation_items_from_excerpt_-_Article --> Send_Output_to_Goal_Autodelegator_Airtable1
+  Get_Goal_of_Podcast --> Extract_the_parts_where_the_person_is_talking_about_how_to_achieve_the_goal_-_Podcast
+  Generate_Transcript_via_Deepgram --> Get_Goal_of_Podcast
+  Get_Correct_mp3_URL --> Generate_Transcript_via_Deepgram
+  Extract_the_parts_where_the_person_is_talking_about_how_to_achieve_the_goal_-_Podcast --> Create_playbook_from_podcast_excerpt
+  Create_playbook_from_podcast_excerpt --> Create_delegation_items_from_podcast_excerpt
+  Create_delegation_items_from_podcast_excerpt --> Send_Output_to_Goal_Autodelegator_Airtable
+  Get_current_unix_epoch_time --> URL_encode_the_title
+  URL_encode_the_title --> Set_API_Keys
+  Set_API_Keys --> Build_SHA1_Hash_Authorization
+  Build_SHA1_Hash_Authorization --> Podcast_Index_API_Call
+  Podcast_Index_API_Call --> Get_Correct_mp3_URL
+  Send_Output_to_Goal_Autodelegator_Airtable --> Create_Task_via_TickTick_API_V
+  Send_Output_to_Goal_Autodelegator_Airtable2 --> Create_Task_via_TickTick_API_V1
+  Merge_All_Text --> What_is_the_goal_or_outcome_they_are_trying_to_achieve?_-_Article
+  Send_Output_to_Goal_Autodelegator_Airtable1 --> Create_Task_via_TickTick_API_V2
+  Spider_-_Crawl --> Parse_JSON_&_Clean_Markdown
+  When_clicking_‘Test_workflow’ --> Figure_out_where_URL_leads_to
+  Start_flow --> Figure_out_where_URL_leads_to
+  Get_YouTube_Video --> Get_Video_ID_and_Full_YouTube_URL_from_YouTube_Share_URLs
+  Parse_JSON_&_Clean_Markdown --> Merge_All_Text
+  Visit_Page --> Get_current_unix_epoch_time
+  Switch --> Spider_-_Crawl
+  Grab_YT_Transcript_via_LangChain --> Get_Goal_of_YT_Transcript
+```
+---
+Tips:
+- Use --json for raw payload

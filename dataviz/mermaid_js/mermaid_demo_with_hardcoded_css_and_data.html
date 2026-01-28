@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://unpkg.com/svg2roughjs/dist/svg2roughjs.umd.min.js"></script>
+</head>
+<body>
+    <h3>Original Mermaid:</h3>
+    <div id="chart-container"></div>
+    
+    <h3>Sketchy Version:</h3>
+    <div id="rough-container"></div>
+    
+    <script>
+        // Data embedded in the page (works immediately)
+        const data = {
+            "title": "NETFLIX",
+            "values": [
+                {"label": "Time spent looking for movie", "value": 90},
+                {"label": "Time spent watching it", "value": 10}
+            ]
+        };
+        
+        // Generate Mermaid diagram from data (NO handDrawn config)
+        let mermaidCode = `pie title ${data.title}`;
+        
+        // Add data points
+        data.values.forEach(item => {
+            mermaidCode += `\n         "${item.label}" : ${item.value}`;
+        });
+        
+        // Insert diagram into page
+        document.getElementById('chart-container').innerHTML = 
+            `<div class="mermaid">${mermaidCode}</div>`;
+        
+        // Initialize Mermaid normally
+        mermaid.initialize({startOnLoad: false});
+        mermaid.run().then(() => {
+            console.log('Mermaid rendered');
+            
+            // Wait a bit for DOM to settle
+            setTimeout(() => {
+                const svgElement = document.querySelector('#chart-container svg');
+                console.log('SVG Element:', svgElement);
+                
+                if (svgElement) {
+                    try {
+                        // Create svg2roughjs instance with ALL the customization options
+                        const roughConverter = new svg2roughjs.Svg2Roughjs('#rough-container');
+                        roughConverter.svg = svgElement;
+                        
+                        // ROUGH STYLING OPTIONS
+                        roughConverter.roughConfig = {
+                            roughness: 3,          // How rough/sketchy (0-10)
+                            bowing: 2,             // How much lines bow/curve (0-10) 
+                            fillStyle: 'hachure', // 'hachure', 'solid', 'zigzag', 'cross-hatch', 'dots', 'dashed', 'zigzag-line'
+                            fillWeight: 2,         // Thickness of fill lines
+                            hachureAngle: 45,      // Angle of hachure lines
+                            hachureGap: 4,         // Gap between hachure lines
+                            stroke: '#333',        // Line color
+                            strokeWidth: 2,        // Line thickness
+                        };
+                        
+                        // FONT AND COLOR OPTIONS
+                        roughConverter.fontFamily = 'Gaegu'; // Change font
+                        roughConverter.backgroundColor = '#fafafa';  // Background color (or 'transparent')
+                        roughConverter.randomize = true;             // Add randomness
+                        roughConverter.seed = 12345;                 // Fixed seed for consistent look
+                        roughConverter.pencilFilter = true;          // Adds pencil texture effect
+                        
+                        // Convert to sketchy
+                        roughConverter.sketch().then(() => {
+                            console.log('Rough conversion complete');
+                        }).catch(err => {
+                            console.error('Rough conversion failed:', err);
+                        });
+                        
+                    } catch (error) {
+                        console.error('Error creating rough version:', error);
+                    }
+                } else {
+                    console.error('No SVG element found');
+                }
+            }, 500);
+        }).catch(err => {
+            console.error('Mermaid failed:', err);
+        });
+    </script>
+</body>
+</html>

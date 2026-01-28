@@ -1,0 +1,84 @@
+# Excalidraw Customizing Styles
+
+Excalidraw uses CSS variables to style certain components. To override them, you should set your own on the `.excalidraw` and `.excalidraw.theme--dark` (for dark mode variables) selectors.
+
+Make sure the selector has higher specificity, e.g. by prefixing it with your app's selector:
+
+```jsx
+.your-app .excalidraw {
+  --color-primary: red;
+}
+.your-app .excalidraw.theme--dark {
+  --color-primary: pink;
+}
+
+```
+
+Most notably, you can customize the primary colors, by overriding these variables:
+
+- `--color-primary`
+- `--color-primary-darker`
+- `--color-primary-darkest`
+- `--color-primary-light`
+- `--color-primary-contrast-offset` — a slightly darker (in light mode), or lighter (in dark mode) `--color-primary` color to fix contrast issues (see [Chubb illusion](https://en.wikipedia.org/wiki/Chubb_illusion)). It will fall back to `--color-primary` if not present.
+
+For a complete list of variables, check [theme.scss](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/css/theme.scss), though most of them will not make sense to override.
+
+```jsx
+.custom-styles .excalidraw {
+  --color-primary: #fcc6d9;
+  --color-primary-darker: #f783ac;
+  --color-primary-darkest: #e64980;
+  --color-primary-light: #f2a9c4;
+}
+
+.custom-styles .excalidraw.theme--dark {
+  --color-primary: #d494aa;
+  --color-primary-darker: #d64c7e;
+  --color-primary-darkest: #e86e99;
+  --color-primary-light: #dcbec9;
+}
+
+```
+
+Live Editor
+
+```jsx
+function App() {
+  return (
+    <div style={{ height: "500px" }} className="custom-styles">
+      <Excalidraw />
+    </div>
+  );
+}
+```
+
+Result
+
+To move canvas, hold mouse wheel or spacebar while dragging, or use the hand tool
+
+## Shapes
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+0
+
+Library
+
+Drawing canvas

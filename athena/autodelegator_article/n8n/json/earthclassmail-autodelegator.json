@@ -1,0 +1,16 @@
+{
+  "Name": "EarthClassMail Autodelegator",
+  "ID": "GuskgMMyMN7reK6y",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": true,
+  "Trigger Ct": 1,
+  "Last Updated": "6/1/2025 12:48:00",
+  "Created Datetime": "4/27/2024 12:42:00",
+  "Updated": "2025-06-01T04:48:39.810Z",
+  "Created": "2024-04-27T04:42:38.349Z",
+  "Nodes": "No Operation, do nothing, Split Out, If, OpenAI, Merge, Filter, Read/Write Files from Disk, Schedule Trigger, Set, Manual Trigger, HTTP Request, Sticky Note",
+  "Node Types": "@n8n/n8n-nodes-langchain.openAi, n8n-nodes-base.filter, n8n-nodes-base.httpRequest, n8n-nodes-base.if, n8n-nodes-base.manualTrigger, n8n-nodes-base.merge, n8n-nodes-base.noOp, n8n-nodes-base.readWriteFile, n8n-nodes-base.scheduleTrigger, n8n-nodes-base.set, n8n-nodes-base.splitOut",
+  "Node Names": "Action Item, Clean Fields, Create Task via TickTick API V, Create Task via TickTick API V1, Create Task via TickTick API V2, Create Task via TickTick API V3, ECM - Get Piece Details, ECM - Get Piece Media, ECM - Get Piece Media Details, ECM - List Inboxes, ECM - List Inbox Pieces, ECM - Login, ECM - Refresh Token, Filter - Scanned and in Last Day, Fireworks - Vision via URL, Get PDF, Get PDF1, Get Tasks in CYCL List via TickTick V2 API1, If, Merge, Merge1, Merge2, Merge3, Merge4, Merged Fields, No Operation, do nothing, OCR, OpenAI - Action Item, OpenAI - OCR, OpenAI - Sender, Read/Write Files from Disk, Schedule Trigger, Sender, Split Out, TickTick Fields, When clicking \"Test workflow\"",
+  "Notes": ""
+}

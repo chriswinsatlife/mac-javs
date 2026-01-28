@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import AnnouncementBadge from '../../components/elements/announcement-badge.astro';
+import Button from '../../components/elements/button.astro';
+import Heading from '../../components/elements/heading.astro';
+import Subheading from '../../components/elements/subheading.astro';
+import Text from '../../components/elements/text.astro';
+import Eyebrow from '../../components/elements/eyebrow.astro';
+import ButtonLink from '../../components/elements/button-link.astro';
+import Link from '../../components/elements/link.astro';
+import PlainButton from '../../components/elements/plain-button.astro';
+import PlainButtonLink from '../../components/elements/plain-button-link.astro';
+import SoftButton from '../../components/elements/soft-button.astro';
+import SoftButtonLink from '../../components/elements/soft-button-link.astro';
+import LogoGrid from '../../components/elements/logo-grid.astro';
+import Main from '../../components/elements/main.astro';
+import Screenshot from '../../components/elements/screenshot.astro';
+---
+<Base title="16 Elements Test">
+  <div class="p-8 bg-slate-50 min-h-screen space-y-6">
+    <h1 class="text-2xl font-bold mb-6">16 Elements (no Wallpaper)</h1>
+    
+    <div class="grid gap-6">
+      <div class="bg-white p-6 rounded shadow space-y-4">
+        <h2 class="text-lg font-bold border-b pb-2">AnnouncementBadge, Button</h2>
+        <AnnouncementBadge text="New features available!" href="#" cta="View now" />
+        <Button>Button</Button>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow space-y-4">
+        <h2 class="text-lg font-bold border-b pb-2">Eyebrow, Heading, Subheading, Text</h2>
+        <Eyebrow>eyebrow</Eyebrow>
+        <Heading>Heading</Heading>
+        <Subheading>Subheading</Subheading>
+        <Text>Text component content</Text>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow space-y-4">
+        <h2 class="text-lg font-bold border-b pb-2">ButtonLink, Link</h2>
+        <ButtonLink href="#">Button Link</ButtonLink>
+        <Link href="#">Link</Link>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow space-y-4">
+        <h2 class="text-lg font-bold border-b pb-2">PlainButton, PlainButtonLink, SoftButton, SoftButtonLink</h2>
+        <PlainButton>Plain Button</PlainButton>
+        <PlainButtonLink href="#">Plain Button Link</PlainButtonLink>
+        <SoftButton>Soft Button</SoftButton>
+        <SoftButtonLink href="#">Soft Button Link</SoftButtonLink>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow space-y-4">
+        <h2 class="text-lg font-bold border-b pb-2">LogoGrid, Main, Screenshot</h2>
+        <Main>Main content wrapper</Main>
+        <Screenshot image="https://via.placeholder.com/800x600" />
+        <LogoGrid logotype={['Logo 1', 'Logo 2', 'Logo 3']} />
+      </div>
+    </div>
+  </div>
+</Base>

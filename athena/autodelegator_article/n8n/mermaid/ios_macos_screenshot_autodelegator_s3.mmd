@@ -1,0 +1,26 @@
+# n8n — workflows mermaid
+---
+
+```mermaid
+graph LR
+  How_might_we_go_above_and_beyond? --> Write_title_for_task
+  Write_title_for_task --> Can_Tavily_Help_with_Research?
+  If --> Set_query_for_Tavily_API_call
+  Can_Tavily_Help_with_Research? --> If
+  Set_query_for_Tavily_API_call --> Tavily_API_call
+  Tavily_API_call --> Create_TT_Task
+  Create_Markdown_for_Image --> Create_TT_Task2
+  Get_File_URL --> Create_TT_Task3
+  AWS_S3 --> Find_File
+  Find_File --> Sort
+  Sort --> Limit
+  Limit --> Image_File_URL
+  Prompt --> GPT-4O
+  GPT-4O --> How_might_we_go_above_and_beyond?
+  Convert_to_File --> AWS_S3
+  Catch_screenshot --> Convert_to_File
+  Image_File_URL --> Prompt
+```
+---
+Tips:
+- Use --json for raw payload

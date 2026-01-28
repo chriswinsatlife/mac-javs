@@ -1,0 +1,19 @@
+# n8n — workflows mermaid
+---
+
+```mermaid
+graph LR
+  Schedule_Trigger --> GraphQL
+  Google_Calendar_Event_Ended_-_CY.co --> Set_Fields
+  Google_Calendar_Event_Ended_-_Cognitive --> Set_Fields
+  Google_Calendar_Event_Ended_-_Athena --> Set_Fields
+  Google_Calendar_Event_Ended_-_BeSci --> Set_Fields
+  Organize_Meeting_Data --> Create_TT_Task
+  Get_Details_for_Meeting_w/o_Transcript --> Organize_Meeting_Data
+  Set_Fields --> Get_Recent_Fireflies_Meetings
+  Filter --> Get_Details_for_Meeting_w/o_Transcript
+  Get_Recent_Fireflies_Meetings --> Filter
+```
+---
+Tips:
+- Use --json for raw payload

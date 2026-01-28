@@ -1,0 +1,16 @@
+{
+  "Name": "Meeting Autodelegator [Old]",
+  "ID": "aath9mBYbSzs65kx",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": false,
+  "Trigger Ct": 5,
+  "Last Updated": "8/9/2024 4:36:00",
+  "Created Datetime": "2/16/2024 3:51:00",
+  "Updated": "2024-08-09T08:36:10.863Z",
+  "Created": "2024-02-16T08:51:03.292Z",
+  "Nodes": "GraphQL, Filter, Schedule Trigger, Set, HTTP Request, Sticky Note, Google Calendar Trigger",
+  "Node Types": "n8n-nodes-base.filter, n8n-nodes-base.googleCalendarTrigger, n8n-nodes-base.graphql, n8n-nodes-base.httpRequest, n8n-nodes-base.scheduleTrigger, n8n-nodes-base.set",
+  "Node Names": "Create TT Task, Filter, Get Details for Meeting with Transcript, Get Details for Meeting w/o Transcript, Get Recent Fireflies Meetings, Google Calendar Event Ended - Athena, Google Calendar Event Ended - BeSci, Google Calendar Event Ended - Cognitive, Google Calendar Event Ended - CY.co, GraphQL, Organize Meeting Data, Schedule Trigger, Set Fields",
+  "Notes": ""
+}

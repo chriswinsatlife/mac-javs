@@ -1,0 +1,183 @@
+[
+  {
+    "Stage": "Pre-activation",
+    "Touchpoint": "Discovery",
+    "Who": "Client",
+    "Where": "Usually referral or Jonathan's network"
+  },
+  {
+    "Stage": "Pre-activation",
+    "Touchpoint": "Fill out waitlist form (Client Profile Form)",
+    "Who": "Client to Athena",
+    "Where": "Typeform into CRM",
+    "Notes/status": "WIP: Discovery Intake Questions"
+  },
+  {
+    "Stage": "Pre-activation",
+    "Touchpoint": "Waitlist form received",
+    "Who": "Beth to Client",
+    "Where": "Email",
+    "Trigger point": "Immediately after waitlist form received",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Pre-activation",
+    "Touchpoint": "Hiring + training new EAs",
+    "Who": "Recruitment + Training",
+    "Where": "Ongoing",
+    "Trigger point": "1-3 months",
+    "Notes/status": "Beth prioritizing clients"
+  },
+  {
+    "Stage": "Activation",
+    "Touchpoint": "Activation email + pay deposit",
+    "Who": "Beth to Client",
+    "Where": "Email",
+    "Trigger point": "EAs pass",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Activation",
+    "Touchpoint": "Client pays deposit",
+    "Who": "Client to Athena",
+    "Where": "Moonclerk POS",
+    "Trigger point": "Within a week of asking for deposit"
+  },
+  {
+    "Stage": "Activation",
+    "Touchpoint": "Deposit received + schedule discovery call with Beth",
+    "Who": "Beth to Client",
+    "Where": "Email",
+    "Trigger point": "Upon receipt of deposit from client",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Activation",
+    "Touchpoint": "Start: 10x delegation tips",
+    "Who": "Jonathan to Client",
+    "Where": "Email",
+    "Trigger point": "Upon receipt of deposit from client",
+    "Notes/status": "WIP: 10x delegation tips cascade"
+  },
+  {
+    "Stage": "Activation",
+    "Touchpoint": "Discovery call with Beth",
+    "Who": "Client & Beth",
+    "Where": "Zoom\nNotes into CRM",
+    "Trigger point": "Within a week of \"Deposit received\" email",
+    "Notes/status": "WIP: Discovery intake snapshot"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "Discovery call Recap email",
+    "Who": "Beth to Clent (BCC Jan for matching)",
+    "Where": "Email",
+    "Trigger point": "Right after Discovery call",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Activation",
+    "Touchpoint": "Matching",
+    "Who": "Beth, Jan & EA",
+    "Where": "Process"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "Internal email: You've been matched to [Client] + schedule client briefing + EA update their bio",
+    "Who": "Beth to EA",
+    "Where": "Email",
+    "Trigger point": "Match found (~2 days after discovery call)",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "Internal EA briefing on client",
+    "Who": "Beth to EA",
+    "Where": "Zoom",
+    "Trigger point": "When Beth schedules quick call with EA (within 2 days max)",
+    "Notes/status": "Required if EA's first client(?)\n\nWIP: go over client profile form with EA (should be stored on CRM and EA given access for continuous updating)"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "\"Meet your new EA\" intro email (with CV) + schedule ONB call",
+    "Who": "Beth to Client + EA",
+    "Where": "Email",
+    "Trigger point": "Right after Beth briefs EA",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "EA response to \"Meet your new EA\" intro email",
+    "Who": "EA to Client, cc Beth",
+    "Where": "Email",
+    "Trigger point": "Upon receipt of \"Meet your new EA\" intro email",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "ONB call",
+    "Who": "Client, EA, Beth",
+    "Where": "Zoom",
+    "Trigger point": "Ideally within a week of \"Meet your new EA\" intro email",
+    "Notes/status": "WIP: Discovery intake snapshot"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "30-day ONB action plan on Asana/task app + request client for access",
+    "Who": "Beth to EA + Client",
+    "Where": "Email (with link to Asana)",
+    "Trigger point": "Right after ONB call",
+    "Notes/status": "WIP: Discovery intake snapshot"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "10x Delegation Tips: ONB",
+    "Who": "Jonathan to Client",
+    "Where": "Email",
+    "Trigger point": "After ONB call/with 30-day ONB plan"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "1st \"Daily Check-in\"",
+    "Who": "EA to Client",
+    "Where": "Slack/Chat/text",
+    "Trigger point": "Sent at the start of EA's first full day with client",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Onboarding",
+    "Touchpoint": "Client & EA first weekly 1:1",
+    "Who": "Client + EA",
+    "Where": "Zoom + email recap",
+    "Trigger point": "Included in 30-day ONB action plan",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Nurturing",
+    "Touchpoint": "7-day check-in w/ client invite + meeting",
+    "Who": "Beth to Client",
+    "Where": "Zoom (email as backup)",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Nurturing",
+    "Touchpoint": "30-day coaching for EA",
+    "Who": "Beth? to EA",
+    "Where": "Email + Zoom (if needed)",
+    "Trigger point": "Weekly check-in"
+  },
+  {
+    "Stage": "Nurturing",
+    "Touchpoint": "Monthly invoice for EA & ask for feedback (NPS or measuring retention)",
+    "Who": "Beth to Client",
+    "Where": "Email",
+    "Trigger point": "Monthly",
+    "Notes/status": "WIP: Proposed ONB comms"
+  },
+  {
+    "Stage": "Nurturing",
+    "Touchpoint": "Continuous education & check-in",
+    "Who": "Jonathan to Client",
+    "Where": "Email/text + meet if needed"
+  }
+]

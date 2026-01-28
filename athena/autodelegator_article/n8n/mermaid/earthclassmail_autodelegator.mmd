@@ -1,0 +1,41 @@
+# n8n — workflows mermaid
+---
+
+```mermaid
+graph LR
+  ECM_-_List_Inbox_Pieces --> Split_Out
+  Split_Out --> Filter_-_Scanned_and_in_Last_Day
+  Filter_-_Scanned_and_in_Last_Day --> ECM_-_Get_Piece_Details
+  ECM_-_Get_Piece_Details --> Clean_Fields
+  Get_PDF --> Fireworks_-_Vision_via_URL
+  When_clicking_"Test_workflow" --> ECM_-_List_Inbox_Pieces
+  Schedule_Trigger --> ECM_-_List_Inbox_Pieces
+  ECM_-_Login --> ECM_-_Refresh_Token
+  ECM_-_Login --> ECM_-_List_Inboxes
+  Merge --> Merged_Fields
+  Merged_Fields --> OpenAI_-_Action_Item
+  Merged_Fields --> Merge2
+  If --> OpenAI_-_OCR
+  If --> Merge3
+  Merge1 --> Merge2
+  Merge2 --> If
+  Action_Item --> Merge1
+  Sender --> Merge1
+  ECM_-_Get_Piece_Media_Details --> Get_PDF
+  ECM_-_Get_Piece_Media --> Merge
+  Clean_Fields --> ECM_-_Get_Piece_Media
+  Clean_Fields --> Merge
+  OCR --> Merge3
+  Merge3 --> Create_Task_via_TickTick_API_V
+  Get_PDF1 --> Create_Task_via_TickTick_API_V2
+  TickTick_Fields --> Get_PDF1
+  TickTick_Fields --> Merge4
+  Create_Task_via_TickTick_API_V2 --> Create_Task_via_TickTick_API_V3
+  OpenAI_-_Action_Item --> OpenAI_-_Sender
+  OpenAI_-_Action_Item --> Action_Item
+  OpenAI_-_Sender --> Sender
+  OpenAI_-_OCR --> OCR
+```
+---
+Tips:
+- Use --json for raw payload

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchy Charts</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="chart_styles.css">
+    
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+    <!-- External libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://unpkg.com/svg2roughjs/dist/svg2roughjs.umd.min.js"></script>
+</head>
+<body>
+    <h1>🎨 Sketchy Chart Generator</h1>
+    
+    <div class="instructions" style="display: none !important">:
+        <h4>📝 Edit your chart data and styling below, then click "Generate Chart"</h4>
+    </div>
+    
+    <div class="edit-section">
+        <h4>Chart Data:</h4>
+        <textarea id="dataEditor">{
+            "title": "NETFLIX",
+            "type": "pie",
+            "values": [
+                {"label": "Time spent looking for movie", "value": 90},
+                {"label": "Time spent watching it", "value": 10}
+                ]
+            }
+        </textarea>
+    </div>
+    
+    <div class="edit-section">
+        <h4>Styling Config:</h4>
+        <textarea id="stylingEditor">{
+            "roughConfig": {
+                "roughness": 1,
+                "bowing": 2,
+                "fillStyle": "hachure",
+                "fillWeight": 2,
+                "hachureAngle": 45,
+                "hachureGap": 4,
+                "stroke": "#333",
+                "strokeWidth": 2
+            },
+            "fontFamily": "Architects Daughter",
+            "backgroundColor": "transparent",
+            "randomize": true,
+            "seed": 12345,
+            "pencilFilter": true
+            }
+        </textarea>
+    </div>
+    
+    <button onclick="generateChart()">🎨 Generate Sketchy Chart</button>
+    <button onclick="loadExamples()">📋 Load Examples</button>
+    
+    <div class="chart-section">
+        <h3 style="display: none !important;">✏️ Your Sketchy Chart</h3>
+        <div id="rough-container">
+            <p style="color: #666;">Click "Generate Chart" to create your sketchy visualization!</p>
+        </div>
+    </div>
+
+    <!-- Hidden container for Mermaid rendering -->
+    <div id="chart-container" style="display: none;"></div>
+
+    <script>
+        function generateChart() {
+            try {
+                // Parse the JSON from textareas
+                const data = JSON.parse(document.getElementById('dataEditor').value);
+                const styling = JSON.parse(document.getElementById('stylingEditor').value);
+                
+                console.log('Generating chart with:', data, styling);
+                
+                // Generate Mermaid code
+                let mermaidCode = `${data.type} title ${data.title}`;
+                
+                // Handle different chart types
+                if (data.type === 'pie') {
+                    data.values.forEach(item => {
+                        mermaidCode += `\n         "${item.label}" : ${item.value}`;
+                    });
+                } else if (data.type.includes('flowchart')) {
+                    // For flowcharts, values are the connections
+                    data.values.forEach(item => {
+                        mermaidCode += `\n    ${item}`;
+                    });
+                }
+                
+                // Clear containers
+                document.getElementById('chart-container').innerHTML = `<div class="mermaid">${mermaidCode}</div>`;
+                document.getElementById('rough-container').innerHTML = '<p>Generating...</p>';
+                
+                // Initialize Mermaid
+                mermaid.initialize({ startOnLoad: false });
+                mermaid.run().then(() => {
+                    console.log('Mermaid rendered');
+                    
+                    // Convert to sketchy after short delay
+                    setTimeout(() => {
+                        const svgElement = document.querySelector('#chart-container svg');
+                        if (svgElement) {
+                            // Fix the SVG dimensions to include all content
+                            svgElement.style.width = '100%';
+                            svgElement.style.height = 'auto';
+                            svgElement.removeAttribute('width');
+                            svgElement.removeAttribute('height');
+                            
+                            // Set a proper viewBox to show all content
+                            const bbox = svgElement.getBBox();
+                            const padding = 50;
+                            svgElement.setAttribute('viewBox', 
+                                `${bbox.x - padding} ${bbox.y - padding} ${bbox.width + padding * 2} ${bbox.height + padding * 2}`);
+                            
+                            const roughConverter = new svg2roughjs.Svg2Roughjs('#rough-container');
+                            roughConverter.svg = svgElement;
+                            
+                            // Apply styling
+                            roughConverter.roughConfig = styling.roughConfig;
+                            roughConverter.fontFamily = styling.fontFamily;
+                            roughConverter.backgroundColor = styling.backgroundColor;
+                            roughConverter.randomize = styling.randomize;
+                            roughConverter.seed = styling.seed;
+                            roughConverter.pencilFilter = styling.pencilFilter;
+                            
+                            roughConverter.sketch().then(() => {
+                                console.log('Sketchy chart complete!');
+                                // Clear the "Generating..." text after chart is ready
+                                const generatingText = document.querySelector('#rough-container p');
+                                if (generatingText && generatingText.textContent.includes('Generating')) {
+                                    generatingText.style.display = 'none';
+                                }
+                                
+                                // Make sure the final output shows full content
+                                const finalSvg = document.querySelector('#rough-container svg');
+                                if (finalSvg) {
+                                    finalSvg.style.width = '100%';
+                                    finalSvg.style.height = 'auto';
+                                    finalSvg.style.maxWidth = '800px';
+                                }
+                            });
+                        }
+                    }, 500);
+                }).catch(err => {
+                    console.error('Mermaid failed:', err);
+                    document.getElementById('rough-container').innerHTML = '<p style="color: red;">Chart generation failed</p>';
+                });
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('rough-container').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+        
+        function loadExamples() {
+            // Flowchart example
+            document.getElementById('dataEditor').value = `{
+                "title": "Decision Process",
+                "type": "flowchart TD",
+                "values": [
+                    "A[Start] --> B{Is it working?}",
+                    "B -->|Yes| C[Great!]",
+                    "B -->|No| D[Fix it]",
+                    "D --> B"
+                ]
+                }`;
+                            
+                            document.getElementById('stylingEditor').value = `{
+                "roughConfig": {
+                    "roughness": 2,
+                    "bowing": 3,
+                    "fillStyle": "zigzag",
+                    "fillWeight": 2,
+                    "stroke": "#8B4513",
+                    "strokeWidth": 2
+                },
+                "fontFamily": "Gaegu Bold",
+                "backgroundColor": "transparent",
+                "randomize": true,
+                "seed": 42,
+                "pencilFilter": true
+            }`;
+        }
+        
+        // Auto-generate on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            generateChart();
+        });
+    </script>
+</body>
+</html>

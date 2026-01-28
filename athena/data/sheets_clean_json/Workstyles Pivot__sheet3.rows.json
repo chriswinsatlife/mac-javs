@@ -1,0 +1,103 @@
+[
+  {
+    "__EMPTY_2": "Calls / month",
+    "Grand Total per month": "Avg Duration (mins)",
+    "__EMPTY_3": "Cost / hr",
+    "$552.60": "Total Cost",
+    "__EMPTY_4": "% of total cost"
+  },
+  {
+    "__EMPTY": "CX",
+    "$552.60": 112.6,
+    "__EMPTY_4": 0.2037640246
+  },
+  {
+    "__EMPTY_1": "2WFC",
+    "__EMPTY_2": 350,
+    "Grand Total per month": 25,
+    "__EMPTY_3": 0.12,
+    "$552.60": 17.5,
+    "__EMPTY_4": 0.03166847629
+  },
+  {
+    "__EMPTY_1": "DCs",
+    "__EMPTY_2": 200,
+    "Grand Total per month": 65,
+    "__EMPTY_3": 0.12,
+    "$552.60": 26,
+    "__EMPTY_4": 0.04705030764
+  },
+  {
+    "__EMPTY_1": "MPs",
+    "__EMPTY_2": 200,
+    "Grand Total per month": 45,
+    "__EMPTY_3": 0.12,
+    "$552.60": 18,
+    "__EMPTY_4": 0.0325732899
+  },
+  {
+    "__EMPTY_1": "KOCs",
+    "__EMPTY_2": 180,
+    "Grand Total per month": 35,
+    "__EMPTY_3": 0.12,
+    "$552.60": 12.6,
+    "__EMPTY_4": 0.02280130293
+  },
+  {
+    "__EMPTY_1": "Feedback Calls",
+    "__EMPTY_2": 350,
+    "Grand Total per month": 55,
+    "__EMPTY_3": 0.12,
+    "$552.60": 38.5,
+    "__EMPTY_4": 0.06967064785
+  },
+  {
+    "__EMPTY": "Operations",
+    "$552.60": 374,
+    "__EMPTY_4": 0.6768005791
+  },
+  {
+    "__EMPTY_1": "OM <> XP Coaching",
+    "__EMPTY_2": 1700,
+    "Grand Total per month": 65,
+    "__EMPTY_3": 0.12,
+    "$552.60": 221,
+    "__EMPTY_4": 0.3999276149
+  },
+  {
+    "__EMPTY_1": "Client <>XP Calls",
+    "__EMPTY_2": 1700,
+    "Grand Total per month": 45,
+    "__EMPTY_3": 0.12,
+    "$552.60": 153,
+    "__EMPTY_4": 0.2768729642
+  },
+  {
+    "__EMPTY": "Recruiting"
+  },
+  {
+    "__EMPTY_1": "Final interviews",
+    "__EMPTY_2": 300,
+    "Grand Total per month": 45,
+    "__EMPTY_3": 0.12,
+    "$552.60": 27,
+    "__EMPTY_4": 0.04885993485
+  },
+  {
+    "__EMPTY": "LX (upcoming)"
+  },
+  {
+    "__EMPTY_1": "Training calls",
+    "__EMPTY_2": 300,
+    "Grand Total per month": 65,
+    "__EMPTY_3": 0.12,
+    "$552.60": 39,
+    "__EMPTY_4": 0.07057546145
+  },
+  {
+    "__EMPTY_1": "subtotal cost per department"
+  },
+  {
+    "__EMPTY_1": "expected duration (tentative)"
+  }
+]

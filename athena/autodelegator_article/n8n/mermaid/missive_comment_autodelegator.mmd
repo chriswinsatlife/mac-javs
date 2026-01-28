@@ -1,0 +1,19 @@
+# n8n — workflows mermaid
+---
+
+```mermaid
+graph LR
+  Edit_Fields --> Missive_-_Get_Messages_in_Conversation
+  Missive_-_Get_Messages_in_Conversation --> Missive_-_Get_Message_Details1
+  Set_query_for_Tavily_API_call --> Tavily_API_call
+  If1 --> Set_query_for_Tavily_API_call
+  Tavily_API_call --> Create_Task_via_TickTick_API_V2
+  Catch_Webhook_from_Missive_Rule --> Edit_Fields
+  Missive_-_Get_Message_Details1 --> Missive_-_Get_Message_Details
+  Missive_-_Get_Message_Details --> Remove_HTML
+  Remove_HTML --> Load_Profile
+  Create_Title_for_Task --> Can_Tavily_Help_with_Research?
+```
+---
+Tips:
+- Use --json for raw payload

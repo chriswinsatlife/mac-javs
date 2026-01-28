@@ -1,102 +1,66 @@
 ---
 import Base from '../layouts/Base.astro';
 
+import AnnouncementBadge from '../../components/elements/announcement-badge.astro'
+import ButtonLink from '../../components/elements/button-link.astro'
+import Button from '../../components/elements/button.astro'
+import Container from '../../components/elements/container.astro'
+import EmailSignupForm from '../../components/elements/email-signup-form.astro'
+import Eyebrow from '../../components/elements/eyebrow.astro'
+import Heading from '../../components/elements/heading.astro'
+import InstallCommand from '../../components/elements/install-command.astro'
+import Link from '../../components/elements/link.astro'
+import LogoGrid from '../../components/elements/logo-grid.astro'
+import Main from '../../components/elements/main.astro'
+import PlainButtonLink from '../../components/elements/plain-button-link.astro'
+import PlainButton from '../../components/elements/plain-button.astro'
+import Screenshot from '../../components/elements/screenshot.astro'
+import Section from '../../components/elements/section.astro'
+import SoftButtonLink from '../../components/elements/soft-button-link.astro'
+import SoftButton from '../../components/elements/soft-button.astro'
+import Subheading from '../../components/elements/subheading.astro'
+import Text from '../../components/elements/text.astro'
+import Wallpaper from '../../components/elements/wallpaper.astro'
+
+const elements = [
+  AnnouncementBadge,
+  ButtonLink,
+  Button,
+  Container,
+  EmailSignupForm,
+  Eyebrow,
+  Heading,
+  InstallCommand,
+  Link,
+  LogoGrid,
+  Main,
+  PlainButtonLink,
+  PlainButton,
+  Screenshot,
+  Section,
+  SoftButtonLink,
+  SoftButton,
+  Subheading,
+  Text,
+  Wallpaper,
+]
 ---
-<Base title="All Element Components (20) - Component Showcase">
-  <div class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 py-12 px-4">
-    
-    <header class="text-center mb-8">
-      <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-        All 20 Element Components
-      </h1>
-      <p class="text-slate-600 dark:text-slate-400">Each component verified and error-free</p>
-    </header>
-
-    <div class="grid grid-cols-5 gap-4 text-sm">
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">announcement-badge</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">button-link</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">button</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">container</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">email-signup-form</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">eyebrow</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">heading</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">install-command</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">link</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">logo-grid</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">main</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">plain-button-link</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">plain-button</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">screenshot</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">section</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">soft-button-link</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">soft-button</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">subheading</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">text</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-      <div class="p-4 rounded-lg bg-white dark:bg-slate-700 shadow border border-slate-200 dark:border-slate-600">
-        <div class="font-bold text-slate-900 dark:text-white mb-1">wallpaper</div>
-        <div class="text-xs text-purple-600 dark:text-purple-400">.astro</div>
-      </div>
-    </div>
-
-    <div class="mt-8 text-center">
-      <a href="/showcase" class="text-purple-600 dark:text-purple-400 underline">Back to Main Showcase</a>
+<Base title="All Elements Components">
+  <div class="p-8 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen dark:from-slate-900 dark:to-slate-800">
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+      All 20 Elements Components
+    </h1>
+    <div class="grid gap-6">
+      {elements.map((Component) => (
+        <div class="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-slate-700">
+            {Component.name}
+          </h2>
+          <div class="bg-blue-50 dark:bg-blue-900/30 rounded p-4">
+            <Component />
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 </Base>

@@ -1,0 +1,16 @@
+{
+  "Name": "Email Autodelegator v3",
+  "ID": "cnbCWgDj2ngb6nM5",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": true,
+  "Trigger Ct": 1,
+  "Last Updated": "6/10/2025 11:36:00",
+  "Created Datetime": "1/30/2025 11:37:00",
+  "Updated": "2025-06-11T03:36:41.607Z",
+  "Created": "2025-01-30T16:37:18.483Z",
+  "Nodes": "No Operation, do nothing, Gmail Trigger, Gmail, Code, Webhook, Split Out, Execution Data, OpenAI Chat Model, Auto-fixing Output Parser, If, Aggregate, OpenAI, OpenAI, Switch, Merge, Filter, Airtable, Limit, Basic LLM Chain, Respond to Webhook, Structured Output Parser, Set, HTTP Request, Sticky Note",
+  "Node Types": "@n8n/n8n-nodes-langchain.chainLlm, @n8n/n8n-nodes-langchain.lmChatOpenAi, @n8n/n8n-nodes-langchain.openAi, @n8n/n8n-nodes-langchain.outputParserAutofixing, @n8n/n8n-nodes-langchain.outputParserStructured, n8n-nodes-base.aggregate, n8n-nodes-base.airtable, n8n-nodes-base.code, n8n-nodes-base.executionData, n8n-nodes-base.filter, n8n-nodes-base.gmail, n8n-nodes-base.gmailTrigger, n8n-nodes-base.httpRequest, n8n-nodes-base.if, n8n-nodes-base.limit, n8n-nodes-base.merge, n8n-nodes-base.noOp, n8n-nodes-base.openAi, n8n-nodes-base.respondToWebhook, n8n-nodes-base.set, n8n-nodes-base.splitOut, n8n-nodes-base.switch, n8n-nodes-base.webhook",
+  "Node Names": "4.1-mini - 1, 4.1-mini - 2, Aggregate, Auto-fixing Output Parser, Auto-fixing Output Parser1, Check if meeting already scheduled, Client/EA Router, Client Email Fields, Conversation Data, Create Task via TickTick API V, Create Task via TickTick API V1, Create Task via TickTick API V3, EA Email Fields, Email, Execution Data, Filter by Subject & Recency, Filter Events, Filter Out Automated Emails, Filter Out CY/CL Emails, Filters, Filter to Emails Deemed Important by LLM, Filter to Matching Subject, Filter to Matching Task, Find Client Emails, Find EA Emails, Generate Client Email, Generate EA Email, Generate Email Search String, Generate Unavailability String, Get Availability, Get Client & EA Context, Get Missive Conversation ID from 1 API Call, Get Missive Conversation ID from Multiple API Calls, Get Tasks in CYCL List via TickTick V2 API1, Gmail Trigger, Gmail Trigger2, If, Limit, Limit1, Limit2, Merge, Missive - Create Draft from Client, Missive - Create Draft from EA, Missive - Get Message IDs, Missive - Get Message URLs, Missive - Last 50 Conversations, Missive - Last X Conversations, Missive - Last X Conversations1, Missive Webhook - \"Delegated\" Label Added, No Operation, do nothing, OpenAI - Due Date, Respond to Webhook, Route Based On Research Agent Opportunity, Route Based On Whether Task Exists for Conversation, Split Out Emails, Step 1, Step 2, Structured Output Parser, Structured Output Parser1, Tavily API - Research Company, Tavily API - Research Tasks, Update Tasks via TickTick V2 API1, Upsert Record in Autodelegator Base",
+  "Notes": ""
+}

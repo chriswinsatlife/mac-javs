@@ -1,0 +1,16 @@
+{
+  "Name": "Email Autodelegator v1",
+  "ID": "5HYnc6X2iG9uuMTh",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": false,
+  "Trigger Ct": 1,
+  "Last Updated": "6/26/2024 4:04:00",
+  "Created Datetime": "2/9/2024 3:27:00",
+  "Updated": "2024-06-26T08:04:21.712Z",
+  "Created": "2024-02-09T08:27:40.660Z",
+  "Nodes": "No Operation, do nothing, Gmail Trigger, Gmail, Code, Split Out, If, Aggregate, OpenAI, OpenAI, Switch, Merge, Filter, Airtable, Limit, Set, HTTP Request, Sticky Note",
+  "Node Types": "@n8n/n8n-nodes-langchain.openAi, n8n-nodes-base.aggregate, n8n-nodes-base.airtable, n8n-nodes-base.code, n8n-nodes-base.filter, n8n-nodes-base.gmail, n8n-nodes-base.gmailTrigger, n8n-nodes-base.httpRequest, n8n-nodes-base.if, n8n-nodes-base.limit, n8n-nodes-base.merge, n8n-nodes-base.noOp, n8n-nodes-base.openAi, n8n-nodes-base.set, n8n-nodes-base.splitOut, n8n-nodes-base.switch",
+  "Node Names": "Aggregate, Any Research Items the LLM can help with?, Client/EA Router, Client Email Fields, Construct Query, Conversation Data, Create Task Title, Create Task via TickTick API V, Create Task via TickTick API V1, Create Task via TickTick API V2, Create Task via TickTick API V3, EA Email Fields, Filter Events, Filter to Emails Deemed Important by LLM, Filter to Matching Subject, Filter to Matching Task, Find Client Emails, Find EA Emails, Generate Client Email, Generate EA Email, Generate Email Search String, Generate Unavailability String, Get Availability, Get Client & EA Context, Get Company Name from Email, Get Missive Conversation ID from 1 API Call, Get Missive Conversation ID from Multiple API Calls, Get Tasks in CYCL List via TickTick V2 API1, Gmail Trigger, Gmail Trigger2, How Might We Go Above and Beyond?, If Tavily Research Exists, If Tavily Research Exists1, Is this actually important?, Limit, Limit1, Limit2, Merge, Missive - Create Draft from Client, Missive - Create Draft from EA, Missive - Get Message IDs, Missive - Get Message URLs, Missive - Last 50 Conversations, Missive - Last X Conversations, Missive - Last X Conversations1, No Operation, do nothing, OpenAI, Route Based On Research Agent Opportunity, Route Based On Whether Task Exists for Conversation, Split Out Emails, Summarize Email, Tavily API Request, Tavily API Request 2, Trim Email Thread, Update Tasks via TickTick V2 API, Update Tasks via TickTick V2 API1, Upsert Record in Autodelegator Base, What Action or Content is Required via the Email Reply?, Who Should Respond?",
+  "Notes": ""
+}

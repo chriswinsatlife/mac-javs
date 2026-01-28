@@ -1,0 +1,37 @@
+:root {
+  --node-stroke: #9370db;
+  --node-fill: #e8e8ff;
+  --node-stroke-width: 2;
+  --edge-stroke: #666;
+  --edge-stroke-width: 1.2;
+  --font-family: 'Architects Daughter', cursive;
+  --font-weight: 700;
+  --font-min-px: 10;
+  --font-max-px: 18;
+  --node-pad-x: 32;
+  --node-pad-y: 22;
+  --diamond-extra-min-w: 150;
+  --diamond-extra-min-h: 90;
+  --nodesep: 120;
+  --ranksep: 120;
+  --start-gap: 14;
+  --end-gap: 20;
+  --curve-tightness: 0.25;
+  --roughness: 1.6;
+  --label-offset: 16;
+}
+
+.chart-container { max-width: 1400px; margin: 2rem auto; padding: 0 1rem; }
+.controls { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.controls input[type="text"] { min-width: 360px; }
+.controls button { padding: 0.35rem 0.6rem; }
+
+svg { width: 100%; height: auto; }
+
+.node text { font-family: var(--font-family); font-weight: var(--font-weight); fill: #333; }
+.edge-label { font-family: var(--font-family); fill: #333; font-size: 12px; }
+
+/* Rough.js shapes pick up color from JS, but keep class hooks for future */
+.node-rect {}
+.node-ellipse {}
+.node-diamond {}

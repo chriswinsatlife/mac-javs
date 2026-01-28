@@ -1,0 +1,16 @@
+{
+  "Name": "iOS and MacOS Screenshot Autodelegator S3",
+  "ID": "eoO98AkDvF6b21Pe",
+  "Link": "→",
+  "URL": "https://n8n.chrisyork.co/workflow/undefined",
+  "Active": false,
+  "Trigger Ct": 1,
+  "Last Updated": "7/5/2024 9:25:00",
+  "Created Datetime": "7/5/2024 9:17:00",
+  "Updated": "2024-07-05T13:25:05.026Z",
+  "Created": "2024-07-05T13:17:11.021Z",
+  "Nodes": "Convert to File, Webhook, If, OpenAI, AWS S3, Limit, Execute Workflow, Set, HTTP Request, Sticky Note, Sort",
+  "Node Types": "n8n-nodes-base.awsS3, n8n-nodes-base.convertToFile, n8n-nodes-base.executeWorkflow, n8n-nodes-base.httpRequest, n8n-nodes-base.if, n8n-nodes-base.limit, n8n-nodes-base.openAi, n8n-nodes-base.set, n8n-nodes-base.sort, n8n-nodes-base.webhook",
+  "Node Names": "AWS S3, Can Tavily Help with Research?, Catch screenshot, Convert to File, Create Markdown for Image, Create TT Task, Create TT Task1, Create TT Task2, Create TT Task3, Create TT Task5, Create TT Task6, Create TT Task w Base64, Delete file, Delete Task via Updating in V2 API, Delete Task via V1 API, Find File, Get File URL, Get Task with Image as Example via TickTick V2 API, GPT-4O, GPT-4O1, How might we go above and beyond?, If, Image File URL, Limit, Make Google Drive File Private, Prompt, Set query for Tavily API call, Sort, Tavily API call, Test of Image URL Method, Write title for task",
+  "Notes": ""
+}

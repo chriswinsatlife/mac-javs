@@ -1,12 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
 
-import Text from '../../components/elements/text.astro'
+import Button from '../../components/elements/button.astro'
 import Heading from '../../components/elements/heading.astro'
-import Subheading from '../../components/elements/subheading.astro'
+import Text from '../../components/elements/text.astro'
 import Eyebrow from '../../components/elements/eyebrow.astro'
-import Container from '../../components/elements/container.astro'
-import Section from '../../components/elements/section.astro'
+import Link from '../../components/elements/link.astro'
+import ButtonLink from '../../components/elements/button-link.astro'
 ---
 
 <Base title="Showcase - Elements Only">
@@ -15,22 +15,38 @@ import Section from '../../components/elements/section.astro'
       Component Showcase - Elements Only
     </h1>
     
-    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow mb-6">
-      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-        Typography Elements
-      </h2>
-      <div class="space-y-4 p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
-        <Eyebrow>Eyebrow Text</Eyebrow>
-        <Heading>Heading Component</Heading>
-        <Subheading>Subheading Component</Subheading>
-        <Text>Regular text component for body content.</Text>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+        <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">Button</h3>
+        <Button>Click me</Button>
       </div>
-    </div>
-    
-    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 shadow">
-      <p class="text-slate-700 dark:text-slate-300">
-        Elements only - loaded successfully!
-      </p>
+
+      <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+        <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">Heading</h3>
+        <Heading>Heading Component</Heading>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+        <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">Text</h3>
+        <Text>This is the Text component for body content</Text>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+        <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">Eyebrow</h3>
+        <Eyebrow>EYEBROW</Eyebrow>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+        <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">Link</h3>
+        <Link href="#">Visit link</Link>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+        <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">Button Link</h3>
+        <ButtonLink href="#">Button Link</ButtonLink>
+      </div>
+
     </div>
   </div>
 </Base>
