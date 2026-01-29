@@ -217,8 +217,9 @@ const description =
                               <div data-salepilltop class="athena templated-texts pilled-sale-pale lit">Better savings</div>
                             </div>
                           </div>
+                        </div>
 
-                          <div id="w-node-_2446728a-2ee5-244a-ef55-2ec3d774d44b-4dea49a9" class="athena card pricing-base">
+                        <div id="w-node-_2446728a-2ee5-244a-ef55-2ec3d774d44b-4dea49a9" class="athena card pricing-base">
                             <div class="athena section-background glass-01">
                               <div class="athena padded-element _32">
                                 <div class="athena container default">
@@ -328,7 +329,6 @@ const description =
                               </div>
                             </div>
                           </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -376,16 +376,23 @@ const description =
       <div class="athena section-padding footer">
         <div class="athena side-padding default">
           <div class="athena grid footer-grid">
-            <div class="athena container default">
-              <a href="https://athena-82fb4f.webflow.io/athena-2025/homepage" class="w-inline-block">
+            <div id="w-node-_977dea7e-1a28-cdce-766e-eecaa8cb38d7-46825cda" class="athena container default">
+              <a
+                href="https://athena-82fb4f.webflow.io/athena-2025/homepage"
+                id="w-node-_3baf290f-4a6f-02cf-138b-8bde46825cdf-46825cda"
+                class="w-inline-block"
+              >
                 <img
                   src="https://cdn.prod.website-files.com/6513fda5217cc80d379e2473/67c54beacf7fd1150efb295b_Wordmark.svg"
+                  data-figma-image-id="67c54beacf7fd1150efb295b"
                   alt=""
+                  data-figma-id="223:449"
+                  data-figma-image-hash="a033fa5768c1991c098aed6c0a42f6ad"
                   loading="lazy"
                 />
               </a>
 
-              <div class="w-layout-hflex athena flexbox default-horizontal y-center">
+              <div id="w-node-_3baf290f-4a6f-02cf-138b-8bde46825ce5-46825cda" class="w-layout-hflex athena flexbox default-horizontal y-center">
                 <a href="https://www.facebook.com/athenacareersph/" class="w-inline-block"><div class="w-embed">
                     <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -445,7 +452,7 @@ const description =
               </div>
             </div>
 
-            <div class="athena flexbox default-horizontal gap96 mobile-reduce mobile-wrap">
+            <div id="w-node-_3baf290f-4a6f-02cf-138b-8bde46825cf9-46825cda" class="athena flexbox default-horizontal gap96 mobile-reduce mobile-wrap">
               <div class="athena text-color sage">
                 <div class="w-layout-vflex athena flexbox default-vertical">
                   <div class="athena text-color white"><div class="athena body-18">About</div></div>
@@ -476,8 +483,8 @@ const description =
               </div>
             </div>
 
-            <div class="w-layout-hflex athena flexbox default-horizontal gap32 mobile-reduce mobile-wrap">
-              <p class="copyright-2024-athena-llc">Copyright © 2025 Athena LLC</p>
+            <div id="w-node-_3baf290f-4a6f-02cf-138b-8bde46825cf2-46825cda" class="w-layout-hflex athena flexbox default-horizontal gap32 mobile-reduce mobile-wrap">
+              <p data-figma-id="223:451" class="copyright-2024-athena-llc">Copyright © 2025 Athena LLC</p>
               <a href="/terms" class="copyright-2024-athena-llc">Terms and Conditions</a>
               <a href="/privacy" class="copyright-2024-athena-llc">Privacy Policy</a>
             </div>
@@ -565,8 +572,8 @@ const description =
           }
         }
 
-          const toggles = cardToggleEl ? Array.from(cardToggleEl.querySelectorAll('.pilled-toggle')) : [];
-          toggles.forEach((t) => {
+        const toggles = cardToggleEl ? Array.from(cardToggleEl.querySelectorAll('.pilled-toggle')) : [];
+        toggles.forEach((t) => {
           const tMode = t.getAttribute('data-mode');
           t.classList.toggle('active', tMode === payment);
         });
