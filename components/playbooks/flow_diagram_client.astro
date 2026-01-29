@@ -7,7 +7,7 @@ type Props = {
   cssHref?: string;
 };
 
-const { id, dataUrl, height = 320, maxLines = 2, cssHref = '/diagrams/gifting_playbook_flow/runtime.css' } = Astro.props;
+const { id, dataUrl, height = 320, maxLines = 4, cssHref = '/diagrams/gifting_playbook_flow/runtime.css' } = Astro.props;
 const dialogId = `${id}__flow_dialog`;
 
 if (!id) throw new Error('flow_diagram_client: id required');
@@ -32,7 +32,7 @@ if (!dataUrl || !dataUrl.startsWith('/')) {
   </dialog>
 </div>
 
-<script is:inline define:vars={{ id, dataUrl, dialogId }}>
+<script is:inline define:vars={{ id, dataUrl, dialogId, cssHref }}>
   (async () => {
 
     function loadScript(src) {

@@ -1,0 +1,16 @@
+- user: 1
+  name: Sarah
+  text: Hey, did you see the new design mockups?
+- user: 1
+  text: I think they look great
+- user: 2
+  name: Mike
+  text: Just opened them! Love the color palette
+- user: 2
+  text: Should we schedule a review call?
+  timestamp: "10:34 AM"
+- user: 1
+  text: Yes! How about tomorrow at 2pm?
+- user: 2
+  text: Works for me
+  timestamp: "10:36 AM"

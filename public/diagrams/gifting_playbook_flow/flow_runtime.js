@@ -2,6 +2,59 @@
   const vbBySvg = new WeakMap();
   const roBySvg = new WeakMap();
 
+  function escapeHtml(s) {
+    return String(s ?? '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
+
+  function iconSvg(kind) {
+    const k = String(kind || '').toLowerCase();
+    // Inline SVG only (no external images). Keep minimal built-ins.
+    if (k === 'check') {
+      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.667 13.2 4.6 10.133l-1.2 1.2 4.267 4.267L16.6 6.667l-1.2-1.2z"/></svg>';
+    }
+    if (k === 'alert') {
+      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 2 1.5 17h17zM11 14H9v2h2zm0-7H9v6h2z"/></svg>';
+    }
+    if (k === 'clock') {
+      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 1 0 .001 16.001A8 8 0 0 0 10 2m1 8.2 3.1 1.8-.8 1.4L9 11V5h2z"/></svg>';
+    }
+    if (k === 'gift') {
+      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M11 3c.9 0 1.8.5 2.2 1.3.4.8.2 1.8-.4 2.4L13.5 8H18v3h-1v7H3v-7H2V8h4.5L5.2 6.7c-.6-.6-.8-1.6-.4-2.4C5.2 3.5 6.1 3 7 3c1.1 0 2.1.6 2.6 1.5L10 5.2l.4-.7C8.9 3.6 9.9 3 11 3m-4 2c-.4 0-.6.2-.7.4-.1.2 0 .6.2.8L8.3 8H10V6.6L8.9 5.4C8.4 5.2 7.7 5 7 5m6 0c-.7 0-1.4.2-1.9.4L10 6.6V8h1.7l1.8-1.8c.2-.2.3-.6.2-.8-.1-.2-.3-.4-.7-.4M4 11v6h5v-6zm7 0v6h5v-6z"/></svg>';
+    }
+    return '';
+  }
+
+  function normalizeNodeContent(n) {
+    // Backwards compatible: { label: string }
+    // Rich: { headline, body, footer, icon }
+    const hasRich = n.headline != null || n.body != null || n.footer != null || n.icon != null;
+    if (!hasRich && typeof n.label === 'string') {
+      return { headline: undefined, body: n.label, footer: undefined, icon: undefined, legacy: true };
+    }
+
+    const headline = n.headline;
+    const body = n.body;
+    const footer = n.footer;
+    const icon = n.icon;
+    return { headline, body, footer, icon, legacy: false };
+  }
+
+  function nodeHtml(n) {
+    const c = normalizeNodeContent(n);
+    const icon = c.icon ? iconSvg(c.icon) : '';
+    const headline = c.headline ? `<div class="node-headline"><span>${escapeHtml(c.headline)}</span></div>` : '';
+    const body = c.body ? `<div class="node-body"><span>${escapeHtml(c.body)}</span></div>` : '';
+    const footer = c.footer ? `<div class="node-footer"><span>${escapeHtml(c.footer)}</span></div>` : '';
+    const hasText = headline || body || footer;
+    const text = hasText ? `<div class="node-text">${headline}${body}${footer}</div>` : '';
+    return `<div class="node-card${c.legacy ? ' node-card--legacy' : ''}">${icon ? `<div class="node-icon">${icon}</div>` : ''}${text}</div>`;
+  }
+
   function uid(prefix) {
     return `${prefix}-${Math.random().toString(36).slice(2, 9)}`;
   }
@@ -45,43 +98,36 @@
   }
 
   function measureTextHeights(nodes, widthFor, maxLines) {
-    const hidden = document.createElement('div');
     const clamp = Math.max(1, Math.min(6, Number(maxLines ?? 2) || 2));
+    const hidden = document.createElement('div');
+    hidden.className = 'node-fo';
     hidden.style.cssText = [
       'position:absolute',
+      'left:-99999px',
+      'top:-99999px',
       'visibility:hidden',
       'white-space:normal',
       'word-wrap:break-word',
-      'display:-webkit-box',
-      `-webkit-line-clamp:${clamp}`,
-      '-webkit-box-orient:vertical',
-      'overflow:hidden',
       'padding:0',
       'margin:0'
     ].join(';');
     document.body.appendChild(hidden);
 
-    const probe = document.createElement('div');
-    probe.className = 'node-fo';
-    probe.style.cssText = 'position:absolute;visibility:hidden';
-    probe.innerHTML = '<div><span>A</span></div>';
-    document.body.appendChild(probe);
-    const c = getComputedStyle(probe.querySelector('span'));
-    hidden.style.font = c.font;
-    hidden.style.letterSpacing = c.letterSpacing;
-    document.body.removeChild(probe);
-
-    function wrappedHeight(text, w) {
-      hidden.style.width = w + 'px';
-      hidden.textContent = text;
-      return hidden.scrollHeight;
-    }
-
     for (const n of nodes) {
       const w = widthFor(n);
-      const sidePad = 24;
-      const tH = wrappedHeight(n.label, Math.max(1, w - sidePad));
-      n._h = tH + 24;
+      hidden.style.width = Math.max(1, w) + 'px';
+      hidden.innerHTML = nodeHtml(n);
+      // Ensure the main body clamp matches the requested maxLines.
+      const bodySpan = hidden.querySelector('.node-body > span');
+      if (bodySpan) {
+        bodySpan.style.display = '-webkit-box';
+        bodySpan.style.webkitBoxOrient = 'vertical';
+        bodySpan.style.webkitLineClamp = String(clamp);
+        bodySpan.style.overflow = 'hidden';
+      }
+
+      // Ensure there is a little breathing room for descenders; allow taller nodes.
+      n._h = hidden.scrollHeight + 4;
       n._w = w;
     }
 
@@ -310,8 +356,7 @@
       .attr('width', (d) => d.w)
       .attr('height', (d) => d.h)
       .append('xhtml:div')
-      .append('xhtml:span')
-      .text((d) => d.label);
+      .html((d) => nodeHtml(d));
 
     const vb = computeViewBox(nodeData, edgeData, labelData);
     vbBySvg.set(svgEl, vb);

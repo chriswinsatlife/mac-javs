@@ -1,0 +1,43 @@
+{
+  "rankdir": "LR",
+  "nodes": [
+    {
+      "id": "a",
+      "type": "process",
+      "icon": "gift",
+      "headline": "Trigger",
+      "body": "A birthday, milestone, or thoughtful moment gets captured.",
+      "footer": "Input"
+    },
+    {
+      "id": "b",
+      "type": "decision",
+      "icon": "alert",
+      "headline": "Need clarification?",
+      "body": "If we lack preferences, address, or budget, we ask the minimum set of questions.",
+      "footer": "Decision"
+    },
+    {
+      "id": "c",
+      "type": "process",
+      "icon": "clock",
+      "headline": "Execute",
+      "body": "Select, purchase, track delivery, and confirm receipt.",
+      "footer": "Output"
+    },
+    {
+      "id": "d",
+      "type": "process",
+      "icon": "check",
+      "headline": "Log & learn",
+      "body": "Record outcome and preferences to compound over time.",
+      "footer": "Feedback"
+    }
+  ],
+  "edges": [
+    { "source": "a", "target": "b" },
+    { "source": "b", "target": "c", "label": "Yes" },
+    { "source": "b", "target": "c", "label": "No" },
+    { "source": "c", "target": "d" }
+  ]
+}

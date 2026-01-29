@@ -1,0 +1,97 @@
+---
+import Base from '../layouts/Base.astro';
+import Messages from '../components/Messages.astro';
+---
+
+<Base title="Messages Component Demo">
+  <main class="p-8 space-y-12 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-heading font-bold">Messages Component Demo</h1>
+    
+    <section>
+      <h2 class="text-xl font-semibold mb-4">iMessage Style (inline data)</h2>
+      <Messages
+        style="imessage"
+        messages={[
+          { user: 1, name: "Me", text: "Hey! Are you coming to the party tonight?" },
+          { user: 2, name: "Alex", text: "Yes! What time does it start?" },
+          { user: 1, text: "Around 8pm" },
+          { user: 1, text: "Bring snacks if you can" },
+          { user: 2, text: "Perfect, see you there!", timestamp: "2:34 PM" }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">WhatsApp Style (from JSON file)</h2>
+      <Messages style="whatsapp" src="/data/sample_conversation.json" />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">ChatGPT Style (inline data)</h2>
+      <Messages
+        style="chatgpt"
+        messages={[
+          { user: 1, name: "You", text: "How do I center a div in CSS?" },
+          { user: 2, name: "ChatGPT", text: "There are several ways to center a div in CSS. The most modern approach is using Flexbox: set the parent container to display: flex, then use justify-content: center and align-items: center." },
+          { user: 1, text: "What about using Grid?" },
+          { user: 2, name: "ChatGPT", text: "Great question! With CSS Grid, you can use place-items: center on the parent, which is shorthand for both align-items and justify-items." }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Claude Code Style (terminal)</h2>
+      <Messages
+        style="claudecode"
+        messages={[
+          { user: 1, text: "help me refactor the auth module to use JWT" },
+          { user: 2, text: "I'll help you refactor the auth module to use JWT. Let me first examine the current implementation to understand the structure." },
+          { user: 2, text: "I can see you're using session-based auth. Here's my plan: 1) Add jsonwebtoken package, 2) Create token generation utility, 3) Replace session middleware with JWT verification." },
+          { user: 1, text: "sounds good, go ahead" },
+          { user: 2, text: "I've made the changes. The auth module now uses JWT with a 24-hour expiration. I also added refresh token support." }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">OpenCode Style (terminal)</h2>
+      <Messages
+        style="opencode"
+        messages={[
+          { user: 1, text: "Find the homepage button and make it blue" },
+          { user: 2, text: "I'll search for the homepage button in the codebase." },
+          { user: 2, text: "I found several \"Home\" links. Let me look at the most likely candidates - the 404 pages and the header component which have \"Home\" links." },
+          { user: 1, text: "use the header one" },
+          { user: 2, text: "I've updated the Home button in the header component to use blue styling. The change is in packages/console/app/src/component/header.tsx." }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">WhatsApp Group Chat (3+ users)</h2>
+      <Messages
+        style="whatsapp"
+        messages={[
+          { user: 1, name: "Me", text: "Team standup in 5 minutes" },
+          { user: 2, name: "Sarah", text: "On my way!" },
+          { user: 3, name: "Mike", text: "Running a bit late, start without me" },
+          { user: 2, text: "No worries Mike" },
+          { user: 4, name: "Lisa", text: "I'll take notes for you" },
+          { user: 3, text: "Thanks Lisa!" }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">With Avatars</h2>
+      <Messages
+        style="imessage"
+        messages={[
+          { user: 1, name: "Alice", text: "Check out this new feature!", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=alice" },
+          { user: 2, name: "Bob", text: "Looks amazing!", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=bob" },
+          { user: 1, text: "Right? Took me all weekend", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=alice" }
+        ]}
+      />
+    </section>
+  </main>
+</Base>

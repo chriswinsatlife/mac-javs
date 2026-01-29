@@ -1,0 +1,519 @@
+---
+/**
+ * Messages - Display messaging conversations in platform-specific styles
+ * 
+ * Usage:
+ *   Inline:
+ *     <Messages 
+ *       style="whatsapp"
+ *       messages={[
+ *         { user: 1, name: "Alice", text: "Hey!" },
+ *         { user: 1, text: "How are you?" },
+ *         { user: 2, name: "Bob", text: "Good, you?" }
+ *       ]}
+ *     />
+ * 
+ *   From file (JSON or YAML):
+ *     <Messages style="imessage" src="/data/conversation.json" />
+ * 
+ * Message format:
+ *   - user: number (1, 2, 3...) - required, determines alignment/color
+ *   - text: string - required, the message content
+ *   - name?: string - optional, only shown for first message in sequence
+ *   - avatar?: string - optional, URL to avatar image
+ *   - timestamp?: string - optional, displayed below message
+ * 
+ * Styles: whatsapp | imessage | chatgpt
+ */
+
+import { parse as parseYAML } from 'yaml';
+
+export interface Message {
+  user: number;
+  text: string;
+  name?: string;
+  avatar?: string;
+  timestamp?: string;
+}
+
+export interface Props {
+  style?: 'whatsapp' | 'imessage' | 'chatgpt' | 'claudecode' | 'opencode';
+  messages?: Message[];
+  src?: string;
+  /** Footer label for OpenCode style, e.g. "Build · Claude Opus 4.5" */
+  agent?: string;
+}
+
+const { style = 'imessage', messages: inlineMessages, src, agent } = Astro.props;
+
+let messages: Message[] = inlineMessages || [];
+
+// Load from file if src provided
+if (src && !inlineMessages) {
+  try {
+    const response = await fetch(new URL(src, Astro.url));
+    const text = await response.text();
+    
+    if (src.endsWith('.yaml') || src.endsWith('.yml')) {
+      messages = parseYAML(text);
+    } else {
+      messages = JSON.parse(text);
+    }
+  } catch (e) {
+    console.error(`Failed to load messages from ${src}:`, e);
+  }
+}
+
+// Determine if name should be shown
+// - Never for user 1 on iMessage/WhatsApp/ChatGPT/ClaudeCode (self messages are visually distinct)
+// - Only for first message in sequence from that user
+function shouldShowName(index: number, platformStyle: string): boolean {
+  const current = messages[index];
+  
+  // User 1 (self) never shows name on these platforms - position + style is enough
+  const noSelfNamePlatforms = ['imessage', 'whatsapp', 'chatgpt', 'claudecode', 'opencode'];
+  if (current.user === 1 && noSelfNamePlatforms.includes(platformStyle)) {
+    return false;
+  }
+  
+  // ChatGPT, ClaudeCode, and OpenCode hide all names - position identifies speaker
+  if (platformStyle === 'chatgpt' || platformStyle === 'claudecode' || platformStyle === 'opencode') {
+    return false;
+  }
+  
+  if (!current.name) return false;
+  if (index === 0) return true;
+  
+  const previous = messages[index - 1];
+  return current.user !== previous.user;
+}
+
+// Check if this message starts a new speaker (for extra gap)
+function isNewSpeaker(index: number): boolean {
+  if (index === 0) return false;
+  return messages[index].user !== messages[index - 1].user;
+}
+
+// Get user class for styling
+function getUserClass(user: number): string {
+  return user === 1 ? 'user-self' : `user-other user-${user}`;
+}
+---
+
+<div class={`messages-container messages-${style}`}>
+  {messages.map((msg, i) => (
+    <div class={`message-wrapper ${getUserClass(msg.user)}${isNewSpeaker(i) ? ' new-speaker' : ''}`}>
+      {msg.avatar && (
+        <img 
+          src={msg.avatar} 
+          alt={msg.name || `User ${msg.user}`} 
+          class="message-avatar"
+        />
+      )}
+      <div class="message-content">
+        {shouldShowName(i, style) && (
+          <span class="message-name">{msg.name}</span>
+        )}
+        <div class="message-bubble">
+          <span class="message-text">{msg.text}</span>
+        </div>
+        {msg.timestamp && (
+          <span class="message-timestamp">{msg.timestamp}</span>
+        )}
+      </div>
+    </div>
+  ))}
+  {style === 'opencode' && agent && (
+    <div class="opencode-footer">
+      <span class="opencode-footer-icon">&#x25A3;</span>
+      <span class="opencode-footer-text">{agent}</span>
+    </div>
+  )}
+</div>
+
+<style>
+  /* Base styles */
+  .messages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    max-width: 32rem;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .message-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 85%;
+  }
+
+  .message-wrapper.user-self {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  .message-wrapper.user-other {
+    align-self: flex-start;
+  }
+
+  /* Extra vertical gap when switching speakers */
+  .message-wrapper.new-speaker {
+    margin-top: 0.5rem;
+  }
+
+  .message-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    align-self: flex-end;
+  }
+
+  .message-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message-name {
+    font-size: 0.75rem;
+    margin-bottom: 0.125rem;
+    padding-left: 0.5rem;
+  }
+
+  /* Names align with bubble start */
+  .user-other .message-name {
+    padding-left: 0.5rem;
+  }
+
+  .message-bubble {
+    padding: 0.5rem 0.75rem;
+    border-radius: 1.125rem;
+    word-wrap: break-word;
+  }
+
+  .message-text {
+    font-size: 0.9375rem;
+    line-height: 1.4;
+  }
+
+  .message-timestamp {
+    font-size: 0.6875rem;
+    margin-top: 0.125rem;
+    padding-left: 0.75rem;
+  }
+
+  /* ========================================
+     iMessage Style
+     ======================================== */
+  .messages-imessage {
+    background: #fff;
+  }
+
+  .messages-imessage .message-name {
+    color: #8e8e93;
+  }
+
+  .messages-imessage .message-timestamp {
+    color: #8e8e93;
+  }
+
+  .messages-imessage .user-self .message-bubble {
+    background: #007aff;
+    color: #fff;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .messages-imessage .user-other .message-bubble {
+    background: #e9e9eb;
+    color: #000;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  /* Different colors for additional users in iMessage */
+  .messages-imessage .user-3 .message-bubble {
+    background: #34c759;
+  }
+
+  .messages-imessage .user-4 .message-bubble {
+    background: #ff9500;
+  }
+
+  /* ========================================
+     WhatsApp Style
+     ======================================== */
+  .messages-whatsapp {
+    background: #e5ddd5;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4ccc4' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .messages-whatsapp .message-name {
+    color: #128c7e;
+    font-weight: 500;
+  }
+
+  .messages-whatsapp .message-timestamp {
+    color: #667781;
+  }
+
+  .messages-whatsapp .user-self .message-bubble {
+    background: #dcf8c6;
+    color: #111;
+    border-radius: 0.5rem;
+    border-top-right-radius: 0;
+    position: relative;
+  }
+
+  .messages-whatsapp .user-other .message-bubble {
+    background: #fff;
+    color: #111;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+  }
+
+  /* Different name colors for group chats */
+  .messages-whatsapp .user-2 .message-name { color: #128c7e; }
+  .messages-whatsapp .user-3 .message-name { color: #25d366; }
+  .messages-whatsapp .user-4 .message-name { color: #34b7f1; }
+
+  /* ========================================
+     ChatGPT Style
+     ======================================== */
+  .messages-chatgpt {
+    background: #212121;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .messages-chatgpt .message-wrapper {
+    max-width: 85%;
+  }
+
+  /* User messages: right-aligned with rounded gray bubble */
+  .messages-chatgpt .message-wrapper.user-self {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  .messages-chatgpt .user-self .message-bubble {
+    background: #303030;
+    color: #ececf1;
+    padding: 0.75rem 1rem;
+    border-radius: 1.25rem;
+  }
+
+  /* AI messages: left-aligned, no bubble, plain text */
+  .messages-chatgpt .message-wrapper.user-other {
+    align-self: flex-start;
+    max-width: 100%;
+  }
+
+  .messages-chatgpt .user-other .message-bubble {
+    background: transparent;
+    color: #ececf1;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .messages-chatgpt .message-avatar {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.25rem;
+    align-self: flex-start;
+  }
+
+  /* Hide names on ChatGPT - position identifies speaker */
+  .messages-chatgpt .message-name {
+    display: none;
+  }
+
+  .messages-chatgpt .message-text {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .messages-chatgpt .message-timestamp {
+    color: #8e8ea0;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .messages-chatgpt .user-other .message-avatar {
+    background: #10a37f;
+  }
+
+  /* ========================================
+     Claude Code Style (Terminal)
+     ======================================== */
+  .messages-claudecode {
+    background: #1a1a1a;
+    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .messages-claudecode .message-wrapper {
+    max-width: 100%;
+    align-self: flex-start;
+  }
+
+  /* User messages: > prefix with dark gray rounded bubble */
+  .messages-claudecode .message-wrapper.user-self {
+    flex-direction: row;
+  }
+
+  .messages-claudecode .user-self .message-bubble {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    padding: 0.625rem 0.875rem;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+
+  .messages-claudecode .user-self .message-bubble::before {
+    content: '>';
+    color: #d97757;
+    font-weight: 600;
+    position: absolute;
+    left: -1.25rem;
+  }
+
+  .messages-claudecode .message-wrapper.user-self {
+    padding-left: 1.25rem;
+  }
+
+  /* Claude messages: plain text with bullet marker, no bubble */
+  .messages-claudecode .message-wrapper.user-other {
+    flex-direction: row;
+  }
+
+  .messages-claudecode .user-other .message-bubble {
+    background: transparent;
+    color: #e0e0e0;
+    padding: 0;
+    padding-left: 1.25rem;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .messages-claudecode .user-other .message-bubble::before {
+    content: '\2022';
+    color: #888;
+    position: absolute;
+    left: 0;
+  }
+
+  .messages-claudecode .message-name {
+    display: none;
+  }
+
+  .messages-claudecode .message-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .messages-claudecode .message-timestamp {
+    color: #666;
+    font-size: 0.75rem;
+    padding-left: 1.25rem;
+    margin-top: 0.25rem;
+  }
+
+  .messages-claudecode .message-avatar {
+    display: none;
+  }
+
+  /* ========================================
+     OpenCode Style (Terminal)
+     ======================================== */
+  .messages-opencode {
+    background: #0d0d0d;
+    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .messages-opencode .message-wrapper {
+    max-width: 100%;
+    align-self: stretch;
+    flex-direction: row;
+  }
+
+  /* User messages: full-width bar with cyan left border, slightly lighter bg */
+  .messages-opencode .message-wrapper.user-self {
+    background: #1a1a1a;
+  }
+
+  .messages-opencode .user-self .message-bubble {
+    background: transparent;
+    color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    border-left: 3px solid #5fd4f4;
+    width: 100%;
+  }
+
+  /* AI messages: plain text, no bubble, no prefix */
+  .messages-opencode .user-other .message-bubble {
+    background: transparent;
+    color: #c8c8c8;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .messages-opencode .message-name {
+    display: none;
+  }
+
+  .messages-opencode .message-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .messages-opencode .message-timestamp {
+    color: #555;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .messages-opencode .message-avatar {
+    display: none;
+  }
+
+  /* OpenCode footer badge */
+  .opencode-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+  }
+
+  .opencode-footer-icon {
+    color: #666;
+    font-size: 0.75rem;
+  }
+
+  .opencode-footer-text {
+    color: #666;
+    font-size: 0.75rem;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .messages-imessage {
+      background: #1c1c1e;
+    }
+
+    .messages-imessage .user-other .message-bubble {
+      background: #3a3a3c;
+      color: #fff;
+    }
+
+    .messages-imessage .message-name,
+    .messages-imessage .message-timestamp {
+      color: #98989d;
+    }
+  }
+</style>

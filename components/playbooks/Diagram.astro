@@ -4,6 +4,7 @@ type Props = {
   alt: string;
   title?: string;
   caption?: string;
+  cssHref?: string;
 };
 
 const {
@@ -11,6 +12,7 @@ const {
   alt,
   title,
   caption,
+  cssHref,
 } = Astro.props;
 
 if (!src || !src.startsWith('/')) {
@@ -29,7 +31,7 @@ const dialogId = `diagram__${Math.random().toString(36).slice(2, 9)}`;
     <button class="playbook-diagram__fs" type="button" data-diagram-fs={dialogId} aria-label="View diagram full screen">
       Full screen
     </button>
-    <div class="playbook-diagram__svg" role="img" aria-label={alt} data-diagram-src={src}></div>
+    <div class="playbook-diagram__svg" role="img" aria-label={alt} data-diagram-src={src} data-diagram-css={cssHref ?? ''}></div>
     <dialog id={dialogId} class="playbook-diagram__dialog">
       <div class="playbook-diagram__dialog_bar">
         <div class="playbook-diagram__dialog_title">Diagram</div>
@@ -52,6 +54,16 @@ const dialogId = `diagram__${Math.random().toString(36).slice(2, 9)}`;
     const svgWrap = frame?.querySelector('.playbook-diagram__svg');
     const src = svgWrap?.getAttribute('data-diagram-src');
     if (!svgWrap || !src) return;
+
+    // Optional per-diagram stylesheet.
+    const css = svgWrap.getAttribute('data-diagram-css');
+    if (css && !document.querySelector(`link[data-diagram-css="${css}"]`)) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = css;
+      link.dataset.diagramCss = css;
+      document.head.appendChild(link);
+    }
 
     try {
       const res = await fetch(src);
