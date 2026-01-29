@@ -165,3 +165,11 @@ Based on high-performing sites:
 - `How to {Action} with Your EA | Athena`
 - `{Person}'s {Topic} Routine - Athena`
 - `The Complete {Topic} Playbook for Delegators`
+
+---
+
+### Potential Next Steps to Verify w/ User
+
+1. Create the TypeScript schema/types for this frontmatter
+2. Build a sample playbook MDX file using this structure
+3. Design the Astro collection config for content validation
