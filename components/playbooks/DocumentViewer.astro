@@ -1,0 +1,780 @@
+---
+/**
+ * DocumentViewer - Embed content styled as popular document editors
+ * 
+ * Renders as an inline mockup. Content expands naturally (no scroll).
+ * 
+ * Usage:
+ *   <DocumentViewer style="googledocs" title="Project Brief" src="/doc.md" />
+ *   <DocumentViewer style="notion" title="Guidelines" emoji="🤖" src="/doc.md" />
+ *   <DocumentViewer style="applenotes" title="Shopping List" src="/doc.md" />
+ * 
+ * Props:
+ *   - style: 'googledocs' | 'notion' | 'applenotes' (default: 'googledocs')
+ *   - src?: string - Path to .md file
+ *   - title?: string - Document title in header
+ *   - emoji?: string - Hero emoji for Notion style (displays above content)
+ *   - caption?: string - Caption below the embed
+ */
+
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+
+export type DocStyle = 'googledocs' | 'notion' | 'applenotes';
+
+export interface Props {
+  style?: DocStyle;
+  src?: string;
+  title?: string;
+  emoji?: string;
+  caption?: string;
+}
+
+const { 
+  style = 'googledocs', 
+  src, 
+  title = 'Untitled',
+  emoji,
+  caption,
+} = Astro.props;
+
+let htmlContent = '';
+
+if (src) {
+  try {
+    const response = await fetch(new URL(src, Astro.url));
+    const markdown = await response.text();
+    
+    const result = await unified()
+      .use(remarkParse)
+      .use(remarkRehype)
+      .use(rehypeStringify)
+      .process(markdown);
+    
+    htmlContent = String(result);
+  } catch (e) {
+    console.error(`DocumentViewer: Failed to load markdown from ${src}:`, e);
+  }
+}
+---
+
+<figure class="docview-figure">
+  <div class={`docview docview--${style}`}>
+    {/* Google Docs Header */}
+    {style === 'googledocs' && (
+      <div class="gdocs-header">
+        <div class="gdocs-header__left">
+          <svg class="gdocs-header__logo" viewBox="0 0 48 48" width="40" height="52">
+            <path fill="#4285F4" d="M29 4H12c-2.2 0-4 1.8-4 4v32c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V15L29 4z"/>
+            <path fill="#A1C2FA" d="M29 4v11h11L29 4z"/>
+            <path fill="#fff" d="M14 19h20v2H14zm0 5h20v2H14zm0 5h12v2H14z"/>
+          </svg>
+          <div class="gdocs-header__meta">
+            <div class="gdocs-header__title">{title}</div>
+            <div class="gdocs-header__menu">
+              <span>File</span>
+              <span>Edit</span>
+              <span>View</span>
+              <span>Insert</span>
+              <span>Format</span>
+              <span>Tools</span>
+              <span>Extensions</span>
+              <span>Help</span>
+            </div>
+          </div>
+        </div>
+        <div class="gdocs-header__right">
+          <button class="gdocs-header__share">Share</button>
+        </div>
+      </div>
+    )}
+    
+    {/* Google Docs Toolbar */}
+    {style === 'googledocs' && (
+      <div class="gdocs-toolbar">
+        <div class="gdocs-toolbar__group">
+          <button class="gdocs-toolbar__btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg>
+          </button>
+          <button class="gdocs-toolbar__btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.4 10.6C16.55 8.99 14.15 8 11.5 8c-4.65 0-8.58 3.03-9.96 7.22L3.9 16c1.05-3.19 4.05-5.5 7.6-5.5 1.95 0 3.73.72 5.12 1.88L13 16h9V7l-3.6 3.6z"/></svg>
+          </button>
+          <button class="gdocs-toolbar__btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>
+          </button>
+        </div>
+        <span class="gdocs-toolbar__divider"></span>
+        <select class="gdocs-toolbar__select" disabled>
+          <option>100%</option>
+        </select>
+        <span class="gdocs-toolbar__divider"></span>
+        <select class="gdocs-toolbar__select gdocs-toolbar__select--wide" disabled>
+          <option>Normal text</option>
+        </select>
+        <span class="gdocs-toolbar__divider"></span>
+        <select class="gdocs-toolbar__select" disabled>
+          <option>Arial</option>
+        </select>
+        <span class="gdocs-toolbar__divider"></span>
+        <select class="gdocs-toolbar__select gdocs-toolbar__select--narrow" disabled>
+          <option>11</option>
+        </select>
+        <span class="gdocs-toolbar__divider"></span>
+        <div class="gdocs-toolbar__group">
+          <button class="gdocs-toolbar__btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.6 10.79c.97-.67 1.65-1.77 1.65-2.79 0-2.26-1.75-4-4-4H7v14h7.04c2.09 0 3.71-1.7 3.71-3.79 0-1.52-.86-2.82-2.15-3.42zM10 6.5h3c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-3v-3zm3.5 9H10v-3h3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z"/></svg>
+          </button>
+          <button class="gdocs-toolbar__btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4v3h2.21l-3.42 8H6v3h8v-3h-2.21l3.42-8H18V4z"/></svg>
+          </button>
+          <button class="gdocs-toolbar__btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17c3.31 0 6-2.69 6-6V3h-2.5v8c0 1.93-1.57 3.5-3.5 3.5S8.5 12.93 8.5 11V3H6v8c0 3.31 2.69 6 6 6zm-7 2v2h14v-2H5z"/></svg>
+          </button>
+        </div>
+      </div>
+    )}
+    
+    {/* Notion Header */}
+    {style === 'notion' && (
+      <div class="notion-header">
+        <span class="notion-header__icon">
+          <svg width="18" height="18" viewBox="0 0 100 100" fill="none">
+            <path d="M6.017 4.313l55.333 -4.087c6.797 -0.583 8.543 -0.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277 -1.553 6.807 -6.99 7.193L24.467 99.967c-4.08 0.193 -6.023 -0.39 -8.16 -3.113L3.3 79.94c-2.333 -3.113 -3.3 -5.443 -3.3 -8.167V11.113c0 -3.497 1.553 -6.413 6.017 -6.8z" fill="#fff"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M61.35 0.227l-55.333 4.087C1.553 4.7 0 7.617 0 11.113v60.66c0 2.723 0.967 5.053 3.3 8.167l13.007 16.913c2.137 2.723 4.08 3.307 8.16 3.113l64.257 -3.89c5.433 -0.387 6.99 -2.917 6.99 -7.193V20.64c0 -2.21 -0.873 -2.847 -3.443 -4.733L74.167 3.143c-4.273 -3.107 -6.02 -3.5 -12.817 -2.917zM25.92 19.523c-5.247 0.353 -6.437 0.433 -9.417 -1.99L8.927 11.507c-0.77 -0.78 -0.383 -1.753 1.557 -1.947l53.193 -3.887c4.467 -0.39 6.793 1.167 8.54 2.527l9.123 6.61c0.39 0.197 1.36 1.36 0.193 1.36l-54.933 3.307 -0.68 0.047zM19.803 88.3V30.367c0 -2.53 0.777 -3.697 3.103 -3.893L86 22.78c2.14 -0.193 3.107 1.167 3.107 3.693v57.547c0 2.53 -0.39 4.67 -3.883 4.863l-60.377 3.5c-3.493 0.193 -5.043 -0.97 -5.043 -4.083zm59.6 -54.827c0.387 1.75 0 3.5 -1.75 3.7l-2.917 0.577v42.773c-2.527 1.36 -4.853 2.137 -6.797 2.137 -3.107 0 -3.883 -0.973 -6.21 -3.887l-19.03 -29.94v28.967l6.02 1.363s0 3.5 -4.857 3.5l-13.39 0.777c-0.39 -0.78 0 -2.723 1.357 -3.11l3.497 -0.97v-38.3L30.48 40.667c-0.39 -1.75 0.58 -4.277 3.3 -4.473l14.367 -0.967 19.8 30.327v-26.83l-5.047 -0.58c-0.39 -2.143 1.163 -3.7 3.103 -3.89l13.4 -0.78z" fill="#000"/>
+          </svg>
+        </span>
+        <span class="notion-header__title">{title}</span>
+      </div>
+    )}
+    
+    {/* Apple Notes - no header chrome, just content */}
+    
+    {/* Document content - expands to fit */}
+    <div class="docview__body">
+      {/* Notion hero emoji */}
+      {style === 'notion' && emoji && (
+        <div class="notion-emoji">{emoji}</div>
+      )}
+      <div class="docview__page">
+        {src ? (
+          <Fragment set:html={htmlContent} />
+        ) : (
+          <slot />
+        )}
+      </div>
+    </div>
+  </div>
+  
+  {caption && (
+    <figcaption class="docview-figure__caption">{caption}</figcaption>
+  )}
+</figure>
+
+<style>
+  .docview-figure {
+    margin: 1.5rem 0;
+  }
+  
+  .docview-figure__caption {
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .docview {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24);
+    border: 1px solid #dadce0;
+    background: #fff;
+  }
+
+  /* ========================================
+     Google Docs - Header
+     Current 2024/2025 style
+     ======================================== */
+  .gdocs-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 0 0.75rem;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .gdocs-header__left {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .gdocs-header__logo {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+
+  .gdocs-header__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding-top: 0.25rem;
+  }
+
+  .gdocs-header__title {
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #202124;
+    line-height: 1.25;
+  }
+
+  .gdocs-header__menu {
+    display: flex;
+    gap: 0.125rem;
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    font-size: 0.875rem;
+    color: #202124;
+    padding-bottom: 0.375rem;
+  }
+
+  .gdocs-header__menu span {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: default;
+  }
+
+  .gdocs-header__menu span:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .gdocs-header__right {
+    padding-top: 0.625rem;
+  }
+
+  .gdocs-header__share {
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #fff;
+    background: #1a73e8;
+    border: none;
+    border-radius: 100px;
+    padding: 0.5rem 1.5rem;
+    cursor: default;
+  }
+
+  /* ========================================
+     Google Docs - Toolbar
+     ======================================== */
+  .gdocs-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background: #edf2fa;
+    border-bottom: 1px solid #dadce0;
+  }
+
+  .gdocs-toolbar__group {
+    display: flex;
+    align-items: center;
+  }
+
+  .gdocs-toolbar__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    color: #444746;
+    cursor: default;
+  }
+
+  .gdocs-toolbar__btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .gdocs-toolbar__divider {
+    width: 1px;
+    height: 20px;
+    background: #c4c7c5;
+    margin: 0 0.375rem;
+  }
+
+  .gdocs-toolbar__select {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 0.8125rem;
+    color: #202124;
+    background: transparent;
+    border: none;
+    padding: 0.25rem 0.375rem;
+    border-radius: 4px;
+    cursor: default;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .gdocs-toolbar__select--wide {
+    min-width: 100px;
+  }
+
+  .gdocs-toolbar__select--narrow {
+    width: 40px;
+  }
+
+  .gdocs-toolbar__select:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  /* ========================================
+     Google Docs - Document Body
+     NO SCROLL - expands to fit content
+     ======================================== */
+  .docview__body {
+    background: #f8f9fa;
+    padding: 1.25rem;
+  }
+
+  .docview--googledocs .docview__page {
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 816px;
+    margin: 0 auto;
+    padding: 72px 96px;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  /* Google Docs Typography - matching actual current styles */
+  .docview--googledocs .docview__page :global(h1) {
+    font-size: 26pt;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.4em;
+    color: #000;
+  }
+
+  .docview--googledocs .docview__page :global(h2) {
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 1.2em 0 0.4em;
+    color: #000;
+  }
+
+  .docview--googledocs .docview__page :global(h3) {
+    font-size: 14pt;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 1em 0 0.3em;
+    color: #000;
+  }
+
+  .docview--googledocs .docview__page :global(h4) {
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 1em 0 0.3em;
+    color: #000;
+  }
+
+  .docview--googledocs .docview__page :global(h5) {
+    font-size: 11pt;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 1em 0 0.3em;
+    color: #000;
+  }
+
+  .docview--googledocs .docview__page :global(h6) {
+    font-size: 11pt;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 1em 0 0.3em;
+    color: #000;
+  }
+
+  .docview--googledocs .docview__page :global(p) {
+    margin: 0 0 0.75em;
+  }
+
+  .docview--googledocs .docview__page :global(ul) {
+    margin: 0 0 0.75em;
+    padding-left: 2em;
+    list-style-type: disc;
+  }
+
+  .docview--googledocs .docview__page :global(ul ul) {
+    list-style-type: circle;
+  }
+
+  .docview--googledocs .docview__page :global(ul ul ul) {
+    list-style-type: square;
+  }
+
+  .docview--googledocs .docview__page :global(ol) {
+    margin: 0 0 0.75em;
+    padding-left: 2em;
+  }
+
+  .docview--googledocs .docview__page :global(li) {
+    margin: 0.25em 0;
+  }
+
+  .docview--googledocs .docview__page :global(strong) {
+    font-weight: 700;
+  }
+
+  .docview--googledocs .docview__page :global(em) {
+    font-style: italic;
+  }
+
+  .docview--googledocs .docview__page :global(a) {
+    color: #1155cc;
+    text-decoration: underline;
+  }
+
+  .docview--googledocs .docview__page :global(code) {
+    font-family: 'Roboto Mono', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f1f3f4;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+  }
+
+  .docview--googledocs .docview__page :global(pre) {
+    font-family: 'Roboto Mono', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f8f9fa;
+    padding: 1em;
+    margin: 0 0 0.75em;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+
+  .docview--googledocs .docview__page :global(pre code) {
+    background: transparent;
+    padding: 0;
+  }
+
+  .docview--googledocs .docview__page :global(blockquote) {
+    border-left: 4px solid #dadce0;
+    margin: 0 0 0.75em 0;
+    padding: 0 0 0 1em;
+    color: #5f6368;
+  }
+
+  .docview--googledocs .docview__page :global(hr) {
+    border: none;
+    border-top: 1px solid #dadce0;
+    margin: 1.5em 0;
+  }
+
+  /* ========================================
+     Notion - Current 2024/2025 style
+     Based on actual screenshot reference
+     ======================================== */
+  .docview--notion {
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+  }
+
+  .notion-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 0.875rem;
+    background: #fff;
+    border-bottom: 1px solid rgba(55, 53, 47, 0.08);
+  }
+
+  .notion-header__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .notion-header__title {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(55, 53, 47, 0.65);
+  }
+
+  .docview--notion .docview__body {
+    background: #fff;
+    padding: 0;
+  }
+
+  /* Notion hero emoji */
+  .notion-emoji {
+    font-size: 78px;
+    line-height: 1;
+    padding: 1rem 3rem 0;
+  }
+
+  .docview--notion .docview__page {
+    padding: 2.5rem 3rem 3rem;
+    max-width: 900px;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(55, 53, 47);
+  }
+
+  /* Notion Typography */
+  .docview--notion .docview__page :global(h1) {
+    font-size: 2.25em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.25em;
+    color: rgb(55, 53, 47);
+  }
+
+  .docview--notion .docview__page :global(h2) {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 1.4em 0 0.25em;
+    color: rgb(55, 53, 47);
+  }
+
+  .docview--notion .docview__page :global(h3) {
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 1em 0 0.25em;
+    color: rgb(55, 53, 47);
+  }
+
+  .docview--notion .docview__page :global(p) {
+    margin: 0 0 0.5em;
+  }
+
+  /* Notion lists - standard filled bullets */
+  .docview--notion .docview__page :global(ul) {
+    margin: 0 0 0.5em;
+    padding-left: 1.5em;
+    list-style-type: disc;
+  }
+
+  .docview--notion .docview__page :global(ul li) {
+    margin: 0.125em 0;
+  }
+
+  .docview--notion .docview__page :global(ol) {
+    margin: 0 0 0.5em;
+    padding-left: 1.5em;
+  }
+
+  .docview--notion .docview__page :global(ol li) {
+    margin: 0.125em 0;
+  }
+
+  .docview--notion .docview__page :global(strong) {
+    font-weight: 600;
+  }
+
+  .docview--notion .docview__page :global(em) {
+    font-style: italic;
+  }
+
+  .docview--notion .docview__page :global(a) {
+    color: rgb(55, 53, 47);
+    text-decoration: underline;
+    text-decoration-color: rgba(55, 53, 47, 0.4);
+    text-underline-offset: 2px;
+  }
+
+  .docview--notion .docview__page :global(code) {
+    font-family: 'SFMono-Regular', Menlo, Consolas, 'PT Mono', 'Liberation Mono', Courier, monospace;
+    font-size: 0.85em;
+    background: rgba(135, 131, 120, 0.15);
+    color: #eb5757;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
+
+  .docview--notion .docview__page :global(pre) {
+    font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: rgb(247, 246, 243);
+    padding: 1.5em;
+    margin: 0 0 0.5em;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+
+  .docview--notion .docview__page :global(pre code) {
+    background: transparent;
+    color: rgb(55, 53, 47);
+    padding: 0;
+  }
+
+  /* Notion blockquote - thick dark left border */
+  .docview--notion .docview__page :global(blockquote) {
+    border-left: 3px solid rgb(55, 53, 47);
+    margin: 0.5em 0;
+    padding: 0.25em 0 0.25em 1em;
+    color: rgb(55, 53, 47);
+  }
+
+  .docview--notion .docview__page :global(blockquote p) {
+    margin: 0;
+  }
+
+  .docview--notion .docview__page :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(55, 53, 47, 0.16);
+    margin: 1.5em 0;
+  }
+
+  /* ========================================
+     Apple Notes - Current 2024/2025 style
+     Just content, no chrome
+     ======================================== */
+  .docview--applenotes {
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .docview--applenotes .docview__body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .docview--applenotes .docview__page {
+    padding: 2.5rem 2rem 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    line-height: 1.47;
+    color: #1d1d1f;
+  }
+
+  /* Apple Notes Typography - SF Pro */
+  .docview--applenotes .docview__page :global(h1) {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 0.6em;
+    color: #1d1d1f;
+  }
+
+  .docview--applenotes .docview__page :global(h2) {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1.2em 0 0.5em;
+    color: #1d1d1f;
+  }
+
+  .docview--applenotes .docview__page :global(h3) {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 1em 0 0.4em;
+    color: #1d1d1f;
+  }
+
+  .docview--applenotes .docview__page :global(p) {
+    margin: 0 0 1em;
+  }
+
+  /* Apple Notes lists */
+  .docview--applenotes .docview__page :global(ul) {
+    margin: 0 0 1em;
+    padding-left: 1.25em;
+    list-style-type: disc;
+  }
+
+  .docview--applenotes .docview__page :global(ul li) {
+    margin: 0.35em 0;
+  }
+
+  .docview--applenotes .docview__page :global(ol) {
+    margin: 0 0 1em;
+    padding-left: 1.25em;
+  }
+
+  .docview--applenotes .docview__page :global(ol li) {
+    margin: 0.35em 0;
+  }
+
+  .docview--applenotes .docview__page :global(strong) {
+    font-weight: 600;
+  }
+
+  .docview--applenotes .docview__page :global(em) {
+    font-style: italic;
+  }
+
+  .docview--applenotes .docview__page :global(a) {
+    color: #007aff;
+    text-decoration: none;
+  }
+
+  .docview--applenotes .docview__page :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  /* Apple Notes blockquote - yellow/gold left border */
+  .docview--applenotes .docview__page :global(blockquote) {
+    border-left: 4px solid #f5c518;
+    margin: 1em 0;
+    padding: 0.5em 0 0.5em 1em;
+    color: #1d1d1f;
+  }
+
+  .docview--applenotes .docview__page :global(blockquote p) {
+    margin: 0;
+  }
+
+  /* Apple Notes code block - gray rounded */
+  .docview--applenotes .docview__page :global(code) {
+    font-family: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+    font-size: 0.9em;
+    background: #f5f5f7;
+    padding: 0.2em 0.4em;
+    border-radius: 5px;
+  }
+
+  .docview--applenotes .docview__page :global(pre) {
+    font-family: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+    font-size: 15px;
+    background: #f5f5f7;
+    padding: 1em 1.25em;
+    margin: 1em 0;
+    border-radius: 10px;
+    overflow-x: auto;
+    line-height: 1.4;
+  }
+
+  .docview--applenotes .docview__page :global(pre code) {
+    background: transparent;
+    padding: 0;
+  }
+
+  .docview--applenotes .docview__page :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1.5em 0;
+  }
+</style>

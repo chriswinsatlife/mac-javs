@@ -1,0 +1,84 @@
+---
+title: DocumentViewer Test
+layout: ../../layouts/Base.astro
+---
+
+import DocumentViewer from "@components/playbooks/DocumentViewer.astro";
+
+<div class="min-h-screen bg-base-200">
+  <main class="mx-auto max-w-3xl px-6 py-12">
+    <header class="mb-10">
+      <h1 class="font-display text-4xl tracking-tight text-base-content">DocumentViewer Component</h1>
+      <p class="mt-3 text-base leading-relaxed text-base-content/70">
+        Embed document mockups inline within articles. Looks like a mini screenshot of Google Docs or Notion.
+      </p>
+    </header>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-base-content mb-4">Google Docs Style</h2>
+      <p class="text-base leading-relaxed text-base-content/80 mb-4">
+        Here's what a typical planning document might look like in Google Docs:
+      </p>
+      
+      <DocumentViewer 
+        style="googledocs" 
+        title="Q4 Planning" 
+        src="/tests/document_viewer/gdocs_sample.md"
+        caption="Example planning document in Google Docs" 
+      />
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-base-content mb-4">Notion Style</h2>
+      <p class="text-base leading-relaxed text-base-content/80 mb-4">
+        The same content rendered in Notion's style:
+      </p>
+      
+      <DocumentViewer 
+        style="notion" 
+        title="Team Notes" 
+        emoji="🤖"
+        src="/tests/document_viewer/notion_sample.md"
+        caption="Meeting notes in Notion with hero emoji" 
+      />
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-base-content mb-4">Apple Notes Style</h2>
+      <p class="text-base leading-relaxed text-base-content/80 mb-4">
+        Clean, warm Apple Notes styling:
+      </p>
+      
+      <DocumentViewer 
+        style="applenotes" 
+        title="Notes"
+        src="/tests/document_viewer/applenotes_sample.md"
+        caption="Apple Notes with yellow blockquote border" 
+      />
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-base-content mb-4">Compact Version</h2>
+      <p class="text-base leading-relaxed text-base-content/80 mb-4">
+        A shorter height works for quick snippets:
+      </p>
+      
+      <DocumentViewer 
+        style="googledocs" 
+        title="Quick Note" 
+        src="/tests/document_viewer/short_sample.md"
+      />
+    </section>
+
+    <section class="rounded-2xl border border-base-300 bg-base-100 p-6">
+      <h2 class="text-xl font-semibold text-base-content mb-3">Usage</h2>
+      <pre class="bg-base-200 p-4 rounded-lg text-sm overflow-x-auto"><code>&lt;DocumentViewer 
+  style="googledocs"
+  title="Doc Title"
+  src="/path/to/file.md"
+  height=&#123;280&#125;
+  caption="Optional caption"
+/&gt;</code></pre>
+    </section>
+  </main>
+</div>

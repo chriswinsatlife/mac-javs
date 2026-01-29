@@ -5,18 +5,40 @@ type Props = {
   height?: number;
   maxLines?: number;
   cssHref?: string;
+  iconSet?: string;
+  iconBasePath?: string;
+  iconMode?: 'inline' | 'sprite';
 };
 
-const { id, dataUrl, height = 320, maxLines = 4, cssHref = '/diagrams/gifting_playbook_flow/runtime.css' } = Astro.props;
+const {
+  id,
+  dataUrl,
+  height = 320,
+  maxLines = 4,
+  cssHref = '/diagrams/gifting_playbook_flow/runtime.css',
+  iconSet = 'athena',
+  iconBasePath = '/diagrams/icon_sets',
+  iconMode = 'inline',
+} = Astro.props;
 const dialogId = `${id}__flow_dialog`;
 
 if (!id) throw new Error('flow_diagram_client: id required');
 if (!dataUrl || !dataUrl.startsWith('/')) {
   throw new Error(`flow_diagram_client: dataUrl must be site-root (got: ${dataUrl})`);
 }
+if (!iconBasePath || !iconBasePath.startsWith('/')) {
+  throw new Error(`flow_diagram_client: iconBasePath must be site-root (got: ${iconBasePath})`);
+}
 ---
 
-<div class="flow-embed" style={`--flow-min-h:${height}px`} data-flow-lines={maxLines}>
+<div
+  class="flow-embed"
+  style={`--flow-min-h:${height}px`}
+  data-flow-lines={maxLines}
+  data-flow-icon-set={iconSet}
+  data-flow-icon-base-path={iconBasePath}
+  data-flow-icon-mode={iconMode}
+>
   <button class="flow-embed__fs" type="button" data-flow-fs={dialogId} aria-label="View diagram full screen">
     Full screen
   </button>

@@ -8,7 +8,11 @@
         "@heroicons/react": "^2.2.0",
         "@popperjs/core": "^2.11.8",
         "astro": "^5.16.16",
+        "rehype-stringify": "^10.0.1",
+        "remark-parse": "^11.0.0",
+        "remark-rehype": "^11.1.2",
         "tippy.js": "^6.3.7",
+        "unified": "^11.0.5",
         "yaml": "^2.8.2",
       },
       "devDependencies": {

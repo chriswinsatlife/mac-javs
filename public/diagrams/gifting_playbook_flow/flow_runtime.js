@@ -1,6 +1,7 @@
 (() => {
   const vbBySvg = new WeakMap();
   const roBySvg = new WeakMap();
+  const iconCacheByUrl = new Map(); // url -> Promise<{viewBox:string, inner:string} | null>
 
   function escapeHtml(s) {
     return String(s ?? '')
@@ -11,22 +12,282 @@
       .replaceAll("'", '&#39;');
   }
 
-  function iconSvg(kind) {
-    const k = String(kind || '').toLowerCase();
-    // Inline SVG only (no external images). Keep minimal built-ins.
-    if (k === 'check') {
-      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.667 13.2 4.6 10.133l-1.2 1.2 4.267 4.267L16.6 6.667l-1.2-1.2z"/></svg>';
+  function clampIdPart(s) {
+    return String(s ?? '')
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9_-]+/g, '-');
+  }
+
+  function hashString(s) {
+    // FNV-1a 32-bit
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = Math.imul(h, 0x01000193);
     }
-    if (k === 'alert') {
-      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 2 1.5 17h17zM11 14H9v2h2zm0-7H9v6h2z"/></svg>';
+    return (h >>> 0).toString(36);
+  }
+
+  function ensureSiteRootPath(p) {
+    const s = String(p ?? '').trim();
+    return s.startsWith('/') ? s.replace(/\/+$/, '') : '';
+  }
+
+  function diagramDirFromDataUrl(dataUrl) {
+    try {
+      const u = new URL(String(dataUrl), window.location.href);
+      return u.pathname.replace(/\/[^/]*$/, '');
+    } catch {
+      return '';
     }
-    if (k === 'clock') {
-      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 1 0 .001 16.001A8 8 0 0 0 10 2m1 8.2 3.1 1.8-.8 1.4L9 11V5h2z"/></svg>';
+  }
+
+  function getIconConfig(svgEl, dataUrl) {
+    const wrapper = svgEl.closest('.flow-embed') || svgEl.parentElement;
+    const iconSet = clampIdPart(wrapper?.getAttribute('data-flow-icon-set') || 'athena') || 'athena';
+    const iconBasePath = ensureSiteRootPath(wrapper?.getAttribute('data-flow-icon-base-path') || '/diagrams/icon_sets') || '/diagrams/icon_sets';
+    const iconModeRaw = String(wrapper?.getAttribute('data-flow-icon-mode') || 'inline').toLowerCase();
+    const iconMode = iconModeRaw === 'sprite' ? 'sprite' : 'inline';
+    const diagramDir = diagramDirFromDataUrl(dataUrl);
+    return {
+      iconSet,
+      iconBasePath,
+      iconMode,
+      diagramIconsBase: diagramDir ? `${diagramDir}/icons` : '',
+      iconSetIconsBase: `${iconBasePath}/${encodeURIComponent(iconSet)}/icons`,
+    };
+  }
+
+  function sanitizeIconSvgText(svgText, urlForLog) {
+    if (!svgText || typeof svgText !== 'string') return null;
+    if (typeof DOMParser === 'undefined') return null;
+
+    const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
+    const root = doc?.documentElement;
+    if (!root || String(root.tagName).toLowerCase() !== 'svg') return null;
+
+    const viewBox = root.getAttribute('viewBox');
+    if (!viewBox) {
+      console.warn(`[flow] icon missing viewBox, skipping: ${urlForLog}`);
+      return null;
     }
-    if (k === 'gift') {
-      return '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M11 3c.9 0 1.8.5 2.2 1.3.4.8.2 1.8-.4 2.4L13.5 8H18v3h-1v7H3v-7H2V8h4.5L5.2 6.7c-.6-.6-.8-1.6-.4-2.4C5.2 3.5 6.1 3 7 3c1.1 0 2.1.6 2.6 1.5L10 5.2l.4-.7C8.9 3.6 9.9 3 11 3m-4 2c-.4 0-.6.2-.7.4-.1.2 0 .6.2.8L8.3 8H10V6.6L8.9 5.4C8.4 5.2 7.7 5 7 5m6 0c-.7 0-1.4.2-1.9.4L10 6.6V8h1.7l1.8-1.8c.2-.2.3-.6.2-.8-.1-.2-.3-.4-.7-.4M4 11v6h5v-6zm7 0v6h5v-6z"/></svg>';
+
+    const nsPrefix = `fi-${hashString(String(urlForLog || ''))}__`;
+
+    // Strip risky / unsupported nodes.
+    const forbiddenTags = new Set([
+      'script',
+      'foreignobject',
+      'image',
+      'iframe',
+      'object',
+      'embed',
+      'canvas',
+      'audio',
+      'video',
+      'style',
+      'animate',
+      'animatetransform',
+      'set',
+      'mpath',
+      'a',
+      'use',
+    ]);
+    const allowedTags = new Set([
+      'svg',
+      'g',
+      'path',
+      'circle',
+      'rect',
+      'line',
+      'polyline',
+      'polygon',
+      'ellipse',
+      // Optional support for richer icons (internal-only).
+      'defs',
+      'lineargradient',
+      'radialgradient',
+      'stop',
+      'clippath',
+      'mask',
+    ]);
+
+    // Remove nested <svg> elements (root only).
+    for (const el of Array.from(root.querySelectorAll('svg'))) {
+      if (el !== root) el.remove();
     }
-    return '';
+
+    const allEls = [root, ...Array.from(root.querySelectorAll('*'))];
+    for (const el of allEls) {
+      const tag = String(el.tagName).toLowerCase();
+      if (forbiddenTags.has(tag) || (!allowedTags.has(tag) && tag !== 'svg')) {
+        el.remove();
+        continue;
+      }
+
+      for (const attr of Array.from(el.attributes || [])) {
+        const name = String(attr.name);
+        const lname = name.toLowerCase();
+        const value = String(attr.value || '');
+
+        if (lname.startsWith('on')) {
+          el.removeAttribute(name);
+          continue;
+        }
+        if (lname === 'style' || lname === 'class') {
+          el.removeAttribute(name);
+          continue;
+        }
+        if (lname === 'href' || lname === 'xlink:href') {
+          // Disallow external refs entirely.
+          el.removeAttribute(name);
+          continue;
+        }
+        if (value.toLowerCase().includes('javascript:')) {
+          el.removeAttribute(name);
+          continue;
+        }
+        if (lname === 'fill') {
+          const v = value.trim();
+          if (!v) el.removeAttribute(name);
+          else if (v.toLowerCase() !== 'none' && !/^url\(#/i.test(v)) el.setAttribute(name, 'currentColor');
+          continue;
+        }
+        if (lname === 'stroke') {
+          const v = value.trim();
+          if (!v) el.removeAttribute(name);
+          else if (v.toLowerCase() !== 'none' && !/^url\(#/i.test(v)) el.setAttribute(name, 'currentColor');
+          continue;
+        }
+      }
+    }
+
+    // Namespace IDs and rewrite internal url(#...) references.
+    const idMap = new Map();
+    for (const el of Array.from(root.querySelectorAll('[id]'))) {
+      const oldId = el.getAttribute('id');
+      if (!oldId) continue;
+      const newId = nsPrefix + oldId;
+      idMap.set(oldId, newId);
+      el.setAttribute('id', newId);
+    }
+    if (idMap.size) {
+      const refAttrs = new Set(['fill', 'stroke', 'clip-path', 'mask', 'filter']);
+      for (const el of [root, ...Array.from(root.querySelectorAll('*'))]) {
+        for (const attr of Array.from(el.attributes || [])) {
+          const name = String(attr.name);
+          const lname = name.toLowerCase();
+          const value = String(attr.value || '');
+
+          if (refAttrs.has(lname)) {
+            let next = value;
+            for (const [oldId, newId] of idMap) {
+              next = next.replaceAll(`url(#${oldId})`, `url(#${newId})`);
+            }
+            if (next !== value) el.setAttribute(name, next);
+          }
+        }
+      }
+    }
+
+    root.removeAttribute('width');
+    root.removeAttribute('height');
+
+    // Serialize inner content for inlining.
+    return { viewBox, inner: root.innerHTML };
+  }
+
+  async function fetchAndSanitizeIcon(url) {
+    const u = String(url || '');
+    if (!u) return null;
+
+    if (iconCacheByUrl.has(u)) return await iconCacheByUrl.get(u);
+
+    const p = (async () => {
+      try {
+        const res = await fetch(u, { credentials: 'same-origin' });
+        if (!res.ok) return null;
+        const txt = await res.text();
+        return sanitizeIconSvgText(txt, u);
+      } catch {
+        return null;
+      }
+    })();
+
+    iconCacheByUrl.set(u, p);
+    return await p;
+  }
+
+  async function resolveIcon(slug, cfg) {
+    const s = clampIdPart(slug);
+    if (!s) return null;
+
+    const perUrl = cfg.diagramIconsBase ? `${cfg.diagramIconsBase}/${encodeURIComponent(s)}.svg` : '';
+    const setUrl = `${cfg.iconSetIconsBase}/${encodeURIComponent(s)}.svg`;
+
+    if (perUrl) {
+      const per = await fetchAndSanitizeIcon(perUrl);
+      if (per) return { ...per, url: perUrl };
+    }
+    const set = await fetchAndSanitizeIcon(setUrl);
+    if (set) return { ...set, url: setUrl };
+    return null;
+  }
+
+  function iconMarkupInline(svg) {
+    if (!svg) return '';
+    return `<svg viewBox="${escapeHtml(svg.viewBox)}" fill="currentColor" aria-hidden="true" focusable="false">${svg.inner}</svg>`;
+  }
+
+  function iconMarkupSpriteUse(symbolId, viewBox) {
+    return `<svg viewBox="${escapeHtml(viewBox)}" fill="currentColor" aria-hidden="true" focusable="false"><use href="#${escapeHtml(symbolId)}"></use></svg>`;
+  }
+
+  async function preloadNodeIcons(nodes, cfg) {
+    const slugs = new Set();
+    for (const n of nodes) {
+      const iconVal = n?.icon != null && typeof n.icon === 'object' ? n.icon?.name : n?.icon;
+      if (n && iconVal != null) {
+        const s = clampIdPart(iconVal);
+        if (s) slugs.add(s);
+      }
+    }
+
+    const resolved = new Map();
+    await Promise.all(
+      Array.from(slugs).map(async (s) => {
+        const r = await resolveIcon(s, cfg);
+        if (r) resolved.set(s, r);
+      })
+    );
+
+    const spriteSymbols = [];
+    if (cfg.iconMode === 'sprite') {
+      for (const [slug, r] of resolved) {
+        const id = `flow-icon-${hashString(r.url)}`;
+        spriteSymbols.push({ id, viewBox: r.viewBox, inner: r.inner });
+        resolved.set(slug, { ...r, symbolId: id });
+      }
+    }
+
+    for (const n of nodes) {
+      const iconVal = n?.icon != null && typeof n.icon === 'object' ? n.icon?.name : n?.icon;
+      const s = iconVal != null ? clampIdPart(iconVal) : '';
+      const r = s ? resolved.get(s) : null;
+      if (!r) {
+        n._iconMarkup = '';
+        continue;
+      }
+
+      if (cfg.iconMode === 'sprite') {
+        n._iconMarkup = iconMarkupSpriteUse(r.symbolId, r.viewBox);
+      } else {
+        n._iconMarkup = iconMarkupInline(r);
+      }
+    }
+
+    return { spriteSymbols };
   }
 
   function normalizeNodeContent(n) {
@@ -46,7 +307,7 @@
 
   function nodeHtml(n) {
     const c = normalizeNodeContent(n);
-    const icon = c.icon ? iconSvg(c.icon) : '';
+    const icon = String(n?._iconMarkup || '');
     const headline = c.headline ? `<div class="node-headline"><span>${escapeHtml(c.headline)}</span></div>` : '';
     const body = c.body ? `<div class="node-body"><span>${escapeHtml(c.body)}</span></div>` : '';
     const footer = c.footer ? `<div class="node-footer"><span>${escapeHtml(c.footer)}</span></div>` : '';
@@ -228,6 +489,7 @@
     const data = await window.d3.json(dataUrl);
     const wrapper = svgEl.closest('.flow-embed') || svgEl.parentElement;
     const maxLines = Number(wrapper?.getAttribute('data-flow-lines') ?? 2) || 2;
+    const iconCfg = getIconConfig(svgEl, dataUrl);
 
     const svg = window.d3.select(svgEl);
     svg.selectAll('*').remove();
@@ -237,6 +499,8 @@
 
     const nodes = (data.nodes || []).map((n) => ({ ...n }));
     const edges = (data.edges || []).map((e) => ({ ...e }));
+
+    const { spriteSymbols } = await preloadNodeIcons(nodes, iconCfg);
 
     measureTextHeights(nodes, widthForNode, maxLines);
 
@@ -262,6 +526,17 @@
 
     const arrowId = uid('flow-arrow');
     const defs = svg.append('defs');
+
+    if (iconCfg.iconMode === 'sprite' && spriteSymbols?.length) {
+      defs
+        .selectAll('symbol.flow-icon-symbol')
+        .data(spriteSymbols)
+        .join('symbol')
+        .attr('class', 'flow-icon-symbol')
+        .attr('id', (d) => d.id)
+        .attr('viewBox', (d) => d.viewBox)
+        .html((d) => d.inner);
+    }
     defs
       .append('marker')
       .attr('id', arrowId)

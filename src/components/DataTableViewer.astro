@@ -1,0 +1,791 @@
+---
+/**
+ * DataTableViewer - Display tabular data in platform-specific visual styles
+ *
+ * Usage:
+ *   Inline data:
+ *     <DataTableViewer
+ *       style="sheets"
+ *       data={[
+ *         { name: "Alice", role: "EA", status: "Active" },
+ *         { name: "Bob", role: "Designer", status: "Pending" }
+ *       ]}
+ *     />
+ *
+ *   From file (JSON, YAML, or CSV):
+ *     <DataTableViewer style="notion" src="/data/team.csv" />
+ *
+ *   With column config:
+ *     <DataTableViewer
+ *       style="airtable"
+ *       src="/data/tasks.json"
+ *       columns={[
+ *         { key: "task", label: "Task Name" },
+ *         { key: "status", type: "tag" },
+ *         { key: "done", type: "checkbox" }
+ *       ]}
+ *     />
+ *
+ * Styles: sheets | notion | airtable | excel | plain
+ */
+
+import { parse as parseYAML } from 'yaml';
+
+export interface ColumnConfig {
+  key: string;
+  label?: string;
+  type?: 'text' | 'number' | 'checkbox' | 'tag' | 'date' | 'url';
+  width?: string;
+  align?: 'left' | 'center' | 'right';
+  icon?: string;  // Notion-style property icon (emoji or text like "Aa")
+}
+
+export interface Props {
+  style?: 'sheets' | 'notion' | 'airtable' | 'excel' | 'plain';
+  data?: Record<string, unknown>[];
+  src?: string;
+  columns?: ColumnConfig[];
+  showRowNumbers?: boolean;
+  showHeader?: boolean;
+  striped?: boolean;
+  compact?: boolean;
+}
+
+const {
+  style = 'sheets',
+  data: inlineData,
+  src,
+  columns: columnConfig,
+  showRowNumbers,
+  showHeader = true,
+  striped = false,
+  compact = false,
+} = Astro.props;
+
+let data: Record<string, unknown>[] = inlineData || [];
+
+// Parse CSV string to array of objects
+function parseCSV(text: string): Record<string, unknown>[] {
+  const lines = text.trim().split('\n');
+  if (lines.length < 2) return [];
+
+  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+  const rows: Record<string, unknown>[] = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
+    const row: Record<string, unknown> = {};
+    headers.forEach((header, idx) => {
+      row[header] = values[idx] ?? '';
+    });
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+// Load from file if src provided
+if (src && !inlineData) {
+  try {
+    const response = await fetch(new URL(src, Astro.url));
+    const text = await response.text();
+
+    if (src.endsWith('.yaml') || src.endsWith('.yml')) {
+      data = parseYAML(text);
+    } else if (src.endsWith('.csv')) {
+      data = parseCSV(text);
+    } else {
+      data = JSON.parse(text);
+    }
+  } catch (e) {
+    console.error(`Failed to load data from ${src}:`, e);
+  }
+}
+
+// Derive columns from data if not provided
+function deriveColumns(rows: Record<string, unknown>[]): ColumnConfig[] {
+  if (rows.length === 0) return [];
+  const firstRow = rows[0];
+  return Object.keys(firstRow).map(key => ({
+    key,
+    label: key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' '),
+    type: 'text' as const,
+  }));
+}
+
+const columns = columnConfig || deriveColumns(data);
+
+// Style defaults
+const defaultShowRowNumbers: Record<string, boolean> = {
+  sheets: true,
+  excel: true,
+  notion: false,
+  airtable: false,
+  plain: false,
+};
+const shouldShowRowNumbers = showRowNumbers ?? defaultShowRowNumbers[style] ?? false;
+
+// Column letter for sheets/excel style
+function getColumnLetter(index: number): string {
+  let letter = '';
+  let n = index;
+  while (n >= 0) {
+    letter = String.fromCharCode(65 + (n % 26)) + letter;
+    n = Math.floor(n / 26) - 1;
+  }
+  return letter;
+}
+
+// Render cell value based on type
+function renderCellValue(value: unknown, type: ColumnConfig['type']): string {
+  if (value === null || value === undefined) return '';
+
+  switch (type) {
+    case 'checkbox':
+      return value === true || value === 'true' || value === '1' ? 'checked' : '';
+    case 'number':
+      return String(value);
+    case 'url':
+      return String(value);
+    case 'date':
+      return String(value);
+    case 'tag':
+      return String(value);
+    default:
+      return String(value);
+  }
+}
+
+// Get tag color class based on value
+function getTagColor(value: string): string {
+  const valueMap: Record<string, string> = {
+    // Airtable status colors from screenshots
+    'will cancel': 'tag-purple',
+    'active': 'tag-green',
+    'cancelled': 'tag-red',
+    'other': 'tag-tan',
+    'yearly': 'tag-blue',
+    'automatic': 'tag-blue',
+    'manual': 'tag-blue',
+    // Sales stages
+    'closed-won': 'tag-green',
+    'closed-lost': 'tag-red',
+    'negotiation': 'tag-purple',
+    'contract': 'tag-yellow',
+    'evaluation': 'tag-gray',
+    // Sizes/effort
+    'small': 'tag-green',
+    'medium': 'tag-yellow',
+    'large': 'tag-red',
+    // Priority
+    'low': 'tag-gray',
+    'high': 'tag-orange',
+    // General
+    'pending': 'tag-yellow',
+    'done': 'tag-green',
+    'complete': 'tag-green',
+    'in progress': 'tag-blue',
+    'on hold': 'tag-gray',
+  };
+  
+  const lower = value.toLowerCase();
+  if (valueMap[lower]) return valueMap[lower];
+  
+  const colors = ['tag-blue', 'tag-green', 'tag-yellow', 'tag-orange', 'tag-purple', 'tag-cyan', 'tag-red', 'tag-gray'];
+  const hash = value.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return colors[hash % colors.length];
+}
+---
+
+<div class:list={[
+  'table-viewer',
+  `table-viewer-${style}`,
+  { 'table-striped': striped },
+  { 'table-compact': compact },
+]}>
+  <table>
+    {/* Sheets/Excel: Column letters row separate from data */}
+    {(style === 'sheets' || style === 'excel') ? (
+      <>
+        <thead class="column-letters-row">
+          <tr>
+            {shouldShowRowNumbers && (
+              <th class="corner-cell"></th>
+            )}
+            {columns.map((col, idx) => (
+              <th class="column-letter-cell" style={col.width ? `width: ${col.width}` : undefined}>
+                {getColumnLetter(idx)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {showHeader && (
+            <tr class="header-row">
+              {shouldShowRowNumbers && (
+                <td class="row-number">1</td>
+              )}
+              {columns.map((col) => (
+                <td
+                  class:list={['header-cell', col.align && `align-${col.align}`]}
+                  style={col.width ? `width: ${col.width}` : undefined}
+                >
+                  <span class="column-label">{col.label || col.key}</span>
+                </td>
+              ))}
+            </tr>
+          )}
+          {data.map((row, rowIdx) => (
+            <tr>
+              {shouldShowRowNumbers && (
+                <td class="row-number">{rowIdx + (showHeader ? 2 : 1)}</td>
+              )}
+              {columns.map((col) => {
+                const value = row[col.key];
+                const rendered = renderCellValue(value, col.type);
+                return (
+                  <td class:list={[col.align && `align-${col.align}`, col.type && `cell-${col.type}`]}>
+                    {col.type === 'checkbox' ? (
+                      <span class:list={['checkbox-cell', { checked: rendered === 'checked' }]}>
+                        {rendered === 'checked' ? '\u2713' : ''}
+                      </span>
+                    ) : col.type === 'tag' && rendered ? (
+                      <span class:list={['tag-cell', getTagColor(rendered)]}>
+                        {rendered}
+                      </span>
+                    ) : col.type === 'url' && rendered ? (
+                      <a href={rendered} class="url-cell" target="_blank" rel="noopener">
+                        {rendered}
+                      </a>
+                    ) : (
+                      rendered
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </>
+    ) : (
+      <>
+        {showHeader && (
+          <thead>
+            <tr>
+              {shouldShowRowNumbers && (
+                <th class="row-number-header"></th>
+              )}
+              {columns.map((col) => (
+                <th
+                  class:list={[col.align && `align-${col.align}`, col.type && `col-type-${col.type}`]}
+                  style={col.width ? `width: ${col.width}` : undefined}
+                >
+                  {col.icon && <span class="col-icon">{col.icon}</span>}
+                  {col.label || col.key}
+                </th>
+              ))}
+            </tr>
+          </thead>
+        )}
+        <tbody>
+          {data.map((row, rowIdx) => (
+            <tr>
+              {shouldShowRowNumbers && (
+                <td class="row-number">{rowIdx + 1}</td>
+              )}
+              {columns.map((col) => {
+                const value = row[col.key];
+                const rendered = renderCellValue(value, col.type);
+                return (
+                  <td class:list={[col.align && `align-${col.align}`, col.type && `cell-${col.type}`]}>
+                    {col.type === 'checkbox' ? (
+                      <span class:list={['checkbox-cell', { checked: rendered === 'checked' }]}>
+                        {rendered === 'checked' ? '\u2713' : ''}
+                      </span>
+                    ) : col.type === 'tag' && rendered ? (
+                      <span class:list={['tag-cell', getTagColor(rendered)]}>
+                        {rendered}
+                      </span>
+                    ) : col.type === 'url' && rendered ? (
+                      <a href={rendered} class="url-cell" target="_blank" rel="noopener">
+                        {rendered}
+                      </a>
+                    ) : (
+                      rendered
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </>
+    )}
+  </table>
+</div>
+
+<style>
+  /* ========================================
+     Base Styles
+     ======================================== */
+  .table-viewer {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    overflow-x: auto;
+  }
+
+  .table-viewer table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: max-content;
+  }
+
+  .table-viewer th,
+  .table-viewer td {
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  /* Column letters are the ONLY exception - centered */
+  .table-viewer .column-letters-row th,
+  .table-viewer .column-letter-cell {
+    text-align: center;
+  }
+
+  /* Row numbers are centered */
+  .table-viewer .row-number,
+  .table-viewer .row-number-header,
+  .table-viewer .corner-cell {
+    text-align: center;
+  }
+
+  .align-center { text-align: center; }
+  .align-right { text-align: right; }
+
+  .column-letter {
+    display: none;
+  }
+
+  /* Column icon (Notion-style property type icons) */
+  .col-icon {
+    margin-right: 0.375rem;
+    opacity: 0.5;
+  }
+
+  /* Compact mode */
+  .table-compact th,
+  .table-compact td {
+    padding: 0.375rem 0.5rem;
+    text-align: left;
+  }
+
+  /* Checkbox cell */
+  .checkbox-cell {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.125rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  /* Tag cell */
+  .tag-cell {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* URL cell */
+  .url-cell {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .url-cell:hover {
+    text-decoration: underline;
+  }
+
+  /* ========================================
+     Google Sheets Style
+     ======================================== */
+  .table-viewer-sheets {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+  }
+
+  .table-viewer-sheets table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* Column letters row (A, B, C...) */
+  .table-viewer-sheets .column-letters-row th {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    color: #5f6368;
+    font-size: 0.8125rem;
+    text-align: center;
+  }
+
+  .table-viewer-sheets .corner-cell {
+    background: #f8f9fa;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 2.5rem;
+  }
+
+  .table-viewer-sheets .column-letter-cell {
+    background: #f8f9fa;
+  }
+
+  /* Row numbers */
+  .table-viewer-sheets .row-number {
+    background: #f8f9fa;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #5f6368;
+    text-align: center;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    font-size: 0.8125rem;
+    padding: 0.375rem 0.25rem;
+  }
+
+  /* Header row (row 1 with Name, URL, etc) */
+  .table-viewer-sheets .header-row .header-cell {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    padding: 0.375rem 0.5rem;
+    font-weight: 700;
+    color: #000;
+    font-size: 0.875rem;
+  }
+
+  /* Data cells */
+  .table-viewer-sheets td {
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    padding: 0.375rem 0.5rem;
+    color: #000;
+    font-size: 0.875rem;
+    background: #fff;
+  }
+
+  /* URL cells - blue links */
+  .table-viewer-sheets .url-cell {
+    color: #1155cc;
+    text-decoration: none;
+  }
+  .table-viewer-sheets .url-cell:hover {
+    text-decoration: underline;
+  }
+
+  .table-viewer-sheets tr:hover td:not(.row-number):not(.header-cell) {
+    background: #e8f0fe;
+  }
+
+  .table-viewer-sheets .checkbox-cell {
+    border: 1px solid #80868b;
+    background: #fff;
+  }
+  .table-viewer-sheets .checkbox-cell.checked {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    color: #fff;
+  }
+
+  /* ========================================
+     Notion Style
+     ======================================== */
+  .table-viewer-notion {
+    background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  }
+
+  .table-viewer-notion table {
+    border-collapse: collapse;
+  }
+
+  .table-viewer-notion th {
+    background: transparent;
+    padding: 0.5rem 0.75rem;
+    font-weight: 400;
+    color: #9b9a97;
+    font-size: 0.875rem;
+    text-transform: none;
+    letter-spacing: normal;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .table-viewer-notion td {
+    padding: 0.5rem 0.75rem;
+    color: #37352f;
+    border-bottom: 1px solid #eee;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .table-viewer-notion tr:last-child td {
+    border-bottom: none;
+  }
+
+  .table-viewer-notion tbody tr:hover td {
+    background: #f7f7f5;
+  }
+
+  .table-viewer-notion .checkbox-cell {
+    width: 1rem;
+    height: 1rem;
+    border: 1.5px solid #c3c2c0;
+    border-radius: 0.1875rem;
+    background: #fff;
+  }
+  .table-viewer-notion .checkbox-cell.checked {
+    background: #2eaadc;
+    border-color: #2eaadc;
+    color: #fff;
+  }
+
+  .table-viewer-notion .tag-cell {
+    border-radius: 0.25rem;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  /* Notion tag colors - solid colors */
+  .table-viewer-notion .tag-green { background: #dbeddb; color: #1e5631; }
+  .table-viewer-notion .tag-yellow { background: #fdecc8; color: #64531c; }
+  .table-viewer-notion .tag-orange { background: #fadec9; color: #73491c; }
+  .table-viewer-notion .tag-red { background: #ffe2dd; color: #6e2b22; }
+  .table-viewer-notion .tag-blue { background: #d3e5ef; color: #183b56; }
+  .table-viewer-notion .tag-purple { background: #e8deee; color: #432874; }
+  .table-viewer-notion .tag-gray { background: #e3e2e0; color: #373530; }
+
+  /* ========================================
+     Airtable Style
+     ======================================== */
+  .table-viewer-airtable {
+    background: #fff;
+  }
+
+  .table-viewer-airtable table {
+    border-collapse: collapse;
+  }
+
+  .table-viewer-airtable th {
+    background: #f5f5f5;
+    padding: 0.5rem 0.75rem;
+    font-weight: 400;
+    color: #333;
+    font-size: 0.8125rem;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .table-viewer-airtable th:last-child {
+    border-right: none;
+  }
+
+  .table-viewer-airtable td {
+    padding: 0.5rem 0.75rem;
+    color: #1d1f26;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  .table-viewer-airtable td:last-child {
+    border-right: none;
+  }
+
+  .table-viewer-airtable tbody tr:hover td {
+    background: #fafafa;
+  }
+
+  /* Checkbox as green checkmark, not filled box */
+  .table-viewer-airtable .checkbox-cell {
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: #22c55e;
+    font-size: 1.125rem;
+  }
+  .table-viewer-airtable .checkbox-cell.checked {
+    background: transparent;
+    border: none;
+    color: #22c55e;
+  }
+
+  /* Airtable tag - fully rounded pill with more padding */
+  .table-viewer-airtable .tag-cell {
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+
+  /* Airtable ACTUAL colors - pastel bg, SAME dark text color */
+  .table-viewer-airtable .tag-cell { color: #1d1f26; }
+  .table-viewer-airtable .tag-green { background: #d1f7c4; }
+  .table-viewer-airtable .tag-red { background: #ffdce5; }
+  .table-viewer-airtable .tag-purple { background: #ede2fe; }
+  .table-viewer-airtable .tag-yellow { background: #ffeab6; }
+  .table-viewer-airtable .tag-gray { background: #eee; }
+  .table-viewer-airtable .tag-blue { background: #d0f0fd; }
+  .table-viewer-airtable .tag-cyan { background: #c2f5e9; }
+  .table-viewer-airtable .tag-orange { background: #fee2d5; }
+  .table-viewer-airtable .tag-pink { background: #ffdaf6; }
+  .table-viewer-airtable .tag-tan { background: #f5e6d3; }
+
+  /* ========================================
+     Excel Style
+     ======================================== */
+  .table-viewer-excel {
+    background: #fff;
+    border: 1px solid #b4b4b4;
+    font-family: Calibri, 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  .table-viewer-excel table {
+    border-collapse: collapse;
+  }
+
+  /* Column letters row (A, B, C...) - gray header */
+  .table-viewer-excel .column-letters-row th {
+    background: #e6e6e6;
+    border: 1px solid #b4b4b4;
+    padding: 0.25rem 0.5rem;
+    font-weight: 400;
+    color: #000;
+    font-size: 0.8125rem;
+    text-align: center;
+  }
+
+  /* Corner cell (top-left) */
+  .table-viewer-excel .corner-cell {
+    background: #e6e6e6;
+    border: 1px solid #b4b4b4;
+    width: 2.5rem;
+  }
+
+  /* Row numbers column */
+  .table-viewer-excel .row-number {
+    background: #e6e6e6;
+    border: 1px solid #b4b4b4;
+    color: #000;
+    text-align: center;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    font-size: 0.8125rem;
+    padding: 0.25rem 0.25rem;
+    font-weight: 400;
+  }
+
+  /* Header row (row 1 with data labels) - white bg, LEFT ALIGNED */
+  .table-viewer-excel .header-row .header-cell {
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    color: #000;
+    font-size: 0.8125rem;
+    text-align: left;
+  }
+
+  /* Data cells */
+  .table-viewer-excel td {
+    padding: 0.25rem 0.5rem;
+    color: #000;
+    border: 1px solid #d4d4d4;
+    font-size: 0.8125rem;
+    background: #fff;
+  }
+
+  .table-viewer-excel tr:hover td:not(.row-number):not(.header-cell) {
+    background: #d6eaf8;
+  }
+
+  .table-viewer-excel .checkbox-cell {
+    border: 1px solid #7f7f7f;
+    background: #fff;
+  }
+  .table-viewer-excel .checkbox-cell.checked {
+    color: #000;
+    background: #fff;
+  }
+
+  /* ========================================
+     Plain Style
+     ======================================== */
+  .table-viewer-plain {
+    background: transparent;
+  }
+
+  .table-viewer-plain th {
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    color: inherit;
+    border-bottom: 2px solid currentColor;
+    opacity: 0.9;
+  }
+
+  .table-viewer-plain td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid currentColor;
+    opacity: 0.8;
+  }
+
+  .table-viewer-plain tr:last-child td {
+    border-bottom: none;
+  }
+
+  .table-viewer-plain .checkbox-cell {
+    border: 1.5px solid currentColor;
+    opacity: 0.6;
+  }
+  .table-viewer-plain .checkbox-cell.checked {
+    opacity: 1;
+  }
+
+  .table-viewer-plain .tag-cell {
+    border: 1px solid currentColor;
+    background: transparent;
+    opacity: 0.9;
+  }
+
+  /* ========================================
+     Tag Colors
+     ======================================== */
+  .tag-blue { background: #d3e5ef; color: #183b56; }
+  .tag-cyan { background: #c5f0f0; color: #1a5f5f; }
+  .tag-green { background: #dbeddb; color: #1e5631; }
+  .tag-yellow { background: #fdecc8; color: #64531c; }
+  .tag-orange { background: #faebdd; color: #73491c; }
+  .tag-purple { background: #e8deee; color: #432874; }
+  .tag-red { background: #ffe2dd; color: #6e2b22; }
+  .tag-tan { background: #f5e6d3; color: #8a6d3b; }
+  .tag-pink { background: #ffdaf6; color: #b2158b; }
+  .tag-gray { background: #e3e2e0; color: #373530; }
+
+  /* Striped rows */
+  .table-striped tbody tr:nth-child(even) td {
+    background: rgba(0, 0, 0, 0.02);
+    text-align: left;
+  }
+</style>

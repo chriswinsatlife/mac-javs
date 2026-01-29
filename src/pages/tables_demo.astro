@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import DataTableViewer from '../components/DataTableViewer.astro';
+
+const teamData = [
+  { name: "Alice Chen", role: "Executive Assistant", status: "Active", tasks: 42 },
+  { name: "Bob Martinez", role: "Project Manager", status: "Active", tasks: 28 },
+  { name: "Carol Smith", role: "Research Analyst", status: "On Leave", tasks: 15 },
+  { name: "David Park", role: "Calendar Coordinator", status: "Active", tasks: 67 },
+  { name: "Eva Johnson", role: "Travel Specialist", status: "Training", tasks: 8 },
+];
+
+const projectData = [
+  { project: "Website Redesign", owner: "Alice", priority: "High", complete: true },
+  { project: "Q4 Budget", owner: "Bob", priority: "Medium", complete: false },
+  { project: "Client Onboarding", owner: "Carol", priority: "High", complete: true },
+  { project: "Travel Booking System", owner: "David", priority: "Low", complete: false },
+  { project: "Training Materials", owner: "Eva", priority: "Medium", complete: false },
+];
+---
+
+<Base title="DataTableViewer Demo">
+  <main class="p-8 space-y-16 max-w-5xl mx-auto">
+    <header>
+      <h1 class="text-3xl font-heading font-bold mb-2">DataTableViewer Component</h1>
+      <p class="text-gray-600">Render tabular data in platform-specific visual styles</p>
+    </header>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Google Sheets Style</h2>
+      <p class="text-sm text-gray-500 mb-4">Row numbers, column letters, light grid</p>
+      <DataTableViewer
+        style="sheets"
+        data={teamData}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Notion Style</h2>
+      <p class="text-sm text-gray-500 mb-4">Minimal, property icons, subtle row dividers</p>
+      <DataTableViewer
+        style="notion"
+        data={[
+          { name: "Improve website copy", startDate: "May 14, 2025", dueDate: "February 21, 2025", effort: "Medium" },
+          { name: "Create new illustrations", startDate: "May 14, 2025", dueDate: "February 17, 2025", effort: "Small" },
+          { name: "Social media post", startDate: "May 14, 2025", dueDate: "February 14, 2025", effort: "Small" },
+          { name: "Create new videos", startDate: "May 14, 2025", dueDate: "February 14, 2025", effort: "Medium" },
+          { name: "Revise value props", startDate: "May 14, 2025", dueDate: "February 28, 2025", effort: "Small" },
+        ]}
+        columns={[
+          { key: "name", label: "Name", icon: "Aa" },
+          { key: "startDate", label: "Start date", icon: "\u{1F4C5}", type: "date" },
+          { key: "dueDate", label: "Due date", icon: "\u{1F4C5}", type: "date" },
+          { key: "effort", label: "Effort level", icon: "\u{231B}", type: "tag" },
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Airtable Style</h2>
+      <p class="text-sm text-gray-500 mb-4">Column dividers, row dividers, pastel tags, green checkmarks</p>
+      <DataTableViewer
+        style="airtable"
+        data={[
+          { name: "Hephaestus Capital", rep: "Katina Frey", stage: "Closed-Won", priority: true },
+          { name: "FireBasket", rep: "Marcellus Wong", stage: "Closed-Won", priority: false },
+          { name: "The Handy Henchwomen, LLC", rep: "Kendrick Anar", stage: "Closed-Lost", priority: false },
+          { name: "Bob's Cabinets", rep: "Katina Frey", stage: "Negotiation", priority: false },
+          { name: "Four Horsepeople Flooring", rep: "Emily Rintaro", stage: "Contract", priority: false },
+          { name: "The Gingerbread Men", rep: "Clara Rotelli", stage: "Closed-Won", priority: true },
+        ]}
+        columns={[
+          { key: "name", label: "Name" },
+          { key: "rep", label: "Rep" },
+          { key: "stage", label: "Sales Stage", type: "tag" },
+          { key: "priority", label: "Priority", type: "checkbox" },
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Excel Style</h2>
+      <p class="text-sm text-gray-500 mb-4">Classic spreadsheet with strong grid, column letters only</p>
+      <DataTableViewer
+        style="excel"
+        data={teamData}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Plain Style</h2>
+      <p class="text-sm text-gray-500 mb-4">Minimal borders, inherits page colors</p>
+      <DataTableViewer
+        style="plain"
+        data={projectData}
+        columns={[
+          { key: "project", label: "Project" },
+          { key: "owner", label: "Owner" },
+          { key: "priority", label: "Priority", type: "tag" },
+          { key: "complete", label: "Complete", type: "checkbox" },
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Compact + Striped</h2>
+      <p class="text-sm text-gray-500 mb-4">Notion style with compact and striped options</p>
+      <DataTableViewer
+        style="notion"
+        data={teamData}
+        compact
+        striped
+      />
+    </section>
+
+  </main>
+</Base>
