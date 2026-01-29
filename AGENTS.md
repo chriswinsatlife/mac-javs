@@ -21,3 +21,4 @@
 - Original/older playbook format: `athena/coda_playbooks_doc/CqI5pastxC.txt`
 - Use `lower_snake_case` for every filename, directory name, etc.
 - Strongly prefer Bun and avoid Node to the maximum extent possible. Always check Bun.com documentation for ways to avoid using Node or implement a feature with the latest Bun APIs, primitives, and syntax. Refactor any discovered Node usage to Bun immediately if encountered. Only utilize Node if multiple non-Node implementations were tried relentlessly and could not be implemented to success.
+- There are demos for the component library listed here: `docs/demo_pages.md`; update regularly

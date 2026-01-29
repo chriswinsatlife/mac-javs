@@ -1,0 +1,826 @@
+---
+/**
+ * EmailThread - Display email conversations in Gmail-style thread view
+ * 
+ * Usage:
+ *   <EmailThread
+ *     subject="Re: Project Update"
+ *     messages={[
+ *       {
+ *         from: { name: "Alice Smith", email: "alice@example.com" },
+ *         to: [{ name: "Bob Jones", email: "bob@example.com" }],
+ *         body: "Here's the latest update...",
+ *         date: "Dec 15, 2024, 2:34 PM"
+ *       }
+ *     ]}
+ *   />
+ * 
+ * Features:
+ *   - Collapsible message headers (click to expand/collapse)
+ *   - Rich headers: From, To, CC, date
+ *   - Attachment indicators
+ *   - Star toggle
+ *   - Read/unread visual states
+ *   - Labels/tags
+ */
+
+import { parse as parseYAML } from 'yaml';
+
+export interface EmailParticipant {
+  name: string;
+  email: string;
+}
+
+export interface EmailAttachment {
+  name: string;
+  size?: string;
+  type?: 'pdf' | 'doc' | 'image' | 'spreadsheet' | 'archive' | 'other';
+}
+
+export interface EmailMessage {
+  id?: string;
+  from: EmailParticipant;
+  to: EmailParticipant[];
+  cc?: EmailParticipant[];
+  body: string;
+  date: string;
+  attachments?: EmailAttachment[];
+  isRead?: boolean;
+  isStarred?: boolean;
+  isCollapsed?: boolean;
+  avatar?: string;
+}
+
+export interface Props {
+  subject: string;
+  messages: EmailMessage[];
+  src?: string;
+  labels?: string[];
+  isStarred?: boolean;
+  /** Force light or dark mode; 'auto' uses prefers-color-scheme */
+  mode?: 'light' | 'dark' | 'auto';
+}
+
+const { subject, messages: inlineMessages, src, labels = [], isStarred = false, mode = 'auto' } = Astro.props;
+
+let messages: EmailMessage[] = inlineMessages || [];
+
+// Load from file if src provided
+if (src && !inlineMessages) {
+  try {
+    const response = await fetch(new URL(src, Astro.url));
+    const text = await response.text();
+    
+    if (src.endsWith('.yaml') || src.endsWith('.yml')) {
+      const data = parseYAML(text);
+      messages = data.messages || data;
+    } else {
+      const data = JSON.parse(text);
+      messages = data.messages || data;
+    }
+  } catch (e) {
+    console.error(`Failed to load email thread from ${src}:`, e);
+  }
+}
+
+// Generate unique IDs for messages if not provided
+messages = messages.map((msg, i) => ({
+  ...msg,
+  id: msg.id || `email-${i}`,
+  isCollapsed: msg.isCollapsed ?? (i < messages.length - 1), // Collapse all but last by default
+}));
+
+// Get initials for avatar fallback
+function getInitials(name: string): string {
+  return name
+    .split(' ')
+    .map(n => n[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
+}
+
+// Get avatar background color based on email hash
+function getAvatarColor(email: string): string {
+  const colors = [
+    '#1a73e8', '#ea4335', '#34a853', '#fbbc04', '#673ab7',
+    '#e91e63', '#00bcd4', '#ff5722', '#795548', '#607d8b'
+  ];
+  let hash = 0;
+  for (let i = 0; i < email.length; i++) {
+    hash = email.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return colors[Math.abs(hash) % colors.length];
+}
+
+// Format recipient list for collapsed view
+function formatRecipients(to: EmailParticipant[], cc?: EmailParticipant[]): string {
+  const all = [...to, ...(cc || [])];
+  if (all.length === 1) return `to ${all[0].name.split(' ')[0]}`;
+  if (all.length === 2) return `to ${all[0].name.split(' ')[0]}, ${all[1].name.split(' ')[0]}`;
+  return `to ${all[0].name.split(' ')[0]} and ${all.length - 1} others`;
+}
+
+// Get attachment icon based on type
+function getAttachmentIcon(type?: string): string {
+  switch (type) {
+    case 'pdf': return 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 2l5 5h-5V4zm-3 9v6h2v-6h3l-4-4-4 4h3z';
+    case 'image': return 'M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z';
+    case 'spreadsheet': return 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h3v2H8v-2zm5 0h3v2h-3v-2zm-5 3h3v2H8v-2zm5 0h3v2h-3v-2z';
+    default: return 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 2l5 5h-5V4z';
+  }
+}
+---
+
+<div class:list={['email-thread', `email-thread--${mode}`]}>
+  <!-- Thread Header -->
+  <div class="thread-header">
+    <div class="thread-header-left">
+      <button class="back-button" aria-label="Back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <h1 class="thread-subject">{subject}</h1>
+      {labels.length > 0 && (
+        <div class="thread-labels">
+          {labels.map(label => (
+            <span class="label">{label}</span>
+          ))}
+        </div>
+      )}
+    </div>
+    <div class="thread-header-right">
+      <button class="icon-button star-button" class:list={[{ starred: isStarred }]} aria-label="Star">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill={isStarred ? 'currentColor' : 'none'} stroke="currentColor" stroke-width="2">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </button>
+      <button class="icon-button" aria-label="More options">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="5" r="1.5"/>
+          <circle cx="12" cy="12" r="1.5"/>
+          <circle cx="12" cy="19" r="1.5"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="messages-list">
+    {messages.map((msg, index) => (
+      <div 
+        class:list={['email-message', { collapsed: msg.isCollapsed, unread: !msg.isRead }]}
+        data-message-id={msg.id}
+      >
+        <!-- Avatar -->
+        <div class="message-avatar-col">
+          {msg.avatar ? (
+            <img src={msg.avatar} alt={msg.from.name} class="avatar-img" />
+          ) : (
+            <div class="avatar-initials" style={`background-color: ${getAvatarColor(msg.from.email)}`}>
+              {getInitials(msg.from.name)}
+            </div>
+          )}
+        </div>
+
+        <!-- Content -->
+        <div class="message-content-col">
+          <!-- Header (always visible) -->
+          <div class="message-header" data-toggle-collapse>
+            <div class="header-left">
+              <span class="sender-name">{msg.from.name}</span>
+              {msg.isCollapsed && (
+                <span class="collapsed-preview">
+                  <span class="recipient-preview">{formatRecipients(msg.to, msg.cc)}</span>
+                  <span class="body-preview">&mdash; {msg.body.slice(0, 80)}{msg.body.length > 80 ? '...' : ''}</span>
+                </span>
+              )}
+            </div>
+            <div class="header-right">
+              {msg.attachments && msg.attachments.length > 0 && (
+                <svg class="attachment-indicator" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>
+                </svg>
+              )}
+              <span class="message-date">{msg.date}</span>
+              <button class="icon-button star-msg-button" class:list={[{ starred: msg.isStarred }]} aria-label="Star message">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill={msg.isStarred ? 'currentColor' : 'none'} stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expanded details (hidden when collapsed) -->
+          {!msg.isCollapsed && (
+            <div class="message-details">
+              <div class="recipient-line">
+                <span class="label-text">to</span>
+                <span class="recipients">
+                  {msg.to.map((r, i) => (
+                    <span class="recipient">
+                      {r.name}
+                      {i < msg.to.length - 1 && ', '}
+                    </span>
+                  ))}
+                </span>
+                <button class="expand-details-btn" aria-label="Show details">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"/>
+                  </svg>
+                </button>
+              </div>
+
+              {msg.cc && msg.cc.length > 0 && (
+                <div class="recipient-line cc-line">
+                  <span class="label-text">cc</span>
+                  <span class="recipients">
+                    {msg.cc.map((r, i) => (
+                      <span class="recipient">
+                        {r.name}
+                        {i < msg.cc.length - 1 && ', '}
+                      </span>
+                    ))}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+
+          <!-- Body (hidden when collapsed) -->
+          {!msg.isCollapsed && (
+            <div class="message-body">
+              <Fragment set:html={msg.body.replace(/\n/g, '<br>')} />
+            </div>
+          )}
+
+          <!-- Attachments (hidden when collapsed) -->
+          {!msg.isCollapsed && msg.attachments && msg.attachments.length > 0 && (
+            <div class="message-attachments">
+              {msg.attachments.map(att => (
+                <div class="attachment-chip">
+                  <svg class="attachment-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d={getAttachmentIcon(att.type)} />
+                  </svg>
+                  <span class="attachment-name">{att.name}</span>
+                  {att.size && <span class="attachment-size">{att.size}</span>}
+                </div>
+              ))}
+            </div>
+          )}
+
+          <!-- Actions (hidden when collapsed) -->
+          {!msg.isCollapsed && index === messages.length - 1 && (
+            <div class="message-actions">
+              <button class="action-button reply-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 17H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                </svg>
+                Reply
+              </button>
+              <button class="action-button forward-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+                Forward
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .email-thread {
+    font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Thread Header */
+  .thread-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+  }
+
+  .thread-header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .thread-header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #5f6368;
+    flex-shrink: 0;
+  }
+
+  .back-button:hover {
+    background: #f1f3f4;
+  }
+
+  .thread-subject {
+    font-size: 1.375rem;
+    font-weight: 400;
+    color: #202124;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .thread-labels {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    background: #e8f0fe;
+    color: #1967d2;
+  }
+
+  .icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #5f6368;
+  }
+
+  .icon-button:hover {
+    background: #f1f3f4;
+  }
+
+  .star-button.starred,
+  .star-msg-button.starred {
+    color: #f4b400;
+  }
+
+  /* Messages List */
+  .messages-list {
+    padding: 0.5rem 0;
+  }
+
+  .email-message {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid transparent;
+    transition: background 0.1s;
+  }
+
+  .email-message:not(:last-child) {
+    border-bottom-color: #e0e0e0;
+  }
+
+  .email-message.collapsed {
+    cursor: pointer;
+  }
+
+  .email-message.collapsed:hover {
+    background: #f8f9fa;
+  }
+
+  .email-message.unread .sender-name {
+    font-weight: 600;
+  }
+
+  /* Avatar */
+  .message-avatar-col {
+    flex-shrink: 0;
+  }
+
+  .avatar-img,
+  .avatar-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .avatar-img {
+    object-fit: cover;
+  }
+
+  .avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  /* Message Content */
+  .message-content-col {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .message-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .header-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .sender-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #202124;
+    flex-shrink: 0;
+  }
+
+  .collapsed-preview {
+    display: flex;
+    gap: 0.25rem;
+    min-width: 0;
+    color: #5f6368;
+    font-size: 0.875rem;
+  }
+
+  .recipient-preview {
+    flex-shrink: 0;
+  }
+
+  .body-preview {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #80868b;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .attachment-indicator {
+    color: #5f6368;
+  }
+
+  .message-date {
+    font-size: 0.75rem;
+    color: #5f6368;
+    white-space: nowrap;
+  }
+
+  .star-msg-button {
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  .email-message:hover .star-msg-button,
+  .star-msg-button.starred {
+    opacity: 1;
+  }
+
+  /* Message Details */
+  .message-details {
+    margin-top: 0.25rem;
+  }
+
+  .recipient-line {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: #5f6368;
+  }
+
+  .label-text {
+    color: #80868b;
+  }
+
+  .recipients {
+    color: #202124;
+  }
+
+  .expand-details-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #5f6368;
+    margin-left: 0.25rem;
+  }
+
+  .expand-details-btn:hover {
+    background: #f1f3f4;
+  }
+
+  .cc-line {
+    margin-top: 0.125rem;
+  }
+
+  /* Message Body */
+  .message-body {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #202124;
+  }
+
+  /* Attachments */
+  .message-attachments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .attachment-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #dadce0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .attachment-chip:hover {
+    background: #f1f3f4;
+  }
+
+  .attachment-icon {
+    color: #5f6368;
+  }
+
+  .attachment-name {
+    font-size: 0.8125rem;
+    color: #202124;
+  }
+
+  .attachment-size {
+    font-size: 0.75rem;
+    color: #80868b;
+  }
+
+  /* Actions */
+  .message-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .action-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #dadce0;
+    border-radius: 1.5rem;
+    background: transparent;
+    color: #202124;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.1s, box-shadow 0.1s;
+  }
+
+  .action-button:hover {
+    background: #f1f3f4;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Dark mode - explicit class */
+  .email-thread--dark {
+    background: #202124;
+  }
+
+  .email-thread--dark .thread-header {
+    border-bottom-color: #3c4043;
+    background: #202124;
+  }
+
+  .email-thread--dark .thread-subject {
+    color: #e8eaed;
+  }
+
+  .email-thread--dark .label {
+    background: #394457;
+    color: #8ab4f8;
+  }
+
+  .email-thread--dark .back-button,
+  .email-thread--dark .icon-button {
+    color: #9aa0a6;
+  }
+
+  .email-thread--dark .back-button:hover,
+  .email-thread--dark .icon-button:hover {
+    background: #3c4043;
+  }
+
+  .email-thread--dark .email-message:not(:last-child) {
+    border-bottom-color: #3c4043;
+  }
+
+  .email-thread--dark .email-message.collapsed:hover {
+    background: #292a2d;
+  }
+
+  .email-thread--dark .sender-name,
+  .email-thread--dark .recipients {
+    color: #e8eaed;
+  }
+
+  .email-thread--dark .collapsed-preview,
+  .email-thread--dark .message-date,
+  .email-thread--dark .attachment-indicator,
+  .email-thread--dark .label-text {
+    color: #9aa0a6;
+  }
+
+  .email-thread--dark .body-preview {
+    color: #80868b;
+  }
+
+  .email-thread--dark .message-body {
+    color: #bdc1c6;
+  }
+
+  .email-thread--dark .attachment-chip {
+    border-color: #3c4043;
+  }
+
+  .email-thread--dark .attachment-chip:hover {
+    background: #3c4043;
+  }
+
+  .email-thread--dark .attachment-name {
+    color: #e8eaed;
+  }
+
+  .email-thread--dark .action-button {
+    border-color: #5f6368;
+    color: #e8eaed;
+  }
+
+  .email-thread--dark .action-button:hover {
+    background: #3c4043;
+  }
+
+  .email-thread--dark .expand-details-btn:hover {
+    background: #3c4043;
+  }
+
+  .email-thread--dark .message-attachments {
+    border-top-color: #3c4043;
+  }
+
+  /* Dark mode - auto (media query) */
+  @media (prefers-color-scheme: dark) {
+    .email-thread--auto {
+      background: #202124;
+    }
+
+    .email-thread--auto .thread-header {
+      border-bottom-color: #3c4043;
+      background: #202124;
+    }
+
+    .email-thread--auto .thread-subject {
+      color: #e8eaed;
+    }
+
+    .email-thread--auto .label {
+      background: #394457;
+      color: #8ab4f8;
+    }
+
+    .email-thread--auto .back-button,
+    .email-thread--auto .icon-button {
+      color: #9aa0a6;
+    }
+
+    .email-thread--auto .back-button:hover,
+    .email-thread--auto .icon-button:hover {
+      background: #3c4043;
+    }
+
+    .email-thread--auto .email-message:not(:last-child) {
+      border-bottom-color: #3c4043;
+    }
+
+    .email-thread--auto .email-message.collapsed:hover {
+      background: #292a2d;
+    }
+
+    .email-thread--auto .sender-name,
+    .email-thread--auto .recipients {
+      color: #e8eaed;
+    }
+
+    .email-thread--auto .collapsed-preview,
+    .email-thread--auto .message-date,
+    .email-thread--auto .attachment-indicator,
+    .email-thread--auto .label-text {
+      color: #9aa0a6;
+    }
+
+    .email-thread--auto .body-preview {
+      color: #80868b;
+    }
+
+    .email-thread--auto .message-body {
+      color: #bdc1c6;
+    }
+
+    .email-thread--auto .attachment-chip {
+      border-color: #3c4043;
+    }
+
+    .email-thread--auto .attachment-chip:hover {
+      background: #3c4043;
+    }
+
+    .email-thread--auto .attachment-name {
+      color: #e8eaed;
+    }
+
+    .email-thread--auto .action-button {
+      border-color: #5f6368;
+      color: #e8eaed;
+    }
+
+    .email-thread--auto .action-button:hover {
+      background: #3c4043;
+    }
+
+    .email-thread--auto .expand-details-btn:hover {
+      background: #3c4043;
+    }
+
+    .email-thread--auto .message-attachments {
+      border-top-color: #3c4043;
+    }
+  }
+</style>
+
+<script>
+  // Toggle collapse state on click
+  document.querySelectorAll('.email-message.collapsed').forEach(el => {
+    el.addEventListener('click', () => {
+      el.classList.remove('collapsed');
+    });
+  });
+</script>

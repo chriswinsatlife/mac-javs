@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+import EmailThread from '../components/EmailThread.astro';
+---
+
+<Base title="Email Thread Component Demo">
+  <main class="p-8 space-y-12 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-heading font-bold">Email Thread Component Demo</h1>
+    
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Gmail-style Thread (Project Discussion)</h2>
+      <EmailThread
+        subject="Re: Q4 Product Roadmap Review"
+        labels={["work", "important"]}
+        isStarred={true}
+        messages={[
+          {
+            from: { name: "Sarah Chen", email: "sarah.chen@company.com" },
+            to: [
+              { name: "Product Team", email: "product@company.com" }
+            ],
+            cc: [
+              { name: "Alex Rivera", email: "alex.r@company.com" },
+              { name: "Jordan Kim", email: "j.kim@company.com" }
+            ],
+            body: "Hi team,\n\nI've put together the initial roadmap draft for Q4. Key priorities include:\n\n1. Mobile app redesign\n2. API v2 migration\n3. Analytics dashboard improvements\n\nPlease review and share your thoughts by EOW.",
+            date: "Oct 15, 2024, 9:23 AM",
+            isRead: true,
+            isCollapsed: true
+          },
+          {
+            from: { name: "Alex Rivera", email: "alex.r@company.com" },
+            to: [
+              { name: "Sarah Chen", email: "sarah.chen@company.com" },
+              { name: "Product Team", email: "product@company.com" }
+            ],
+            body: "Sarah, this looks solid. One question: should we prioritize the API migration before the mobile redesign? The new endpoints would benefit the mobile team significantly.",
+            date: "Oct 15, 2024, 11:47 AM",
+            isRead: true,
+            isCollapsed: true
+          },
+          {
+            from: { name: "Jordan Kim", email: "j.kim@company.com" },
+            to: [
+              { name: "Sarah Chen", email: "sarah.chen@company.com" },
+              { name: "Alex Rivera", email: "alex.r@company.com" }
+            ],
+            body: "I agree with Alex. The current API is blocking several mobile features we want to ship.\n\nAlso attaching the analytics requirements doc we discussed last week.",
+            date: "Oct 15, 2024, 2:15 PM",
+            attachments: [
+              { name: "analytics_requirements_v2.pdf", size: "2.4 MB", type: "pdf" },
+              { name: "mobile_api_gaps.xlsx", size: "156 KB", type: "spreadsheet" }
+            ],
+            isRead: true,
+            isCollapsed: true
+          },
+          {
+            from: { name: "Sarah Chen", email: "sarah.chen@company.com" },
+            to: [
+              { name: "Alex Rivera", email: "alex.r@company.com" },
+              { name: "Jordan Kim", email: "j.kim@company.com" }
+            ],
+            cc: [
+              { name: "Product Team", email: "product@company.com" }
+            ],
+            body: "Great points, both of you. I'll revise the timeline to front-load the API work.\n\nJordan, thanks for the docs. I'll review them this afternoon and schedule a sync for Thursday to align on the analytics scope.\n\nUpdated roadmap will be shared by tomorrow EOD.",
+            date: "Oct 15, 2024, 4:32 PM",
+            isRead: false,
+            isStarred: true,
+            isCollapsed: false
+          }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Simple Two-Person Thread (Light Mode)</h2>
+      <EmailThread
+        subject="Dinner plans?"
+        mode="light"
+        messages={[
+          {
+            from: { name: "Mike Thompson", email: "mike.t@email.com" },
+            to: [{ name: "Me", email: "me@email.com" }],
+            body: "Hey! Are you free for dinner this Saturday? Thinking of trying that new Thai place downtown.",
+            date: "Oct 14, 2024, 6:45 PM",
+            isRead: true,
+            isCollapsed: true
+          },
+          {
+            from: { name: "Me", email: "me@email.com" },
+            to: [{ name: "Mike Thompson", email: "mike.t@email.com" }],
+            body: "Saturday works for me! What time were you thinking? I heard they get busy after 7.",
+            date: "Oct 14, 2024, 7:12 PM",
+            isRead: true,
+            isCollapsed: false
+          }
+        ]}
+      />
+    </section>
+
+    <section class="bg-neutral-900 p-6 rounded-lg">
+      <h2 class="text-xl font-semibold mb-4 text-white">Same Thread (Dark Mode)</h2>
+      <EmailThread
+        subject="Dinner plans?"
+        mode="dark"
+        messages={[
+          {
+            from: { name: "Mike Thompson", email: "mike.t@email.com" },
+            to: [{ name: "Me", email: "me@email.com" }],
+            body: "Hey! Are you free for dinner this Saturday? Thinking of trying that new Thai place downtown.",
+            date: "Oct 14, 2024, 6:45 PM",
+            isRead: true,
+            isCollapsed: true
+          },
+          {
+            from: { name: "Me", email: "me@email.com" },
+            to: [{ name: "Mike Thompson", email: "mike.t@email.com" }],
+            body: "Saturday works for me! What time were you thinking? I heard they get busy after 7.",
+            date: "Oct 14, 2024, 7:12 PM",
+            isRead: true,
+            isCollapsed: false
+          }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Single Email with Attachments</h2>
+      <EmailThread
+        subject="Design Assets - Homepage Refresh"
+        labels={["design"]}
+        messages={[
+          {
+            from: { name: "Emily Watson", email: "emily.w@designstudio.com" },
+            to: [{ name: "Chris Developer", email: "chris@company.com" }],
+            body: "Hi Chris,\n\nHere are the final design assets for the homepage refresh project.\n\nIncluded:\n- Hero section mockups (3 variations)\n- Icon set (SVG format)\n- Updated brand guidelines PDF\n\nLet me know if you need anything else or have questions about the implementation.",
+            date: "Oct 16, 2024, 10:00 AM",
+            attachments: [
+              { name: "hero_mockups.fig", size: "8.2 MB", type: "other" },
+              { name: "icon_set_v3.zip", size: "1.1 MB", type: "archive" },
+              { name: "brand_guidelines_2024.pdf", size: "4.5 MB", type: "pdf" },
+              { name: "preview_hero_a.png", size: "890 KB", type: "image" }
+            ],
+            isRead: false,
+            isCollapsed: false
+          }
+        ]}
+      />
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,213 @@
+---
+import Base from '../layouts/Base.astro';
+import Calendar from '../components/Calendar.astro';
+---
+
+<Base title="Calendar Component Demo">
+  <main class="p-8 space-y-12 max-w-6xl mx-auto">
+    <h1 class="text-3xl font-heading font-bold">Calendar Component Demo</h1>
+    
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Google Calendar Style - Week View (from JSON file)</h2>
+      <Calendar 
+        style="google" 
+        view="week" 
+        src="/data/sample_calendar_events.json"
+        date="2025-01-29"
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Apple Calendar Style - Week View (inline data)</h2>
+      <Calendar
+        style="apple"
+        view="week"
+        date="2025-01-29"
+        events={[
+          { title: "Morning Yoga", start: "2025-01-27T07:00", end: "2025-01-27T08:00", color: "green" },
+          { title: "Board Meeting", start: "2025-01-27T10:00", end: "2025-01-27T12:00", color: "red", location: "Boardroom" },
+          { title: "Lunch Break", start: "2025-01-28T12:00", end: "2025-01-28T13:00", color: "blue" },
+          { title: "Team Building", start: "2025-01-28T14:00", end: "2025-01-28T17:00", color: "purple", location: "Offsite" },
+          { title: "Client Call", start: "2025-01-29T09:00", end: "2025-01-29T10:00", color: "orange" },
+          { title: "Strategy Session", start: "2025-01-30T13:00", end: "2025-01-30T15:00", color: "cyan" },
+          { title: "Happy Hour", start: "2025-01-31T17:00", end: "2025-01-31T19:00", color: "pink", location: "Rooftop Bar" }
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Outlook Style - Week View (inline data)</h2>
+      <Calendar
+        style="outlook"
+        view="week"
+        date="2025-01-29"
+        events={[
+          { title: "All Hands", start: "2025-01-27T09:00", end: "2025-01-27T10:30", color: "blue" },
+          { title: "Budget Review", start: "2025-01-27T14:00", end: "2025-01-27T15:00", color: "green" },
+          { title: "Training Session", start: "2025-01-28T10:00", end: "2025-01-28T12:00", color: "purple" },
+          { title: "Interview: Sr. Engineer", start: "2025-01-29T11:00", end: "2025-01-29T12:00", color: "red" },
+          { title: "Project Kickoff", start: "2025-01-29T14:00", end: "2025-01-29T16:00", color: "orange", location: "Room 201" },
+          { title: "Weekly Sync", start: "2025-01-30T15:00", end: "2025-01-30T16:00", color: "cyan" },
+          { title: "Quarterly Review", start: "2025-01-31T10:00", end: "2025-01-31T11:30", color: "yellow" }
+        ]}
+      />
+    </section>
+
+    <!-- Mode Examples -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Light/Dark Mode Control</h2>
+      <p class="text-gray-600 mb-6">Use the <code class="bg-gray-100 px-1 rounded">mode</code> prop to force light or dark mode, or use system preference.</p>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">mode="light"</h3>
+          <Calendar
+            style="google"
+            view="day"
+            mode="light"
+            date="2025-01-29"
+            events={[
+              { title: "Morning Sync", start: "2025-01-29T09:00", end: "2025-01-29T09:30", color: "blue" },
+              { title: "Focus Time", start: "2025-01-29T10:00", end: "2025-01-29T12:00", color: "purple" }
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">mode="dark"</h3>
+          <Calendar
+            style="google"
+            view="day"
+            mode="dark"
+            date="2025-01-29"
+            events={[
+              { title: "Morning Sync", start: "2025-01-29T09:00", end: "2025-01-29T09:30", color: "blue" },
+              { title: "Focus Time", start: "2025-01-29T10:00", end: "2025-01-29T12:00", color: "purple" }
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">mode="auto" (default)</h3>
+          <Calendar
+            style="google"
+            view="day"
+            mode="auto"
+            date="2025-01-29"
+            events={[
+              { title: "Morning Sync", start: "2025-01-29T09:00", end: "2025-01-29T09:30", color: "blue" },
+              { title: "Focus Time", start: "2025-01-29T10:00", end: "2025-01-29T12:00", color: "purple" }
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark Mode for All Styles -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Dark Mode - All Styles</h2>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">Google Dark</h3>
+          <Calendar
+            style="google"
+            view="day"
+            mode="dark"
+            date="2025-01-29"
+            events={[
+              { title: "Team Standup", start: "2025-01-29T09:00", end: "2025-01-29T09:30", color: "blue" },
+              { title: "Code Review", start: "2025-01-29T14:00", end: "2025-01-29T15:00", color: "green" }
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">Apple Dark</h3>
+          <Calendar
+            style="apple"
+            view="day"
+            mode="dark"
+            date="2025-01-29"
+            events={[
+              { title: "Team Standup", start: "2025-01-29T09:00", end: "2025-01-29T09:30", color: "blue" },
+              { title: "Code Review", start: "2025-01-29T14:00", end: "2025-01-29T15:00", color: "green" }
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">Outlook Dark</h3>
+          <Calendar
+            style="outlook"
+            view="day"
+            mode="dark"
+            date="2025-01-29"
+            events={[
+              { title: "Team Standup", start: "2025-01-29T09:00", end: "2025-01-29T09:30", color: "blue" },
+              { title: "Code Review", start: "2025-01-29T14:00", end: "2025-01-29T15:00", color: "green" }
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Day Views - Light Mode</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">Google</h3>
+          <Calendar
+            style="google"
+            view="day"
+            mode="light"
+            date="2025-01-29"
+            events={[
+              { title: "Morning Coffee", start: "2025-01-29T08:00", end: "2025-01-29T08:30", color: "yellow" },
+              { title: "Sprint Planning", start: "2025-01-29T09:00", end: "2025-01-29T11:00", color: "blue" },
+              { title: "Lunch with Team", start: "2025-01-29T12:00", end: "2025-01-29T13:00", color: "green", location: "Cafeteria" },
+              { title: "Code Review", start: "2025-01-29T14:00", end: "2025-01-29T15:30", color: "purple" },
+              { title: "Standup", start: "2025-01-29T16:00", end: "2025-01-29T16:15", color: "cyan" },
+              { title: "Wrap-up", start: "2025-01-29T17:30", end: "2025-01-29T18:00", color: "orange" }
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">Apple</h3>
+          <Calendar
+            style="apple"
+            view="day"
+            mode="light"
+            date="2025-01-29"
+            events={[
+              { title: "Meditation", start: "2025-01-29T06:30", end: "2025-01-29T07:00", color: "green" },
+              { title: "Executive Briefing", start: "2025-01-29T09:00", end: "2025-01-29T10:00", color: "red", location: "CEO Office" },
+              { title: "Product Demo", start: "2025-01-29T11:00", end: "2025-01-29T12:00", color: "blue" },
+              { title: "Working Lunch", start: "2025-01-29T12:30", end: "2025-01-29T13:30", color: "orange" },
+              { title: "Design Review", start: "2025-01-29T15:00", end: "2025-01-29T16:30", color: "purple" },
+              { title: "Team Celebration", start: "2025-01-29T18:00", end: "2025-01-29T20:00", color: "pink", location: "Rooftop" }
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 mb-2">Outlook</h3>
+          <Calendar
+            style="outlook"
+            view="day"
+            mode="light"
+            date="2025-01-29"
+            events={[
+              { title: "Daily Scrum", start: "2025-01-29T09:00", end: "2025-01-29T09:15", color: "blue" },
+              { title: "Client Presentation", start: "2025-01-29T10:00", end: "2025-01-29T11:30", color: "green", location: "Virtual" },
+              { title: "Lunch and Learn", start: "2025-01-29T12:00", end: "2025-01-29T13:00", color: "cyan" },
+              { title: "Focus Time", start: "2025-01-29T14:00", end: "2025-01-29T16:00", color: "purple" },
+              { title: "1:1 with Direct Report", start: "2025-01-29T16:30", end: "2025-01-29T17:00", color: "orange" }
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,898 @@
+---
+/**
+ * Calendar - Display calendar events in platform-specific styles
+ * 
+ * Usage:
+ *   Inline:
+ *     <Calendar 
+ *       style="google"
+ *       view="week"
+ *       events={[
+ *         { title: "Team Standup", start: "2025-01-27T09:00", end: "2025-01-27T09:30", color: "blue" },
+ *         { title: "Lunch with Alex", start: "2025-01-27T12:00", end: "2025-01-27T13:00", color: "green" }
+ *       ]}
+ *     />
+ * 
+ *   From file (JSON or YAML):
+ *     <Calendar style="apple" view="day" src="/data/calendar_events.json" />
+ * 
+ *   Mode control:
+ *     <Calendar mode="light" ... />  <!-- Force light -->
+ *     <Calendar mode="dark" ... />   <!-- Force dark -->
+ *     <Calendar mode="auto" ... />   <!-- Use prefers-color-scheme (default) -->
+ * 
+ * Event format:
+ *   - title: string - required, event name
+ *   - start: string - required, ISO datetime (YYYY-MM-DDTHH:MM)
+ *   - end: string - required, ISO datetime (YYYY-MM-DDTHH:MM)
+ *   - color?: string - optional, event color (blue, green, red, purple, orange, cyan, pink, yellow)
+ *   - location?: string - optional, event location
+ *   - description?: string - optional, event description
+ *   - allDay?: boolean - optional, all-day event flag
+ * 
+ * Styles: google | apple | outlook
+ * Views: week | day
+ */
+
+import { parse as parseYAML } from 'yaml';
+
+export interface CalendarEvent {
+  title: string;
+  start: string;
+  end: string;
+  color?: 'blue' | 'green' | 'red' | 'purple' | 'orange' | 'cyan' | 'pink' | 'yellow';
+  location?: string;
+  description?: string;
+  allDay?: boolean;
+}
+
+export interface Props {
+  style?: 'google' | 'apple' | 'outlook';
+  view?: 'week' | 'day';
+  events?: CalendarEvent[];
+  src?: string;
+  /** Reference date for the calendar view (defaults to today) */
+  date?: string;
+  /** Force light or dark mode; 'auto' uses prefers-color-scheme */
+  mode?: 'light' | 'dark' | 'auto';
+}
+
+const { 
+  style = 'google', 
+  view = 'week', 
+  events: inlineEvents, 
+  src,
+  date: refDate,
+  mode = 'auto'
+} = Astro.props;
+
+let events: CalendarEvent[] = inlineEvents || [];
+
+// Load from file if src provided
+if (src && !inlineEvents) {
+  try {
+    const response = await fetch(new URL(src, Astro.url));
+    const text = await response.text();
+    
+    if (src.endsWith('.yaml') || src.endsWith('.yml')) {
+      events = parseYAML(text);
+    } else {
+      events = JSON.parse(text);
+    }
+  } catch (e) {
+    console.error(`Failed to load calendar events from ${src}:`, e);
+  }
+}
+
+// Utility functions
+function parseDateTime(dateStr: string): Date {
+  return new Date(dateStr);
+}
+
+function formatTime(date: Date): string {
+  return date.toLocaleTimeString('en-US', { 
+    hour: 'numeric', 
+    minute: '2-digit',
+    hour12: true 
+  }).toLowerCase();
+}
+
+function formatDayHeader(date: Date): { weekday: string; day: number } {
+  return {
+    weekday: date.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase(),
+    day: date.getDate()
+  };
+}
+
+function getWeekDates(referenceDate: Date): Date[] {
+  const dates: Date[] = [];
+  const day = referenceDate.getDay();
+  const diff = referenceDate.getDate() - day; // Start from Sunday
+  
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(referenceDate);
+    d.setDate(diff + i);
+    dates.push(d);
+  }
+  return dates;
+}
+
+function getEventPosition(event: CalendarEvent, dayStart: Date): { top: number; height: number } {
+  const start = parseDateTime(event.start);
+  const end = parseDateTime(event.end);
+  
+  // Calculate position as percentage of day (6am to 10pm = 16 hours)
+  const dayStartHour = 6;
+  const dayEndHour = 22;
+  const totalHours = dayEndHour - dayStartHour;
+  
+  const startHour = start.getHours() + start.getMinutes() / 60;
+  const endHour = end.getHours() + end.getMinutes() / 60;
+  
+  const clampedStart = Math.max(startHour, dayStartHour);
+  const clampedEnd = Math.min(endHour, dayEndHour);
+  
+  const top = ((clampedStart - dayStartHour) / totalHours) * 100;
+  const height = ((clampedEnd - clampedStart) / totalHours) * 100;
+  
+  return { top, height: Math.max(height, 2) }; // Minimum 2% height for visibility
+}
+
+function getEventsForDay(dayDate: Date, allEvents: CalendarEvent[]): CalendarEvent[] {
+  const dayStr = dayDate.toISOString().split('T')[0];
+  return allEvents.filter(event => {
+    const eventDay = event.start.split('T')[0];
+    return eventDay === dayStr;
+  });
+}
+
+function isToday(date: Date): boolean {
+  const today = new Date();
+  return date.toDateString() === today.toDateString();
+}
+
+// Generate time labels for the grid (6am to 10pm)
+const timeLabels = Array.from({ length: 17 }, (_, i) => {
+  const hour = i + 6;
+  if (hour === 12) return '12 PM';
+  if (hour > 12) return `${hour - 12} PM`;
+  return `${hour} AM`;
+});
+
+// Calculate reference date and week dates
+const baseDate = refDate ? new Date(refDate) : new Date();
+const weekDates = view === 'week' ? getWeekDates(baseDate) : [baseDate];
+
+// Color mapping
+const colorClasses: Record<string, string> = {
+  blue: 'event-blue',
+  green: 'event-green',
+  red: 'event-red',
+  purple: 'event-purple',
+  orange: 'event-orange',
+  cyan: 'event-cyan',
+  pink: 'event-pink',
+  yellow: 'event-yellow'
+};
+---
+
+<div class:list={['calendar-container', `calendar-${style}`, `calendar-${view}`, `calendar--${mode}`]}>
+  <!-- Header with day columns -->
+  <div class="calendar-header">
+    <div class="time-gutter"></div>
+    {weekDates.map(date => {
+      const { weekday, day } = formatDayHeader(date);
+      return (
+        <div class={`day-header ${isToday(date) ? 'today' : ''}`}>
+          <span class="weekday">{weekday}</span>
+          <span class="day-number">{day}</span>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Time grid -->
+  <div class="calendar-body">
+    <!-- Time labels column -->
+    <div class="time-gutter">
+      {timeLabels.map(label => (
+        <div class="time-label">{label}</div>
+      ))}
+    </div>
+
+    <!-- Day columns -->
+    {weekDates.map(date => {
+      const dayEvents = getEventsForDay(date, events);
+      return (
+        <div class={`day-column ${isToday(date) ? 'today' : ''}`}>
+          {/* Hour grid lines */}
+          {timeLabels.map(() => (
+            <div class="hour-cell"></div>
+          ))}
+          
+          {/* Events overlay */}
+          <div class="events-layer">
+            {dayEvents.map(event => {
+              const { top, height } = getEventPosition(event, date);
+              const colorClass = colorClasses[event.color || 'blue'];
+              return (
+                <div 
+                  class={`calendar-event ${colorClass}`}
+                  style={`top: ${top}%; height: ${height}%;`}
+                >
+                  <span class="event-time">{formatTime(parseDateTime(event.start))}</span>
+                  <span class="event-title">{event.title}</span>
+                  {event.location && (
+                    <span class="event-location">{event.location}</span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+<style>
+  /* ========================================
+     Base Styles
+     ======================================== */
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, sans-serif;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .calendar-header {
+    display: flex;
+    border-bottom: 1px solid;
+  }
+
+  .time-gutter {
+    width: 3.5rem;
+    flex-shrink: 0;
+  }
+
+  .day-header {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+  }
+
+  .weekday {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+  }
+
+  .day-number {
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .calendar-body {
+    display: flex;
+    overflow-y: auto;
+    max-height: 600px;
+  }
+
+  .calendar-body .time-gutter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .time-label {
+    height: 3rem;
+    font-size: 0.6875rem;
+    padding-right: 0.5rem;
+    text-align: right;
+    position: relative;
+    top: -0.375rem;
+  }
+
+  .day-column {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+  }
+
+  .hour-cell {
+    height: 3rem;
+    border-top: 1px solid;
+  }
+
+  .events-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .calendar-event {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    padding: 0.25rem 0.375rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    pointer-events: auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.0625rem;
+  }
+
+  .event-time {
+    font-size: 0.625rem;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  .event-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .event-location {
+    font-size: 0.625rem;
+    opacity: 0.8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Day view adjustments */
+  .calendar-day .day-column {
+    min-width: 200px;
+  }
+
+  .calendar-day .calendar-event {
+    left: 4px;
+    right: 4px;
+  }
+
+  .calendar-day .event-title {
+    white-space: normal;
+  }
+
+  /* ========================================
+     Google Calendar Style - Light
+     ======================================== */
+  .calendar-google {
+    background: #fff;
+    border: 1px solid #dadce0;
+  }
+
+  .calendar-google .calendar-header {
+    border-color: #dadce0;
+  }
+
+  .calendar-google .weekday {
+    color: #70757a;
+  }
+
+  .calendar-google .day-number {
+    color: #3c4043;
+  }
+
+  .calendar-google .day-header.today .day-number {
+    background: #1a73e8;
+    color: #fff;
+  }
+
+  .calendar-google .day-header.today .weekday {
+    color: #1a73e8;
+  }
+
+  .calendar-google .time-label {
+    color: #70757a;
+  }
+
+  .calendar-google .hour-cell {
+    border-color: #e8eaed;
+  }
+
+  .calendar-google .day-column {
+    border-left: 1px solid #e8eaed;
+  }
+
+  .calendar-google .day-column.today {
+    background: rgba(26, 115, 232, 0.04);
+  }
+
+  /* Google event colors */
+  .calendar-google .event-blue {
+    background: #039be5;
+    color: #fff;
+  }
+
+  .calendar-google .event-green {
+    background: #33b679;
+    color: #fff;
+  }
+
+  .calendar-google .event-red {
+    background: #d50000;
+    color: #fff;
+  }
+
+  .calendar-google .event-purple {
+    background: #8e24aa;
+    color: #fff;
+  }
+
+  .calendar-google .event-orange {
+    background: #f4511e;
+    color: #fff;
+  }
+
+  .calendar-google .event-cyan {
+    background: #009688;
+    color: #fff;
+  }
+
+  .calendar-google .event-pink {
+    background: #e67c73;
+    color: #fff;
+  }
+
+  .calendar-google .event-yellow {
+    background: #f6bf26;
+    color: #1f1f1f;
+  }
+
+  /* ========================================
+     Apple Calendar Style - Light
+     ======================================== */
+  .calendar-apple {
+    background: #f5f5f7;
+    border: 1px solid #d2d2d7;
+  }
+
+  .calendar-apple .calendar-header {
+    background: #fff;
+    border-color: #d2d2d7;
+  }
+
+  .calendar-apple .weekday {
+    color: #86868b;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .calendar-apple .day-number {
+    color: #1d1d1f;
+    font-weight: 300;
+    font-size: 1.75rem;
+  }
+
+  .calendar-apple .day-header.today .day-number {
+    background: #ff3b30;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .calendar-apple .day-header.today .weekday {
+    color: #ff3b30;
+  }
+
+  .calendar-apple .time-label {
+    color: #86868b;
+    font-size: 0.625rem;
+    font-weight: 500;
+  }
+
+  .calendar-apple .hour-cell {
+    border-color: #d2d2d7;
+  }
+
+  .calendar-apple .day-column {
+    background: #fff;
+    border-left: 1px solid #d2d2d7;
+  }
+
+  .calendar-apple .day-column.today {
+    background: rgba(255, 59, 48, 0.03);
+  }
+
+  .calendar-apple .calendar-event {
+    border-radius: 0.375rem;
+    border-left: 3px solid;
+  }
+
+  /* Apple event colors */
+  .calendar-apple .event-blue {
+    background: rgba(0, 122, 255, 0.15);
+    color: #007aff;
+    border-color: #007aff;
+  }
+
+  .calendar-apple .event-green {
+    background: rgba(52, 199, 89, 0.15);
+    color: #34c759;
+    border-color: #34c759;
+  }
+
+  .calendar-apple .event-red {
+    background: rgba(255, 59, 48, 0.15);
+    color: #ff3b30;
+    border-color: #ff3b30;
+  }
+
+  .calendar-apple .event-purple {
+    background: rgba(175, 82, 222, 0.15);
+    color: #af52de;
+    border-color: #af52de;
+  }
+
+  .calendar-apple .event-orange {
+    background: rgba(255, 149, 0, 0.15);
+    color: #ff9500;
+    border-color: #ff9500;
+  }
+
+  .calendar-apple .event-cyan {
+    background: rgba(90, 200, 250, 0.15);
+    color: #5ac8fa;
+    border-color: #5ac8fa;
+  }
+
+  .calendar-apple .event-pink {
+    background: rgba(255, 45, 85, 0.15);
+    color: #ff2d55;
+    border-color: #ff2d55;
+  }
+
+  .calendar-apple .event-yellow {
+    background: rgba(255, 204, 0, 0.15);
+    color: #cc9900;
+    border-color: #ffcc00;
+  }
+
+  /* ========================================
+     Outlook Style - Light
+     ======================================== */
+  .calendar-outlook {
+    background: #fff;
+    border: 1px solid #edebe9;
+  }
+
+  .calendar-outlook .calendar-header {
+    background: #faf9f8;
+    border-color: #edebe9;
+  }
+
+  .calendar-outlook .weekday {
+    color: #605e5c;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .calendar-outlook .day-number {
+    color: #323130;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .calendar-outlook .day-header.today .day-number {
+    background: #0078d4;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .calendar-outlook .day-header.today .weekday {
+    color: #0078d4;
+  }
+
+  .calendar-outlook .time-label {
+    color: #605e5c;
+    font-size: 0.6875rem;
+  }
+
+  .calendar-outlook .hour-cell {
+    border-color: #edebe9;
+  }
+
+  .calendar-outlook .day-column {
+    border-left: 1px solid #edebe9;
+  }
+
+  .calendar-outlook .day-column.today {
+    background: rgba(0, 120, 212, 0.04);
+  }
+
+  .calendar-outlook .calendar-event {
+    border-radius: 0.125rem;
+    border-left: 4px solid;
+  }
+
+  /* Outlook event colors */
+  .calendar-outlook .event-blue {
+    background: #deecf9;
+    color: #0078d4;
+    border-color: #0078d4;
+  }
+
+  .calendar-outlook .event-green {
+    background: #dff6dd;
+    color: #107c10;
+    border-color: #107c10;
+  }
+
+  .calendar-outlook .event-red {
+    background: #fde7e9;
+    color: #d13438;
+    border-color: #d13438;
+  }
+
+  .calendar-outlook .event-purple {
+    background: #e8d4f0;
+    color: #881798;
+    border-color: #881798;
+  }
+
+  .calendar-outlook .event-orange {
+    background: #fff4ce;
+    color: #ca5010;
+    border-color: #ca5010;
+  }
+
+  .calendar-outlook .event-cyan {
+    background: #d0e7f2;
+    color: #008272;
+    border-color: #008272;
+  }
+
+  .calendar-outlook .event-pink {
+    background: #fce4ec;
+    color: #e3008c;
+    border-color: #e3008c;
+  }
+
+  .calendar-outlook .event-yellow {
+    background: #fff4ce;
+    color: #8a7600;
+    border-color: #ffc83d;
+  }
+
+  /* ========================================
+     Dark Mode - Explicit (calendar--dark)
+     ======================================== */
+  
+  /* Google Dark */
+  .calendar--dark.calendar-google {
+    background: #202124;
+    border-color: #3c4043;
+  }
+
+  .calendar--dark.calendar-google .calendar-header {
+    border-color: #3c4043;
+  }
+
+  .calendar--dark.calendar-google .weekday {
+    color: #9aa0a6;
+  }
+
+  .calendar--dark.calendar-google .day-number {
+    color: #e8eaed;
+  }
+
+  .calendar--dark.calendar-google .time-label {
+    color: #9aa0a6;
+  }
+
+  .calendar--dark.calendar-google .hour-cell {
+    border-color: #3c4043;
+  }
+
+  .calendar--dark.calendar-google .day-column {
+    border-color: #3c4043;
+  }
+
+  .calendar--dark.calendar-google .day-column.today {
+    background: rgba(138, 180, 248, 0.08);
+  }
+
+  /* Apple Dark */
+  .calendar--dark.calendar-apple {
+    background: #1c1c1e;
+    border-color: #38383a;
+  }
+
+  .calendar--dark.calendar-apple .calendar-header {
+    background: #2c2c2e;
+    border-color: #38383a;
+  }
+
+  .calendar--dark.calendar-apple .weekday {
+    color: #98989d;
+  }
+
+  .calendar--dark.calendar-apple .day-number {
+    color: #fff;
+  }
+
+  .calendar--dark.calendar-apple .time-label {
+    color: #98989d;
+  }
+
+  .calendar--dark.calendar-apple .hour-cell {
+    border-color: #38383a;
+  }
+
+  .calendar--dark.calendar-apple .day-column {
+    background: #2c2c2e;
+    border-color: #38383a;
+  }
+
+  .calendar--dark.calendar-apple .day-column.today {
+    background: rgba(255, 59, 48, 0.08);
+  }
+
+  /* Outlook Dark */
+  .calendar--dark.calendar-outlook {
+    background: #201f1e;
+    border-color: #323130;
+  }
+
+  .calendar--dark.calendar-outlook .calendar-header {
+    background: #292827;
+    border-color: #323130;
+  }
+
+  .calendar--dark.calendar-outlook .weekday {
+    color: #a19f9d;
+  }
+
+  .calendar--dark.calendar-outlook .day-number {
+    color: #f3f2f1;
+  }
+
+  .calendar--dark.calendar-outlook .time-label {
+    color: #a19f9d;
+  }
+
+  .calendar--dark.calendar-outlook .hour-cell {
+    border-color: #323130;
+  }
+
+  .calendar--dark.calendar-outlook .day-column {
+    border-color: #323130;
+  }
+
+  .calendar--dark.calendar-outlook .day-column.today {
+    background: rgba(0, 120, 212, 0.08);
+  }
+
+  /* ========================================
+     Dark Mode - Auto (prefers-color-scheme)
+     ======================================== */
+  @media (prefers-color-scheme: dark) {
+    /* Google Auto Dark */
+    .calendar--auto.calendar-google {
+      background: #202124;
+      border-color: #3c4043;
+    }
+
+    .calendar--auto.calendar-google .calendar-header {
+      border-color: #3c4043;
+    }
+
+    .calendar--auto.calendar-google .weekday {
+      color: #9aa0a6;
+    }
+
+    .calendar--auto.calendar-google .day-number {
+      color: #e8eaed;
+    }
+
+    .calendar--auto.calendar-google .time-label {
+      color: #9aa0a6;
+    }
+
+    .calendar--auto.calendar-google .hour-cell {
+      border-color: #3c4043;
+    }
+
+    .calendar--auto.calendar-google .day-column {
+      border-color: #3c4043;
+    }
+
+    .calendar--auto.calendar-google .day-column.today {
+      background: rgba(138, 180, 248, 0.08);
+    }
+
+    /* Apple Auto Dark */
+    .calendar--auto.calendar-apple {
+      background: #1c1c1e;
+      border-color: #38383a;
+    }
+
+    .calendar--auto.calendar-apple .calendar-header {
+      background: #2c2c2e;
+      border-color: #38383a;
+    }
+
+    .calendar--auto.calendar-apple .weekday {
+      color: #98989d;
+    }
+
+    .calendar--auto.calendar-apple .day-number {
+      color: #fff;
+    }
+
+    .calendar--auto.calendar-apple .time-label {
+      color: #98989d;
+    }
+
+    .calendar--auto.calendar-apple .hour-cell {
+      border-color: #38383a;
+    }
+
+    .calendar--auto.calendar-apple .day-column {
+      background: #2c2c2e;
+      border-color: #38383a;
+    }
+
+    .calendar--auto.calendar-apple .day-column.today {
+      background: rgba(255, 59, 48, 0.08);
+    }
+
+    /* Outlook Auto Dark */
+    .calendar--auto.calendar-outlook {
+      background: #201f1e;
+      border-color: #323130;
+    }
+
+    .calendar--auto.calendar-outlook .calendar-header {
+      background: #292827;
+      border-color: #323130;
+    }
+
+    .calendar--auto.calendar-outlook .weekday {
+      color: #a19f9d;
+    }
+
+    .calendar--auto.calendar-outlook .day-number {
+      color: #f3f2f1;
+    }
+
+    .calendar--auto.calendar-outlook .time-label {
+      color: #a19f9d;
+    }
+
+    .calendar--auto.calendar-outlook .hour-cell {
+      border-color: #323130;
+    }
+
+    .calendar--auto.calendar-outlook .day-column {
+      border-color: #323130;
+    }
+
+    .calendar--auto.calendar-outlook .day-column.today {
+      background: rgba(0, 120, 212, 0.08);
+    }
+  }
+</style>

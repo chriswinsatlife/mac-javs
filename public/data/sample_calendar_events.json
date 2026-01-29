@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Team Standup",
+    "start": "2025-01-27T09:00",
+    "end": "2025-01-27T09:30",
+    "color": "blue"
+  },
+  {
+    "title": "Product Review",
+    "start": "2025-01-27T14:00",
+    "end": "2025-01-27T15:30",
+    "color": "green",
+    "location": "Conference Room A"
+  },
+  {
+    "title": "1:1 with Manager",
+    "start": "2025-01-28T10:00",
+    "end": "2025-01-28T10:30",
+    "color": "purple"
+  },
+  {
+    "title": "Design Workshop",
+    "start": "2025-01-28T13:00",
+    "end": "2025-01-28T16:00",
+    "color": "orange",
+    "location": "Design Studio"
+  },
+  {
+    "title": "Sprint Planning",
+    "start": "2025-01-29T09:00",
+    "end": "2025-01-29T11:00",
+    "color": "blue"
+  },
+  {
+    "title": "Lunch with Client",
+    "start": "2025-01-29T12:00",
+    "end": "2025-01-29T13:30",
+    "color": "cyan",
+    "location": "Downtown Cafe"
+  },
+  {
+    "title": "Code Review",
+    "start": "2025-01-29T15:00",
+    "end": "2025-01-29T16:00",
+    "color": "red"
+  },
+  {
+    "title": "Team Standup",
+    "start": "2025-01-30T09:00",
+    "end": "2025-01-30T09:30",
+    "color": "blue"
+  },
+  {
+    "title": "Architecture Discussion",
+    "start": "2025-01-30T11:00",
+    "end": "2025-01-30T12:30",
+    "color": "purple"
+  },
+  {
+    "title": "Demo Prep",
+    "start": "2025-01-31T14:00",
+    "end": "2025-01-31T15:00",
+    "color": "yellow"
+  },
+  {
+    "title": "Friday Demo",
+    "start": "2025-01-31T16:00",
+    "end": "2025-01-31T17:00",
+    "color": "green",
+    "location": "Main Hall"
+  },
+  {
+    "title": "Weekend Planning",
+    "start": "2025-02-01T10:00",
+    "end": "2025-02-01T11:00",
+    "color": "pink"
+  }
+]
