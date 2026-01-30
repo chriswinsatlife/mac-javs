@@ -1,5 +1,8 @@
 ## Files and Folders
 
+- [Athena](https://www.athena.com/) is a premium executive assistant service.
+- Athena clients are startup founders and executives, venture capitalists and other private equity personnel, larger-scale or rapidly scaling SMB entrepreneurs (often professional services like law, medicine and boutique consulting; real estate; bootstrapped SaaS; high-end "creators" e.g. `@thepediatricianmom`); mid-market and enterprise company executives or director+ level managers, etc).
+- The purpose of this repo is to generate long-form content and supporting assets (e.g. D3 visualizations, Dagre and Mermaid Diagrams, genAI illustrations and other media, etc).
 - This project uses Astro, DaisyUI, Tailwind V4, Bun, D3/Dagre, Mermaid, MDX, and Vercel AI SDK v6.
 - Use the `grepapp` and `ref` CLI tools to get latest documentation.
 - Use the `exa` CLI tool to get latest code context (i.e. current implementations) or answers (simple reponses to questions).
@@ -22,3 +25,4 @@
 - Use `lower_snake_case` for every filename, directory name, etc.
 - Strongly prefer Bun and avoid Node to the maximum extent possible. Always check Bun.com documentation for ways to avoid using Node or implement a feature with the latest Bun APIs, primitives, and syntax. Refactor any discovered Node usage to Bun immediately if encountered. Only utilize Node if multiple non-Node implementations were tried relentlessly and could not be implemented to success.
 - There are demos for the component library listed here: `docs/demo_pages.md`; update regularly
+- Documentation for the repo, its utilities, its workflows, its architecture, its runbooks, and so on live in `docs/` or subdirectories within.

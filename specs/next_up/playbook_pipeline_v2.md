@@ -4,6 +4,115 @@ Multi-step AI generation pipeline for Athena playbooks using JSON content collec
 
 Tech: Bun + Vercel AI SDK v6 + Zod. No framework (Mastra etc) for v1.
 
+## Vercel AI SDK v6 Patterns
+
+IMPORTANT: `generateObject` and `streamObject` are **deprecated**. Use `generateText` with `Output.object()` instead.
+
+### Installation
+
+```bash
+bun add ai @ai-sdk/anthropic zod
+```
+
+### Structured Output Generation
+
+```typescript
+import { generateText, Output } from 'ai';
+import { anthropic } from '@ai-sdk/anthropic';
+import { z } from 'zod';
+
+// Define schema with Zod
+const playbookSchema = z.object({
+  meta: z.object({
+    title: z.string().describe('SEO-friendly title'),
+    description: z.string().describe('Meta description, 150-160 chars'),
+  }),
+  sections: z.array(z.object({
+    id: z.string(),
+    title: z.string(),
+    content: z.object({
+      format: z.enum(['prose', 'checklist', 'steps', 'specs']),
+      // ... rest of content schema
+    }),
+  })),
+});
+
+// Generate structured output
+const { output } = await generateText({
+  model: anthropic('claude-sonnet-4-5'),
+  output: Output.object({
+    name: 'Playbook',
+    description: 'A complete playbook for delegation',
+    schema: playbookSchema,
+  }),
+  system: 'You generate Athena playbooks for EA delegation...',
+  prompt: briefContent,
+});
+```
+
+### Output Types Available
+
+- `Output.text()` - plain text (default)
+- `Output.object({ schema })` - typed object with Zod validation
+- `Output.array({ element })` - array of typed elements
+- `Output.choice({ options })` - enum/classification
+- `Output.json()` - unstructured JSON
+
+### Streaming Structured Output
+
+```typescript
+import { streamText, Output } from 'ai';
+
+const { partialOutputStream } = streamText({
+  model: anthropic('claude-sonnet-4-5'),
+  output: Output.object({ schema: playbookSchema }),
+  prompt: briefContent,
+});
+
+for await (const partialObject of partialOutputStream) {
+  console.log(partialObject); // Partial object as it streams
+}
+```
+
+### Error Handling
+
+```typescript
+import { generateText, Output, NoObjectGeneratedError } from 'ai';
+
+try {
+  const { output } = await generateText({
+    model: anthropic('claude-sonnet-4-5'),
+    output: Output.object({ schema }),
+    prompt,
+  });
+} catch (error) {
+  if (NoObjectGeneratedError.isInstance(error)) {
+    console.error('Failed to generate:', error.cause);
+    console.error('Raw text:', error.text);
+  }
+}
+```
+
+### Provider Options
+
+```typescript
+import { anthropic, AnthropicProviderOptions } from '@ai-sdk/anthropic';
+
+const { output } = await generateText({
+  model: anthropic('claude-sonnet-4-5'),
+  output: Output.object({ schema }),
+  prompt,
+  temperature: 0.7,
+  maxOutputTokens: 4000,
+  providerOptions: {
+    anthropic: {
+      // Enable structured output mode
+      structuredOutputMode: 'auto',
+    } satisfies AnthropicProviderOptions,
+  },
+});
+```
+
 ## Design Principles
 
 - JSON as source of truth: AI generates structured JSON validated by Zod schema

@@ -7,7 +7,9 @@ date: ""
 date_accessed: "2025-10-21T15:25:47Z"
 firecrawl_id: "c3d991d9-f794-4606-9d54-8f04330381e5"
 ---
+
 # Frequently Asked Questions
+
 Your Athena Membership
 What are Athena’s Membership requirements?
 There are no formal requirements to become an Athena Member. However, we are a two-way partnership so we do an initial call to make sure there’s a mutual fit. Whether you run a household, a small business, an enterprise company, or just your own busy life, Athena supports all types of leaders who are ready to live better and realize their full potential.
@@ -65,94 +67,98 @@ How does my XP receive payment?
 Your XP is employed and paid by Athena. They also receive health insurance, pet insurance (one of our most popular benefits), social perks, and mental health support.
 What benefits does my XP receive?
 Athena offers the following to every XP:
+
 - Continuous training and programs for upskilling
 - Best-in-class Health Maintenance Organization (HMO) for the XP and their family
 - Pet Reimbursement Program
 - Established communication channels to share things they've learned, exchange best practices, and celebrate achievements
 - Mental health support
-Does my XP receive PTO, and how does the process work?
-By contract, your XP is entitled to 20 days of paid time off per year (used for holidays, personal events, etc.). They will seek approval from Athena first. This process is in place because each type of leave has corresponding qualifications, conditions, and limitations. If Athena approves the PTO, your XP will then request your approval. If they need longer extended leave, your Partnership Manager will coordinate the necessary training, shadow sessions, and meetings to ensure your life-work flow isn't disrupted.
-Working with your Executive Partner (XP)
-How can my XP help me?
-Our onboarding is designed to focus your attention, optimize your time, and manage your energy. Over time, your XP will learn to take on more and more of the administrative and operational tasks on your plate, and to serve as an extension of you.
-These are just a few examples of how your XP can help:
+  Does my XP receive PTO, and how does the process work?
+  By contract, your XP is entitled to 20 days of paid time off per year (used for holidays, personal events, etc.). They will seek approval from Athena first. This process is in place because each type of leave has corresponding qualifications, conditions, and limitations. If Athena approves the PTO, your XP will then request your approval. If they need longer extended leave, your Partnership Manager will coordinate the necessary training, shadow sessions, and meetings to ensure your life-work flow isn't disrupted.
+  Working with your Executive Partner (XP)
+  How can my XP help me?
+  Our onboarding is designed to focus your attention, optimize your time, and manage your energy. Over time, your XP will learn to take on more and more of the administrative and operational tasks on your plate, and to serve as an extension of you.
+  These are just a few examples of how your XP can help:
 - Organizing, drafting and helping to manage your email inbox
 - Owning your calendar and scheduling
 - Travel planning, booking and coordination
 - Personal and professional research
 - Submitting and tracking invoices
 - Meeting notes and follow-ups
-Are there best practices for setting up my XP’s work schedule?
-We recommend a fixed working schedule with daily overlap between you and your XP, especially at the beginning of the partnership. Many XPs start one hour before their client to complete inbox sweeps and brief them at the top of the day. As the partnership evolves, you can shift to whatever schedule works best for you and your XP.
-How many hours a week does my XP work?
-Every Athena XP works 40 hours per week (five business days) with two consecutive days off. You can discuss your preferences with your XP.
-What happens if my XP works more than 40 hours some weeks?
-Some weeks will be busier than others, but if your XP consistently works more than 40 hours a week, we recommend bringing on an additional Athena XP.
-How do I provide feedback on my XP’s performance?
-Our most successful partnerships provide real-time, direct feedback on a daily basis. During onboarding, we'll check in regularly, facilitate feedback sessions to get you up and running, and send out regular surveys to make sure your partnership is progressing.
-What if I ask my XP to do something they can’t do?
-If a request falls outside your XP’s scope, they’ll let you know right away. If it’s something your XP can develop the capability to support, your Partnership Manager will help define a path for your XP to take it on. If it’s not something we can cover, your XP will connect you with the right service partner or solution to get it done.
-Executive coaching at Athena
-What type of coaching is included with membership?
-Executive Coaching is included with every membership. Executive coaching is a professional development process where experienced coaches work one-on-one with leaders and executives to enhance their leadership effectiveness, decision-making abilities, and overall performance. This collaborative partnership typically results in improved leadership presence, better strategic thinking, enhanced emotional intelligence, and ultimately stronger business outcomes for both the individual leader and their organization.
-Who are the coaches, and what is their background?
-Athena coaches are seasoned, certified executive coaches with experience in nearly every type of business and focus area. They have thousands of hours of experience coaching founders and senior leaders.
-How often do I get access to coaching sessions?
-Members receive two comprehensive 1-hour coaching sessions each month, designed to provide in-depth support and guidance. In addition to these dedicated sessions, members also benefit from asynchronous communication channels throughout the month.
-Can my XP join coaching sessions with me?
-If you would like to use a session to work on strengthening your relationship with your XP or to align on goals, you are welcome to invite your XP to the session. Otherwise, it is recommended that you attend the sessions alone.
-Can coaching be tailored to my personal or business goals?
-Athena Executive Coaching offers a self-directed approach, allowing you to customize the focus of each session based on your individual goals, current experiences, and challenges. Our coaches follow your lead while checking in on your previous commitments and goals.
-Your privacy and security
-What measures are in place to ensure security, privacy, and confidentiality?
-We take security, privacy, and confidentiality very seriously. Every XP undergoes a comprehensive third-party background check, with character references verified and previous employers contacted. Security and privacy rules are reviewed regularly during and after training to ensure your XP is compliant with all precautions. Information Security Awareness Training is required annually for all employees. Learn more about our [Security Measures](https://www.athena.com/security).
-Can I require my Executive Partner (XP) to sign a non-disclosure agreement (NDA)?
-Yes, your XP can sign a company NDA. Your XP also signs a contract with Athena that covers client confidentiality.
-What device does my Executive Partner (XP) use?
-Every XP receives an Athena-issued MacBook at the start of a partnership. They are not permitted to use personal devices.
-What tools are provided to my Executive Partner (XP)?
-Athena provides every XP with a MacBook, NordVPN, and a Zoom account.
-How do you keep my Executive Partner’s device secure?
-Mobile Device Management software is installed on every XP’s laptop. It enforces security measures such as hard drive encryption, strong password setting, regular password updates, device lockouts, OS updates, location tracking, and more.
-How does Athena protect employee devices?
-We use a Mobile Device Management (MDM) solution deployed on all company-provided laptops to enforce security policies and ensure consistent configuration.
-This includes:
+  Are there best practices for setting up my XP’s work schedule?
+  We recommend a fixed working schedule with daily overlap between you and your XP, especially at the beginning of the partnership. Many XPs start one hour before their client to complete inbox sweeps and brief them at the top of the day. As the partnership evolves, you can shift to whatever schedule works best for you and your XP.
+  How many hours a week does my XP work?
+  Every Athena XP works 40 hours per week (five business days) with two consecutive days off. You can discuss your preferences with your XP.
+  What happens if my XP works more than 40 hours some weeks?
+  Some weeks will be busier than others, but if your XP consistently works more than 40 hours a week, we recommend bringing on an additional Athena XP.
+  How do I provide feedback on my XP’s performance?
+  Our most successful partnerships provide real-time, direct feedback on a daily basis. During onboarding, we'll check in regularly, facilitate feedback sessions to get you up and running, and send out regular surveys to make sure your partnership is progressing.
+  What if I ask my XP to do something they can’t do?
+  If a request falls outside your XP’s scope, they’ll let you know right away. If it’s something your XP can develop the capability to support, your Partnership Manager will help define a path for your XP to take it on. If it’s not something we can cover, your XP will connect you with the right service partner or solution to get it done.
+  Executive coaching at Athena
+  What type of coaching is included with membership?
+  Executive Coaching is included with every membership. Executive coaching is a professional development process where experienced coaches work one-on-one with leaders and executives to enhance their leadership effectiveness, decision-making abilities, and overall performance. This collaborative partnership typically results in improved leadership presence, better strategic thinking, enhanced emotional intelligence, and ultimately stronger business outcomes for both the individual leader and their organization.
+  Who are the coaches, and what is their background?
+  Athena coaches are seasoned, certified executive coaches with experience in nearly every type of business and focus area. They have thousands of hours of experience coaching founders and senior leaders.
+  How often do I get access to coaching sessions?
+  Members receive two comprehensive 1-hour coaching sessions each month, designed to provide in-depth support and guidance. In addition to these dedicated sessions, members also benefit from asynchronous communication channels throughout the month.
+  Can my XP join coaching sessions with me?
+  If you would like to use a session to work on strengthening your relationship with your XP or to align on goals, you are welcome to invite your XP to the session. Otherwise, it is recommended that you attend the sessions alone.
+  Can coaching be tailored to my personal or business goals?
+  Athena Executive Coaching offers a self-directed approach, allowing you to customize the focus of each session based on your individual goals, current experiences, and challenges. Our coaches follow your lead while checking in on your previous commitments and goals.
+  Your privacy and security
+  What measures are in place to ensure security, privacy, and confidentiality?
+  We take security, privacy, and confidentiality very seriously. Every XP undergoes a comprehensive third-party background check, with character references verified and previous employers contacted. Security and privacy rules are reviewed regularly during and after training to ensure your XP is compliant with all precautions. Information Security Awareness Training is required annually for all employees. Learn more about our [Security Measures](https://www.athena.com/security).
+  Can I require my Executive Partner (XP) to sign a non-disclosure agreement (NDA)?
+  Yes, your XP can sign a company NDA. Your XP also signs a contract with Athena that covers client confidentiality.
+  What device does my Executive Partner (XP) use?
+  Every XP receives an Athena-issued MacBook at the start of a partnership. They are not permitted to use personal devices.
+  What tools are provided to my Executive Partner (XP)?
+  Athena provides every XP with a MacBook, NordVPN, and a Zoom account.
+  How do you keep my Executive Partner’s device secure?
+  Mobile Device Management software is installed on every XP’s laptop. It enforces security measures such as hard drive encryption, strong password setting, regular password updates, device lockouts, OS updates, location tracking, and more.
+  How does Athena protect employee devices?
+  We use a Mobile Device Management (MDM) solution deployed on all company-provided laptops to enforce security policies and ensure consistent configuration.
+  This includes:
 - **Full disk encryption:** Devices are encrypted to maintain data integrity and confidentiality.
 - **Software updates:** All devices are regularly patched or updated to protect against vulnerabilities.
 - **Remote data wipe:** In case of theft or loss, we can remotely erase data to prevent unauthorized access.
 - **Password complexity:** We enforce strong password requirements to keep devices secure.
 - **Two-factor authentication (2FA):** Applied across all company systems and applications to ensure only authorized individuals can access sensitive information.
-Can my XP make international phone calls for tasks like booking international hotels, following up on a refund etc.?
-Yes, we provide your XP with a US phone number through Zoom.
-What endpoint protection does Athena use?
-We deploy an Endpoint Detection and Response (EDR) solution to enhance threat detection and response capabilities. This provides real-time protection against malware and other threats on employee devices.
-What information security policies does Athena follow?
-Athena follows and regularly updates comprehensive information security policies to meet industry standards. We also ensure our protocols align with client policies and comply with all relevant data protection laws. These policies cover confidentiality, integrity, and availability of our information systems.
-How does Athena train its team on security?
-Athena has an Information Security Awareness Program that all employees must participate in.
-Through this program we: 1. Educate our team on the latest security practices and threats.
+  Can my XP make international phone calls for tasks like booking international hotels, following up on a refund etc.?
+  Yes, we provide your XP with a US phone number through Zoom.
+  What endpoint protection does Athena use?
+  We deploy an Endpoint Detection and Response (EDR) solution to enhance threat detection and response capabilities. This provides real-time protection against malware and other threats on employee devices.
+  What information security policies does Athena follow?
+  Athena follows and regularly updates comprehensive information security policies to meet industry standards. We also ensure our protocols align with client policies and comply with all relevant data protection laws. These policies cover confidentiality, integrity, and availability of our information systems.
+  How does Athena train its team on security?
+  Athena has an Information Security Awareness Program that all employees must participate in.
+  Through this program we: 1. Educate our team on the latest security practices and threats.
+
 2. Encourage quick reporting of any suspicious activity or incidents.
 3. Train employees to recognize and respond to phishing and other social engineering attacks.
-What future initiatives is Athena planning to enhance cybersecurity?
-We are pursuing our SOC 2 Type II attestation through Q4 2025, and our ISO 27001 in 2026.
-Billing and payment
-How is membership billed?
-Membership dues are billed quarterly.
-What payment methods are accepted?
-We accept credit cards or ACH.
-Referral program
-Does Athena have a referral program?
-Yes. Every Athena member is automatically enrolled in our referral program, which offers some of the strongest incentives in the industry for both you and your referrals. The specific rewards change periodically, and they’re always designed to offer true value to you, your referrals and your XP.
-How do I refer someone?
-You’ll receive a unique referral link and custom landing page to share. Anyone who joins Athena through your link will be credited to you, activating your reward and your referral’s discount.
-What do I receive for a successful referral?
-When someone joins through your link, they’ll receive a discount on their membership. You’ll receive a cash reward, and your XP will also receive a bonus. On top of that, Athena often adds special perks, such as gifts or event access, as bonuses.
-What does the person I referred receive?
-They’ll receive an exclusive discount on their Athena membership and priority onboarding when they join through your referral link.
-What does my XP receive when I refer someone?
-Your XP earns a $500 bonus for every successful referral you make.
-Who should I refer?
-Anyone in your network – friends, colleagues, family, or your broader audience. Athena members span every industry, and our XPs adapt to any field, so you can confidently refer anyone who would benefit from more time and leverage.
+   What future initiatives is Athena planning to enhance cybersecurity?
+   We are pursuing our SOC 2 Type II attestation through Q4 2025, and our ISO 27001 in 2026.
+   Billing and payment
+   How is membership billed?
+   Membership dues are billed quarterly.
+   What payment methods are accepted?
+   We accept credit cards or ACH.
+   Referral program
+   Does Athena have a referral program?
+   Yes. Every Athena member is automatically enrolled in our referral program, which offers some of the strongest incentives in the industry for both you and your referrals. The specific rewards change periodically, and they’re always designed to offer true value to you, your referrals and your XP.
+   How do I refer someone?
+   You’ll receive a unique referral link and custom landing page to share. Anyone who joins Athena through your link will be credited to you, activating your reward and your referral’s discount.
+   What do I receive for a successful referral?
+   When someone joins through your link, they’ll receive a discount on their membership. You’ll receive a cash reward, and your XP will also receive a bonus. On top of that, Athena often adds special perks, such as gifts or event access, as bonuses.
+   What does the person I referred receive?
+   They’ll receive an exclusive discount on their Athena membership and priority onboarding when they join through your referral link.
+   What does my XP receive when I refer someone?
+   Your XP earns a $500 bonus for every successful referral you make.
+   Who should I refer?
+   Anyone in your network – friends, colleagues, family, or your broader audience. Athena members span every industry, and our XPs adapt to any field, so you can confidently refer anyone who would benefit from more time and leverage.
+
 ## Let’s talk
+
 Schedule a call to see how an Athena Membership can power your success.
 [Book a call](https://getstarted.athena.com/)
