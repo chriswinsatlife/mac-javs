@@ -1,3 +1,6 @@
+> **Status: ARCHIVED** (2026-01-30)
+> Merged into `specs/completed/playbook_pipeline_v2.md`. JSON schema now implemented as Zod in `src/lib/playbook_schemas.ts`.
+
 You're absolutely right. Let me look at the content structure patterns more closely.
 
 From the scraped examples:

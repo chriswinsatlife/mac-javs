@@ -1,3 +1,6 @@
+> **Status: ARCHIVED** (2026-01-30)
+> Merged into `specs/completed/playbook_pipeline_v2.md`. Taxonomy and ontology now live in `src/lib/playbook_schemas.ts`.
+
 Excellent. Now I have a comprehensive picture. Let me synthesize everything into a data model proposal.
 
 Based on my analysis of:

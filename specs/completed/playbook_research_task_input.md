@@ -1,5 +1,12 @@
 # Playbook Research Task Input
 
+> **Status: COMPLETED** (2026-01-30)
+> Input format defined. Prompts implemented at:
+> - `prompts/playbook_research_system.md`
+> - `prompts/playbook_research_query.md`
+> - `prompts/playbook_analysis.md`
+> Note: Full research pipeline is separate spec at `specs/the_backlog/playbook_research_pipeline.md`
+
 Per-job input for the playbook research pipeline. 5 plaintext fields.
 
 ## Fields

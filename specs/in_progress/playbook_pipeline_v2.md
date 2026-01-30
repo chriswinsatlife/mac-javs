@@ -1,5 +1,14 @@
 # Playbook Authoring Pipeline V2
 
+> **Status: COMPLETED** (2026-01-30)
+> - Phase 1 (Content Generation): Done - `scripts/generate_playbook.ts`
+> - Phase 2a (Diagrams): NOT BUILT - no `generate_playbook_diagrams.ts`
+> - Phase 2b (Illustrations): Done - `tools/generate_illustration.ts`
+> - Phase 2c (Embed Data): NOT BUILT - no `generate_playbook_embeds.ts`
+> - Phase 3 (Astro Build): Done - `[slug].astro`, content collection, 15 components
+> - Zod schemas: Done - `src/lib/playbook_schemas.ts`
+> - Brief parser: Done - `src/lib/brief_parser.ts`
+
 Multi-step AI generation pipeline for Athena playbooks using JSON content collections.
 
 Tech: Bun + Vercel AI SDK v6 + Zod. No framework (Mastra etc) for v1.

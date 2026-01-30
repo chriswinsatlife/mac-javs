@@ -1,3 +1,21 @@
+# Playbook Template Page Upgrades
+
+> **Status: IN PROGRESS** (2026-01-30)
+> 
+> **Done:**
+> - Hero, ToolsGrid, BeforeAfter, FAQ, Section components
+> - SectionChecklist, SectionSteps, SectionSpecs, SectionProse
+> - EmbedRenderer with DiagramEmbed, ComparisonEmbed, ImageEmbed
+> - RelatedPlaybooks component
+> 
+> **Not done:**
+> - "Copy the Prompt" sidebar with ChatGPT/Claude/Gemini buttons
+> - Author/profile cards
+> - Vertical dividers framing editorial text
+> - "More Playbooks" discovery section (dark green footer)
+> - Custom watercolor hero illustrations
+> - Rich embed components unused: Messages, Calendar, EmailThread, Notifications, DataTableViewer
+
 ## Mockup Analysis Summary
 
 The reference mockup (`docs/playbook_page_mockup.png`) is a premium, editorial-style playbook design with these key patterns:
