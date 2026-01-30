@@ -1,0 +1,287 @@
+---
+/**
+ * StackChips - Display a grid of tool/app chips with icons
+ * 
+ * Renders tools from the playbook data model as clickable chips.
+ * Supports inline data or loading from a JSON/YAML file.
+ * 
+ * Usage:
+ *   <StackChips
+ *     tools={[
+ *       { name: "Airtable", category: "database", logo: "/logos/airtable.svg", url: "https://airtable.com" },
+ *       { name: "Google Calendar", category: "calendar", logo: "/logos/gcal.svg" }
+ *     ]}
+ *   />
+ *   
+ *   <StackChips src="/data/playbook-tools.json" />
+ *   
+ *   <StackChips
+ *     tools={playbook.tools}
+ *     label="Tools Used"
+ *     showLabel={true}
+ *   />
+ */
+
+import fs from 'node:fs'
+import path from 'node:path'
+import yaml from 'js-yaml'
+
+export interface PlaybookTool {
+  name: string;
+  slug?: string;
+  category: string;
+  logo?: string;
+  url?: string;
+  affiliate_url?: string;
+  description?: string;
+  required?: boolean;
+  alternatives?: string[];
+}
+
+export interface Props {
+  tools?: PlaybookTool[];
+  src?: string;
+  label?: string;
+  showLabel?: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'outline' | 'filled' | 'ghost';
+}
+
+const {
+  tools: propTools,
+  src,
+  label = 'Stack',
+  showLabel = true,
+  size = 'md',
+  variant = 'outline',
+} = Astro.props
+
+// Load tools from file if src provided
+let tools: PlaybookTool[] = propTools || []
+
+if (src && !propTools) {
+  try {
+    const ext = path.extname(src).toLowerCase()
+    const filePath = src.startsWith('/') 
+      ? path.join(process.cwd(), 'public', src)
+      : path.join(process.cwd(), src)
+    
+    const content = fs.readFileSync(filePath, 'utf-8')
+    
+    if (ext === '.json') {
+      const data = JSON.parse(content)
+      tools = Array.isArray(data) ? data : data.tools || []
+    } else if (ext === '.yaml' || ext === '.yml') {
+      const data = yaml.load(content) as Record<string, unknown>
+      tools = Array.isArray(data) ? data as PlaybookTool[] : (data.tools as PlaybookTool[]) || []
+    }
+  } catch (e) {
+    console.error(`StackChips: Failed to load tools from ${src}:`, e)
+  }
+}
+
+// Helper to get the appropriate URL (affiliate preferred)
+function getToolUrl(tool: PlaybookTool): string | undefined {
+  return tool.affiliate_url || tool.url
+}
+---
+
+{tools.length > 0 && (
+  <div class={`stack-chips sc-size-${size} sc-variant-${variant}`}>
+    {showLabel && (
+      <div class="sc-label-row">
+        <span class="sc-label">{label.toUpperCase()}</span>
+        <span class="sc-label-line"></span>
+      </div>
+    )}
+    
+    <div class="sc-grid">
+      {tools.map((tool) => {
+        const url = getToolUrl(tool)
+        const ChipTag = url ? 'a' : 'div'
+        const chipProps = url ? { href: url, target: '_blank', rel: 'noopener noreferrer' } : {}
+        
+        return (
+          <ChipTag class="sc-chip" {...chipProps} title={tool.description || tool.name}>
+            {tool.logo ? (
+              <img 
+                src={tool.logo} 
+                alt={`${tool.name} icon`} 
+                class="sc-icon"
+                loading="lazy"
+              />
+            ) : (
+              <span class="sc-icon-placeholder">
+                {tool.name.charAt(0).toUpperCase()}
+              </span>
+            )}
+            <span class="sc-name">{tool.name}</span>
+          </ChipTag>
+        )
+      })}
+    </div>
+  </div>
+)}
+
+<style>
+  .stack-chips {
+    --sc-bg: #ffffff;
+    --sc-fg: #1a1a1a;
+    --sc-border: #e5e5e5;
+    --sc-border-hover: #999999;
+    --sc-label: #666666;
+    --sc-label-line: #d4d4d4;
+    --sc-radius: 8px;
+    --sc-gap: 0.75rem;
+    
+    font-family: 'Figtree', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Label row with line extending right */
+  .sc-label-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sc-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--sc-label);
+    white-space: nowrap;
+  }
+  
+  .sc-label-line {
+    flex: 1;
+    height: 1px;
+    background: var(--sc-label-line);
+  }
+  
+  /* Chip grid */
+  .sc-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sc-gap);
+  }
+  
+  /* Individual chip */
+  .sc-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--sc-bg);
+    border: 1px solid var(--sc-border);
+    border-radius: var(--sc-radius);
+    color: var(--sc-fg);
+    text-decoration: none;
+    font-family: ui-monospace, 'SF Mono', 'Menlo', monospace;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    cursor: default;
+  }
+  
+  a.sc-chip {
+    cursor: pointer;
+  }
+  
+  a.sc-chip:hover {
+    border-color: var(--sc-border-hover);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Icon */
+  .sc-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  .sc-icon-placeholder {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #666;
+    flex-shrink: 0;
+  }
+  
+  /* Tool name */
+  .sc-name {
+    white-space: nowrap;
+  }
+  
+  /* Size variants */
+  .sc-size-sm .sc-chip {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    gap: 0.5rem;
+  }
+  
+  .sc-size-sm .sc-icon,
+  .sc-size-sm .sc-icon-placeholder {
+    width: 18px;
+    height: 18px;
+    font-size: 0.625rem;
+  }
+  
+  .sc-size-lg .sc-chip {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .sc-size-lg .sc-icon,
+  .sc-size-lg .sc-icon-placeholder {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* Style variants */
+  .sc-variant-filled .sc-chip {
+    background: #f5f5f5;
+    border-color: transparent;
+  }
+  
+  .sc-variant-filled a.sc-chip:hover {
+    background: #ebebeb;
+    border-color: transparent;
+  }
+  
+  .sc-variant-ghost .sc-chip {
+    background: transparent;
+    border-color: transparent;
+  }
+  
+  .sc-variant-ghost a.sc-chip:hover {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: transparent;
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .stack-chips {
+      --sc-gap: 0.5rem;
+    }
+    
+    .sc-chip {
+      padding: 0.625rem 1rem;
+      font-size: 0.875rem;
+    }
+    
+    .sc-icon,
+    .sc-icon-placeholder {
+      width: 20px;
+      height: 20px;
+    }
+  }
+</style>

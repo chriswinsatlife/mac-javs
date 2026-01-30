@@ -1,0 +1,201 @@
+---
+import Base from '../layouts/Base.astro';
+import StackChips from '../components/StackChips.astro';
+---
+
+<Base title="StackChips Component Demo">
+  <main class="p-8 space-y-16 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-heading font-bold">StackChips Component Demo</h1>
+    <p class="text-mist-600">Display tool/app stacks as styled chips with icons, matching the playbook data model.</p>
+    
+    <!-- Basic Usage -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Basic Usage (Outline)</h2>
+      
+      <StackChips
+        tools={[
+          { name: "ChatGPT Deep Research", category: "ai", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png" },
+          { name: "Google Calendar", category: "calendar", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/512px-Google_Calendar_icon_%282020%29.svg.png" },
+          { name: "Asana", category: "project-management", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Asana_logo.svg/512px-Asana_logo.svg.png" },
+          { name: "Airtable", category: "database", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Airtable_Logo.svg/512px-Airtable_Logo.svg.png" },
+          { name: "WhatsApp", category: "messaging", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" },
+          { name: "Superhuman", category: "email", logo: "https://asset.brandfetch.io/idEnT5QXUD/idCOV_YNCB.png" },
+          { name: "Mercury Personal", category: "banking", logo: "https://asset.brandfetch.io/idJmU6e98X/idI5HJYzQi.svg" },
+        ]}
+      />
+    </section>
+    
+    <!-- Without Logo -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Without Logos (Placeholder)</h2>
+      
+      <StackChips
+        tools={[
+          { name: "Notion", category: "notes" },
+          { name: "Slack", category: "messaging" },
+          { name: "Figma", category: "design" },
+          { name: "Linear", category: "project-management" },
+        ]}
+        label="Productivity Stack"
+      />
+    </section>
+    
+    <!-- Filled Variant -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Filled Variant</h2>
+      
+      <StackChips
+        variant="filled"
+        tools={[
+          { name: "Zapier", category: "automation", logo: "https://asset.brandfetch.io/idnGwTFApN/idBZxNr2wT.png" },
+          { name: "Make", category: "automation", logo: "https://asset.brandfetch.io/idkUQ9GxBm/id_-yQvqfr.png" },
+          { name: "n8n", category: "automation" },
+        ]}
+        label="Automation"
+      />
+    </section>
+    
+    <!-- Ghost Variant -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Ghost Variant</h2>
+      
+      <StackChips
+        variant="ghost"
+        tools={[
+          { name: "VS Code", category: "dev-tools" },
+          { name: "GitHub", category: "dev-tools" },
+          { name: "Vercel", category: "deployment" },
+        ]}
+        label="Dev Stack"
+      />
+    </section>
+    
+    <!-- Size Variants -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Size Variants</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-medium text-mist-700 mb-4">Small</h3>
+          <StackChips
+            size="sm"
+            showLabel={false}
+            tools={[
+              { name: "Notion", category: "notes" },
+              { name: "Slack", category: "messaging" },
+              { name: "Zoom", category: "video" },
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-medium text-mist-700 mb-4">Medium (Default)</h3>
+          <StackChips
+            size="md"
+            showLabel={false}
+            tools={[
+              { name: "Notion", category: "notes" },
+              { name: "Slack", category: "messaging" },
+              { name: "Zoom", category: "video" },
+            ]}
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-medium text-mist-700 mb-4">Large</h3>
+          <StackChips
+            size="lg"
+            showLabel={false}
+            tools={[
+              { name: "Notion", category: "notes" },
+              { name: "Slack", category: "messaging" },
+              { name: "Zoom", category: "video" },
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+    
+    <!-- With URLs (Clickable) -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">With URLs (Clickable)</h2>
+      
+      <StackChips
+        tools={[
+          { 
+            name: "Airtable", 
+            category: "database", 
+            logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Airtable_Logo.svg/512px-Airtable_Logo.svg.png",
+            url: "https://airtable.com",
+            description: "Track people, events, and gift history"
+          },
+          { 
+            name: "Zapier", 
+            category: "automation", 
+            logo: "https://asset.brandfetch.io/idnGwTFApN/idBZxNr2wT.png",
+            url: "https://zapier.com",
+            description: "Automate workflows between apps"
+          },
+        ]}
+        label="Required Tools"
+      />
+    </section>
+    
+    <!-- No Label -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Without Label</h2>
+      
+      <StackChips
+        showLabel={false}
+        tools={[
+          { name: "Stripe", category: "payments" },
+          { name: "Plaid", category: "banking" },
+          { name: "QuickBooks", category: "accounting" },
+        ]}
+      />
+    </section>
+    
+    <!-- Full Playbook Example -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Full Playbook Example</h2>
+      <p class="text-mist-600">Matching the data model from <code>playbook_content_data_model.md</code></p>
+      
+      <div class="bg-stone-50 p-6 rounded-lg border">
+        <StackChips
+          tools={[
+            { 
+              name: "Airtable", 
+              slug: "airtable",
+              category: "database", 
+              logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Airtable_Logo.svg/512px-Airtable_Logo.svg.png",
+              url: "https://airtable.com",
+              required: true,
+              description: "Track people, events, and gift history",
+              alternatives: ["Notion", "Google Sheets"]
+            },
+            { 
+              name: "Zapier", 
+              slug: "zapier",
+              category: "automation", 
+              logo: "https://asset.brandfetch.io/idnGwTFApN/idBZxNr2wT.png",
+              url: "https://zapier.com",
+              required: false,
+              description: "Optional: automate reminders",
+              alternatives: ["Make", "n8n"]
+            },
+            {
+              name: "Google Calendar",
+              slug: "google-calendar",
+              category: "calendar",
+              logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/512px-Google_Calendar_icon_%282020%29.svg.png",
+              url: "https://calendar.google.com",
+              required: true,
+              description: "Sync gift events and reminders"
+            },
+          ]}
+          label="Stack"
+        />
+      </div>
+    </section>
+  </main>
+</Base>
