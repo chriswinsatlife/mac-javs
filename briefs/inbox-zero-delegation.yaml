@@ -1,0 +1,63 @@
+slug: inbox-zero-delegation
+area: admin
+
+topic: |
+  Achieving and maintaining Inbox Zero through strategic delegation to an executive
+  assistant, without losing control of important communications.
+
+  This playbook covers: establishing triage protocols (what the EA handles vs escalates);
+  setting up label/folder systems and response templates; configuring delegation access
+  (Gmail delegation, Superhuman team features, or shared inbox tools); training the EA
+  on your communication style and priorities; and building feedback loops to improve
+  accuracy over time.
+
+  The system should handle: routine requests that can be declined or delegated; scheduling
+  requests; information requests the EA can research and respond to; follow-up reminders;
+  and flagging genuinely urgent items for immediate attention.
+
+  Edge cases: VIP senders who always get through, confidential threads the EA shouldn't see,
+  handling mistakes gracefully, and managing email during travel or intensive work periods.
+
+persona:
+  archetype: "Overwhelmed executive receiving 200+ emails daily"
+  pain_points:
+    - Spends 3+ hours daily on email, first thing in morning and last thing at night
+    - Important messages buried under noise
+    - Feels guilty about slow response times
+    - Can't disconnect for a day without email anxiety
+  goals:
+    - Process email in 30 minutes or less daily
+    - Never miss genuinely urgent or important messages
+    - Respond to routine requests within 24 hours without personal involvement
+    - Take a full day offline without stress
+
+research_guidance:
+  must_cover:
+    - Gmail/Outlook delegation setup and best practices
+    - Triage framework (4-quadrant or similar)
+    - Response template library
+    - VIP/priority sender lists
+    - Weekly review process to tune accuracy
+  do_not_cover:
+    - Email marketing or newsletter management
+    - Cold outreach strategies
+    - Email client feature comparisons
+  depth_guidance: "Tactical with specific examples - ready to implement this week"
+  angles:
+    - Trust-building with your EA (start small, expand scope)
+    - Communication style documentation (so responses feel authentic)
+    - Escalation protocols (never drop the ball on what matters)
+
+section_hints:
+  - Setting up delegation access securely
+  - The triage framework (handle, delegate, escalate, archive)
+  - Building your response template library
+  - Training your EA on your voice and priorities
+  - The weekly calibration meeting
+
+delegation_focus: |
+  This is a defensive delegation: the EA shields the client from noise while
+  ensuring important items surface quickly.
+  
+  The EA handles: initial triage, routine responses, scheduling coordination, follow-ups.
+  The client handles: strategic replies, relationship-critical threads, final decisions.

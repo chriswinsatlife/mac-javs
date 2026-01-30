@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "title": "Mastering Inbox Zero: The Executive’s Guide to Email Delegation",
+    "slug": "inbox-zero-delegation",
+    "description": "Learn how to delegate your inbox to an executive assistant using a triage framework, response templates, and secure delegation protocols to reclaim 10+ hours a week.",
+    "area": "admin",
+    "type": "playbook",
+    "status": "published",
+    "optimized_for": [
+      "Inbox Zero",
+      "Executive Productivity",
+      "Gmail Delegation",
+      "Time Management"
+    ],
+    "complexity": 7,
+    "scope": 6,
+    "intimacy": 8,
+    "time_savings": "10-15 hours per week",
+    "delegation": {
+      "pathway": "direct-defensive",
+      "modality": "process-driven",
+      "frequency": "recurring",
+      "level": "advanced"
+    }
+  },
+  "hero": {
+    "headline": "Reclaim 15 Hours a Week with Delegated Inbox Zero",
+    "subheadline": "Stop drowning in threads and start focusing on high-leverage work.",
+    "value_prop": "Transform your inbox from a source of anxiety into a streamlined command center. By teaching your EA to triage, draft, and manage 80% of your volume, you focus only on what requires your unique expertise.",
+    "stats": [
+      {
+        "value": "85%",
+        "label": "Reduction in Daily Email Volume"
+      },
+      {
+        "value": "<30m",
+        "label": "Time Spent on Email Daily"
+      },
+      {
+        "value": "100%",
+        "label": "Response Rate to VIPs"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Gmail Delegation",
+      "slug": "gmail",
+      "category": "Email",
+      "description": "Native tool to grant account access without password sharing.",
+      "required": true
+    },
+    {
+      "name": "Superhuman",
+      "slug": "superhuman",
+      "category": "Productivity",
+      "description": "High-speed email client with team sharing and snippet features.",
+      "required": false
+    }
+  ],
+  "before_after": {
+    "before": {
+      "title": "The Email Trap",
+      "pain_points": [
+        "200+ unread messages every morning",
+        "Anxiety every time the 'New Mail' notification pings",
+        "Spending Sunday nights 'catching up' on threads",
+        "Missing high-value opportunities due to noise"
+      ]
+    },
+    "after": {
+      "title": "The Strategic Inbox",
+      "benefits": [
+        "Inbox zero reached daily by 5:00 PM",
+        "Only 10-15 high-leverage emails require your attention",
+        "Routine requests handled within 4 hours by your EA",
+        "Complete mental clarity during off-hours"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "secure-access",
+      "title": "Phase 1: Secure Delegation Setup",
+      "icon": "shield-check",
+      "content": {
+        "format": "checklist",
+        "items": [
+          {
+            "label": "Enable Gmail/Outlook Delegation",
+            "details": "Grant access without sharing your primary password.",
+            "substeps": [
+              "Gmail: Settings > Accounts > Grant access to your account",
+              "Outlook: File > Account Settings > Delegate Access",
+              "Superhuman: Enable 'Team' features for shared drafting"
+            ]
+          },
+          {
+            "label": "Configure Labeling System",
+            "details": "Create a visual system for your EA to categorize incoming mail.",
+            "substeps": [
+              "Create '@Action Required' label for items you must handle",
+              "Create '@Drafts to Review' for EA-prepared responses",
+              "Create '@FYI' for items you should read but don't need to answer",
+              "Create '@Waiting' for items the EA is tracking for follow-up"
+            ]
+          }
+        ]
+      },
+      "callout": {
+        "type": "warning",
+        "content": "Never share your master Google/Microsoft password. Always use the built-in delegation features to maintain security and audit trails."
+      }
+    },
+    {
+      "id": "triage-framework",
+      "title": "Phase 2: The Triage Protocol",
+      "icon": "filter",
+      "content": {
+        "format": "specs",
+        "items": [
+          {
+            "label": "Category: Archive/Delete",
+            "value": "Newsletters, cold sales pitches, and automated notifications that don't require action."
+          },
+          {
+            "label": "Category: EA Handle",
+            "value": "Scheduling requests, receipts, simple info requests, and vendor coordination."
+          },
+          {
+            "label": "Category: EA Draft",
+            "value": "Introduction requests, project updates, and routine internal communications."
+          },
+          {
+            "label": "Category: Escalate",
+            "value": "Urgent board matters, high-value sales opportunities, and personal/confidential threads."
+          }
+        ]
+      },
+      "callout": {
+        "type": "tip",
+        "content": "Start by having your EA only 'Label' for one week. Once they achieve 95% accuracy, move to 'Drafting' and 'Handling'."
+      }
+    },
+    {
+      "id": "response-templates",
+      "title": "Phase 3: Building the Template Library",
+      "icon": "template",
+      "content": {
+        "format": "prose",
+        "text": "To move from triage to full delegation, your EA needs a library of your 'Standard Responses.' This allows them to draft emails that sound like you. \n\n**The 'Reply with a Number' Paradigm:** \nYour EA sends you a Slack message with 3 drafted options for a request. You simply reply '2' and they send it. \n\n**Common Templates to Create:**\n* **The Soft No:** 'Thanks for reaching out, but I'm at capacity for new projects right now.'\n* **The Hand-off:** 'I'm looping in [Name] who is better suited to help with this.'\n* **The Scheduling Link:** 'I'd love to chat. My EA [Name] can help find a time, or you can grab a slot here [Link].'"
+      },
+      "callout": {
+        "type": "example",
+        "content": "Template: 'I'm currently in a deep work sprint and not taking meetings, but please send over a 2-paragraph brief and I'll review it Friday.'"
+      }
+    },
+    {
+      "id": "calibration",
+      "title": "Phase 4: The Weekly Calibration",
+      "icon": "refresh",
+      "content": {
+        "format": "steps",
+        "items": [
+          {
+            "label": "The 'Missed' Audit",
+            "details": "Review the 'Archive' and 'FYI' folders once a week to see if anything important was miscategorized."
+          },
+          {
+            "label": "Voice Coaching",
+            "details": "Provide feedback on drafts. Say: 'This is too formal, I usually sign off with just my initial' or 'I want to be firmer on this specific topic.'"
+          },
+          {
+            "label": "VIP List Update",
+            "details": "Add new investors, key hires, or partners to the 'Immediate Escalation' list."
+          }
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What if my EA sees a confidential or personal email?",
+      "answer": "Use a 'Private' label or a separate personal email address for highly sensitive items. Most delegation tools allow you to hide specific threads or folders from the delegate."
+    },
+    {
+      "question": "How do I handle the transition period?",
+      "answer": "For the first 14 days, do not let the EA send anything. They should draft, and you should review and hit send. Only once the 'Drafts' require zero editing should you grant 'Send' authority."
+    },
+    {
+      "question": "How does the EA handle my specific writing style?",
+      "answer": "Give them access to your 'Sent' folder from the last 3 months. Have them analyze your most common phrases, your sign-offs, and your level of emoji/punctuation usage."
+    }
+  ],
+  "related": [
+    "executive-calendar-management",
+    "declining-meetings-gracefully",
+    "effective-slack-delegation"
+  ]
+}

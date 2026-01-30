@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "title": "Calendar Protection System: Reclaiming Your Executive Focus",
+    "slug": "calendar-protection-system",
+    "description": "Learn how to deploy your EA as a strategic gatekeeper to protect deep work, enforce meeting buffers, and eliminate calendar creep.",
+    "area": "admin",
+    "type": "playbook",
+    "status": "published",
+    "optimized_for": [
+      "time-blocking",
+      "executive-productivity",
+      "deep-work",
+      "calendar-management"
+    ],
+    "complexity": 6,
+    "scope": 7,
+    "intimacy": 4,
+    "time_savings": "5-10 hours per week",
+    "delegation": {
+      "pathway": "direct-defensive",
+      "modality": "process-driven",
+      "frequency": "recurring",
+      "level": "intermediate"
+    }
+  },
+  "hero": {
+    "headline": "Stop Renting Out Your Time. Start Owning It.",
+    "subheadline": "Transform your calendar from a reactive list of other people's priorities into a proactive engine for high-leverage outcomes.",
+    "value_prop": "This system turns your EA into a strategic gatekeeper who filters every request through your priorities, ensuring you only attend meetings that require your unique genius.",
+    "stats": [
+      {
+        "value": "30%",
+        "label": "Reduction in meeting volume"
+      },
+      {
+        "value": "10h",
+        "label": "Weekly focus time recovered"
+      },
+      {
+        "value": "0",
+        "label": "Accidental double-bookings"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "SavvyCal",
+      "slug": "savvycal",
+      "category": "Scheduling",
+      "url": "https://savvycal.com",
+      "required": false
+    },
+    {
+      "name": "Google Calendar",
+      "slug": "google-calendar",
+      "category": "Calendar",
+      "url": "https://calendar.google.com",
+      "required": false
+    }
+  ],
+  "before_after": {
+    "before": {
+      "title": "Reactive Chaos",
+      "pain_points": [
+        "Waking up to a calendar full of surprises",
+        "No time for lunch or deep work",
+        "Context switching every 30 minutes",
+        "Feeling like your time belongs to everyone but you"
+      ]
+    },
+    "after": {
+      "title": "Strategic Control",
+      "benefits": [
+        "Predictable 'Focus Zones' for high-value work",
+        "EA handles 95% of scheduling back-and-forth",
+        "Meetings are clustered, leaving full days for execution",
+        "Peace of mind knowing your priorities are protected"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "ideal-week-design",
+      "title": "Designing Your Ideal Week",
+      "icon": "calendar",
+      "content": {
+        "format": "steps",
+        "items": [
+          {
+            "label": "Define your 'Maker' vs 'Manager' blocks",
+            "details": "Identify 2-3 hour blocks for deep work (Maker) and separate blocks for back-to-back calls (Manager). Your EA will mark these as 'Busy' and 'Tentative' respectively."
+          },
+          {
+            "label": "Establish Meeting Clusters",
+            "details": "Choose specific days (e.g., Tuesday/Thursday) for external calls. Tell your EA to push all non-urgent requests to these 'Heavy Meeting' days to preserve flow on other days."
+          },
+          {
+            "label": "Set Hard Buffer Rules",
+            "details": "Instruct your EA to enforce a mandatory 15-minute buffer between all meetings. No back-to-backs allowed without explicit approval."
+          }
+        ]
+      },
+      "callout": {
+        "type": "tip",
+        "content": "The 'Reply with a Number' paradigm: Your EA sends 3 options for a meeting. You simply reply '2' and they handle the rest. Never look at a scheduling link again."
+      }
+    },
+    {
+      "id": "meeting-request-protocol",
+      "title": "The Gatekeeper Protocol",
+      "icon": "shield",
+      "content": {
+        "format": "specs",
+        "items": [
+          {
+            "label": "VIP List",
+            "value": "Immediate booking for Board Members, Key Investors, and Direct Reports."
+          },
+          {
+            "label": "Qualification Questions",
+            "value": "EA asks: 'What is the specific outcome of this meeting?' and 'Can this be resolved via email/Slack?'"
+          },
+          {
+            "label": "Default Duration",
+            "value": "All meetings default to 25 or 45 minutes instead of 30/60 to bake in transition time."
+          },
+          {
+            "label": "Scheduling Links",
+            "value": "EA uses custom links with hidden availability to prevent 'link-surfing' by external parties."
+          }
+        ]
+      }
+    },
+    {
+      "id": "scheduling-guardrails",
+      "title": "Setting Up Tool Guardrails",
+      "icon": "settings",
+      "content": {
+        "format": "checklist",
+        "items": [
+          {
+            "label": "Configure SavvyCal or Calendly Constraints",
+            "substeps": [
+              "Set minimum notice period to 24 hours (No same-day surprises)",
+              "Limit max meetings per day to 6",
+              "Block out mornings before 9:00 AM and evenings after 5:30 PM"
+            ]
+          },
+          {
+            "label": "Sync Personal and Professional Calendars",
+            "details": "Ensure your EA sees 'Busy' blocks for family commitments without seeing private details."
+          }
+        ]
+      },
+      "callout": {
+        "type": "tool",
+        "content": "We recommend SavvyCal for its 'ranked availability' which allows your EA to prioritize your meeting clusters over random open slots.",
+        "tool_slug": "savvycal"
+      }
+    },
+    {
+      "id": "calendar-audit",
+      "title": "The Monthly Calendar Audit",
+      "icon": "search",
+      "content": {
+        "format": "steps",
+        "items": [
+          {
+            "label": "Identify 'Zombie' Meetings",
+            "details": "EA flags recurring meetings where you haven't spoken or the value has plateaued."
+          },
+          {
+            "label": "The 'Delegate or Delete' Review",
+            "details": "Monthly 15-minute sync where you and your EA review the upcoming month and cancel/delegate 10% of scheduled time."
+          },
+          {
+            "label": "Consolidate 1:1s",
+            "details": "Move disparate check-ins into a single afternoon block to minimize context switching."
+          }
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I handle 'urgent' requests that ignore the system?",
+      "answer": "Define 'Urgent' for your EA. Usually, this means a client-at-risk or a major deal milestone. For everything else, the EA politely informs them: 'To ensure [Name] can give this his full attention, the earliest we can do is [Date].'"
+    },
+    {
+      "question": "What if a Board Member or my Boss ignores the gatekeeper?",
+      "answer": "Give your EA 'Executive Override' permission for a specific list of people. For everyone else, the EA should proactively reach out to reschedule conflicts that arise when these VIPs force their way onto the calendar."
+    },
+    {
+      "question": "How does the EA manage travel time?",
+      "answer": "Your EA should use a 'Travel Buffer' template that automatically blocks 30-60 minutes before and after any off-site meeting based on Google Maps traffic estimates."
+    }
+  ],
+  "related": [
+    "deep-work-protocol",
+    "executive-travel-management",
+    "email-inbox-zero-system"
+  ]
+}

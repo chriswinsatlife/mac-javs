@@ -1,0 +1,63 @@
+slug: calendar-protection-system
+area: admin
+
+topic: |
+  Protecting your calendar from meeting creep while ensuring you're available for
+  what truly matters. A system for proactive time-blocking, meeting gatekeeping,
+  and strategic scheduling delegation.
+
+  This playbook covers: establishing non-negotiable time blocks (deep work, personal,
+  weekly review); setting up a meeting request protocol where the EA screens and
+  qualifies before anything hits your calendar; configuring scheduling tools like
+  Calendly or SavvyCal with proper constraints; batch scheduling to cluster meetings
+  on specific days; and running effective calendar audits to reclaim time.
+
+  The system should handle: external meeting requests, internal meeting invites,
+  rescheduling coordination, time zone complexity, and buffer time enforcement.
+
+  Edge cases: truly urgent requests that should interrupt deep work, managing a
+  CEO or board member who ignores your system, double-bookings, and travel scheduling.
+
+persona:
+  archetype: "VC partner or executive with back-to-back meetings and no time to think"
+  pain_points:
+    - Calendar is 80%+ meetings, no time for deep work
+    - Anyone can book time, no gatekeeper
+    - Constantly context-switching between unrelated meetings
+    - Dreads Monday because the week is already packed
+  goals:
+    - Protect 2+ hours of uninterrupted deep work daily
+    - Reduce total meeting hours by 30% without damaging relationships
+    - Cluster meetings to create focus days
+    - Review the week ahead every Sunday with confidence
+
+research_guidance:
+  must_cover:
+    - Time-blocking methodology (maker vs manager schedule)
+    - Meeting request qualification framework
+    - Scheduling tool setup with proper constraints
+    - Calendar audit process
+    - The EA as calendar gatekeeper role
+  do_not_cover:
+    - Meeting facilitation or agenda best practices
+    - Specific meeting productivity tips (that's after they're scheduled)
+    - Time tracking software
+  depth_guidance: "Strategic with specific implementation steps"
+  angles:
+    - Defense (protecting time) and offense (proactively scheduling what matters)
+    - The political art of saying no gracefully
+    - Building meeting-free zones that others respect
+
+section_hints:
+  - Designing your ideal week (time blocks and meeting clusters)
+  - The meeting request protocol (who qualifies, what questions to ask)
+  - Setting up your scheduling tool with proper guardrails
+  - Running a calendar audit (what to cut, combine, or delegate)
+  - The weekly calendar review ritual
+
+delegation_focus: |
+  This is a defensive-offensive delegation: the EA both protects existing blocks
+  and proactively schedules high-priority items the client is avoiding.
+  
+  The EA handles: screening requests, scheduling logistics, rescheduling, buffer enforcement.
+  The client handles: final approval on new commitments, protected block exceptions.

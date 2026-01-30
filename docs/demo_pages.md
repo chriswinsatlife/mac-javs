@@ -7,8 +7,17 @@
 - [Calendar Components - Google, Apple, Outlook week/day views](http://localhost:4321/calendar_demo)
 - [Email Components](http://localhost:4321/email_demo)
 - [Social Quote Components - Twitter, LinkedIn, Podcast, Book, Article](http://localhost:4321/social_quote_demo)
-- [Playbook Diagrams Latest](http://127.0.0.1:4321/playbooks/gifting_playbook_diagram_lab/)
-- [Playbook Diagrams Old](http://127.0.0.1:4321/playbooks/gifting_playbook/)
-- [Playbook Diagrams Article](http://127.0.0.1:4321/playbooks/gift-automation/)
 - [PlaybookCard Component](http://localhost:4321/playbook_card_demo)
 - [StackChips Component](http://localhost:4321/stack_chips_demo)
+
+## Playbook Demos (Static)
+
+- [Playbook Diagrams Latest](http://localhost:4321/playbooks/gifting_playbook_diagram_lab/)
+- [Playbook Diagrams Old](http://localhost:4321/playbooks/gifting_playbook/)
+- [Playbook Diagrams Article](http://localhost:4321/playbooks/gift-automation/)
+
+## Generated Playbooks (Dynamic)
+
+- [Automated Gifting System](http://localhost:4321/playbooks/automated-gifting-system/)
+- [Inbox Zero Delegation](http://localhost:4321/playbooks/inbox-zero-delegation/)
+- [Calendar Protection System](http://localhost:4321/playbooks/calendar-protection-system/)

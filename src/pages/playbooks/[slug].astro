@@ -9,12 +9,13 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/playbook/Hero.astro';
-import ToolsGrid from '../../components/playbook/ToolsGrid.astro';
+import StackChips from '../../components/StackChips.astro';
 import BeforeAfter from '../../components/playbook/BeforeAfter.astro';
 import Section from '../../components/playbook/Section.astro';
 import FAQ from '../../components/playbook/FAQ.astro';
 import RelatedPlaybooks from '../../components/playbook/RelatedPlaybooks.astro';
 import CallToAction from '../../components/playbook/CallToAction.astro';
+import PromptLauncher from '../../components/PromptLauncher.astro';
 
 // Shared embed components
 import Notifications from '../../components/Notifications.astro';
@@ -36,6 +37,16 @@ const { data } = playbook;
 
 // Page title for SEO
 const pageTitle = `${data.meta.title} | Athena Playbooks`;
+
+// Build a default prompt from playbook content
+const defaultPrompt = `Help me implement the "${data.meta.title}" playbook.
+
+Key steps:
+${data.sections.slice(0, 3).map((s, i) => `${i + 1}. ${s.title}`).join('\n')}
+
+Tools I'll use: ${data.tools?.slice(0, 4).map(t => t.name).join(', ') || 'TBD'}
+
+Please provide specific, actionable next steps to get started.`;
 ---
 
 <Base title={pageTitle}>
@@ -51,7 +62,9 @@ const pageTitle = `${data.meta.title} | Athena Playbooks`;
       />
 
       {data.tools && data.tools.length > 0 && (
-        <ToolsGrid playbook_tools={data.tools} />
+        <div class="stack-section">
+          <StackChips tools={data.tools} label="Stack" showLabel={true} />
+        </div>
       )}
 
       {data.before_after && (
@@ -61,17 +74,25 @@ const pageTitle = `${data.meta.title} | Athena Playbooks`;
         />
       )}
 
-      <div class="playbook-sections">
-        {data.sections.map((section) => (
-          <Section
-            id={section.id}
-            title={section.title}
-            icon={section.icon}
-            content={section.content}
-            embeds={section.embeds}
-            callout={section.callout}
-          />
-        ))}
+      <div class="content-with-sidebar">
+        <div class="playbook-sections">
+          {data.sections.map((section) => (
+            <Section
+              id={section.id}
+              title={section.title}
+              icon={section.icon}
+              content={section.content}
+              embeds={section.embeds}
+              callout={section.callout}
+            />
+          ))}
+        </div>
+
+        <aside class="playbook-sidebar">
+          <div class="sidebar-sticky">
+            <PromptLauncher prompt={defaultPrompt} />
+          </div>
+        </aside>
       </div>
 
       <FAQ items={data.faq} />
@@ -103,7 +124,7 @@ const pageTitle = `${data.meta.title} | Athena Playbooks`;
 
 <style>
   .playbook-page {
-    --playbook-max-width: 900px;
+    --playbook-max-width: 1200px;
     --playbook-padding: 2rem;
 
     min-height: 100vh;
@@ -116,8 +137,30 @@ const pageTitle = `${data.meta.title} | Athena Playbooks`;
     padding: var(--playbook-padding);
   }
 
-  .playbook-sections {
+  .stack-section {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .content-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 3rem;
     margin-top: 2rem;
+  }
+
+  .playbook-sections {
+    min-width: 0;
+  }
+
+  .playbook-sidebar {
+    min-width: 0;
+  }
+
+  .sidebar-sticky {
+    position: sticky;
+    top: 2rem;
   }
 
   .references-section {
@@ -160,6 +203,21 @@ const pageTitle = `${data.meta.title} | Athena Playbooks`;
 
   .reference-source {
     color: #666;
+  }
+
+  @media (max-width: 1024px) {
+    .content-with-sidebar {
+      grid-template-columns: 1fr;
+    }
+
+    .playbook-sidebar {
+      order: -1;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-sticky {
+      position: static;
+    }
   }
 
   @media (max-width: 768px) {

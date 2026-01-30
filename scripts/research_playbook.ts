@@ -11,7 +11,7 @@
 
 import { loadResearchTask, type ResearchTask } from '../lib/schemas/research_task';
 
-const EXA_API_BASE = 'https://api.exa.ai/research/v0/tasks';
+const EXA_API_BASE = 'https://api.exa.ai/research/v1';
 const POLL_INTERVAL_MS = 10_000; // 10 seconds, matching n8n Wait nodes
 const MAX_POLL_ATTEMPTS = 60; // 10 minutes max
 
@@ -22,13 +22,25 @@ interface ExaCreateResponse {
   status: string;
 }
 
+interface ExaSource {
+  id: string;
+  url: string;
+  title: string;
+}
+
 interface ExaTaskResult {
   researchId: string;
   model: string;
   instructions: string;
   status: 'pending' | 'running' | 'completed' | 'failed';
+  // Output fields - check actual response
   text?: string;
-  citations?: Record<string, string>;
+  output?: unknown;
+  data?: unknown;
+  result?: unknown;
+  answer?: string;
+  sources?: ExaSource[];
+  citations?: Record<string, string> | ExaSource[];
   operations?: unknown[];
   costDollars?: { total: number };
   timeMs?: number;
@@ -233,8 +245,37 @@ async function main() {
 
   // 5. Process and clean results
   log('Process', 'Processing research results...');
-  const cleanedText = cleanMarkdownOutput(result.text || '');
-  const sources = extractUniqueSources(result.citations);
+  
+  // Debug: log the full result structure
+  log('Debug', `Result keys: ${Object.keys(result).join(', ')}`);
+  if (result.text) log('Debug', `text length: ${result.text.length}`);
+  if (result.output) {
+    log('Debug', `output type: ${typeof result.output}`);
+    if (typeof result.output === 'object') {
+      log('Debug', `output keys: ${Object.keys(result.output as object).join(', ')}`);
+      log('Debug', `output sample: ${JSON.stringify(result.output).slice(0, 500)}`);
+    }
+  }
+  if (result.data) log('Debug', `data type: ${typeof result.data}`);
+  if (result.answer) log('Debug', `answer length: ${result.answer.length}`);
+  if (result.sources) log('Debug', `sources count: ${result.sources.length}`);
+  
+  // Try different output field names
+  const rawText = result.text || result.answer || (typeof result.output === 'string' ? result.output : '') || '';
+  const cleanedText = cleanMarkdownOutput(rawText);
+  
+  // Handle sources - could be array of objects or Record
+  let sources: string[] = [];
+  if (result.sources && Array.isArray(result.sources)) {
+    sources = result.sources.map((s: ExaSource) => s.url);
+  } else if (result.citations) {
+    if (Array.isArray(result.citations)) {
+      sources = (result.citations as ExaSource[]).map(s => s.url);
+    } else {
+      sources = Array.from(new Set(Object.values(result.citations as Record<string, string>)));
+    }
+  }
+  
   const costUsd = result.costDollars?.total ?? 0;
 
   log('Process', `Research complete: ${cleanedText.length} chars, ${sources.length} sources, $${costUsd.toFixed(2)}`);
