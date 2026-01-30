@@ -79,6 +79,6 @@ Latest preview URL: [http://localhost:4321/playbooks/automated-gifting-system/]
 
 ### Notes
 
-- The current implementation, alongside the JSON schema which populates the page, does include some elements which are desirable but _absent_ from the conceptual mockup, which focused more on aesthetics and was made prior to the finalization of the playbook data model & schema
-- We may need to create more components or create final designs for components which were YOLO'd with code in the existing page (`src/pages/playbooks/[slug].astro`) but not present in the illustrative mockup (`docs/playbook_page_mockup.png`)
+- The current implementation (`src/pages/playbooks/[slug].astro`), alongside the JSON schema which populates the page, does include some elements which are desirable but _absent_ from the conceptual mockup (`docs/playbook_page_mockup.png`), which focused more on aesthetics and was made _prior_ to the finalization of the playbook data model & schema
+- We may need to create more components or create final designs for components which were YOLO'd with code in the existing page but not present in the illustrative mockup
 - There are many desirable components which assist with communicating the narrative, value, tactics, and key moments of the playbook which were _neither_ in the illustrative mockup _nor_ in the current implementation; we may need to update our prompting or schema to facilitate the usage of these components; these include amongst other things, quotes, messages, emails, calendar items, and so on in `src/components/`
