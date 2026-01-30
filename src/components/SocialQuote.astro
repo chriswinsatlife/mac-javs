@@ -1,0 +1,422 @@
+---
+/**
+ * SocialQuote - Display social media quotes in platform-specific styles
+ * 
+ * Usage:
+ *   <SocialQuote
+ *     platform="twitter"
+ *     author={{ name: "Elon Musk", handle: "elonmusk", avatar: "https://..." }}
+ *     content="The future of AI is incredible."
+ *     date="Dec 15, 2024"
+ *     metrics={{ likes: 45200, reposts: 8300, replies: 2100, views: 1200000 }}
+ *     verified={true}
+ *     url="https://twitter.com/elonmusk/status/123456789"
+ *   />
+ * 
+ *   From file:
+ *     <SocialQuote platform="twitter" src="/data/tweet.yaml" />
+ * 
+ * Platforms: twitter | linkedin | podcast | book | article
+ * Mode: light | dark | auto (default)
+ * 
+ * Stylesheet: Uses external platform-specific styles from src/styles/social_quote_platforms.css
+ */
+
+import { parse as parseYAML } from 'yaml';
+
+export interface QuoteAuthor {
+  name: string;
+  handle?: string;
+  avatar?: string;
+  title?: string;        // For LinkedIn, podcasts, articles
+  company?: string;      // For LinkedIn
+  publication?: string;  // For articles
+}
+
+export interface QuoteMetrics {
+  likes?: number;
+  reposts?: number;
+  replies?: number;
+  views?: number;
+  shares?: number;
+  comments?: number;
+}
+
+export interface QuoteMedia {
+  type: 'image' | 'video' | 'link';
+  url: string;
+  alt?: string;
+  title?: string;
+  domain?: string;
+}
+
+export interface QuoteData {
+  author: QuoteAuthor;
+  content: string;
+  date?: string;
+  metrics?: QuoteMetrics;
+  verified?: boolean;
+  media?: QuoteMedia[];
+  url?: string;
+  // Book-specific
+  bookTitle?: string;
+  chapter?: string;
+  page?: string;
+  // Podcast-specific
+  podcastName?: string;
+  episodeTitle?: string;
+  timestamp?: string;
+  // Article-specific
+  articleTitle?: string;
+  source?: string;
+}
+
+export interface Props {
+  platform?: 'twitter' | 'linkedin' | 'podcast' | 'book' | 'article';
+  mode?: 'light' | 'dark' | 'auto';
+  src?: string;
+  // Inline props (alternative to src)
+  author?: QuoteAuthor;
+  content?: string;
+  date?: string;
+  metrics?: QuoteMetrics;
+  verified?: boolean;
+  media?: QuoteMedia[];
+  url?: string;
+  bookTitle?: string;
+  chapter?: string;
+  page?: string;
+  podcastName?: string;
+  episodeTitle?: string;
+  timestamp?: string;
+  articleTitle?: string;
+  source?: string;
+}
+
+const { 
+  platform = 'twitter', 
+  mode = 'auto',
+  src,
+  author: inlineAuthor,
+  content: inlineContent,
+  date: inlineDate,
+  metrics: inlineMetrics,
+  verified: inlineVerified,
+  media: inlineMedia,
+  url: inlineUrl,
+  bookTitle: inlineBookTitle,
+  chapter: inlineChapter,
+  page: inlinePage,
+  podcastName: inlinePodcastName,
+  episodeTitle: inlineEpisodeTitle,
+  timestamp: inlineTimestamp,
+  articleTitle: inlineArticleTitle,
+  source: inlineSource,
+} = Astro.props;
+
+let data: QuoteData = {
+  author: inlineAuthor || { name: '', handle: '' },
+  content: inlineContent || '',
+  date: inlineDate,
+  metrics: inlineMetrics,
+  verified: inlineVerified,
+  media: inlineMedia,
+  url: inlineUrl,
+  bookTitle: inlineBookTitle,
+  chapter: inlineChapter,
+  page: inlinePage,
+  podcastName: inlinePodcastName,
+  episodeTitle: inlineEpisodeTitle,
+  timestamp: inlineTimestamp,
+  articleTitle: inlineArticleTitle,
+  source: inlineSource,
+};
+
+// Load from file if src provided
+if (src && !inlineContent) {
+  try {
+    const response = await fetch(new URL(src, Astro.url));
+    const text = await response.text();
+    
+    if (src.endsWith('.yaml') || src.endsWith('.yml')) {
+      data = parseYAML(text);
+    } else {
+      data = JSON.parse(text);
+    }
+  } catch (e) {
+    console.error(`Failed to load quote from ${src}:`, e);
+  }
+}
+
+// Format large numbers (1.2K, 45.3M, etc.)
+function formatNumber(num?: number): string {
+  if (!num) return '0';
+  if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
+  if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
+  return num.toString();
+}
+
+// Compute mode class
+const modeClass = mode === 'auto' ? 'mode-auto' : `mode-${mode}`;
+---
+
+<div class={`social-quote sq-${platform} ${modeClass}`}>
+  {/* Twitter/X Layout */}
+  {platform === 'twitter' && (
+    <a href={data.url} target="_blank" rel="noopener noreferrer" class="sq-link">
+      <div class="sq-header">
+        <div class="sq-avatar-wrapper">
+          {data.author.avatar ? (
+            <img src={data.author.avatar} alt={data.author.name} class="sq-avatar" />
+          ) : (
+            <div class="sq-avatar sq-avatar-placeholder">
+              {data.author.name.charAt(0).toUpperCase()}
+            </div>
+          )}
+        </div>
+        <div class="sq-author-info">
+          <div class="sq-author-row">
+            <span class="sq-author-name">{data.author.name}</span>
+            {data.verified && (
+              <svg class="sq-verified" viewBox="0 0 22 22" aria-label="Verified account" width="18" height="18">
+                <path fill="currentColor" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681.132-.637.075-1.299-.164-1.903.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
+              </svg>
+            )}
+          </div>
+          <span class="sq-handle">@{data.author.handle}</span>
+        </div>
+        <div class="sq-platform-logo">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="sq-content">
+        <p class="sq-text">{data.content}</p>
+      </div>
+      
+      {data.media && data.media.length > 0 && (
+        <div class="sq-media">
+          {data.media.map(m => (
+            m.type === 'image' && (
+              <img src={m.url} alt={m.alt || ''} class="sq-media-img" />
+            )
+          ))}
+        </div>
+      )}
+      
+      <div class="sq-timestamp">
+        <span>{data.date}</span>
+      </div>
+      
+      {data.metrics && (
+        <div class="sq-metrics">
+          <div class="sq-metric">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"/>
+            </svg>
+            <span>{formatNumber(data.metrics.replies)}</span>
+          </div>
+          <div class="sq-metric">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"/>
+            </svg>
+            <span>{formatNumber(data.metrics.reposts)}</span>
+          </div>
+          <div class="sq-metric">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"/>
+            </svg>
+            <span>{formatNumber(data.metrics.likes)}</span>
+          </div>
+          {data.metrics.views && (
+            <div class="sq-metric">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"/>
+              </svg>
+              <span>{formatNumber(data.metrics.views)}</span>
+            </div>
+          )}
+        </div>
+      )}
+    </a>
+  )}
+
+  {/* LinkedIn Layout - matches actual LinkedIn UI */}
+  {platform === 'linkedin' && (
+    <a href={data.url} target="_blank" rel="noopener noreferrer" class="sq-link">
+      <div class="sq-li-header">
+        <div class="sq-li-avatar-wrapper">
+          {data.author.avatar ? (
+            <img src={data.author.avatar} alt={data.author.name} class="sq-li-avatar" />
+          ) : (
+            <div class="sq-li-avatar sq-li-avatar-placeholder">
+              {data.author.name.charAt(0).toUpperCase()}
+            </div>
+          )}
+        </div>
+        <div class="sq-li-author-info">
+          <div class="sq-li-name-row">
+            <span class="sq-li-name">{data.author.name}</span>
+            {data.verified && (
+              <svg class="sq-li-verified" viewBox="0 0 16 16" width="16" height="16">
+                <circle cx="8" cy="8" r="8" fill="#0a66c2"/>
+                <path fill="#fff" d="M6.5 11.5l-3-3 1-1 2 2 5-5 1 1z"/>
+              </svg>
+            )}
+            <span class="sq-li-connection">1st</span>
+          </div>
+          <div class="sq-li-title">{data.author.title}{data.author.company && `, ${data.author.company}`}</div>
+          <div class="sq-li-meta">
+            <span>{data.date}</span>
+            <span class="sq-li-dot"></span>
+            <svg class="sq-li-globe" viewBox="0 0 16 16" width="16" height="16">
+              <path fill="currentColor" d="M8 1a7 7 0 107 7 7 7 0 00-7-7zM4.5 6.5h3v3h-3zm4 0h3v3h-3zm-4-4h3v3h-3zm4 0h3v3h-3zm-5 8h3v1.5A5.99 5.99 0 013.5 10.5zm8 0h3a5.99 5.99 0 01-3 1.5zm-4 0h3v1.5a6.02 6.02 0 01-3 0zm-5-4h-1a6.02 6.02 0 011.5-3zm9 0h1a6.02 6.02 0 00-1.5-3z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="sq-li-actions">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <circle cx="5" cy="12" r="2" fill="currentColor"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+            <circle cx="19" cy="12" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="sq-li-content">
+        <p class="sq-li-text">{data.content}</p>
+      </div>
+      
+      {data.metrics && (
+        <div class="sq-li-reactions-bar">
+          <div class="sq-li-reactions-left">
+            <div class="sq-li-reaction-icons">
+              <span class="sq-li-reaction sq-li-reaction-like">
+                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="#378fe9" d="M19.46 11l-3.91-3.91a7 7 0 01-1.69-2.74l-.49-1.47A2.76 2.76 0 0010.76 1 2.75 2.75 0 008 3.74v1.12a9.19 9.19 0 00.46 2.85L8.89 9H4.12A2.12 2.12 0 002 11.12a2.16 2.16 0 00.92 1.76A2.11 2.11 0 002 14.62a2.14 2.14 0 001.28 2 2 2 0 00-.28 1 2.12 2.12 0 002 2.12v.14A2.12 2.12 0 007.12 22h7.49a8.08 8.08 0 003.58-.84l.31-.16H21V11zM19 19h-1l-.73.37a6.14 6.14 0 01-2.69.63H7.72a1 1 0 01-1-1V18l-.72-.1a1 1 0 01-.9-.9 1 1 0 01.65-.94l.65-.25-.47-.65a1 1 0 01-.17-.55 1 1 0 01.46-.85l.75-.47-.55-.68a1 1 0 01-.16-.6A1 1 0 016.12 12H10l-.94-3.29A7.15 7.15 0 018 5.86V3.74A.74.74 0 0110.76 3a.77.77 0 01.72.55l.49 1.46a9 9 0 002.13 3.5L17 11.41V19z"/></svg>
+              </span>
+              <span class="sq-li-reaction sq-li-reaction-celebrate">
+                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="#44712e" d="M11.08 4.75l.59 1.21.49-1.21a3.8 3.8 0 01.26-.52l-1.34.52zm4.87 13.76l2.55-7.47-3.97-3.97-7.47 2.55-2.56 7.47 3.97 3.97 7.48-2.55zm-8.89-1.34l1.21-.59-1.21-.49a3.8 3.8 0 01-.52-.26l.52 1.34zm10.57-6.93l-2.28 6.66-6.66 2.28-2.79-2.79 2.28-6.66 6.66-2.28 2.79 2.79zM7.14 19.86a2.75 2.75 0 00-3.53-3.53l.75 1.96a.75.75 0 01.82.82l1.96.75zM3.61 8.68a2.75 2.75 0 003.53-3.53l-.75 1.96a.75.75 0 01-.82.82l-1.96.75z"/></svg>
+              </span>
+              <span class="sq-li-reaction sq-li-reaction-love">
+                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="#df704d" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              </span>
+            </div>
+            <span class="sq-li-reactions-count">{formatNumber(data.metrics.likes)}</span>
+          </div>
+          <div class="sq-li-reactions-right">
+            {data.metrics.comments && <span>{data.metrics.comments} comment{data.metrics.comments !== 1 ? 's' : ''}</span>}
+          </div>
+        </div>
+      )}
+    </a>
+  )}
+
+  {/* Podcast Quote Layout - Apple Podcasts style */}
+  {platform === 'podcast' && (
+    <a href={data.url} target="_blank" rel="noopener noreferrer" class="sq-link">
+      <div class="sq-pod-header">
+        <div class="sq-pod-artwork">
+          {data.author.avatar ? (
+            <img src={data.author.avatar} alt={data.podcastName || data.author.name} class="sq-pod-cover" />
+          ) : (
+            <div class="sq-pod-cover sq-pod-cover-placeholder">
+              <svg viewBox="0 0 24 24" width="32" height="32">
+                <path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+              </svg>
+            </div>
+          )}
+        </div>
+        <div class="sq-pod-info">
+          {data.podcastName && <span class="sq-pod-show">{data.podcastName}</span>}
+          {data.episodeTitle && <span class="sq-pod-episode">{data.episodeTitle}</span>}
+          <div class="sq-pod-meta">
+            <span class="sq-pod-speaker">{data.author.name}</span>
+            {data.timestamp && <span class="sq-pod-timestamp">{data.timestamp}</span>}
+          </div>
+        </div>
+      </div>
+      
+      <div class="sq-pod-content">
+        <p class="sq-pod-quote">{data.content}</p>
+      </div>
+    </a>
+  )}
+
+  {/* Book Quote Layout */}
+  {platform === 'book' && (
+    <a href={data.url} target="_blank" rel="noopener noreferrer" class="sq-link">
+      <div class="sq-header">
+        <div class="sq-avatar-wrapper">
+          {data.author.avatar ? (
+            <img src={data.author.avatar} alt={data.bookTitle || data.author.name} class="sq-avatar sq-avatar-book" />
+          ) : (
+            <div class="sq-avatar sq-avatar-book sq-avatar-placeholder">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+              </svg>
+            </div>
+          )}
+        </div>
+        <div class="sq-author-info">
+          {data.bookTitle && <span class="sq-book-title">{data.bookTitle}</span>}
+          <span class="sq-author-name">{data.author.name}</span>
+          {(data.chapter || data.page) && (
+            <span class="sq-location">
+              {data.chapter && `Chapter: ${data.chapter}`}
+              {data.chapter && data.page && ' | '}
+              {data.page && `Page ${data.page}`}
+            </span>
+          )}
+        </div>
+      </div>
+      
+      <div class="sq-content sq-content-quote">
+        <span class="sq-quote-mark">"</span>
+        <p class="sq-text">{data.content}</p>
+        <span class="sq-quote-mark sq-quote-mark-end">"</span>
+      </div>
+    </a>
+  )}
+
+  {/* Article Quote Layout */}
+  {platform === 'article' && (
+    <a href={data.url} target="_blank" rel="noopener noreferrer" class="sq-link">
+      <div class="sq-header">
+        <div class="sq-avatar-wrapper">
+          {data.author.avatar ? (
+            <img src={data.author.avatar} alt={data.author.publication || data.author.name} class="sq-avatar" />
+          ) : (
+            <div class="sq-avatar sq-avatar-placeholder">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+            </div>
+          )}
+        </div>
+        <div class="sq-author-info">
+          {data.articleTitle && <span class="sq-article-title">{data.articleTitle}</span>}
+          <span class="sq-author-name">{data.author.name}</span>
+          {(data.author.publication || data.source || data.date) && (
+            <span class="sq-source">
+              {data.author.publication || data.source}
+              {(data.author.publication || data.source) && data.date && ' - '}
+              {data.date}
+            </span>
+          )}
+        </div>
+      </div>
+      
+      <div class="sq-content sq-content-quote">
+        <span class="sq-quote-mark">"</span>
+        <p class="sq-text">{data.content}</p>
+        <span class="sq-quote-mark sq-quote-mark-end">"</span>
+      </div>
+    </a>
+  )}
+</div>
+
+<style>
+  @import '../styles/social_quote_platforms.css';
+</style>

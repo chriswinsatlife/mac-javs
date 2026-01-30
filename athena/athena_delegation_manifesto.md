@@ -4,6 +4,7 @@ source_url: "https://docs.google.com/document/d/11a0ZpumpZIeDvJKhYpqz3uacAehL2VS
 export_date: "2025-08-18T02:53:08.624Z"
 type: "google_doc"
 export_format: "markdown"
+author: "Chris York"
 ---
 
 # **The Delegation Manifesto**
@@ -12,7 +13,7 @@ export_format: "markdown"
 
 We are all beneficiaries of uniquely impactful and productive people who came before us, though we may fail to perceive their intricate latticeworks of leverage. From Cicero to Disney, Newton to Jobs, Kant to Lee Kuan Yew—the great producers of our species were wise enough not to attempt everything alone. A myopically soloist approach to their endeavors would have left humanity far worse off.
 
-Those with prodigious vision and talent bend the arc of the future through orchestrating time, attention, and effort far beyond their own. 
+Those with prodigious vision and talent bend the arc of the future through orchestrating time, attention, and effort far beyond their own.
 
 In a word, they delegate.
 
@@ -28,11 +29,11 @@ The sextet of luminaries mentioned earlier share little in common—and perhaps 
 
 So did Caesar. So did Einstein. So did Darwin. And Mark Twain. And Salvador Dalí.
 
-Throughout history, nearly all people of consequence across virtually every field of human endeavor have sought to maximize their impact through trusted assistants and the skillful utilization of others. 
+Throughout history, nearly all people of consequence across virtually every field of human endeavor have sought to maximize their impact through trusted assistants and the skillful utilization of others.
 
-Though they may have existed in different centuries, different disciplines, and—in some ways, entirely different worlds—they all saw the same Pareto frontier. 
+Though they may have existed in different centuries, different disciplines, and—in some ways, entirely different worlds—they all saw the same Pareto frontier.
 
-They all delegated. 
+They all delegated.
 
 And we are all better for it.
 
@@ -66,9 +67,9 @@ John Snow had his assistant literally risk his life to collect data on the 1854 
 
 Einstein delegated the mathematical formalization of general relativity to Marcel Grossmann.
 
-And Henry Ford delegated the lion's share of work on the automotive assembly line to his aide, Charles Sorenson. Sorenson, in turn, delegated most of the work to *his* assistant, Clarence Avery.
+And Henry Ford delegated the lion's share of work on the automotive assembly line to his aide, Charles Sorenson. Sorenson, in turn, delegated most of the work to _his_ assistant, Clarence Avery.
 
-The list goes on and on, despite most of the records being lost to history. 
+The list goes on and on, despite most of the records being lost to history.
 
 The greatness of these individuals is not diminished by their delegation, their greatness was borne of it.
 
@@ -76,17 +77,17 @@ The greatness of these individuals is not diminished by their delegation, their 
 
 Humans have always sought to multiply their output, whether physical production through industrial apparatus or cognitive labors via artificial intelligence.
 
-All people—especially those of consequence—naturally seek leverage. 
+All people—especially those of consequence—naturally seek leverage.
 
-Greatness does not bottleneck itself. 
+Greatness does not bottleneck itself.
 
-Greatness multiplies its impact. 
+Greatness multiplies its impact.
 
 Greatness delegates.
 
 In a world where time is finite, but the potential for impact is infinite, delegation is not just a strategy—it's a necessity for maximal progress and human flourishing.
 
-## 
+##
 
 ## An Evolutionary Imperative
 
@@ -128,13 +129,13 @@ As our capacity for delegation grows, so does the complexity of the systems we c
 
 Ultimately, delegation is not just a tool for personal productivity or organizational efficiency. It's the very mechanism by which our species has achieved its dominance, and it will continue to be the key to our biological and technological evolution. As more of our work is accomplished through means extending beyond our own bodies and brains, the skillful orchestration of these hybrid human-artificial systems will become the defining skill of humanity's future.
 
-## 
+##
 
-## 
+##
 
 ## The Gifts of Leverage
 
-Delegation has historically been the primary leverage strategy of our biology and society. Its benefits are legion, but not necessarily obvious. 
+Delegation has historically been the primary leverage strategy of our biology and society. Its benefits are legion, but not necessarily obvious.
 
 The power of delegation lies not just in its immediate efficiency gains, but in its capacity to compound over time, across individuals, organizations, and society as a whole. It is a force that transforms not just what we do, but who we become.
 
@@ -216,9 +217,9 @@ This is the paradox of delegation: by relinquishing control over certain tasks, 
 
 Time freed by delegation tends to be invested more skillfully than typical discretionary time. Executives who delegate basic email correspondence and calendar management almost exclusively replace these activities with higher-leverage efforts. Non-work time freed by delegation is often invested in under-utilized areas like social interaction with friends and quality time with family—activities correlated with greater happiness and meaning.
 
-In other words, the hour we gain by delegating is much more valuable than a typical hour. And in the end, hours are all we really have. 
+In other words, the hour we gain by delegating is much more valuable than a typical hour. And in the end, hours are all we really have.
 
-## 
+##
 
 ## The Architecture of Leverage
 
@@ -228,7 +229,7 @@ Delegation is not a simple concept. At its essence, it is the art of exponential
 
 In classical depictions, Athena, the Greek Goddess of Wisdom, is rarely portrayed as relying solely on her formidable intellect. Typically, she is armed with both a spear for offense and a shield for defense.
 
-Delegation, as wisdom made manifest, similarly divides into these two categories. The most skilled practitioners seamlessly interlace these approaches, weaving systems that simultaneously shield them from distraction and propel their visions forward with minimal direct intercession. 
+Delegation, as wisdom made manifest, similarly divides into these two categories. The most skilled practitioners seamlessly interlace these approaches, weaving systems that simultaneously shield them from distraction and propel their visions forward with minimal direct intercession.
 
 Defensive delegation is the bulwark against the ceaseless tide of trivial obligations. Far from mere reactivity, it is a proactive aegis, a calculated fortification that preserves precious cognitive bandwidth for higher-order cognition.
 
@@ -238,14 +239,14 @@ Both forms are indispensable for reaping the full rewards of delegation. Defense
 
 Attempting to triage and assign every conceivable task relevant to one's responsibilities and aspirations is a Sisyphean endeavor—an interminable treadmill of enervating decisions. In the quest for greater leverage, one quickly learns to construct systems that allow work to be assigned and progress to be made without oneself as the bottleneck. Whether delegating defensively to protect time, or offensively to pursue goals, the ability to delegate vicariously through others is a sine qua non for maximizing impact.
 
-The intersection of defensive/offensive strategies with direct/vicarious methods yields a four-quadrant matrix of delegation approaches.  
+The intersection of defensive/offensive strategies with direct/vicarious methods yields a four-quadrant matrix of delegation approaches.
 Seasoned delegators cultivate an intuitive ability to navigate this matrix, adapting their approach based on the nature of the task, the capabilities of their agents, and the prevailing strategic context.
 
 ![][image1]
 
 #### Direct Defensive Delegation
 
-Defensive delegation entails the manual assignment of incoming, predefined tasks and responsibilities. 
+Defensive delegation entails the manual assignment of incoming, predefined tasks and responsibilities.
 
 The quintessential example is tasking an assistant with a scheduling request sent directly to the principal, though this modality extends to far more complex undertakings. A veteran entrepreneur, for instance, might be capable of drafting their own contracts from past templates, yet this is more optimally handled by legal counsel.
 
@@ -265,7 +266,7 @@ Defensive delegation creates space, both temporally and psychologically, for the
 
 #### Vicarious Defensive Delegation
 
-Vicarious *defensive* delegation entails the assignment of incoming tasks or responsibilities to others, without direct intervention or manual input from the principal.
+Vicarious _defensive_ delegation entails the assignment of incoming tasks or responsibilities to others, without direct intervention or manual input from the principal.
 
 Delegating every possible task ultimately does not scale. Whether intuitively or intentionally, skilled delegators eventually shift their approach and remove themselves as a bottleneck to task definition and execution. In other words, they delegate delegation itself—they delegate vicariously through people or systems.
 
@@ -275,7 +276,7 @@ The skills demanded by vicarious defense are quite distinct from those of direct
 
 #### Vicarious Offensive Delegation
 
-Vicarious *offensive* delegation involves the empowerment of others to independently define and assign tasks based on overarching objectives. 
+Vicarious _offensive_ delegation involves the empowerment of others to independently define and assign tasks based on overarching objectives.
 
 Perhaps the most potent form of delegation, vicarious offense gives rise to self-perpetuating engines of progress that operate with minimal oversight. Often, this approach involves delegating only the desired outcome and any pertinent constraints, from which the responsible parties derive their own course of action, for themselves or for others. Unlike direct offensive delegation, the granular tasks are not specified by the original delegator; that onus falls upon the agent charged with achieving the outcome. The principal may be consulted as these plans are formulated and executed, but they are informed rather than responsible for the minutiae of task definition.
 
@@ -287,11 +288,11 @@ Delegating offensively through others represents an immense leap in complexity c
 
 As a principal's mastery deepens, their delegation becomes decreasingly direct and defensive, and increasingly oriented towards tasks that yield compounding returns.
 
-### 
+###
 
 ### **Delegation Modalities**
 
-Aside from making distinctions between delegation approaches based on their style, we can consider different forms of delegation based on their contents. 
+Aside from making distinctions between delegation approaches based on their style, we can consider different forms of delegation based on their contents.
 
 #### Ad Hoc Delegation
 
@@ -313,7 +314,7 @@ The anticipatory assignment of tasks and objectives, born of deep contextual und
 
 ### **Common Manifestations**
 
-There are a few stylistic forms of delegation which are worth noting. As with a prism, each facet reveals some aspect of the underlying phenomenon. 
+There are a few stylistic forms of delegation which are worth noting. As with a prism, each facet reveals some aspect of the underlying phenomenon.
 
 #### Delegating by Constraint
 
@@ -351,7 +352,7 @@ It's an approach that requires a high level of trust and a willingness to embrac
 
 But when done well, the payoffs can be enormous. Teams that are entrusted with black box delegation are more engaged, more innovative, and more adaptable. They're more likely to come up with novel solutions and to spot opportunities that others might miss.
 
-Moreover, black box delegation is a powerful tool for talent development. It provides opportunities for team members to stretch themselves, to take on new challenges, and to grow in ways that wouldn't be possible under a more prescriptive approach.  
+Moreover, black box delegation is a powerful tool for talent development. It provides opportunities for team members to stretch themselves, to take on new challenges, and to grow in ways that wouldn't be possible under a more prescriptive approach.
 Of course, this doesn't mean that failure is not an option. In fact, failure is an inherent part of the process. When you're venturing into the unknown, dead ends and wrong turns are inevitable. But each setback is an opportunity for learning, for refining the approach, for adjusting the course.
 
 The key is to create a culture where failure is seen not as a personal shortcoming, but as a necessary part of the innovation process. It's about celebrating the learnings, not just the successes, and about using each misstep as a stepping stone to greater understanding and more effective action.
@@ -374,7 +375,7 @@ At its core, this form of delegation recognizes that cognitive bandwidth is a pr
 
 Of course, effective delegation of the mise en place requires a deep understanding of the leader's needs and preferences. It's not just about providing information, but about providing it in the right form, at the right time, and in the right context. It requires a keen sense of what's truly important, and an ability to anticipate needs and potential roadblocks.
 
-When done well, delegating the mise en place creates a virtuous cycle of enhanced performance. Leaders are able to make better decisions faster, which in turn creates more opportunities for delegation and growth. It's a self-reinforcing pattern of effectiveness that separates the truly exceptional from the merely competent.  
+When done well, delegating the mise en place creates a virtuous cycle of enhanced performance. Leaders are able to make better decisions faster, which in turn creates more opportunities for delegation and growth. It's a self-reinforcing pattern of effectiveness that separates the truly exceptional from the merely competent.
 Moreover, it's an approach that scales. As leaders rise through the ranks and take on ever-greater responsibilities, the ability to effectively delegate the mise en place becomes increasingly critical. It's what allows them to maintain clarity and focus in the face of increasing complexity and demands on their time and attention.
 
 In the end, delegating the mise en place is about creating the conditions for peak performance. It's about recognizing that success is often determined before the first move is made, in the quiet preparation and organization that happens behind the scenes. It's about setting the stage for greatness, and then stepping back to let the performance unfold. And for leaders who master this art, the results can be nothing short of extraordinary.
@@ -407,7 +408,7 @@ Trust is the bedrock upon which all effective delegation is built. Leaders must 
 
 Due to constant changes in knowledge, environment, technology, and human capabilities, continuous experimentation is essential to maximize value. This implies a pattern more similar to an optimal poker strategy or the growth of a volatile tech stock—there must be some short-term losses in order to maximize long-term gains. Seeking to eliminate mistakes or productivity drawdowns essentially guarantees a suboptimal long-term performance.
 
-Part of the magic of delegation is how it continuously evolves the skill of the delegator and the task's executor. To delegate only tasks where there is 100% confidence in execution eliminates most opportunity for growth, both for the principal and the agent. Just as innovation requires failed experiments to push the boundaries of our knowledge, so too does the leverage in requiring failed delegation to push the boundaries of our collective ability. 
+Part of the magic of delegation is how it continuously evolves the skill of the delegator and the task's executor. To delegate only tasks where there is 100% confidence in execution eliminates most opportunity for growth, both for the principal and the agent. Just as innovation requires failed experiments to push the boundaries of our knowledge, so too does the leverage in requiring failed delegation to push the boundaries of our collective ability.
 
 The path to mastery in delegation is paved with good intentions and imperfect executions. But it is only through this process of trial and error, of entrusting others with tasks of increasing complexity and ambiguity, that we can truly unleash the exponential power of delegation.
 
@@ -417,7 +418,7 @@ In the end, the greatest risk is not that we delegate and fail, but that we fail
 
 #### Recursive Leverage
 
-The true power of delegation lies in its potential for *recursive* leverage. Both offensive and defensive delegation can be amplified through additional layers of delegation, each adding their own multiplicative effect.
+The true power of delegation lies in its potential for _recursive_ leverage. Both offensive and defensive delegation can be amplified through additional layers of delegation, each adding their own multiplicative effect.
 
 In defensive delegation, a chief of staff (CoS) or trusted executive assistant (EA) might be granted broad authority to handle a wide range of responsibilities, effectively becoming a vicarious delegator for their principal. This creates a shared understanding of the leader's intended time use, freeing them from the cognitive burden of constant task triage.
 
@@ -427,19 +428,19 @@ Offensive delegation's recursive potential is even more profound. A personal ass
 
 Effective delegation isn't about creating a linear chain of command; it's about crafting a fractal network of empowered actors and decision-makers, each operating with a clear understanding of the overarching vision but with the autonomy to execute in their sphere of influence.
 
-In the end, recursive delegation is about transcending the limits of individual capacity. It's about leveraging the power of systems and networks to create outcomes that far exceed the sum of their parts. 
+In the end, recursive delegation is about transcending the limits of individual capacity. It's about leveraging the power of systems and networks to create outcomes that far exceed the sum of their parts.
 
-This recursive leverage explains why some leaders seem to operate on an entirely different plane of productivity and influence. They've mastered the art of creating self-replicating systems of task distribution—removing themselves from the loop by delegating through other people and systems. Novice delegators have but one layer of leverage, but recursive delegation enables infinite layers of leverage. 
+This recursive leverage explains why some leaders seem to operate on an entirely different plane of productivity and influence. They've mastered the art of creating self-replicating systems of task distribution—removing themselves from the loop by delegating through other people and systems. Novice delegators have but one layer of leverage, but recursive delegation enables infinite layers of leverage.
 
-This approach to delegation doesn't just save time; it creates time. It doesn't merely increase productivity; it redefines what's possible. 
+This approach to delegation doesn't just save time; it creates time. It doesn't merely increase productivity; it redefines what's possible.
 
-Seasoned delegators know that the greatest leverage is not from what you delegate *to* your assistant, but what you delegate *through* your assistant.
+Seasoned delegators know that the greatest leverage is not from what you delegate _to_ your assistant, but what you delegate _through_ your assistant.
 
-## 
+##
 
 ## Leverage Incarnate
 
-It is impossible to explore the history of human productivity or study the art of delegation without paying special attention to its most powerful manifestation: the long-term personal assistant. 
+It is impossible to explore the history of human productivity or study the art of delegation without paying special attention to its most powerful manifestation: the long-term personal assistant.
 
 The personal assistant is ubiquitous in the lives of history's most consequential figures. Across disparate fields and eras, great people have wielded this instrument of impact with remarkable consistency. Long-term personal assistants are not just a tool for leverage—in essence, they are leverage incarnate.
 
@@ -457,9 +458,9 @@ Like a portfolio growing through compound interest, the deep specialization of l
 
 In the economy of human resources, the personal assistant acts as a force multiplier on the principal's time. Consider a technology company CEO—their time and attention are the organization's most precious commodities. By effectively extracting more productive hours from their week, we perform an arbitrage of astounding proportions, trading hours of a typically low-cost resource for the most valuable human resource in the entire enterprise.
 
-Former Cisco CEO John Chambers summarized this dynamic pointedly: "Debbie has always been and continues to be a true business partner; she makes it a point to know the business, what my priorities are and she has the ability to represent me as well as Cisco in the absolute best professional manner." Beyond pinch-hitting for the principal in certain situations, assistants also enable them to perform at their best through creating an ideal cognitive mise en place. As Chambers' assistant describes, 
+Former Cisco CEO John Chambers summarized this dynamic pointedly: "Debbie has always been and continues to be a true business partner; she makes it a point to know the business, what my priorities are and she has the ability to represent me as well as Cisco in the absolute best professional manner." Beyond pinch-hitting for the principal in certain situations, assistants also enable them to perform at their best through creating an ideal cognitive mise en place. As Chambers' assistant describes,
 
-"You'd be nauseated to see what we put together for him. He doesn't really know what he's doing until he goes on the plane. Our teams are constantly putting together materials for him to review." 
+"You'd be nauseated to see what we put together for him. He doesn't really know what he's doing until he goes on the plane. Our teams are constantly putting together materials for him to review."
 
 The personal assistant not only finds more hours in the day for the principal, they enable maximum value extraction from the hours that remain. Unsurprisingly, a detailed economic analysis by Kauppinen (2020) concluded that, in the general case, "it would be wiser to hire \[an\] assistant instead of another manager."
 
@@ -501,7 +502,7 @@ Momentum can often transfer from progress in personal areas to one's work achiev
 
 The ability to minimize cognitive costs associated with meals, shopping, and other personal obligations is often key to unlocking the greatest production in the office, lab, or studio. For many, eliminating 5-15 hours of stressful administrative work each week can ultimately save a marriage or prevent a life-threatening health risk. The bidirectional impacts between the personal and professional life is an area uniquely addressed by personal assistants, and an oft-cited benefit by seasoned delegators.
 
-## 
+##
 
 ## The Hybrid Era of Delegation
 
@@ -513,11 +514,11 @@ While the transformative power of cognitive labor performed by machines is indis
 
 #### Alloyed Goods
 
-It is crucial to recognize that artificial intelligence, like any technology, is not an unalloyed good in terms of productivity or human labor. History is replete with examples of innovations, such as personal computers, smartphones, and recording devices, that have inadvertently eroded the usage of personal assistants. At first glance, using a device to capture one's thoughts may seem superior to relying on an assistant who cannot be omnipresent. However, this shortsighted perspective fails to account for the invaluable context that assistants absorb through their constant presence, equipping them to tackle more complex and impactful tasks. Throughout the ages, luminaries across diverse fields—from politics to science to art—have relied on personal assistants to take dictation, capture ideas, and handle correspondence. The erosion of this norm by technological advances has simultaneously diminished a fertile training ground for one of the most potent amplifiers of human productivity. This risk is doubly applicable to artificial agents. The most catastrophic mistake would be overeliance on AI assistants, or using them to the exclusion of human assistants, rather than as an augmentation for them. 
+It is crucial to recognize that artificial intelligence, like any technology, is not an unalloyed good in terms of productivity or human labor. History is replete with examples of innovations, such as personal computers, smartphones, and recording devices, that have inadvertently eroded the usage of personal assistants. At first glance, using a device to capture one's thoughts may seem superior to relying on an assistant who cannot be omnipresent. However, this shortsighted perspective fails to account for the invaluable context that assistants absorb through their constant presence, equipping them to tackle more complex and impactful tasks. Throughout the ages, luminaries across diverse fields—from politics to science to art—have relied on personal assistants to take dictation, capture ideas, and handle correspondence. The erosion of this norm by technological advances has simultaneously diminished a fertile training ground for one of the most potent amplifiers of human productivity. This risk is doubly applicable to artificial agents. The most catastrophic mistake would be overeliance on AI assistants, or using them to the exclusion of human assistants, rather than as an augmentation for them.
 
 #### Assembly Lines of Cognition
 
-In the near future, it is virtually certain that more work will be delegated both *to* and *by* artificial agents than humans.
+In the near future, it is virtually certain that more work will be delegated both _to_ and _by_ artificial agents than humans.
 
 While this assertion may initially seem implausible, this is exactly how it has played out with prior technologies. Prior to the Industrial Age, few would have predicted that the majority of engines or common factory goods would be assembled by robots rather than people. Yet, this has indisputably come to pass. Similarly, if you had told accountants in the 1950s that most financial calculations would be performed by spreadsheets rather than humans, many would have responded with incredulity.
 
@@ -525,7 +526,7 @@ The trajectory of artificial agents is both familiar and distinct. It is self-ev
 
 #### Artificial Orchestrators
 
-The more intriguing divergence lies not in the work delegated *to* artificial agents, but in the work delegated *by* them. Emerging research by Fügener and colleagues (2021) suggests that even at this early stage, artificial agents are proving to be more effective delegators than their human counterparts. Perhaps more surprising, related work by Hemmer et al (2023) showed that humans prefer the tasks delegated to them by AI than by other human managers. 
+The more intriguing divergence lies not in the work delegated _to_ artificial agents, but in the work delegated _by_ them. Emerging research by Fügener and colleagues (2021) suggests that even at this early stage, artificial agents are proving to be more effective delegators than their human counterparts. Perhaps more surprising, related work by Hemmer et al (2023) showed that humans prefer the tasks delegated to them by AI than by other human managers.
 
 Several factors may contribute to this unexpected finding. First, artificial agents make more accurate judgments about which tasks can be performed by specific humans or other artificial agents. Second, due to their lower marginal cost of time or computation compared to humans, artificial agents can more consistently include details crucial to task execution. For instance, they can retrieve relevant information from a call transcript or a cloud-stored file, which a human assigning the task may neglect to do or include. Moreover, artificial agents will more reliably adhere to best practices for task delineation, provided this is encoded in their system prompt or enforced through other mechanisms. Finally, AI agents are less likely to elicit negative emotional responses or trigger anxiety in the task recipient. The artificial agent can also be summoned to clarify or check task progress as often as the recipient desires, which would be impermissible for a senior human manager.
 
@@ -539,7 +540,7 @@ Consistent with the research, we have discovered that human assistants indeed pr
 
 #### Assistants Past and Future
 
-The exemplars of human assistant utilization throughout history offer instructive lessons for their imminent artificial counterparts. For both artificial and human assistants, context is the primary constraint. The instructions given by skilled delegators in the past bear a striking resemblance to current best practices for prompt design in AI agents and large language models. These instructions often specified where necessary context should be retrieved. For instance, Catherine the Great directed her secretary to read her notes on Enlightenment legal texts and research laws from Western Europe, which were then used to rewrite Russian laws. Her written instructions to her assistant read like an example of prompt engineering from OpenAI or Anthropic. There is likely a great deal to be gained in adapting time-tested approaches with human assistants in the design of artificial ones. 
+The exemplars of human assistant utilization throughout history offer instructive lessons for their imminent artificial counterparts. For both artificial and human assistants, context is the primary constraint. The instructions given by skilled delegators in the past bear a striking resemblance to current best practices for prompt design in AI agents and large language models. These instructions often specified where necessary context should be retrieved. For instance, Catherine the Great directed her secretary to read her notes on Enlightenment legal texts and research laws from Western Europe, which were then used to rewrite Russian laws. Her written instructions to her assistant read like an example of prompt engineering from OpenAI or Anthropic. There is likely a great deal to be gained in adapting time-tested approaches with human assistants in the design of artificial ones.
 
 The bottlenecks with AI assistants today often stem from an inability to delegate or a lack of crucial context, rather than deficiencies in the models' intelligence. Many business leaders struggle to delegate effectively even to highly experienced and specialized humans who possess extensive context about their organization, processes, and goals. It is unlikely that they would fare much better working with artificial agents, which are frequently hampered by fragmented data sources, incomplete context, or poor instruction and goal definition. However, AI does present certain opportunities for humans to delegate beyond their innate capability, provided they attain a minimum threshold of skill.
 
@@ -569,7 +570,7 @@ Moving beyond enhancement, AI is now capable of identifying and initiating deleg
 
 2. Call and Meeting Autodelegation: By analyzing call or meeting transcripts, AI can extract action items and commitments, translating them into task manager entries without manual intervention.
 
-3. Visual Autodelegation: AI's image recognition capabilities allow it to identify tasks from screenshots, screen recordings, or other media, extracting and assigning corresponding tasks. 
+3. Visual Autodelegation: AI's image recognition capabilities allow it to identify tasks from screenshots, screen recordings, or other media, extracting and assigning corresponding tasks.
 
 4. Log-Based Autodelegation: AI can process raw logs of system activity, such as focused application windows, browser tabs, API calls, and their corresponding contents, and then process these with user context. This will allow an experience like text autocompletion but at the task level, which can involve assignment to either AI agents or humans chosen from available resources.
 
@@ -603,33 +604,33 @@ The integration of AI into the delegation process represents a symbiotic relatio
 
 As we approach an inflection point where nearly every person on Earth will have access to zero-cost cognitive labor, delegation will emerge as the most essential discipline in shaping our future. Imagine if, during the Industrial Revolution, every member of the workforce had access to their own gigafactory staffed with an unlimited supply of free line workers. In such a scenario, knowledge of each station on the assembly line would be of little consequence. Insight into factory design, workforce organization, and systems-building would be far more crucial. Strategic expertise in determining what the factory should produce, how to respond to shifting market conditions, and other high-level decisions would be the key drivers of success. In short, the skills of the orchestrator, rather than the instrumentalist, would reign supreme.
 
-We are on the cusp of this exact scenario in the realm of knowledge work. When nearly everyone has access to free cognitive labor that rivals human experts in capability, the skill of organizing this infinite workforce will be the ultimate differentiator. What you delegate and how you delegate it will be the sole factors distinguishing you from those with access to the same unlimited artificial labor force (and its dramatically more productive human counterpart). 
+We are on the cusp of this exact scenario in the realm of knowledge work. When nearly everyone has access to free cognitive labor that rivals human experts in capability, the skill of organizing this infinite workforce will be the ultimate differentiator. What you delegate and how you delegate it will be the sole factors distinguishing you from those with access to the same unlimited artificial labor force (and its dramatically more productive human counterpart).
 
-And it is clear that AI will not solely be a worker in this future hybrid organization, but also a manager and advisor—on the giving end delegation, not just the receiving end. 
+And it is clear that AI will not solely be a worker in this future hybrid organization, but also a manager and advisor—on the giving end delegation, not just the receiving end.
 
-Nicholas Bloom and colleagues (2024) put forth the notion that management itself is "akin to a technology"—one that can account for dramatic differences in productivity between companies and nations. Intuitively, this makes sense; most companies and nations have access to the same basic technologies, so it is the skill in wielding them that drives the end result. The conclusions are self-evident, even without the authors' rigorous econometric analysis: "the need to coordinate a multitude of dispersed agents within a ﬁrm is critical," and the better we understand these dynamics, the more we can "increase the aggregate wealth of nations." 
+Nicholas Bloom and colleagues (2024) put forth the notion that management itself is "akin to a technology"—one that can account for dramatic differences in productivity between companies and nations. Intuitively, this makes sense; most companies and nations have access to the same basic technologies, so it is the skill in wielding them that drives the end result. The conclusions are self-evident, even without the authors' rigorous econometric analysis: "the need to coordinate a multitude of dispersed agents within a ﬁrm is critical," and the better we understand these dynamics, the more we can "increase the aggregate wealth of nations."
 
-The differences between firms and countries who differ in management or delegation aptitude are stark, and these gaps will almost certainly be multiplied as artificial agents enter the equation. 
+The differences between firms and countries who differ in management or delegation aptitude are stark, and these gaps will almost certainly be multiplied as artificial agents enter the equation.
 
-The management science of the hybrid workforce has yet to be written, but there is no version of the future where it will not be essential to our species' success. The faster this knowledge is developed and the more widely it is disseminated, the brighter that future will be. 
+The management science of the hybrid workforce has yet to be written, but there is no version of the future where it will not be essential to our species' success. The faster this knowledge is developed and the more widely it is disseminated, the brighter that future will be.
 
 Those who excelled at the management and design of human organizations defined the fate of companies and nations in the 19th and 20th centuries. Those who excel at the architecture of human-AI organizations and delegation of labor within them may well control the fate of the species moving forward.
 
-## 
+##
 
-## 
+##
 
 ## Maximizing Human Delegation
 
-Delegation has delivered humanity’s greatest victories and innovations, yet it occurs with tragic infrequency. 
+Delegation has delivered humanity’s greatest victories and innovations, yet it occurs with tragic infrequency.
 
-Untold hours of each generation’s greatest minds are wasted on mundanities like scheduling, and even skilled work that others can do equally well (or better). 
+Untold hours of each generation’s greatest minds are wasted on mundanities like scheduling, and even skilled work that others can do equally well (or better).
 
-For every Immanuel Kant, who finally created their masterwork after hiring the perfect assistant, there are likely hundreds or thousands of would-be Kants. 
+For every Immanuel Kant, who finally created their masterwork after hiring the perfect assistant, there are likely hundreds or thousands of would-be Kants.
 
 In some other universe, there was a da Vinci who created 200 or 2000 paintings rather than the 20 which we enjoy. At least we have his notebooks, thanks to the heroic cataloging and translation efforts by his assistant, Francecso Melzi.
 
-As history has shown, our great works of art, life-saving inventions, and society-shifting technologies will materialize based largely on how well their creators delegate. 
+As history has shown, our great works of art, life-saving inventions, and society-shifting technologies will materialize based largely on how well their creators delegate.
 
 To maximize human progress and flourishing, we must drive maximal delegation by eliminating its historic barriers.
 
@@ -637,7 +638,7 @@ This campaign must be waged on multiple fronts:
 
 ### **Restoring the Social Norms of Greatness**
 
-We must correct the misconceptions about great contributors working in isolation. This isn't merely about historical accuracy; it's about providing symbolic permission for today's talents to follow the best practices of history's most impactful figures. 
+We must correct the misconceptions about great contributors working in isolation. This isn't merely about historical accuracy; it's about providing symbolic permission for today's talents to follow the best practices of history's most impactful figures.
 
 When students learn of Cicero, they study his rhetoric and historical impact, but likely assume he achieved everything alone. Cicero's brilliant statesmanship, oratory, and writing was enabled by prolific utilization of his assistant, Tiro. In reality, his acumen in delegation is as much a part of his legacy—and perhaps even greater in skill—than his other talents. It's far easier to shape the political discourse of your era when someone else is handling your finances, writing letters on your behalf, managing real estate, organizing your library, taking dictation, playing the role of editor, and serving as a point person on both personal and professional relationships. And ironically, while Cicero's political philosophy has become outdated as new thinkers on governance contributed to humanity's knowledge, his skillful delegation of personal affairs is as relevant today as it was during the reign of Julius Caesar.
 
@@ -649,7 +650,7 @@ The lion's share of history has been achieved through delegation. The better thi
 
 Delegation is a complex cognitive, emotional, and social constellation of skills. It is not a single tactic or workflow to be acquired in a one-day workshop or a single book. Though some have a greater natural talent for delegation, its mastery is not innate but learned. We must accelerate this learning process, documenting specific methods for productive assistance that are often learned only by painful trial and error. Many of the best didactic approaches will involve realtime co-piloting or near-instant feedback enabled by artificial intelligence.
 
-As we approach an inflection point where nearly every person on earth will have access to zero-cost cognitive labor, delegation will become the most essential discipline in crafting our future. 
+As we approach an inflection point where nearly every person on earth will have access to zero-cost cognitive labor, delegation will become the most essential discipline in crafting our future.
 
 Imagine if during the Industrial Revolution, every person in the workforce had access to their own gigafactory staffed with unlimited free line workers. In such a scenario, knowledge about each station on the assembly line would matter little. Insight around factory design, workforce organization, and systems-building would be far more important. So would strategic expertise in knowing what the factory should build, how to react to changing markets, and so on. In short, the skills of the orchestrator rather than the instrumentalist would be the driver of success.
 
@@ -657,7 +658,7 @@ We are nearing the arrival of this exact scenario for knowledge work. When nearl
 
 Nicholas Bloom and colleagues (2024) advanced the notion that management itself is "akin to a technology"—one which can explain dramatic differences in productivity both between companies and nations. Intuitively, this makes sense; most companies and nations have access to the same basic technologies, so it is skill in wielding them which drives the end result. The conclusions are obvious even without the authors' rigorous econometric analysis: "the need to coordinate a multitude of dispersed agents within a ﬁrm is critical," and the better we understand these dynamics, the more we can "increase the aggregate wealth of nations."
 
-The management science of orchestrating human and artificial team members has yet to be written, but there is no version of the future where it will not be essential to our species' success. The faster this knowledge is developed and the more widely it is distributed, the brighter that future will be. 
+The management science of orchestrating human and artificial team members has yet to be written, but there is no version of the future where it will not be essential to our species' success. The faster this knowledge is developed and the more widely it is distributed, the brighter that future will be.
 
 Those who pioneer the art of delegating across human and machine will have a disproportionate role in shaping our collective destiny.
 
@@ -693,7 +694,7 @@ This will require innovative business models and technologies that can scale the
 
 Moreover, we need to reframe the personal assistant relationship as not just a luxury for the elite, but a necessity for anyone looking to maximize their impact. By changing the cultural narrative around personal assistants, we can encourage more people to seek out and benefit from these relationships.
 
-Ultimately, the goal should be to create a world where everyone has access to the support they need to thrive and maximize their impact. Where delegation is not a rare skill possessed by a select few, but a universal tool for unlocking human potential. Where the question is not whether you have an assistant, but how you can best work with your assistant to achieve your goals and contribute to the world. 
+Ultimately, the goal should be to create a world where everyone has access to the support they need to thrive and maximize their impact. Where delegation is not a rare skill possessed by a select few, but a universal tool for unlocking human potential. Where the question is not whether you have an assistant, but how you can best work with your assistant to achieve your goals and contribute to the world.
 
 Artificial intelligence tools may have a powerful role in augmenting the productivity of humanity’s next great achievers, but it is not certain when—or if—these assets might eclipse the power of assistants like Augustus’, Newton’s, and Jobs’. It is a safer bet for the near-term that human assistants will continue to play a critical role in the species’ next great creations, and more likely that they will be utilizing, managing, and coordinating with AI than be replaced by them. Leveraging AI to augment the time-tested impact of personal assistants and broaden their availability is a priority in maximizing the output of our species’ next era of creators, inventors, and leaders.
 
@@ -719,27 +720,27 @@ And to those who wish to author it:
 
 It's time to delegate.
 
-## Epilogue 
+## Epilogue
 
 ### **The Delegated Manifesto**
 
 ### **The ~~Delegation~~ Delegated Manifesto**
 
-It would undermine the spirit of this essay to have written it personally. 
+It would undermine the spirit of this essay to have written it personally.
 
 The reader deserves candor, and each contributor deserves acknowledgement—biological or otherwise.
 
-A human executive assistant collaborated with various AI assistants on identifying historical figures and primary source materials of interest, such as biographies and collections of letters.  The EA helped obtain the material, as well as create certain AI workflows to extract their content.
+A human executive assistant collaborated with various AI assistants on identifying historical figures and primary source materials of interest, such as biographies and collections of letters. The EA helped obtain the material, as well as create certain AI workflows to extract their content.
 
-Essentially, an AI assistant read the biographies for us. The EA fact-checked the extracted quotations to de-risk potential hallucinations. 
+Essentially, an AI assistant read the biographies for us. The EA fact-checked the extracted quotations to de-risk potential hallucinations.
 
-The same is true of quotations from academic papers and other references. 
+The same is true of quotations from academic papers and other references.
 
 We wish we had time to read each one—they all seem very interesting.
 
-The graphics were a human and artificial team effort. 
+The graphics were a human and artificial team effort.
 
-Your author wrote the introduction and conclusion, left voice notes which were transcribed and expanded by other AI tools, sourced writing samples to include in prompts to the large language models, and did an editorial pass on the final draft. 
+Your author wrote the introduction and conclusion, left voice notes which were transcribed and expanded by other AI tools, sourced writing samples to include in prompts to the large language models, and did an editorial pass on the final draft.
 
 We sincerely hope this material inspires the reader to delegate, build systems that enable delegation, and maximize the impact of themselves and others.
 
@@ -747,161 +748,161 @@ More importantly, we intend for this writing to itself empower vicarious delegat
 
 ## References
 
-1. Adam, M., Diebel, C., Goutier, M., & Benlian, A. (2024). Navigating autonomy and control in human-AI delegation: User responses to technology- versus user-invoked task allocation. \*Decision Support Systems, 180\*, 114193\.  
-2. Afanador, J., Baptista, M. S., & Oren, N. (2019). Algorithms for recursive delegation. AI Communications, 32(4), 303–317. https://doi.org/10.3233/aic-190616  
-3. Agness, D., Baseler, T., Chassang, S., Dupas, P., & Snowberg, E. (2022). Valuing the Time of the Self-Employed. CESifo Working Paper Series 9567\.  
-4. Aguinis, H., & O'Boyle, E. H. (2014). Star Performers in Twenty-First Century Organizations. Personnel Psychology, 67, 313-350.  
-5. Aidt, T. S., Leong, B., Saslaw, W. C., & Sgroi, D. (2006). A power-law distribution for tenure lengths of sports managers. Physica a Statistical Mechanics and Its Applications, 370(2), 697–703. https://doi.org/10.1016/j.physa.2006.03.016  
-6. Andriani, P., & McKelvey, B. (2006). Beyond Gaussian averages: Redirecting management research toward extreme events and power laws. SSRN Electronic Journal. Retrieved from the SSRN website.  
-7. Andriani, P., & McKelvey, B. (2009). From Gaussian to Paretian thinking: Causes and implications of power laws in organizations. Organization Science, 20(6), 1053-1071. https://www.jstor.org/stable/25614715  
-8. Andriani, P., & Mckelvey, B. (n.d.). Managing in a Pareto world calls for new thinking. Cairn International Edition.  
-9. Antonio, D. B., Hale, J., & Lindon, J. (1979). The Travel Journal of Antonio de Beatis Germany Switzerland The Low Countries France and Italy 1517-1518. Hakluyt Society.  
-10. Aschauer, F., Sohn, M., & Hirsch, B. (2023). Managerial advice‐taking—Sharing responsibility with (non)human advisors trumps decision accuracy. European Management Review, 21(1), 186–203. https://doi.org/10.1111/emre.12575  
-11. Asuyama, Y. (2016). Delegation to workers across countries and industries : social capital and coordination needs matter. ideas.repec.org. https://ideas.repec.org/p/jet/dpaper/dpaper620.html  
-12. Autor, D. (2014). Polanyi’s paradox and the shape of employment growth. In NBER Working Paper Series (No. 20485). NATIONAL BUREAU OF ECONOMIC RESEARCH. https://www.nber.org/system/files/working\_papers/w20485/w20485.pdf  
-13. Bandiera, O., Prat, A., Hansen, S., & Sadun, R. (2019). CEO Behavior and Firm Performance. Journal of Political Economy, 128(4), 1325-1369.  
-14. Ben-Ner, A., Kong, F., & Lluis, S. (2012). Uncertainty, task environment, and organization design: An empirical investigation. Journal of Economic Behavior & Organization, 82(1), 281-313.  
-15. Bloom, N., Sadun, R., & Van Reenen, J. (2016). Management as a technology? https://doi.org/10.3386/w22327  
-16. Bobek, E., & Tversky, B. (2014). The cognitive design of tools of thought. Review of Philosophy and Psychology. Special issue on diagrammatic reasoning. Retrieved from https://link.springer.com/chapter/10.1007/978-3-319-15594-4\_1  
-17. Boyatzis, R. E., & Dhar, U. (2023). When Normal is Not Normal- A Theory of the Non-Linear and Discontinuous Process of Desired Change and its Managerial Implications. The Journal of Applied Behavioral Science, 00218863231153218  
-18. Brachten, F., Brünker, F., Frick, N. R. J., Ross, B., & Stieglitz, S. (2020). On the ability of virtual agents to decrease cognitive load: an experimental study. Information Systems and e-Business Management, 18(2).  
-19. Bramly, S. (1995). Leonardo. Penguin Random House.  
-20. Buffett, W. (1996). Berkshire Hathaway Inc. Chairman's Letter.  
-21. Buffett, W. (1998). Berkshire Hathaway Inc. Chairman's Letter.  
-22. Buffett, W. (1999). Berkshire Hathaway Inc. Chairman's Letter.  
-23. Buffett, W. (2021). Berkshire Hathaway Inc. Chairman's Letter.  
-24. Cabrera, Á. A., Perer, A., & Hong, J. I. (2023). Improving Human-AI collaboration with descriptions of AI behavior. Proceedings of the ACM on Human-Computer Interaction, 7(CSCW1), 1–21. https://doi.org/10.1145/3579612  
-25. Callula, B., Sana, E., Jacqueline, G., Nathalie, J., & Maria, L. (2024). A structural framework for effective time management in dynamic work environments. Aptisi Transactions on Management (ATM), 8(2), 152–159. https://doi.org/10.33050/atm.v8i2.2256  
-26. Candrian, C., & Scherer, A. (2022). Rise of the machines: Delegating decisions to autonomous AI. Computers in Human Behavior, 134, 107308\. https://doi.org/10.1016/j.chb.2022.107308  
-27. Chandersekaran, N. C. S., & Simpson, N. W. R. (2011). Personal delegation by persona creation. Computer Technology and Application, 2(6). https://doi.org/10.17265/1934-7332/2011.06.001  
-28. Cheng, J., Teevan, J., Iqbal, S. T., & Bernstein, M. S. (2015). Break It Down: A Comparison of Macro- and Microtasks. Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems \- CHI ’15. doi:10.1145/2702123.2702146.  
-29. Clauset, A., Shalizi, C. R., & Newman, M. E. J. (2009). Power-law distributions in empirical data. SIAM Review, 51(4), 661-703. https://doi.org/10.1137/070710111.  
-30. Council of Economic Advisers. (2015). The Economic Benefits Of U.S. Trade.   
-31. Craig, L. and Brown, J. E. (2016). Feeling rushed: Gendered time quality, work hours, nonstandard work schedules, and spousal crossover. Journal of Marriage and Family, 79(1), 225-242. https://doi.org/10.1111/jomf.12320  
-32. Crawford, G. C., Aguinis, H., Lichtenstein, B., Davidsson, P., & McKelvey, B. (2015). Power law distributions in entrepreneurship: Implications for theory and research. Journal of Business Venturing. https://doi.org/10.1016/J.JBUSVENT.2015.01.001  
-33. Crawford, G. Christopher, Aguinis, Herman, Lichtenstein, Benyamin, Davidsson, Per, & McKelvey, Bill (2015) Power law distributions in entrepreneurship: Implications for theory and research. Journal of Business Venturing, 30(5), p. 696-713.  
-34. Cuthberg. (2015). An investigation into delegation of strategy and operational tasks by right brain dominant entrepreneurs. Retrieved from Emerald Insight.  
-35. Cvetkovic, I., & Bittner, E. (2022). Task Delegability to AI: evaluation of a framework in a knowledge work context. Proceedings of the . . . Annual Hawaii International Conference on System Sciences/Proceedings of the Annual Hawaii International Conference on System Sciences. https://doi.org/10.24251/hicss.2022.021  
-36. Dili, R., Buncad, Y. J., Perez, Y. J., & Velasco, R. J. (2022). BPO Industry in Achieving Socio-Economic Development Inclusiveness and Local Governance in the Philippines. Management of Sustainable Development, 14(2), 22–26. https://doi.org/10.54989/msd-2022-0012  
-37. Domingos, E. F., Terrucha, I., Suchon, R., Grujić, J., Burguillo, J. C., Santos, F. C., & Lenaerts, T. (2022). Delegation to artificial agents fosters prosocial behaviors in the collective risk dilemma. Scientific Reports, 12(1). https://doi.org/10.1038/s41598-022-11518-9  
-38. Drăgulescu, A. and Yakovenko, V. M. (2001). Exponential and power-law probability distributions of wealth and income in the united kingdom and the united states. Physica A- Statistical Mechanics and Its Applications, 299(1-2), 213-221  
-39. Drucker, P. F. (1999). Knowledge-Worker productivity: The biggest challenge. California Management Review, 41(2), 79–94. https://doi.org/10.2307/41165987  
-40. Dry, S. (2014). Newton Papers: The Strange and True Odyssey of Isaac Newton’s Manuscripts. Retrieved from \[URL\]  
-41. Du, Y., Wei, F., & Zhang, H. (2024, February 6). AnyTool: Self-Reflective, hierarchical agents for Large-Scale API calls. arXiv.org. [https://arxiv.org/abs/2402.04253](https://arxiv.org/abs/2402.04253)  
-42. Dykstra, H., O'Flaherty, S., & Whillans, A. (2023). The buy-in effect: When increasing initial effort motivates behavioral follow-through (Working Paper No. 24-020). Harvard Business School.  
-43. Economic Innovation Group. (2024). The American Worker Project from EIG. https://eig.org/wp-content/uploads/2024/07/TAWP-Kirkegaard.pdf  
-44. Enhancing AI-Assisted Group Decision Making through LLM-Powered Devil’s Advocate. (n.d.). https://dl.acm.org/doi/fullHtml/10.1145/3640543.3645199  
-45. Erickson, T., Danis, C. M., Kellogg, W. A., & Helander, M. E. (2008). Assistance: The work practices of human administrative assistants and their implications for it and organizations. In Proceedings of the 2008 ACM Conference on Computer Supported Cooperative Work (pp. 609-618). Association for Computing Machinery. https://doi.org/10.1145/1460563.1460658  
-46. Fasae, F. B. K. (2023). The fundamentals and indispensability of the secretarial profession in the 21st century. International Journal of Business and Management Review, 11(11), 35–49. https://doi.org/10.37745/ijbmr.2013/vol11n113549  
-47. Felipe, J. (2008). An Input–Output analysis of the Philippine BPO industry. ASIAN-PACIFIC ECONOMIC LITERATURE. Blackwell Publishing Asia. https://doi.org/10.1111/j.1467-8411.2008.00211.x  
-48. Fuchs, A., Passarella, A., & Conti, M. (2023). Optimizing delegation between human and AI collaborative agents. In European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD). Workshop on Hybrid Human-Machine Learning and Decision Making.  
-49. Fügener, A., Grahl, J., Gupta, A., & Ketter, W. (2022). Cognitive Challenges in Human-Artificial Intelligence Collaboration: Investigating the Path Toward Productive Delegation. \*Information Systems Research\*, 33(2), 678-696. DOI: 10.1287/isre.2021.1079.  
-50. Fügener, A., Grahl, J., Gupta, A., & Ketter, W. (2022). Cognitive Challenges in Human-Artificial Intelligence Collaboration: Investigating the Path Toward Productive Delegation. Information Systems Research, 33(2), 678-696. https://doi.org/10.1287/isre.2021.1079  
-51. Garicano, L., & Van Zandt, T. (2013). Hierarchies and the Division of Labor. In Robert Gibbons and John Roberts (Eds.), The Handbook of Organizational Economics (pp. 604-654). Princeton University Press.  
-52. Giurge, L. M. (2020). Why time poverty matters for individuals, organisations and nations. Nature Human Behaviour, 4(10), 993-1003. https://doi.org/10.1038/s41562-020-0920-z  
-53. Gleick, J. (2003). Isaac Newton. Vintage Books.  
-54. Goodwin, D. K. (1994). No Ordinary Time: Franklin and Eleanor Roosevelt.  
-55. Graeber, D., & Wengrow, D. (2021). The Dawn of Everything: A New History of Humanity. Allen Lane.  
-56. Graham, J. R., Harvey, C. R., & Puri, M. (2011, August 1). Capital Allocation and Delegation of Decision-Making Authority within Firms. https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=1919444  
-57. Guggenberger, T., Lämmermann, L., Urbach, N., & Hofmann, P. (2023). Task delegation from AI to humans: A principal-agent perspective. ResearchGate. https://www.researchgate.net/publication/374420256\_Task\_delegation\_from\_AI\_to\_humans\_A\_principal-agent\_perspective  
-58. Gyory, J. T., Kotovsky, K., & Cagan, J. (2022). Is It Human or Is It Artificial Intelligence? Discerning the Impact and Effectiveness of Process Managers Based on the Manager's Identity. Proceedings of the Design Society, Volume 2\.  
-59. Gyory, J. T., Kotovsky, K., McComb, C., & Cagan, J. (2022). Comparing the Impacts on Team Behaviors Between Artificial Intelligence and Human Process Management in Interdisciplinary Design Teams. Journal of Mechanical Design, 144(10).  
-60. Hagendorff, T. (2023). Machine Psychology: Investigating Emergent Capabilities and Behavior in Large Language Models Using Psychological Methods. In arXiv:2303.13988v1, pp. 1-17.   
-61. Hager, P., Jungmann, F., Holland, R., Bhagat, K., Hubrecht, I., Knauer, M., Vielhauer, J., Makowski, M., Braren, R., Kaissis, G., & Rueckert, D. (2024). Evaluation and mitigation of the limitations of large language models in clinical decision-making. Nature Medicine. https://doi.org/10.1038/s41591-024-03097-1  
-62. Hajna, S., Buckeridge, D. L., & Hanley, J. A. (2015). Substantiating the impact of John Snow’s contributions using data deleted during the 1936 reprinting of his original essayOn the Mode of Communication of Cholera. International Journal of Epidemiology, 44(6), 1794–1799. https://doi.org/10.1093/ije/dyv164  
-63. Hamada, H. (2023). Luck of Outcome in the Talent Versus Luck ModeL. Advances in Complex Systems, 26(04n05)  
-64. Hang, J., & Chen, L. (2022). How to realize the full potentials of artificial intelligence (AI) in the digital economy? A literature review. Stanford Institute for Human-Centered Artificial Intelligence  
-65. Hanna, J. T., Elms, A. K., Gill, H., Stanley, D. J., & Powell, D. M. (2019). The effect of leader risk-taking on subordinate felt trust. Leadership & Organization Development Journal. doi-10.1108:lodj-11-2018-0386  
-66. Hayawi, K.; Shahriar, S. AI Agents from Copilots to Coworkers: Historical Context, Challenges, Limitations, Implications, and Practical Guidelines. Preprints 2024, 2024040709\. https://doi.org/10.20944/preprints202404.0709.v1  
-67. Hemmer, P., Westphal, M., Schemmer, M., Vetter, S., Vössing, M., & Satzger, G. (2023). Human-AI Collaboration: The Effect of AI Delegation on Human Task Performance and Task Satisfaction. arXiv. https://doi.org/10.48550/arXiv.2303.09224  
-68. Hoogenboom, H., & Cruse, M. (2005). The Memoirs of Catherine the Great. New York: Modern Library.  
-69. Horan, R. D., Bulte, E., & Shogren, J. F. (2005). How trade saved humanity from biological exclusion: An economic theory of Neanderthal extinction. Journal of Economic Behavior & Organization, 58(1), 1-29.  
-70. Idema, W. L., & Grant, B. (2004). The red brush: Writing women of imperial China. Harvard University Asia Center.  
-71. Isaacson, W. (2007). Einstein: His Life and Universe. Simon & Schuster.  
-72. Isaacson, W. (2017). Leonardo Da Vinci. Simon and Schuster.  
-73. Isaacson, W. (2021). The Code Breaker. Jennifer Doudna, Gene Editing, and the Future of the Human Race. Simon & Schuster.  
-74. Jabs, J., & Devine, C. M. (2006). Time scarcity and food choices: An overview. Appetite, 47(2), 196–204. https://doi.org/10.1016/j.appet.2006.02.014  
-75. Janowicz, S. (2017). Living history: Myth, representation and dramatizing Catherine the Great (Doctoral dissertation). University of Southern Queensland.  
-76. Josephson, M. (2024). Edison: A Biography. Society of American Historians.  
-77. Kahn, A., & Rubin-Detlev, K. (2018). Catherine the Great, Selected Letters. Oxford University Press.  
-78. Kauppinen, A. (2020). Need for support personnel – analysing the need and the economic impact of a service assistant in Company X. Theseus. https://www.theseus.fi/handle/10024/348246  
-79. Kohler, C. (2005). Power Up: How Japanese video games gave the world an extra life. https://www.semanticscholar.org/paper/Power-Up%3A-How-Japanese-Video-Games-Gave-the-World-Kohler/707e85314e5d233fce07c2b4cd07f1f88cbc9459  
-80. Kristal, A. S., & Zlatev, J. J. (2023). Going beyond the 'Self' in Self-Control: Interpersonal Consequences of Commitment Strategy Use. Journal of Personality and Social Psychology.  
-81. Kuhnert, K. W. (1994). Transforming leadership: Developing people through delegation. In B. M. Bass & B. J. Avolio (Eds.), Improving organizational effectiveness through transformational leadership (pp. 10–25). Sage Publications.  
-82. Kushlev, K., & Dunn, E. W. (2015). Checking email less frequently reduces stress. Computers in Human Behavior, 43, 220–228. doi:10.1016/j.chb.2014.11.005  
-83. Landry, A. T., & Whillans, A. (2018). The Power of Workplace Rewards: Using Self-Determination Theory to understand why reward satisfaction matters for workers around the world. Compensation & Benefits Review, 50(3), 123–148. https://doi.org/10.1177/0886368719840515  
-84. Leana, C. R. (1986). Predictors and Consequences of Delegation. Academy of Management Journal, 29(4), 754-774. doi:10.2307/255943  
-85. Lee-Yoon, A., & Whillans, A. V. (2018). Making seconds count: When valuing time promotes subjective well-being. Current Opinion in Psychology, 26, 54-57. https://doi.org/10.1016/j.copsyc.2018.05.002  
-86. Leitão, D., Saleiro, P., Figueiredo, M. a. T., & Bizarro, P. (2022, June 27). Human-AI Collaboration in Decision-Making: Beyond Learning to Defer. arXiv.org. https://arxiv.org/abs/2206.13202  
-87. Liberman, L., & Boehe, D. (2011). Worldwide willingness to delegate and country labor quality. The International Journal of Human Resource Management, 22(17), 3477–3495. doi-10.1080:09585192.2011.610943  
-88. Lieder, F. (2019). Cognitive prostheses for goal achievement. Nature Human Behaviour, 3(10), 1096-1106. https://doi.org/10.1038/s41562-019-0672-9.  
-89. Lieder, F., Chen, O. X., Krueger, P. M., & Griffiths, T. L. (2019). Cognitive prostheses for goal achievement. Nature Human Behaviour, 3(10), 1096–1106. https://doi.org/10.1038/s41562-019-0672-9  
-90. Liu, J., Yue, W. T., Leung, A., & Zhang, X. (2022). Find the Good. Seek the unity: A Hidden Markov model of Human-AI Delegation Dynamics. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.4150772  
-91. Logg, J. M., Minson, J. A., & Moore, D. A. (2019). Algorithm appreciation: People prefer algorithmic to human judgment. Organizational Behavior and Human Decision Processes, 151, 90-103.  
-92. Lowish, T. L. (2021). Catherine the Great and the development of a modern Russian Sovereignty, 1762-1796. https://escholarship.org/uc/item/6fc7r596  
-93. Lubars, B., University of Colorado Boulder, Tan, C., & University of Colorado Boulder. (2019). Ask not what AI can do, but what AI should do: Towards a framework of task delegability. In 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada \[Conference-proceeding\]. https://papers.nips.cc/paper\_files/paper/2019/file/d67d8ab4f4c10bf22aa353e27879133c-Paper.pdf  
-94. Lucas, R. E., & Jr. (1978). On the Size Distribution of Business Firms. The Bell Journal of Economics, 9(2), 508–523. https://doi.org/10.2307/3003596https://www.jstor.org/stable/3003596  
-95. Marulanda‐Carter, L., & Jackson, T. W. (2012). Effects of e‐mail addiction and interruptions on employees. Journal of Systems and Information Technology, 14(1), 82–94. https://doi.org/10.1108/13287261211221146  
-96. Mathebula, B. and Barnard, B. (2020). The Factors of Delegation Success: Accountability, Compliance and Work Quality. Expert Journal of Business and Management, 8(1), 76-97.  
-97. McCullough, D. (2015). The Wright Brothers. Simon & Schuster.  
-98. McKelvey, B. (2010). Complexity leadership: The secret of Jack Welch's success. International Journal of Complexity in Leadership and Management, 1(1), 4-36.  
-99. McNulty, B. (2016, February 1). David Bowie’s PA Coco Schwab: the woman who saved his life. The Telegraph. https://www.telegraph.co.uk/music/artists/david-bowies-pa-coco-schwab-the-woman-who-saved-his-life/  
-100. Milewski, A. E., & Lewis, S. H. (1997). Delegating to software agents. International Journal of Human-Computer Studies, 46(4), 485–500. https://doi.org/10.1006/ijhc.1996.0100  
-101. Mirkhan, S. D., Omer, S. K., Ali, H. M., Hamza, M. Y., Rashid, T. A., & Nedunchezhian, P. (2024, May 2). Effective delegation and leadership in software management. arXiv.org. https://arxiv.org/abs/2405.01612  
-102. Mogilner, C., Whillans, A. V., & Norton, M. I. (2018). Time, Money, and Subjective Well-Being. In Diener, E., Oishi, S., & Tay, L. (Eds.), Handbook of Well-Being: Rethinking Time for Well-Being.  
-103. Mornati, F. (2013). Pareto Optimality in the work of Pareto. Revue Européenne Des Sciences Sociales, 51–2, 65–82. https://doi.org/10.4000/ress.2517  
-104. Morris, E. (1979). The Rise of Theodore Roosevelt. Coward, McCann & Geoghegan.  
-105. O’Neale, D. R. J., & Hendy, S. C. (2012). Power Law Distributions of Patents as Indicators of Innovation. PLoS ONE, 7(12), e49501. https://doi.org/10.1371/journal.pone.0049501  
-106. Orzach, R., & Quist, K. (2022). Empowerment in Teams: When Delegation Prevents Collaboration. Retrieved from \[URL\]  
-107. Papageorgiou, M. & Washington Flight Standards District Office. (n.d.). Charles E. Taylor: The Unsung Hero of Kitty Hawk Finally Gets His Day. https://www.faa.gov/sites/faa.gov/files/about/history/pioneers/Charles\_E\_Taylor.pdf  
-108. Pareto, V. (1896). Cours d’Economie Politique. Tome Premier. The Economic Journal, 6(22), 249\. https://doi.org/10.2307/2956507  
-109. Pareto, V. (1897). The New Theories of Economics. Journal of Political Economy, 5(4), 485\.  
-110. Paridon, H. M., & Kaufmann, M. (2010). Multitasking in work-related situations and its relevance for occupational health and safety: Effects on performance, subjective strain and physiological parameters. Europe’s Journal of Psychology, 6(4). https://doi.org/10.5964/ejop.v6i4.226  
-111. Perera. (2024). Assessing the Task Management Capabilities of LLM-Powered Agents. Retrieved from https://openreview.net/pdf?id=Bhzd8kJhNC.  
-112. Perlow, L. A. (1999). The Time Famine: toward a sociology of work time. Administrative Science Quarterly, 44(1), 57–81. https://doi.org/10.2307/2667031  
-113. Pinski, M., Adam, M., & Benlian, A. (2023). AI Knowledge: Improving AI Delegation through Human Enablement. Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems.  
-114. Polanyi, M. (2023). The Tacit Dimension. University of Chicago Press.  
-115. Qian, C., & Wexler, J. (2024). Take It, Leave It, or Fix It: Measuring Productivity and Trust in Human-AI Collaboration. In Proceedings of the 29th International Conference on Intelligent User Interfaces (IUI '24), March 18-21, 2024, Greenville, SC, USA.  
-116. Reinhard, P., Li, M. M., Peters, C., & Leimeister, J. M. (2024). Let employees train their own chatbots: Design of generative AI-enabled delegation systems. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.4807392  
-117. Riisgaard, H., Søndergaard, J., Munch, M., Le, J. V., Ledderer, L., Pedersen, L. B., & Nexøe, J. (2017). Associations between degrees of task delegation and job satisfaction of general practitioners and their staff: a cross-sectional study. BMC Health Services Research, 17(1). https://doi.org/10.1186/s12913-017-1984-y  
-118. Rosen, S. (1982). Authority, control, and the distribution of earnings. The Bell Journal of Economics, 13(2), 311–323. https://doi.org/10.2307/3003456https://www.jstor.org/stable/3003456  
-119. Rubin-Detlev, K. (2015). The letters of Catherine the Great and the rhetoric of enlightenment. ORA \- Oxford University Research Archive. https://ora.ox.ac.uk/objects/uuid:b9199484-a774-485d-9e6c-3fef125a361c  
-120. Ruby, M. B., Dunn, E. W., Perrino, A., Gillis, R., & Viel, S. (2011). The invisible benefits of exercise. Health Psychology, 30(1), 67–74. doi-10.1037:a0021859  
-121. Russell, E., Jackson, T. W., Fullman, M., & Chamakiotis, P. (2023). Getting on top of work‐email: A systematic review of 25 years of research to understand effective work‐email activity. Journal of Occupational and Organizational Psychology. https://doi.org/10.1111/joop.12462  
-122. Sandstrom, G. M., & Dunn, E. W. (2014). Social Interactions and Well-Being. Personality and Social Psychology Bulletin, 40(7), 910–922. doi-10.1177:0146167214529799  
-123. Santos, A., Roberto, M. S., Camilo, C., & Chambel, M. J. (2023). Information and communication technologies-assisted after-hours work: A systematic literature review and meta-analysis of the relationships with work–family/life management variables. Frontiers in Psychology, 14\. https://doi.org/10.3389/fpsyg.2023.1101191  
-124. Sengul, M., Gimeno, J., & Dial, J. (2011). Strategic Delegation. Journal of Management, 38(1), 375–414. doi-10.1177:0149206311424317  
-125. Serrat, O. (2010). Delegating in the workplace. Cornell University, ILR School. Washington DC- Asian Development Bank. Retrieved from Academy of Management Journal, 29(4), 754-774.  
-126. Seshadri, S., & Shapira, Z. (2001). Managerial allocation of time and effort: the effects of interruptions. Management Science, 47(5), 647–662. https://doi.org/10.1287/mnsc.47.5.647.10481  
-127. Sev, J. T. & Benue State University. (2017). Effective delegation of authority as a strategy for task accomplishment and performance enhancement in business organizations-an empirical survey of flour mills of Nigeria plc, Lagos-Nigeria. In The Business and Management Review (Vol. 8, Issue 4, pp. 138–139). https://cberuk.com/cdn/conference\_proceedings/conference\_57952.pdf  
-128. Sheff, D. (1993). Game Over: How Nintendo Zapped an American Industry, Captured Your Dollars, and Enslaved Your Children. Random House.  
-129. Shiner, R. L. (2015). Maximizers, Satisficers, and Their Satisfaction With and Preferences for Reversible Versus Irreversible Decisions. Social Psychological and Personality Science, 6(8), 896–903. doi-10.1177:1948550615595271  
-130. Slovic, P. (1972). Psychological Study of Human Judgment: Implications for Investment Decision-Making. Journal of Finance, 27(4), 779-799.  
-131. Smith, K. (2016). The Gatekeeper: Missy LeHand, FDR, and the Untold Story of the Partnership that Defined a Presidency. Simon & Schuster.  
-132. Spitzer, P., Holstein, J., Hemmer, P., Vössing, M., Kühl, N., Martin, D., & Satzger, G. (2024). On the Effect of Contextual Information on Human Delegation Behavior in Human-AI collaboration. CoRR abs/2401.04729.  
-133. Steffel, M., Williams, E. F., & Perrmann-Graham, J. (2016). Passing the buck- Delegating choices to others to avoid responsibility and blame. Organizational Behavior and Human Decision Processes, 135, 32–44. doi-10.1016:j.obhdp.2016.04.006  
-134. Steffensen, D. S., McAllister, C. P., Perrewé, P. L., Wang, G., & Brooks, C. D. (2021). “You’ve Got Mail”- a Daily Investigation of Email Demands on Job Tension and Work-Family Conflict. Journal of Business and Psychology, 37(2), 325–338  
-135. Stieglitz, J., Gurven, M., Kaplan, H., & Hooper, P. L. (2013). Household Task Delegation among High-Fertility Forager-Horticulturalists of Lowland Bolivia. Current Anthropology, 54(2), 232-241. https://doi.org/10.1086/669708.  
-136. Stoker, M. (2022). Leading and working from home in times of COVID-19: On the perceived changes in leadership behaviors. Journal of Leadership & Organizational Studies, 29, 208-218.  
-137. Sulloway, F. J. (1982). The Beagle Collections of Darwin's Finches (Geospizinae). Bulletin of the British Museum (Natural History) Zoology Series, 43(2), 1-46.  
-138. Sunstein, C. R. (2024). Choice engines and paternalistic AI. Palgrave Communications, 11(1), 1-4.  
-139. Sunstein, Cass R. and Gaffe, Jared, An Anatomy of Algorithm Aversion (June 14, 2024). http://dx.doi.org/10.2139/ssrn.4865492  
-140. Terrucha, I., Domingos, E. F., Simoens, P., & Lenaerts, T. (2024). Committing to the wrong artificial delegate in a collective-risk dilemma is better than directly committing mistakes. Scientific Reports, 14(1)  
-141. The Sun. (1904, April 17). Jiu Jitsu, The Newest Fad. New York Sun. https://chroniclingamerica.loc.gov/lccn/sn83030272/1904-04-17/ed-1/seq-16/  
-142. Tomić, Z., & Radović, O. (2018). Models of Distribution of Gdp at the Global Level. Facta Universitatis Series Economics and Organization, 1, 177\.  
-143. Trapunsky, V. (2023). Delegation nation. ChatterBoss Press.  
-144. Vanderbroeck, J. (2014). Leadership Strategies for Women: Lessons from Four Queens on Leadership and Career Development.  
-145. Vásárhelyi, Z., & Scheuring, I. (2018). Behavioral Specialization during the Neolithic—An Evolutionary Model. Frontiers in Sociology, 3\. https://doi.org/10.3389/fsoc.2018.00035  
-146. Vasari, G. (1568). The Lives of the Most Excellent Painters, Sculptors, and Architects. Modern Library.  
-147. Vössing, M. (2022). Designing Transparency for Effective Human-AI Collaboration. Information Systems Frontiers. https://doi.org/10.1007/s10796-022-10284-3.  
-148. Whillans, A. (2017). Exchanging cents for seconds : the happiness benefits of choosing time over money (T). University of British Columbia. Retrieved from https://open.library.ubc.ca/collections/ubctheses/24/items/1.0348134  
-149. Whillans, A. V., Dunn, E. W. (2017). Buying time promotes happiness. Proceedings of the National Academy of Sciences of the United States of America. https://doi.org/10.1073/pnas.1706541114  
-150. Whillans, A. V., Weidman, A. C., & Dunn, E. W. (2016). Valuing Time Over Money Is Associated With Greater Happiness. \*Social Psychological and Personality Science, 7\*, 213-222.  
-151. Whillans, A. V., Pow, J., & Norton, M. I. (2018). Time-saving purchases promote relationship satisfaction (Working Paper No. 18-072). Harvard Business School.  
-152. Whisler, T. L. (1960). The “Assistant-to” in Four Administrative Settings. Administrative Science Quarterly, 5(2), 181\. doi-10.2307:2390778  
-153. Williams, R. (n.d.). The Rationalization Of Labor. In R. Williams (Ed.), Raphael and the Redefinition of Art in Renaissance Italy (pp. 173-258). Cambridge University Press. https://www.cambridge.org/core/books/raphael-and-the-redefinition-of-art-in-renaissance-italy/2510148CB31C1669F8C7D3C5081F6920  
-154. Xu, Y., Bradford, N., & Garg, R. (2023). Transparency enhances positive perceptions of social artificial intelligence. Human Behavior and Emerging Technologies, 2023, 1–15. https://doi.org/10.1155/2023/5550418  
-155. Yukl, G., & Fu, P. P. (1999). Determinants of delegation and consultation by managers. \*Journal of Management\*, 20, 219-232.  
+1. Adam, M., Diebel, C., Goutier, M., & Benlian, A. (2024). Navigating autonomy and control in human-AI delegation: User responses to technology- versus user-invoked task allocation. \*Decision Support Systems, 180\*, 114193\.
+2. Afanador, J., Baptista, M. S., & Oren, N. (2019). Algorithms for recursive delegation. AI Communications, 32(4), 303–317. https://doi.org/10.3233/aic-190616
+3. Agness, D., Baseler, T., Chassang, S., Dupas, P., & Snowberg, E. (2022). Valuing the Time of the Self-Employed. CESifo Working Paper Series 9567\.
+4. Aguinis, H., & O'Boyle, E. H. (2014). Star Performers in Twenty-First Century Organizations. Personnel Psychology, 67, 313-350.
+5. Aidt, T. S., Leong, B., Saslaw, W. C., & Sgroi, D. (2006). A power-law distribution for tenure lengths of sports managers. Physica a Statistical Mechanics and Its Applications, 370(2), 697–703. https://doi.org/10.1016/j.physa.2006.03.016
+6. Andriani, P., & McKelvey, B. (2006). Beyond Gaussian averages: Redirecting management research toward extreme events and power laws. SSRN Electronic Journal. Retrieved from the SSRN website.
+7. Andriani, P., & McKelvey, B. (2009). From Gaussian to Paretian thinking: Causes and implications of power laws in organizations. Organization Science, 20(6), 1053-1071. https://www.jstor.org/stable/25614715
+8. Andriani, P., & Mckelvey, B. (n.d.). Managing in a Pareto world calls for new thinking. Cairn International Edition.
+9. Antonio, D. B., Hale, J., & Lindon, J. (1979). The Travel Journal of Antonio de Beatis Germany Switzerland The Low Countries France and Italy 1517-1518. Hakluyt Society.
+10. Aschauer, F., Sohn, M., & Hirsch, B. (2023). Managerial advice‐taking—Sharing responsibility with (non)human advisors trumps decision accuracy. European Management Review, 21(1), 186–203. https://doi.org/10.1111/emre.12575
+11. Asuyama, Y. (2016). Delegation to workers across countries and industries : social capital and coordination needs matter. ideas.repec.org. https://ideas.repec.org/p/jet/dpaper/dpaper620.html
+12. Autor, D. (2014). Polanyi’s paradox and the shape of employment growth. In NBER Working Paper Series (No. 20485). NATIONAL BUREAU OF ECONOMIC RESEARCH. https://www.nber.org/system/files/working\_papers/w20485/w20485.pdf
+13. Bandiera, O., Prat, A., Hansen, S., & Sadun, R. (2019). CEO Behavior and Firm Performance. Journal of Political Economy, 128(4), 1325-1369.
+14. Ben-Ner, A., Kong, F., & Lluis, S. (2012). Uncertainty, task environment, and organization design: An empirical investigation. Journal of Economic Behavior & Organization, 82(1), 281-313.
+15. Bloom, N., Sadun, R., & Van Reenen, J. (2016). Management as a technology? https://doi.org/10.3386/w22327
+16. Bobek, E., & Tversky, B. (2014). The cognitive design of tools of thought. Review of Philosophy and Psychology. Special issue on diagrammatic reasoning. Retrieved from https://link.springer.com/chapter/10.1007/978-3-319-15594-4\_1
+17. Boyatzis, R. E., & Dhar, U. (2023). When Normal is Not Normal- A Theory of the Non-Linear and Discontinuous Process of Desired Change and its Managerial Implications. The Journal of Applied Behavioral Science, 00218863231153218
+18. Brachten, F., Brünker, F., Frick, N. R. J., Ross, B., & Stieglitz, S. (2020). On the ability of virtual agents to decrease cognitive load: an experimental study. Information Systems and e-Business Management, 18(2).
+19. Bramly, S. (1995). Leonardo. Penguin Random House.
+20. Buffett, W. (1996). Berkshire Hathaway Inc. Chairman's Letter.
+21. Buffett, W. (1998). Berkshire Hathaway Inc. Chairman's Letter.
+22. Buffett, W. (1999). Berkshire Hathaway Inc. Chairman's Letter.
+23. Buffett, W. (2021). Berkshire Hathaway Inc. Chairman's Letter.
+24. Cabrera, Á. A., Perer, A., & Hong, J. I. (2023). Improving Human-AI collaboration with descriptions of AI behavior. Proceedings of the ACM on Human-Computer Interaction, 7(CSCW1), 1–21. https://doi.org/10.1145/3579612
+25. Callula, B., Sana, E., Jacqueline, G., Nathalie, J., & Maria, L. (2024). A structural framework for effective time management in dynamic work environments. Aptisi Transactions on Management (ATM), 8(2), 152–159. https://doi.org/10.33050/atm.v8i2.2256
+26. Candrian, C., & Scherer, A. (2022). Rise of the machines: Delegating decisions to autonomous AI. Computers in Human Behavior, 134, 107308\. https://doi.org/10.1016/j.chb.2022.107308
+27. Chandersekaran, N. C. S., & Simpson, N. W. R. (2011). Personal delegation by persona creation. Computer Technology and Application, 2(6). https://doi.org/10.17265/1934-7332/2011.06.001
+28. Cheng, J., Teevan, J., Iqbal, S. T., & Bernstein, M. S. (2015). Break It Down: A Comparison of Macro- and Microtasks. Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems \- CHI ’15. doi:10.1145/2702123.2702146.
+29. Clauset, A., Shalizi, C. R., & Newman, M. E. J. (2009). Power-law distributions in empirical data. SIAM Review, 51(4), 661-703. https://doi.org/10.1137/070710111.
+30. Council of Economic Advisers. (2015). The Economic Benefits Of U.S. Trade.
+31. Craig, L. and Brown, J. E. (2016). Feeling rushed: Gendered time quality, work hours, nonstandard work schedules, and spousal crossover. Journal of Marriage and Family, 79(1), 225-242. https://doi.org/10.1111/jomf.12320
+32. Crawford, G. C., Aguinis, H., Lichtenstein, B., Davidsson, P., & McKelvey, B. (2015). Power law distributions in entrepreneurship: Implications for theory and research. Journal of Business Venturing. https://doi.org/10.1016/J.JBUSVENT.2015.01.001
+33. Crawford, G. Christopher, Aguinis, Herman, Lichtenstein, Benyamin, Davidsson, Per, & McKelvey, Bill (2015) Power law distributions in entrepreneurship: Implications for theory and research. Journal of Business Venturing, 30(5), p. 696-713.
+34. Cuthberg. (2015). An investigation into delegation of strategy and operational tasks by right brain dominant entrepreneurs. Retrieved from Emerald Insight.
+35. Cvetkovic, I., & Bittner, E. (2022). Task Delegability to AI: evaluation of a framework in a knowledge work context. Proceedings of the . . . Annual Hawaii International Conference on System Sciences/Proceedings of the Annual Hawaii International Conference on System Sciences. https://doi.org/10.24251/hicss.2022.021
+36. Dili, R., Buncad, Y. J., Perez, Y. J., & Velasco, R. J. (2022). BPO Industry in Achieving Socio-Economic Development Inclusiveness and Local Governance in the Philippines. Management of Sustainable Development, 14(2), 22–26. https://doi.org/10.54989/msd-2022-0012
+37. Domingos, E. F., Terrucha, I., Suchon, R., Grujić, J., Burguillo, J. C., Santos, F. C., & Lenaerts, T. (2022). Delegation to artificial agents fosters prosocial behaviors in the collective risk dilemma. Scientific Reports, 12(1). https://doi.org/10.1038/s41598-022-11518-9
+38. Drăgulescu, A. and Yakovenko, V. M. (2001). Exponential and power-law probability distributions of wealth and income in the united kingdom and the united states. Physica A- Statistical Mechanics and Its Applications, 299(1-2), 213-221
+39. Drucker, P. F. (1999). Knowledge-Worker productivity: The biggest challenge. California Management Review, 41(2), 79–94. https://doi.org/10.2307/41165987
+40. Dry, S. (2014). Newton Papers: The Strange and True Odyssey of Isaac Newton’s Manuscripts. Retrieved from \[URL\]
+41. Du, Y., Wei, F., & Zhang, H. (2024, February 6). AnyTool: Self-Reflective, hierarchical agents for Large-Scale API calls. arXiv.org. [https://arxiv.org/abs/2402.04253](https://arxiv.org/abs/2402.04253)
+42. Dykstra, H., O'Flaherty, S., & Whillans, A. (2023). The buy-in effect: When increasing initial effort motivates behavioral follow-through (Working Paper No. 24-020). Harvard Business School.
+43. Economic Innovation Group. (2024). The American Worker Project from EIG. https://eig.org/wp-content/uploads/2024/07/TAWP-Kirkegaard.pdf
+44. Enhancing AI-Assisted Group Decision Making through LLM-Powered Devil’s Advocate. (n.d.). https://dl.acm.org/doi/fullHtml/10.1145/3640543.3645199
+45. Erickson, T., Danis, C. M., Kellogg, W. A., & Helander, M. E. (2008). Assistance: The work practices of human administrative assistants and their implications for it and organizations. In Proceedings of the 2008 ACM Conference on Computer Supported Cooperative Work (pp. 609-618). Association for Computing Machinery. https://doi.org/10.1145/1460563.1460658
+46. Fasae, F. B. K. (2023). The fundamentals and indispensability of the secretarial profession in the 21st century. International Journal of Business and Management Review, 11(11), 35–49. https://doi.org/10.37745/ijbmr.2013/vol11n113549
+47. Felipe, J. (2008). An Input–Output analysis of the Philippine BPO industry. ASIAN-PACIFIC ECONOMIC LITERATURE. Blackwell Publishing Asia. https://doi.org/10.1111/j.1467-8411.2008.00211.x
+48. Fuchs, A., Passarella, A., & Conti, M. (2023). Optimizing delegation between human and AI collaborative agents. In European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD). Workshop on Hybrid Human-Machine Learning and Decision Making.
+49. Fügener, A., Grahl, J., Gupta, A., & Ketter, W. (2022). Cognitive Challenges in Human-Artificial Intelligence Collaboration: Investigating the Path Toward Productive Delegation. \*Information Systems Research\*, 33(2), 678-696. DOI: 10.1287/isre.2021.1079.
+50. Fügener, A., Grahl, J., Gupta, A., & Ketter, W. (2022). Cognitive Challenges in Human-Artificial Intelligence Collaboration: Investigating the Path Toward Productive Delegation. Information Systems Research, 33(2), 678-696. https://doi.org/10.1287/isre.2021.1079
+51. Garicano, L., & Van Zandt, T. (2013). Hierarchies and the Division of Labor. In Robert Gibbons and John Roberts (Eds.), The Handbook of Organizational Economics (pp. 604-654). Princeton University Press.
+52. Giurge, L. M. (2020). Why time poverty matters for individuals, organisations and nations. Nature Human Behaviour, 4(10), 993-1003. https://doi.org/10.1038/s41562-020-0920-z
+53. Gleick, J. (2003). Isaac Newton. Vintage Books.
+54. Goodwin, D. K. (1994). No Ordinary Time: Franklin and Eleanor Roosevelt.
+55. Graeber, D., & Wengrow, D. (2021). The Dawn of Everything: A New History of Humanity. Allen Lane.
+56. Graham, J. R., Harvey, C. R., & Puri, M. (2011, August 1). Capital Allocation and Delegation of Decision-Making Authority within Firms. https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=1919444
+57. Guggenberger, T., Lämmermann, L., Urbach, N., & Hofmann, P. (2023). Task delegation from AI to humans: A principal-agent perspective. ResearchGate. https://www.researchgate.net/publication/374420256\_Task\_delegation\_from\_AI\_to\_humans\_A\_principal-agent\_perspective
+58. Gyory, J. T., Kotovsky, K., & Cagan, J. (2022). Is It Human or Is It Artificial Intelligence? Discerning the Impact and Effectiveness of Process Managers Based on the Manager's Identity. Proceedings of the Design Society, Volume 2\.
+59. Gyory, J. T., Kotovsky, K., McComb, C., & Cagan, J. (2022). Comparing the Impacts on Team Behaviors Between Artificial Intelligence and Human Process Management in Interdisciplinary Design Teams. Journal of Mechanical Design, 144(10).
+60. Hagendorff, T. (2023). Machine Psychology: Investigating Emergent Capabilities and Behavior in Large Language Models Using Psychological Methods. In arXiv:2303.13988v1, pp. 1-17.
+61. Hager, P., Jungmann, F., Holland, R., Bhagat, K., Hubrecht, I., Knauer, M., Vielhauer, J., Makowski, M., Braren, R., Kaissis, G., & Rueckert, D. (2024). Evaluation and mitigation of the limitations of large language models in clinical decision-making. Nature Medicine. https://doi.org/10.1038/s41591-024-03097-1
+62. Hajna, S., Buckeridge, D. L., & Hanley, J. A. (2015). Substantiating the impact of John Snow’s contributions using data deleted during the 1936 reprinting of his original essayOn the Mode of Communication of Cholera. International Journal of Epidemiology, 44(6), 1794–1799. https://doi.org/10.1093/ije/dyv164
+63. Hamada, H. (2023). Luck of Outcome in the Talent Versus Luck ModeL. Advances in Complex Systems, 26(04n05)
+64. Hang, J., & Chen, L. (2022). How to realize the full potentials of artificial intelligence (AI) in the digital economy? A literature review. Stanford Institute for Human-Centered Artificial Intelligence
+65. Hanna, J. T., Elms, A. K., Gill, H., Stanley, D. J., & Powell, D. M. (2019). The effect of leader risk-taking on subordinate felt trust. Leadership & Organization Development Journal. doi-10.1108:lodj-11-2018-0386
+66. Hayawi, K.; Shahriar, S. AI Agents from Copilots to Coworkers: Historical Context, Challenges, Limitations, Implications, and Practical Guidelines. Preprints 2024, 2024040709\. https://doi.org/10.20944/preprints202404.0709.v1
+67. Hemmer, P., Westphal, M., Schemmer, M., Vetter, S., Vössing, M., & Satzger, G. (2023). Human-AI Collaboration: The Effect of AI Delegation on Human Task Performance and Task Satisfaction. arXiv. https://doi.org/10.48550/arXiv.2303.09224
+68. Hoogenboom, H., & Cruse, M. (2005). The Memoirs of Catherine the Great. New York: Modern Library.
+69. Horan, R. D., Bulte, E., & Shogren, J. F. (2005). How trade saved humanity from biological exclusion: An economic theory of Neanderthal extinction. Journal of Economic Behavior & Organization, 58(1), 1-29.
+70. Idema, W. L., & Grant, B. (2004). The red brush: Writing women of imperial China. Harvard University Asia Center.
+71. Isaacson, W. (2007). Einstein: His Life and Universe. Simon & Schuster.
+72. Isaacson, W. (2017). Leonardo Da Vinci. Simon and Schuster.
+73. Isaacson, W. (2021). The Code Breaker. Jennifer Doudna, Gene Editing, and the Future of the Human Race. Simon & Schuster.
+74. Jabs, J., & Devine, C. M. (2006). Time scarcity and food choices: An overview. Appetite, 47(2), 196–204. https://doi.org/10.1016/j.appet.2006.02.014
+75. Janowicz, S. (2017). Living history: Myth, representation and dramatizing Catherine the Great (Doctoral dissertation). University of Southern Queensland.
+76. Josephson, M. (2024). Edison: A Biography. Society of American Historians.
+77. Kahn, A., & Rubin-Detlev, K. (2018). Catherine the Great, Selected Letters. Oxford University Press.
+78. Kauppinen, A. (2020). Need for support personnel – analysing the need and the economic impact of a service assistant in Company X. Theseus. https://www.theseus.fi/handle/10024/348246
+79. Kohler, C. (2005). Power Up: How Japanese video games gave the world an extra life. https://www.semanticscholar.org/paper/Power-Up%3A-How-Japanese-Video-Games-Gave-the-World-Kohler/707e85314e5d233fce07c2b4cd07f1f88cbc9459
+80. Kristal, A. S., & Zlatev, J. J. (2023). Going beyond the 'Self' in Self-Control: Interpersonal Consequences of Commitment Strategy Use. Journal of Personality and Social Psychology.
+81. Kuhnert, K. W. (1994). Transforming leadership: Developing people through delegation. In B. M. Bass & B. J. Avolio (Eds.), Improving organizational effectiveness through transformational leadership (pp. 10–25). Sage Publications.
+82. Kushlev, K., & Dunn, E. W. (2015). Checking email less frequently reduces stress. Computers in Human Behavior, 43, 220–228. doi:10.1016/j.chb.2014.11.005
+83. Landry, A. T., & Whillans, A. (2018). The Power of Workplace Rewards: Using Self-Determination Theory to understand why reward satisfaction matters for workers around the world. Compensation & Benefits Review, 50(3), 123–148. https://doi.org/10.1177/0886368719840515
+84. Leana, C. R. (1986). Predictors and Consequences of Delegation. Academy of Management Journal, 29(4), 754-774. doi:10.2307/255943
+85. Lee-Yoon, A., & Whillans, A. V. (2018). Making seconds count: When valuing time promotes subjective well-being. Current Opinion in Psychology, 26, 54-57. https://doi.org/10.1016/j.copsyc.2018.05.002
+86. Leitão, D., Saleiro, P., Figueiredo, M. a. T., & Bizarro, P. (2022, June 27). Human-AI Collaboration in Decision-Making: Beyond Learning to Defer. arXiv.org. https://arxiv.org/abs/2206.13202
+87. Liberman, L., & Boehe, D. (2011). Worldwide willingness to delegate and country labor quality. The International Journal of Human Resource Management, 22(17), 3477–3495. doi-10.1080:09585192.2011.610943
+88. Lieder, F. (2019). Cognitive prostheses for goal achievement. Nature Human Behaviour, 3(10), 1096-1106. https://doi.org/10.1038/s41562-019-0672-9.
+89. Lieder, F., Chen, O. X., Krueger, P. M., & Griffiths, T. L. (2019). Cognitive prostheses for goal achievement. Nature Human Behaviour, 3(10), 1096–1106. https://doi.org/10.1038/s41562-019-0672-9
+90. Liu, J., Yue, W. T., Leung, A., & Zhang, X. (2022). Find the Good. Seek the unity: A Hidden Markov model of Human-AI Delegation Dynamics. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.4150772
+91. Logg, J. M., Minson, J. A., & Moore, D. A. (2019). Algorithm appreciation: People prefer algorithmic to human judgment. Organizational Behavior and Human Decision Processes, 151, 90-103.
+92. Lowish, T. L. (2021). Catherine the Great and the development of a modern Russian Sovereignty, 1762-1796. https://escholarship.org/uc/item/6fc7r596
+93. Lubars, B., University of Colorado Boulder, Tan, C., & University of Colorado Boulder. (2019). Ask not what AI can do, but what AI should do: Towards a framework of task delegability. In 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada \[Conference-proceeding\]. https://papers.nips.cc/paper\_files/paper/2019/file/d67d8ab4f4c10bf22aa353e27879133c-Paper.pdf
+94. Lucas, R. E., & Jr. (1978). On the Size Distribution of Business Firms. The Bell Journal of Economics, 9(2), 508–523. https://doi.org/10.2307/3003596https://www.jstor.org/stable/3003596
+95. Marulanda‐Carter, L., & Jackson, T. W. (2012). Effects of e‐mail addiction and interruptions on employees. Journal of Systems and Information Technology, 14(1), 82–94. https://doi.org/10.1108/13287261211221146
+96. Mathebula, B. and Barnard, B. (2020). The Factors of Delegation Success: Accountability, Compliance and Work Quality. Expert Journal of Business and Management, 8(1), 76-97.
+97. McCullough, D. (2015). The Wright Brothers. Simon & Schuster.
+98. McKelvey, B. (2010). Complexity leadership: The secret of Jack Welch's success. International Journal of Complexity in Leadership and Management, 1(1), 4-36.
+99. McNulty, B. (2016, February 1). David Bowie’s PA Coco Schwab: the woman who saved his life. The Telegraph. https://www.telegraph.co.uk/music/artists/david-bowies-pa-coco-schwab-the-woman-who-saved-his-life/
+100. Milewski, A. E., & Lewis, S. H. (1997). Delegating to software agents. International Journal of Human-Computer Studies, 46(4), 485–500. https://doi.org/10.1006/ijhc.1996.0100
+101. Mirkhan, S. D., Omer, S. K., Ali, H. M., Hamza, M. Y., Rashid, T. A., & Nedunchezhian, P. (2024, May 2). Effective delegation and leadership in software management. arXiv.org. https://arxiv.org/abs/2405.01612
+102. Mogilner, C., Whillans, A. V., & Norton, M. I. (2018). Time, Money, and Subjective Well-Being. In Diener, E., Oishi, S., & Tay, L. (Eds.), Handbook of Well-Being: Rethinking Time for Well-Being.
+103. Mornati, F. (2013). Pareto Optimality in the work of Pareto. Revue Européenne Des Sciences Sociales, 51–2, 65–82. https://doi.org/10.4000/ress.2517
+104. Morris, E. (1979). The Rise of Theodore Roosevelt. Coward, McCann & Geoghegan.
+105. O’Neale, D. R. J., & Hendy, S. C. (2012). Power Law Distributions of Patents as Indicators of Innovation. PLoS ONE, 7(12), e49501. https://doi.org/10.1371/journal.pone.0049501
+106. Orzach, R., & Quist, K. (2022). Empowerment in Teams: When Delegation Prevents Collaboration. Retrieved from \[URL\]
+107. Papageorgiou, M. & Washington Flight Standards District Office. (n.d.). Charles E. Taylor: The Unsung Hero of Kitty Hawk Finally Gets His Day. https://www.faa.gov/sites/faa.gov/files/about/history/pioneers/Charles\_E\_Taylor.pdf
+108. Pareto, V. (1896). Cours d’Economie Politique. Tome Premier. The Economic Journal, 6(22), 249\. https://doi.org/10.2307/2956507
+109. Pareto, V. (1897). The New Theories of Economics. Journal of Political Economy, 5(4), 485\.
+110. Paridon, H. M., & Kaufmann, M. (2010). Multitasking in work-related situations and its relevance for occupational health and safety: Effects on performance, subjective strain and physiological parameters. Europe’s Journal of Psychology, 6(4). https://doi.org/10.5964/ejop.v6i4.226
+111. Perera. (2024). Assessing the Task Management Capabilities of LLM-Powered Agents. Retrieved from https://openreview.net/pdf?id=Bhzd8kJhNC.
+112. Perlow, L. A. (1999). The Time Famine: toward a sociology of work time. Administrative Science Quarterly, 44(1), 57–81. https://doi.org/10.2307/2667031
+113. Pinski, M., Adam, M., & Benlian, A. (2023). AI Knowledge: Improving AI Delegation through Human Enablement. Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems.
+114. Polanyi, M. (2023). The Tacit Dimension. University of Chicago Press.
+115. Qian, C., & Wexler, J. (2024). Take It, Leave It, or Fix It: Measuring Productivity and Trust in Human-AI Collaboration. In Proceedings of the 29th International Conference on Intelligent User Interfaces (IUI '24), March 18-21, 2024, Greenville, SC, USA.
+116. Reinhard, P., Li, M. M., Peters, C., & Leimeister, J. M. (2024). Let employees train their own chatbots: Design of generative AI-enabled delegation systems. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.4807392
+117. Riisgaard, H., Søndergaard, J., Munch, M., Le, J. V., Ledderer, L., Pedersen, L. B., & Nexøe, J. (2017). Associations between degrees of task delegation and job satisfaction of general practitioners and their staff: a cross-sectional study. BMC Health Services Research, 17(1). https://doi.org/10.1186/s12913-017-1984-y
+118. Rosen, S. (1982). Authority, control, and the distribution of earnings. The Bell Journal of Economics, 13(2), 311–323. https://doi.org/10.2307/3003456https://www.jstor.org/stable/3003456
+119. Rubin-Detlev, K. (2015). The letters of Catherine the Great and the rhetoric of enlightenment. ORA \- Oxford University Research Archive. https://ora.ox.ac.uk/objects/uuid:b9199484-a774-485d-9e6c-3fef125a361c
+120. Ruby, M. B., Dunn, E. W., Perrino, A., Gillis, R., & Viel, S. (2011). The invisible benefits of exercise. Health Psychology, 30(1), 67–74. doi-10.1037:a0021859
+121. Russell, E., Jackson, T. W., Fullman, M., & Chamakiotis, P. (2023). Getting on top of work‐email: A systematic review of 25 years of research to understand effective work‐email activity. Journal of Occupational and Organizational Psychology. https://doi.org/10.1111/joop.12462
+122. Sandstrom, G. M., & Dunn, E. W. (2014). Social Interactions and Well-Being. Personality and Social Psychology Bulletin, 40(7), 910–922. doi-10.1177:0146167214529799
+123. Santos, A., Roberto, M. S., Camilo, C., & Chambel, M. J. (2023). Information and communication technologies-assisted after-hours work: A systematic literature review and meta-analysis of the relationships with work–family/life management variables. Frontiers in Psychology, 14\. https://doi.org/10.3389/fpsyg.2023.1101191
+124. Sengul, M., Gimeno, J., & Dial, J. (2011). Strategic Delegation. Journal of Management, 38(1), 375–414. doi-10.1177:0149206311424317
+125. Serrat, O. (2010). Delegating in the workplace. Cornell University, ILR School. Washington DC- Asian Development Bank. Retrieved from Academy of Management Journal, 29(4), 754-774.
+126. Seshadri, S., & Shapira, Z. (2001). Managerial allocation of time and effort: the effects of interruptions. Management Science, 47(5), 647–662. https://doi.org/10.1287/mnsc.47.5.647.10481
+127. Sev, J. T. & Benue State University. (2017). Effective delegation of authority as a strategy for task accomplishment and performance enhancement in business organizations-an empirical survey of flour mills of Nigeria plc, Lagos-Nigeria. In The Business and Management Review (Vol. 8, Issue 4, pp. 138–139). https://cberuk.com/cdn/conference\_proceedings/conference\_57952.pdf
+128. Sheff, D. (1993). Game Over: How Nintendo Zapped an American Industry, Captured Your Dollars, and Enslaved Your Children. Random House.
+129. Shiner, R. L. (2015). Maximizers, Satisficers, and Their Satisfaction With and Preferences for Reversible Versus Irreversible Decisions. Social Psychological and Personality Science, 6(8), 896–903. doi-10.1177:1948550615595271
+130. Slovic, P. (1972). Psychological Study of Human Judgment: Implications for Investment Decision-Making. Journal of Finance, 27(4), 779-799.
+131. Smith, K. (2016). The Gatekeeper: Missy LeHand, FDR, and the Untold Story of the Partnership that Defined a Presidency. Simon & Schuster.
+132. Spitzer, P., Holstein, J., Hemmer, P., Vössing, M., Kühl, N., Martin, D., & Satzger, G. (2024). On the Effect of Contextual Information on Human Delegation Behavior in Human-AI collaboration. CoRR abs/2401.04729.
+133. Steffel, M., Williams, E. F., & Perrmann-Graham, J. (2016). Passing the buck- Delegating choices to others to avoid responsibility and blame. Organizational Behavior and Human Decision Processes, 135, 32–44. doi-10.1016:j.obhdp.2016.04.006
+134. Steffensen, D. S., McAllister, C. P., Perrewé, P. L., Wang, G., & Brooks, C. D. (2021). “You’ve Got Mail”- a Daily Investigation of Email Demands on Job Tension and Work-Family Conflict. Journal of Business and Psychology, 37(2), 325–338
+135. Stieglitz, J., Gurven, M., Kaplan, H., & Hooper, P. L. (2013). Household Task Delegation among High-Fertility Forager-Horticulturalists of Lowland Bolivia. Current Anthropology, 54(2), 232-241. https://doi.org/10.1086/669708.
+136. Stoker, M. (2022). Leading and working from home in times of COVID-19: On the perceived changes in leadership behaviors. Journal of Leadership & Organizational Studies, 29, 208-218.
+137. Sulloway, F. J. (1982). The Beagle Collections of Darwin's Finches (Geospizinae). Bulletin of the British Museum (Natural History) Zoology Series, 43(2), 1-46.
+138. Sunstein, C. R. (2024). Choice engines and paternalistic AI. Palgrave Communications, 11(1), 1-4.
+139. Sunstein, Cass R. and Gaffe, Jared, An Anatomy of Algorithm Aversion (June 14, 2024). http://dx.doi.org/10.2139/ssrn.4865492
+140. Terrucha, I., Domingos, E. F., Simoens, P., & Lenaerts, T. (2024). Committing to the wrong artificial delegate in a collective-risk dilemma is better than directly committing mistakes. Scientific Reports, 14(1)
+141. The Sun. (1904, April 17). Jiu Jitsu, The Newest Fad. New York Sun. https://chroniclingamerica.loc.gov/lccn/sn83030272/1904-04-17/ed-1/seq-16/
+142. Tomić, Z., & Radović, O. (2018). Models of Distribution of Gdp at the Global Level. Facta Universitatis Series Economics and Organization, 1, 177\.
+143. Trapunsky, V. (2023). Delegation nation. ChatterBoss Press.
+144. Vanderbroeck, J. (2014). Leadership Strategies for Women: Lessons from Four Queens on Leadership and Career Development.
+145. Vásárhelyi, Z., & Scheuring, I. (2018). Behavioral Specialization during the Neolithic—An Evolutionary Model. Frontiers in Sociology, 3\. https://doi.org/10.3389/fsoc.2018.00035
+146. Vasari, G. (1568). The Lives of the Most Excellent Painters, Sculptors, and Architects. Modern Library.
+147. Vössing, M. (2022). Designing Transparency for Effective Human-AI Collaboration. Information Systems Frontiers. https://doi.org/10.1007/s10796-022-10284-3.
+148. Whillans, A. (2017). Exchanging cents for seconds : the happiness benefits of choosing time over money (T). University of British Columbia. Retrieved from https://open.library.ubc.ca/collections/ubctheses/24/items/1.0348134
+149. Whillans, A. V., Dunn, E. W. (2017). Buying time promotes happiness. Proceedings of the National Academy of Sciences of the United States of America. https://doi.org/10.1073/pnas.1706541114
+150. Whillans, A. V., Weidman, A. C., & Dunn, E. W. (2016). Valuing Time Over Money Is Associated With Greater Happiness. \*Social Psychological and Personality Science, 7\*, 213-222.
+151. Whillans, A. V., Pow, J., & Norton, M. I. (2018). Time-saving purchases promote relationship satisfaction (Working Paper No. 18-072). Harvard Business School.
+152. Whisler, T. L. (1960). The “Assistant-to” in Four Administrative Settings. Administrative Science Quarterly, 5(2), 181\. doi-10.2307:2390778
+153. Williams, R. (n.d.). The Rationalization Of Labor. In R. Williams (Ed.), Raphael and the Redefinition of Art in Renaissance Italy (pp. 173-258). Cambridge University Press. https://www.cambridge.org/core/books/raphael-and-the-redefinition-of-art-in-renaissance-italy/2510148CB31C1669F8C7D3C5081F6920
+154. Xu, Y., Bradford, N., & Garg, R. (2023). Transparency enhances positive perceptions of social artificial intelligence. Human Behavior and Emerging Technologies, 2023, 1–15. https://doi.org/10.1155/2023/5550418
+155. Yukl, G., & Fu, P. P. (1999). Determinants of delegation and consultation by managers. \*Journal of Management\*, 20, 219-232.
 156. Zhang, S., Fjermestad, J., & Tremaine, M. (2005). Leadership Styles in Virtual Team Context: Limitations, Solutions and Propositions. Proceedings of the 38th Annual Hawaii International Conference on System Sciences. DOI: 10.1109/HICSS.2005.382.
 
 ## Glossary
@@ -926,7 +927,7 @@ Delegation by Constraints: A method of delegating tasks by specifying limitation
 
 Recursive Delegation: A process where delegation occurs in a nested or hierarchical manner, with each person/AI agent delegating to another.
 
-Task delegability: The extent to which a task can be effectively assigned or transferred to another entity (human or AI). 
+Task delegability: The extent to which a task can be effectively assigned or transferred to another entity (human or AI).
 
 Lubars & Tan (2019) and Cvetkovic & Bittner (2022).
 
@@ -936,7 +937,7 @@ AI to Human: The process by which AI agents assign tasks or decisions to humans.
 
 Hemmer et al (2023).
 
-Human to AI: The process of humans assigning tasks or decisions to AI agents. 
+Human to AI: The process of humans assigning tasks or decisions to AI agents.
 
 Pinski et al (2023).
 
@@ -952,25 +953,25 @@ Ataraxia: A state of serene calmness and freedom from emotional disturbance and 
 
 Recursive leverage: The idea of using a tool or process to improve itself, creating a cycle of continuous enhancement.
 
-Cognitive prostheses: Tools or technologies that extend or enhance human cognitive abilities. 
+Cognitive prostheses: Tools or technologies that extend or enhance human cognitive abilities.
 
 Lieder et al (2019).
 
-Polanyi's Paradox: The observation that humans often have more implicit knowledge than explicit knowledge about their preferences or performance of cognitive tasks, highlighting the challenge of automating certain human skills or enabling AI agents to achieve human-like behavior or performance. 
+Polanyi's Paradox: The observation that humans often have more implicit knowledge than explicit knowledge about their preferences or performance of cognitive tasks, highlighting the challenge of automating certain human skills or enabling AI agents to achieve human-like behavior or performance.
 
 Autor (2014).
 
-Moravec's Paradox: Phenomenon representing the surprising difficulty and high failure rates when AI systems perform tasks that are simple for humans, despite being capable of superhuman performance at more complex tasks. Examples include large language models failing at basic reasoning and mathematics despite possessing enormous quantities of historical and scientific facts or being capable of generating text at rates beyond human capabilities. 
+Moravec's Paradox: Phenomenon representing the surprising difficulty and high failure rates when AI systems perform tasks that are simple for humans, despite being capable of superhuman performance at more complex tasks. Examples include large language models failing at basic reasoning and mathematics despite possessing enormous quantities of historical and scientific facts or being capable of generating text at rates beyond human capabilities.
 
 Jevon's Paradox: An economic theory which posits that as technological progress increases the efficiency with which a resource is used, the rate of consumption of that resource tends to increase rather than decrease. This occurs because improved efficiency lowers the relative cost of using the resource, which generally leads to increased demand and consumption.
 
 Lump of Labor Fallacy: The mistaken belief that there is a fixed amount of work to be done in an economy, which can lead to misguided conclusions about the impact of technology on employment. This fallacy often arises in discussions about automation and job displacement, ignoring the potential for new job creation and economic growth as a result of technological advancements.
 
-Algorithm Aversion: The tendency for people to distrust or avoid algorithmic decision-making, even when it outperforms human judgment. 
+Algorithm Aversion: The tendency for people to distrust or avoid algorithmic decision-making, even when it outperforms human judgment.
 
 Mahmud et al (2022).
 
-Contaminated leisure: Leisure time that is interrupted or combined with other activities, particularly unpaid work, reducing its quality. 
+Contaminated leisure: Leisure time that is interrupted or combined with other activities, particularly unpaid work, reducing its quality.
 
 Bittman & Wajcman (2000).
 
@@ -988,7 +989,7 @@ Prospect theory: A behavioral economic theory that describes how people make dec
 
 Kahneman & Tversky (1979).
 
-Loss aversion: The tendency for people to prefer avoiding losses to acquiring equivalent gains. 
+Loss aversion: The tendency for people to prefer avoiding losses to acquiring equivalent gains.
 
 Candrian & Scherer (2022).
 
@@ -1000,11 +1001,11 @@ Choice engines: Systems or algorithms that help users make decisions by filterin
 
 Moral hazard: A situation where an individual has an incentive to increase their exposure to risk because they do not bear the full costs of that risk.
 
-Hidden context: Information or factors that are not immediately apparent but significantly influence a situation or decision. 
+Hidden context: Information or factors that are not immediately apparent but significantly influence a situation or decision.
 
 Spitzer et al (2024).
 
-Covert Signaling: A form of communication where the signal is ambiguous to outsiders but meaningful to intended receivers. 
+Covert Signaling: A form of communication where the signal is ambiguous to outsiders but meaningful to intended receivers.
 
 Smaldino (2018).
 
@@ -1026,7 +1027,7 @@ Metaknowledge: The awareness and understanding of one's own knowledge, including
 
 Fugener et al (2024).
 
-Cognitive load: The total amount of mental effort being used in working memory. 
+Cognitive load: The total amount of mental effort being used in working memory.
 
 Sweller (1994), Brachten et al (2020).
 
@@ -1034,11 +1035,11 @@ Principal agent theory (PAT): A theory that deals with the difficulties in motiv
 
 Algorithmic governance: The use of algorithms and artificial intelligence in decision-making processes, particularly in public administration and policy-making.
 
-Human-in-the-loop: A model of interaction where a human is involved in a system's operation, often to supervise, intervene, or make critical decisions. 
+Human-in-the-loop: A model of interaction where a human is involved in a system's operation, often to supervise, intervene, or make critical decisions.
 
 Zanzotto (2019).
 
-Explainable AI: AI systems that can provide clear and understandable explanations for their decisions or outputs. Influences human perception and trust regarding AI outputs or decisions. 
+Explainable AI: AI systems that can provide clear and understandable explanations for their decisions or outputs. Influences human perception and trust regarding AI outputs or decisions.
 
 Human-AI Complementarity: The synergistic combination of human and artificial intelligence capabilities to achieve outcomes superior to either working independently.
 

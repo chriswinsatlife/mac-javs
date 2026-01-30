@@ -1,0 +1,253 @@
+---
+import Base from '../layouts/Base.astro';
+import SocialQuote from '../components/SocialQuote.astro';
+---
+
+<Base title="Social Quote Component Demo">
+  <main class="p-8 space-y-16 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-heading font-bold">Social Quote Component Demo</h1>
+    <p class="text-mist-600">Display social media quotes in platform-specific styles with light/dark mode support.</p>
+    
+    <!-- Twitter/X Section -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Twitter / X</h2>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Light Mode</h3>
+        <SocialQuote
+          platform="twitter"
+          mode="light"
+          author={{
+            name: "Sam Altman",
+            handle: "sama",
+            avatar: "https://pbs.twimg.com/profile_images/804990434455887872/BG0Xh7Oa_400x400.jpg"
+          }}
+          content="i love our new model"
+          date="10:34 AM - Dec 15, 2024"
+          verified={true}
+          metrics={{ likes: 45200, reposts: 8300, replies: 2100, views: 1200000 }}
+          url="https://twitter.com/sama/status/123456789"
+        />
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Dark Mode</h3>
+        <SocialQuote
+          platform="twitter"
+          mode="dark"
+          author={{
+            name: "Elon Musk",
+            handle: "elonmusk",
+            avatar: "https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg"
+          }}
+          content={"The future of AI is incredible. We're just getting started."}
+          date="3:21 PM - Jan 10, 2025"
+          verified={true}
+          metrics={{ likes: 125000, reposts: 28400, replies: 15200, views: 8500000 }}
+          url="https://twitter.com/elonmusk/status/987654321"
+        />
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Without Avatar (Placeholder)</h3>
+        <SocialQuote
+          platform="twitter"
+          mode="light"
+          author={{
+            name: "Tech Insider",
+            handle: "techinsider"
+          }}
+          content="Breaking: Major announcement expected tomorrow from leading AI company. Stay tuned for updates."
+          date="9:15 AM - Jan 28, 2025"
+          verified={false}
+          metrics={{ likes: 342, reposts: 89, replies: 45 }}
+        />
+      </div>
+    </section>
+    
+    <!-- LinkedIn Section -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">LinkedIn</h2>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Light Mode</h3>
+        <SocialQuote
+          platform="linkedin"
+          mode="light"
+          author={{
+            name: "Sarah Chen",
+            title: "VP of Engineering",
+            company: "TechCorp",
+            avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+          }}
+          content={"Excited to share that our team just shipped a major infrastructure upgrade that reduced latency by 40%. Huge shoutout to everyone who worked tirelessly over the past quarter to make this happen.\n\nWhat's the biggest win your team has achieved recently?"}
+          date="2d"
+          verified={true}
+          metrics={{ likes: 1240, comments: 89, reposts: 34 }}
+          url="https://linkedin.com/posts/123"
+        />
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Dark Mode</h3>
+        <SocialQuote
+          platform="linkedin"
+          mode="dark"
+          author={{
+            name: "Marcus Johnson",
+            title: "Founder & CEO",
+            company: "StartupXYZ"
+          }}
+          content={"After 3 years, 2 pivots, and countless sleepless nights, we just closed our Series A.\n\nThe journey taught me that persistence isn't about never failing - it's about failing forward."}
+          date="1w"
+          verified={true}
+          metrics={{ likes: 5420, comments: 312, reposts: 156 }}
+          url="https://linkedin.com/posts/456"
+        />
+      </div>
+    </section>
+    
+    <!-- Podcast Section -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Podcast</h2>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Default Style</h3>
+        <SocialQuote
+          platform="podcast"
+          podcastName="The Tim Ferriss Show"
+          episodeTitle="#672 - Naval Ravikant on Happiness"
+          author={{
+            name: "Naval Ravikant",
+            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+          }}
+          content="Desire is a contract you make with yourself to be unhappy until you get what you want."
+          timestamp="42:15"
+          url="https://tim.blog/podcast"
+        />
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Dark Mode</h3>
+        <SocialQuote
+          platform="podcast"
+          mode="dark"
+          podcastName="Lex Fridman Podcast"
+          episodeTitle="#400 - Elon Musk"
+          author={{
+            name: "Elon Musk"
+          }}
+          content={"I think we should be very careful about AI. If one company or small group of people manages to develop superintelligence, that's a very dangerous situation."}
+          timestamp="1:23:45"
+          url="https://lexfridman.com/podcast"
+        />
+      </div>
+    </section>
+    
+    <!-- Book Section -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Book</h2>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Light Mode</h3>
+        <SocialQuote
+          platform="book"
+          mode="light"
+          bookTitle="Thinking, Fast and Slow"
+          author={{ name: "Daniel Kahneman" }}
+          content="Nothing in life is as important as you think it is, while you are thinking about it."
+          chapter="The Focusing Illusion"
+          page="402"
+          url="https://amazon.com/dp/0374533555"
+        />
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Dark Mode</h3>
+        <SocialQuote
+          platform="book"
+          mode="dark"
+          bookTitle="The Psychology of Money"
+          author={{ name: "Morgan Housel" }}
+          content="Spending money to show people how much money you have is the fastest way to have less money."
+          chapter={"Wealth is What You Don't See"}
+          page="78"
+          url="https://amazon.com/dp/0857197681"
+        />
+      </div>
+    </section>
+    
+    <!-- Article Section -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Article</h2>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Light Mode</h3>
+        <SocialQuote
+          platform="article"
+          mode="light"
+          articleTitle="The Age of AI Has Begun"
+          author={{
+            name: "Bill Gates",
+            publication: "GatesNotes"
+          }}
+          content="The development of AI is as fundamental as the creation of the microprocessor, the personal computer, the Internet, and the mobile phone."
+          date="Mar 21, 2023"
+          url="https://gatesnotes.com/The-Age-of-AI-Has-Begun"
+        />
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="text-lg font-medium text-mist-700">Dark Mode</h3>
+        <SocialQuote
+          platform="article"
+          mode="dark"
+          articleTitle="Why Software Is Eating the World"
+          author={{
+            name: "Marc Andreessen",
+            publication: "The Wall Street Journal"
+          }}
+          content="We are in the middle of a dramatic and broad technological and economic shift in which software companies are poised to take over large swathes of the economy."
+          date="Aug 20, 2011"
+          url="https://a16z.com/why-software-is-eating-the-world/"
+        />
+      </div>
+    </section>
+    
+    <!-- Auto Mode Section -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-semibold border-b pb-2">Auto Mode (follows system preference)</h2>
+      <p class="text-mist-600 text-sm">These quotes will adapt to your system light/dark mode preference.</p>
+      
+      <div class="grid gap-8 md:grid-cols-2">
+        <SocialQuote
+          platform="twitter"
+          mode="auto"
+          author={{
+            name: "OpenAI",
+            handle: "OpenAI",
+            avatar: "https://pbs.twimg.com/profile_images/1634058036934500352/b4F1eVpJ_400x400.jpg"
+          }}
+          content="Introducing GPT-5: Our most capable model yet."
+          date="Coming Soon"
+          verified={true}
+          metrics={{ likes: 89000, reposts: 21000, replies: 8500, views: 12000000 }}
+        />
+        
+        <SocialQuote
+          platform="linkedin"
+          mode="auto"
+          author={{
+            name: "Satya Nadella",
+            title: "Chairman and CEO",
+            company: "Microsoft"
+          }}
+          content="Every company is becoming a software company. AI will accelerate this transformation."
+          date="3d"
+          verified={true}
+          metrics={{ likes: 12400, comments: 890 }}
+        />
+      </div>
+    </section>
+  </main>
+</Base>

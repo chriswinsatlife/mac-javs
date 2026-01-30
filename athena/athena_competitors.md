@@ -7,7 +7,7 @@
 - [Bond](https://bondapp.io/)
 - [Serif](https://www.serif.ai/)
 - [Shortwave](https://shortwave.com)
-- [Tasklet](https://tasklet.com)
+- [Tasklet](https://tasklet.ai)
 - [Yutori](https://yutori.com/scouts)
 - [Fyxer](https://www.fyxer.com/)
 - [Howie](https://howie.com/)
