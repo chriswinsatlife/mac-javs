@@ -113,6 +113,146 @@ const { output } = await generateText({
 });
 ```
 
+## Observability (v1: Console Logging)
+
+For v1, we use structured console logging. Each step logs:
+- Phase/step identifier
+- Input summary (truncated)
+- Duration
+- Success/failure status
+- Error details on failure
+
+### Logging Utility
+
+```typescript
+// lib/pipeline_logger.ts
+type LogLevel = 'info' | 'warn' | 'error' | 'debug';
+
+interface StepLog {
+  phase: string;
+  step: string;
+  status: 'start' | 'success' | 'error';
+  durationMs?: number;
+  input?: string;
+  output?: string;
+  error?: string;
+  tokens?: { input: number; output: number };
+}
+
+const startTime = new Map<string, number>();
+
+export function logStep(log: StepLog) {
+  const key = `${log.phase}:${log.step}`;
+  
+  if (log.status === 'start') {
+    startTime.set(key, Date.now());
+    console.log(`[${log.phase}] ${log.step} starting...`);
+    if (log.input) console.log(`  Input: ${log.input.slice(0, 100)}...`);
+    return;
+  }
+  
+  const duration = Date.now() - (startTime.get(key) || Date.now());
+  const emoji = log.status === 'success' ? 'ok' : 'FAIL';
+  
+  console.log(`[${log.phase}] ${log.step} ${emoji} (${duration}ms)`);
+  
+  if (log.tokens) {
+    console.log(`  Tokens: ${log.tokens.input} in / ${log.tokens.output} out`);
+  }
+  
+  if (log.error) {
+    console.error(`  Error: ${log.error}`);
+  }
+  
+  startTime.delete(key);
+}
+```
+
+### Usage in Pipeline
+
+```typescript
+// scripts/generate_playbook.ts
+import { logStep } from '../lib/pipeline_logger';
+
+async function generatePlaybook(briefPath: string) {
+  // PHASE 1: Content generation
+  logStep({ phase: 'Phase1', step: 'generateContent', status: 'start', 
+            input: briefPath });
+  
+  try {
+    const { output, usage } = await generateText({
+      model: anthropic('claude-sonnet-4-5'),
+      output: Output.object({ schema: playbookSchema }),
+      prompt: briefContent,
+    });
+    
+    logStep({ phase: 'Phase1', step: 'generateContent', status: 'success',
+              tokens: { input: usage.promptTokens, output: usage.completionTokens } });
+  } catch (error) {
+    logStep({ phase: 'Phase1', step: 'generateContent', status: 'error',
+              error: error.message });
+    throw error;
+  }
+  
+  // PHASE 2a: Diagrams
+  logStep({ phase: 'Phase2', step: 'generateDiagrams', status: 'start' });
+  // ...
+}
+```
+
+### Sample Output
+
+```
+[Phase1] parsebrief ok (12ms)
+[Phase1] generateContent starting...
+  Input: slug: gift-automation, topic: Gift automation for birthdays...
+[Phase1] generateContent ok (4523ms)
+  Tokens: 1247 in / 3891 out
+[Phase2] generateDiagrams starting...
+[Phase2] generateDiagrams ok (892ms)
+[Phase2] generateEmbeds starting...
+[Phase2] generateEmbeds FAIL (234ms)
+  Error: NoObjectGeneratedError: Failed to parse JSON response
+```
+
+### Upgrade Path: Langfuse
+
+When you need full observability (traces, cost tracking, replays), add Langfuse:
+
+```bash
+bun add langfuse-vercel @opentelemetry/sdk-node @opentelemetry/auto-instrumentations-node
+```
+
+```typescript
+// Enable per-request telemetry
+const { output } = await generateText({
+  model: anthropic('claude-sonnet-4-5'),
+  output: Output.object({ schema }),
+  prompt,
+  experimental_telemetry: {
+    isEnabled: true,
+    functionId: 'generate-playbook-content',
+    metadata: {
+      slug: brief.slug,
+      phase: 'Phase1',
+    },
+  },
+});
+```
+
+Then set up the exporter:
+
+```typescript
+// instrumentation.ts
+import { NodeSDK } from '@opentelemetry/sdk-node';
+import { LangfuseExporter } from 'langfuse-vercel';
+
+const sdk = new NodeSDK({
+  traceExporter: new LangfuseExporter(),
+});
+sdk.start();
+```
+
 ## Design Principles
 
 - JSON as source of truth: AI generates structured JSON validated by Zod schema
