@@ -12,13 +12,17 @@ Requires `EXA_API_KEY` in environment.
 
 ## Exa Research API
 
-Uses the Exa Research API (`https://api.exa.ai/research/v0/tasks`):
+Uses the Exa Research API v1 (`https://api.exa.ai/research/v1`):
 - POST to create task with `instructions` and `model` (exa-research or exa-research-pro)
 - Response includes `researchId` and `status`
 - Poll GET until `status === "completed"`
-- Result includes `text`, `citations`, `costDollars`, `timeMs`
+- Result includes `output.content` (markdown), `citations`, `costDollars`
 
 Docs: https://exa.ai/docs/reference/exa-research
+
+**Limits:**
+- Instructions max 4096 characters
+- If providing outputSchema: max 8 root fields, max 5 levels deep
 
 ## Input
 

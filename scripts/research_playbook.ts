@@ -246,21 +246,7 @@ async function main() {
   // 5. Process and clean results
   log('Process', 'Processing research results...');
   
-  // Debug: log the full result structure
-  log('Debug', `Result keys: ${Object.keys(result).join(', ')}`);
-  if (result.text) log('Debug', `text length: ${result.text.length}`);
-  if (result.output) {
-    log('Debug', `output type: ${typeof result.output}`);
-    if (typeof result.output === 'object') {
-      log('Debug', `output keys: ${Object.keys(result.output as object).join(', ')}`);
-      log('Debug', `output sample: ${JSON.stringify(result.output).slice(0, 500)}`);
-    }
-  }
-  if (result.data) log('Debug', `data type: ${typeof result.data}`);
-  if (result.answer) log('Debug', `answer length: ${result.answer.length}`);
-  if (result.sources) log('Debug', `sources count: ${result.sources.length}`);
-  
-  // Try different output field names
+  // Extract research text from output.content (Exa v1 API response structure)
   let rawText = '';
   if (result.text) {
     rawText = result.text;
@@ -270,7 +256,6 @@ async function main() {
     if (typeof result.output === 'string') {
       rawText = result.output;
     } else if (typeof result.output === 'object' && result.output !== null) {
-      // output.content is the actual research
       const outputObj = result.output as { content?: string };
       if (outputObj.content) {
         rawText = outputObj.content;
