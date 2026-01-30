@@ -1,0 +1,49 @@
+---
+import PromptLauncher from '../../components/PromptLauncher.astro';
+
+const examplePrompt = `You are an expert executive assistant helping me manage gift-giving for important relationships.
+
+I need you to help me:
+1. Track birthdays, anniversaries, and holidays for my key contacts
+2. Suggest thoughtful, personalized gift ideas based on their interests
+3. Set up reminders with appropriate lead times for ordering and shipping
+4. Keep a record of past gifts to avoid repeats
+
+Please start by asking me about the first person I'd like to add to my gift tracking system.`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Launcher Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Figtree', sans-serif;
+      background: #E6E7DD;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .container {
+      background: #F8F9F7;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 4px 24px rgba(5, 36, 12, 0.08);
+      border: 1px solid rgba(90, 134, 105, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <PromptLauncher prompt={examplePrompt} />
+  </div>
+</body>
+</html>

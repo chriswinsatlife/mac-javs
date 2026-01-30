@@ -1,0 +1,314 @@
+---
+/**
+ * PlaybookCard - Display a playbook diagram with author attribution
+ * 
+ * Two variants:
+ *   - compact: Avatar + title + subtitle + URL above a diagram
+ *   - article: ATHENA logo + large title + diagram + author card below
+ * 
+ * Usage:
+ *   <PlaybookCard
+ *     variant="compact"
+ *     title="How Jonathan Swanson Sends 200 Almost Perfect Gifts a Year"
+ *     subtitle="Never miss a birthday, fundraising announcement, or other special event."
+ *     url="athena.com/playbooks/js-gifts"
+ *     author={{ name: "Jonathan Swanson", avatar: "/images/jonathan.jpg" }}
+ *     diagram="graph LR; A-->B"
+ *   />
+ * 
+ *   <PlaybookCard
+ *     variant="article"
+ *     title="Thoughtful Gifts at Scale: A Breakdown of how one EA Nails 200+ Gifts a Year"
+ *     author={{ name: "Jonathan Swanson", avatar: "/images/jonathan.jpg" }}
+ *     authorTitle="How Jonathan Swanson Sends 200 Almost Perfect Gifts a Year"
+ *     authorSubtitle="Never miss a birthday, fundraising announcement, or other special event."
+ *     authorUrl="athena.com/playbooks/js-gifts"
+ *     diagram="graph TD; A-->B"
+ *   />
+ */
+
+import { renderMermaid } from 'beautiful-mermaid'
+import { athena_render_rich } from '../../.opencode/skill/beautiful-mermaid/themes/example'
+
+export interface PlaybookAuthor {
+  name: string
+  avatar?: string
+}
+
+export interface Props {
+  variant?: 'compact' | 'article'
+  title: string
+  subtitle?: string
+  url?: string
+  author: PlaybookAuthor
+  // For article variant, author card can have different content
+  authorTitle?: string
+  authorSubtitle?: string
+  authorUrl?: string
+  // Mermaid diagram source
+  diagram: string
+  // Or pre-rendered SVG
+  diagramSvg?: string
+}
+
+const {
+  variant = 'compact',
+  title,
+  subtitle,
+  url,
+  author,
+  authorTitle,
+  authorSubtitle,
+  authorUrl,
+  diagram,
+  diagramSvg: providedSvg,
+} = Astro.props
+
+// Render the mermaid diagram if not pre-rendered
+let diagramSvg = providedSvg
+if (!diagramSvg && diagram) {
+  try {
+    diagramSvg = await renderMermaid(diagram, athena_render_rich)
+  } catch (e) {
+    console.error('Failed to render mermaid diagram:', e)
+    diagramSvg = `<div class="pc-diagram-error">Diagram render failed</div>`
+  }
+}
+
+// For article variant, use separate author card content or fall back to main props
+const cardTitle = authorTitle || title
+const cardSubtitle = authorSubtitle || subtitle
+const cardUrl = authorUrl || url
+---
+
+<div class={`playbook-card pc-${variant}`}>
+  {variant === 'compact' && (
+    <>
+      <div class="pc-header">
+        <div class="pc-avatar-wrapper">
+          {author.avatar ? (
+            <img src={author.avatar} alt={author.name} class="pc-avatar" />
+          ) : (
+            <div class="pc-avatar pc-avatar-placeholder">
+              {author.name.charAt(0).toUpperCase()}
+            </div>
+          )}
+        </div>
+        <div class="pc-meta">
+          <h2 class="pc-title">{title}</h2>
+          {subtitle && <p class="pc-subtitle">{subtitle}</p>}
+          {url && <span class="pc-url">{url}</span>}
+        </div>
+      </div>
+      
+      <div class="pc-divider"></div>
+      
+      <div class="pc-diagram" set:html={diagramSvg} />
+    </>
+  )}
+  
+  {variant === 'article' && (
+    <>
+      <div class="pc-logo">
+        <img src="/athena/athena_logo.svg" alt="Athena" width="123" height="20" />
+      </div>
+      
+      <h1 class="pc-article-title">{title}</h1>
+      
+      <div class="pc-divider"></div>
+      
+      <div class="pc-diagram" set:html={diagramSvg} />
+      
+      <div class="pc-divider"></div>
+      
+      <div class="pc-author-card">
+        <div class="pc-avatar-wrapper">
+          {author.avatar ? (
+            <img src={author.avatar} alt={author.name} class="pc-avatar" />
+          ) : (
+            <div class="pc-avatar pc-avatar-placeholder">
+              {author.name.charAt(0).toUpperCase()}
+            </div>
+          )}
+        </div>
+        <div class="pc-meta">
+          <h3 class="pc-card-title">{cardTitle}</h3>
+          {cardSubtitle && <p class="pc-subtitle">{cardSubtitle}</p>}
+          {cardUrl && <span class="pc-url">{cardUrl}</span>}
+        </div>
+      </div>
+    </>
+  )}
+</div>
+
+<style>
+  /* Athena brand colors */
+  :root {
+    --pc-bg: #E6E7DD;
+    --pc-fg: #403422;
+    --pc-sage: #5A8669;
+    --pc-muted: #464644;
+    --pc-border: #5A8669;
+    --pc-divider: #99b2a2;
+  }
+  
+  .playbook-card {
+    font-family: 'Figtree', system-ui, sans-serif;
+    background: var(--pc-bg);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Compact variant */
+  .pc-compact .pc-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  
+  .pc-avatar-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .pc-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .pc-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pc-sage);
+    color: var(--pc-bg);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .pc-meta {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .pc-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--pc-fg);
+    margin: 0 0 0.375rem 0;
+  }
+  
+  .pc-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--pc-muted);
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .pc-url {
+    font-size: 0.875rem;
+    color: var(--pc-muted);
+    opacity: 0.7;
+  }
+  
+  .pc-divider {
+    height: 1px;
+    background: var(--pc-divider);
+    margin: 1.5rem 0;
+  }
+  
+  .pc-diagram {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    overflow-x: auto;
+  }
+  
+  .pc-diagram :global(svg) {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Article variant */
+  .pc-article {
+    padding: 2.5rem 3rem;
+  }
+  
+  .pc-logo {
+    color: var(--pc-fg);
+    margin-bottom: 2rem;
+  }
+  
+  .pc-logo svg {
+    height: 20px;
+    width: auto;
+  }
+  
+  .pc-article-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--pc-fg);
+    margin: 0;
+    max-width: 900px;
+  }
+  
+  .pc-author-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    max-width: 700px;
+  }
+  
+  .pc-author-card .pc-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .pc-card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--pc-fg);
+    margin: 0 0 0.375rem 0;
+  }
+  
+  .pc-diagram-error {
+    padding: 2rem;
+    text-align: center;
+    color: var(--pc-muted);
+    font-style: italic;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .playbook-card {
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+    
+    .pc-avatar {
+      width: 56px;
+      height: 56px;
+    }
+    
+    .pc-title {
+      font-size: 1.375rem;
+    }
+    
+    .pc-article-title {
+      font-size: 2rem;
+    }
+    
+    .pc-article {
+      padding: 1.5rem;
+    }
+  }
+</style>

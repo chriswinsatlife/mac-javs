@@ -26,3 +26,5 @@
 - Strongly prefer Bun and avoid Node to the maximum extent possible. Always check Bun.com documentation for ways to avoid using Node or implement a feature with the latest Bun APIs, primitives, and syntax. Refactor any discovered Node usage to Bun immediately if encountered. Only utilize Node if multiple non-Node implementations were tried relentlessly and could not be implemented to success.
 - There are demos for the component library listed here: `docs/demo_pages.md`; update regularly
 - Documentation for the repo, its utilities, its workflows, its architecture, its runbooks, and so on live in `docs/` or subdirectories within.
+- When making Mermaid diagrams, review `.opencode/skill/beautiful-mermaid/SKILL.md`
+- When making Mermaid diagrams, consider: setting `htmlLabels: false` in config, settings `wrappingWidth` in config to override default, and using backtick syntax `["\text here\`"]`instead of`text<br/>here`

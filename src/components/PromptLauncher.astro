@@ -1,0 +1,175 @@
+---
+import openaiLogo from '../assets/logos/ai/openai.svg';
+import anthropicLogo from '../assets/logos/ai/anthropic.svg';
+import geminiLogo from '../assets/logos/ai/gemini.svg';
+import xLogo from '../assets/logos/ai/x.svg';
+import perplexityLogo from '../assets/logos/ai/perplexity.svg';
+
+interface Props {
+  prompt: string;
+  title?: string;
+  subtitle?: string;
+}
+
+const { 
+  prompt, 
+  title = "Copy the Prompt", 
+  subtitle = "Run this system with your personal AI assistant." 
+} = Astro.props;
+
+const encodedPrompt = encodeURIComponent(prompt);
+
+const aiServices = [
+  {
+    name: "ChatGPT",
+    url: `https://chat.openai.com/?q=${encodedPrompt}`,
+    logo: openaiLogo.src,
+  },
+  {
+    name: "Claude",
+    url: `https://claude.ai/new?q=${encodedPrompt}`,
+    logo: anthropicLogo.src,
+    color: "#D97757",
+  },
+  {
+    name: "Gemini",
+    url: `https://aistudio.google.com/prompts/new_chat?prompt=${encodedPrompt}`,
+    logo: geminiLogo.src,
+    useGradient: true,
+  },
+  {
+    name: "Grok",
+    url: `https://x.com/i/grok?text=${encodedPrompt}`,
+    logo: xLogo.src,
+  },
+  {
+    name: "Perplexity",
+    url: `https://www.perplexity.ai/search/new?q=${encodedPrompt}`,
+    logo: perplexityLogo.src,
+  },
+];
+---
+
+<div class="prompt-launcher">
+  <div class="header">
+    <h3 class="title">{title}</h3>
+    <p class="subtitle">{subtitle}</p>
+  </div>
+  
+  <div class="buttons">
+    {aiServices.map((service) => (
+      <a 
+        href={service.url} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="service-button"
+      >
+        <img 
+          src={service.logo} 
+          alt={service.name} 
+          class="icon"
+          style={service.color ? `filter: none;` : ''}
+        />
+        <span class="name">{service.name}</span>
+      </a>
+    ))}
+    
+    <button class="service-button copy-button" data-prompt={prompt}>
+      <span class="name">Other (markdown)</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.copy-button').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const prompt = button.getAttribute('data-prompt');
+      if (prompt) {
+        await navigator.clipboard.writeText(prompt);
+        const nameSpan = button.querySelector('.name');
+        if (nameSpan) {
+          const original = nameSpan.textContent;
+          nameSpan.textContent = 'Copied!';
+          setTimeout(() => {
+            nameSpan.textContent = original;
+          }, 2000);
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .prompt-launcher {
+    font-family: 'Figtree', system-ui, sans-serif;
+    max-width: 400px;
+    padding: 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 1.25rem;
+  }
+
+  .title {
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #05240C;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .subtitle {
+    font-size: 0.9375rem;
+    color: #5A8669;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .service-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    background: #FFFFFF;
+    border: 1px solid #D1D9D4;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #05240C;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.15s ease;
+  }
+
+  .service-button:hover {
+    background: #F5F7F5;
+    border-color: #5A8669;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .name {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .copy-button {
+    color: #5A8669;
+    border-style: dashed;
+  }
+
+  .copy-button:hover {
+    color: #05240C;
+  }
+</style>
